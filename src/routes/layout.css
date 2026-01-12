@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@font-face {
+	font-family: 'MartianMono';
+	src: url('/fonts/MartianMono-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@theme {
+	--color-black: #1a1a1a;
+	--color-white: #f8f8f8;
+	--color-grey: #bbb;
+	--font-mono: 'MartianMono', monospace;
+	--font-sans: 'Arial', sans-serif;
+	--text-xs: 10px;
+}
+
+html,
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+select,
+::picker(select) {
+	appearance: base-select;
+}
+
+::picker(select) {
+	font-family: var(--font-mono);
+	inset: auto;
+	margin: 0;
+	min-inline-size: anchor-size(self-inline);
+	min-block-size: 1lh;
+	/* Go to the edge of the viewport, and add scrollbars if needed. */
+	max-block-size: stretch;
+	overflow: auto;
+	/* Below and span-right, by default. */
+	position-area: block-end span-inline-end;
+}
+
+select::picker-icon {
+	display: none;
+}
+
+option::checkmark {
+	content: '';
+	display: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--color-grey);
+}
