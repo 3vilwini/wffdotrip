@@ -6,5 +6,7 @@ export const enum Language {
 }
 
 export const siteState = $state({
-	language: Language.EN
+	language: Language.EN,
+	userEmail: '',
+	formSubmitted: false
 });

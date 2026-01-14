@@ -641,7 +641,7 @@ export const employerTypeOptions = {
 };
 
 export const numEmployeesOptions = {
-	'0': {
+	'0_employees': {
 		[Language.EN]: '0 employees',
 		[Language.FR]: '0 employees FR',
 		[Language.IT]: '0 employees IT',
@@ -689,7 +689,7 @@ export const numEmployeesOptions = {
 		[Language.IT]: '101-200 employees IT',
 		[Language.ES]: '101-200 employees ES'
 	},
-	'201': {
+	'201_plus': {
 		[Language.EN]: '200+ employees',
 		[Language.FR]: '200+ employees FR',
 		[Language.IT]: '200+ employees IT',

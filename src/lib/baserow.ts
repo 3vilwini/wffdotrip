@@ -35,11 +35,8 @@ export const submitForm = async (data) => {
 			'https://api.baserow.io/api/database/rows/table/797535/?user_field_names=true',
 			options
 		);
-		let body = await response.json();
-		console.log(body);
 		return response;
 	} catch (error) {
-		console.error(error);
-		return;
+		return error;
 	}
 };

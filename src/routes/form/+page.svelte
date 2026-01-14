@@ -1,17 +1,43 @@
 <script lang="ts">
-	import SubmissionForm from '$lib/components/SubmissionForm.svelte';
+	import {
+		SignedIn,
+		SignedOut,
+		SignIn,
+		SignOutButton,
+	} from 'svelte-clerk';
 	let { data } = $props();
-	console.log(data);
 </script>
 
-<div class="relative flex w-dvw divide-x">
-	<div class="relative basis-1/4">
-		<div class="fixed top-0 w-1/4 p-4">Login</div>
+<SignedOut>
+	<div class="px-2 font-mono text-xs">
+	Log-in or Sign up
+
 	</div>
-	<div class="basis-1/2">
-		<SubmissionForm formPage={data.formPage}></SubmissionForm>
-	</div>
-	<div class="relative basis-1/4">
-		<div class="fixed top-0 w-1/4 p-4">Help</div>
-	</div>
-</div>
+	<SignIn
+		fallbackRedirectUrl="/form"
+		oauthFlow="redirect"
+		routing="path"
+		path="/form"
+		signUpFallbackRedirectUrl="/form"
+		signUpForceRedirectUrl="/form"
+		withSignUp={true}
+		appearance={{
+			elements: {
+				main: '!flex-shrink !max-w-sm !w-full !font-mono',
+				rootBox: '!flex-shrink !w-full !flex-grow !flex',
+				cardBox: '!shadow-none !rounded-none',
+				card: '!bg-transparent !rounded-none !p-2 !pr-4',
+				form: '!gap-4',
+				formFieldLabel: '!hidden',
+				formFieldInput: '!text-xs !rounded-none',
+				formButtonPrimary: '!self-end !text-black !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
+				footer: '!hidden',
+				header: '!hidden'
+			}
+		}}
+	/>
+</SignedOut>
+<SignedIn>
+	<div>{data.user.emailAddresses[0].emailAddress}</div>
+	<SignOutButton></SignOutButton>
+</SignedIn>

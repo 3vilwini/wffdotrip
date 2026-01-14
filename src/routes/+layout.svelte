@@ -2,13 +2,17 @@
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
 	import SiteFooter from '$lib/components/SiteFooter.svelte';
+	import type { Snippet } from 'svelte';
+	import { ClerkProvider } from 'svelte-clerk';
 
-	let { children } = $props();
+	let { children }: { children: Snippet } = $props();
 </script>
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
-<div class="pb-14">
-	{@render children()}
-</div>
+<ClerkProvider>
+	<div class="pb-14">
+		{@render children()}
+	</div>
+</ClerkProvider>
 
 <SiteFooter></SiteFooter>

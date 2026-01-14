@@ -1,6 +1,5 @@
 <script lang="ts">
 	import FormSelect from './FormSelect.svelte';
-	import { enhance } from '$app/forms';
 	import {
 		fieldLabels,
 		countryOptions,
@@ -24,12 +23,10 @@
 	import FormCheckbox from './FormCheckbox.svelte';
 	import FormSimpleInput from './FormSimpleInput.svelte';
 	import FormOption from './FormOption.svelte';
-	import { goto } from '$app/navigation';
 
-	let { formPage, email } = $props();
-	console.log(email);
+	let { formPage } = $props();
 
-	let isSubmitting = $state(false);
+	let formSubmitted = $state(false);
 	let selectedCountry: Country | undefined = $state();
 	let selectedYear: number | undefined = $state();
 	let selectedContractType: ContractType | undefined = $state();
@@ -53,32 +50,18 @@
 	};
 </script>
 
-<div class="px-4 pb-12 font-mono text-xs leading-normal {isSubmitting ? 'opacity-20' : ''}">
+<div
+	class="pointer-events-none cursor-not-allowed px-4 pb-12 font-mono text-xs leading-normal opacity-20"
+>
 	<div class="flex flex-col gap-4 py-4">
 		<h1 class="text-center font-sans text-3xl">{formPage.formTitle[siteState.language]}</h1>
 		<div class="flex flex-col gap-4">
 			<BlockContent value={formPage.formIntro[siteState.language]}></BlockContent>
 		</div>
 	</div>
-	<form
-		use:enhance={({ formElement, formData, action, cancel, submitter }) => {
-			isSubmitting = true;
-			return async ({ result, update }) => {
-				isSubmitting = false;
-				if (result.type === 'success') {
-					siteState.formSubmitted = true;
-					goto('/dashboard');
-				}
-				// update();
-			};
-		}}
-		method="POST"
-		action="/form"
-	>
+	<form>
 		<div class="flex flex-col">
-			<input maxlength="250" hidden name="email" value={email} />
-
-			<FormCheckbox required name="disclaimer" label={formPage.disclaimer[siteState.language]}
+			<FormCheckbox name="disclaimer" label={formPage.disclaimer[siteState.language]}
 			></FormCheckbox>
 
 			<div>
@@ -86,7 +69,7 @@
 					{formPage.whereWhenSectionTitle[siteState.language]}
 				</FormSectionHeader>
 				<div class="flex gap-4">
-					<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4" required>
+					<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4">
 						<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
 
 						{#each Object.entries(countryOptions) as [key, value]}
@@ -98,10 +81,9 @@
 						class="basis-1/2"
 						name="city"
 						placeholder={fieldLabels.city[siteState.language]}
-						required
 					></FormSimpleInput>
 
-					<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4" required>
+					<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4">
 						<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
 						{#each yearOptions as year}
 							<FormOption value={year}>{year}</FormOption>
@@ -116,7 +98,7 @@
 					{formPage.employerSectionTitle[siteState.language]}
 				</FormSectionHeader>
 				<div class="flex flex-wrap gap-4">
-					<FormSelect class="w-0 basis-[calc(50%-0.5rem)]" name="employer_type" required>
+					<FormSelect class="w-0 basis-[calc(50%-0.5rem)]" name="employer_type">
 						<FormOption value="" isDefault
 							>{fieldLabels.employerType[siteState.language]}</FormOption
 						>
@@ -133,10 +115,9 @@
 						class="basis-[calc(50%-0.5rem)]"
 						name="employer_name"
 						placeholder={fieldLabels.employerName[siteState.language]}
-						required
 					></FormSimpleInput>
 
-					<FormSelect name="num_employees" class="basis-[calc(50%-0.5rem)]" required>
+					<FormSelect name="num_employees" class="basis-[calc(50%-0.5rem)]">
 						<FormOption value="" isDefault
 							>{fieldLabels.numEmployees[siteState.language]}</FormOption
 						>
@@ -156,7 +137,6 @@
 						bind:boundValue={selectedContractType}
 						name="contract_type"
 						class=" basis-[calc(50%-0.5rem)]"
-						required
 					>
 						<FormOption value="" isDefault
 							>{fieldLabels.contractType[siteState.language]}</FormOption
@@ -167,7 +147,7 @@
 					</FormSelect>
 
 					{#if selectedCountry}
-						<FormSelect required name="worker_status" class="basis-[calc(50%-0.5rem)]">
+						<FormSelect name="worker_status" class="basis-[calc(50%-0.5rem)]">
 							<FormOption value="" isDefault>
 								{fieldLabels.workerStatus[siteState.language][selectedCountry]}
 							</FormOption>
@@ -186,7 +166,7 @@
 								class="flex-grow border-r-0"
 							></FormSimpleInput>
 
-							<FormSelect name="contract_length_unit" class="w-20">
+							<FormSelect name="contract_length_unit">
 								{#each Object.entries(contractLengthUnit) as [key, value]}
 									<FormOption value={key}>{value[siteState.language]}</FormOption>
 								{/each}
@@ -217,7 +197,6 @@
 						bind:boundValue={selectedWorkerType}
 						name="worker_category"
 						class=" basis-[calc(50%-0.5rem)]"
-						required
 					>
 						<FormOption value="" isDefault
 							>{fieldLabels.workerCategory[siteState.language]}</FormOption
@@ -245,7 +224,6 @@
 						name="job_details"
 						placeholder="{fieldLabels.jobDetails[siteState.language]} {selectedWorkerTypeHelpText}"
 						class="field-sizing-content basis-full border-0 border-b text-xs"
-						maxlength="250"
 					></textarea>
 
 					<FormSelect name="job_experience" class="basis-[calc(50%-0.5rem)]">
@@ -279,9 +257,8 @@
 							type="number"
 							placeholder={fieldLabels.compensationAmount[siteState.language]}
 							class="grow"
-							required
 						/>
-						<FormSelect name="compensation_frequency" class="w-30" required>
+						<FormSelect name="compensation_frequency" class="w-30">
 							<FormOption value=""
 								>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
 							>
@@ -342,12 +319,6 @@
 						class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
 					></textarea>
 				</div>
-			</div>
-			<div class="flex items-center justify-center pt-8">
-				<button
-					class="cursor-pointer border px-4 py-2 transition-colors hover:bg-black hover:text-white"
-					>{isSubmitting ? 'Submitting Form...' : 'Submit Form'}</button
-				>
 			</div>
 		</div>
 	</form>
