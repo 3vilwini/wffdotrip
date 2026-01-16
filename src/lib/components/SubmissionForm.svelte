@@ -16,7 +16,8 @@
 		jobExperienceOptions,
 		jobObtainedViaOptions,
 		workerTypeOptions,
-		WorkerType
+		WorkerType,
+		addlCompensationCoverageOptions
 	} from '$lib/staticContent';
 	import FormSectionHeader from './FormSectionHeader.svelte';
 	import { siteState } from '$lib/states.svelte';
@@ -25,6 +26,7 @@
 	import FormSimpleInput from './FormSimpleInput.svelte';
 	import FormOption from './FormOption.svelte';
 	import { goto } from '$app/navigation';
+	import AddlCompensationContainer from './AddlCompensationContainer.svelte';
 
 	let { formPage, email } = $props();
 	console.log(email);
@@ -301,15 +303,62 @@
 						<div class="cursor-pointer border px-2 group-hover:bg-black group-hover:text-white">
 							+
 						</div>
-						<div>Add additional compensation</div>
+						<div>{fieldLabels.addlComp[siteState.language]}</div>
 					</button>
 				</div>
 				{#if showAddlCompensation}
-					<div>Sale of work</div>
-					<div>Production</div>
-					<div>Travel</div>
-					<div>Accomodation</div>
-					<div>Transport of works</div>
+					<div class="flex flex-col gap-2">
+						<AddlCompensationContainer>
+							{fieldLabels.saleOfWork[siteState.language]}
+							<FormSimpleInput
+								name="addl_comp_sale_of_work"
+								type="number"
+								placeholder={fieldLabels.compensationAmount[siteState.language]}
+								class="w-48 border-b-0"
+								required
+							/>
+						</AddlCompensationContainer>
+
+						<AddlCompensationContainer>
+							{fieldLabels.production[siteState.language]}
+							<FormSimpleInput
+								name="addl_comp_production"
+								type="number"
+								placeholder={fieldLabels.compensationAmount[siteState.language]}
+								class="w-48 border-b-0"
+								required
+							/>
+						</AddlCompensationContainer>
+
+						<AddlCompensationContainer>
+							{fieldLabels.travel[siteState.language]}
+
+							<FormSelect name="addl_comp_travel" class="w-48 border-b-0" required>
+								{#each Object.entries(addlCompensationCoverageOptions) as [key, value]}
+									<FormOption value={key}>{value[siteState.language]}</FormOption>
+								{/each}
+							</FormSelect>
+						</AddlCompensationContainer>
+
+						<AddlCompensationContainer>
+							{fieldLabels.accommodation[siteState.language]}
+
+							<FormSelect name="addl_comp_accommodation" class="w-48 border-b-0" required>
+								{#each Object.entries(addlCompensationCoverageOptions) as [key, value]}
+									<FormOption value={key}>{value[siteState.language]}</FormOption>
+								{/each}
+							</FormSelect>
+						</AddlCompensationContainer>
+
+						<AddlCompensationContainer>
+							{fieldLabels.transportOfWorks[siteState.language]}
+							<FormSelect name="addl_comp_transport_of_works" class="w-48 border-b-0" required>
+								{#each Object.entries(addlCompensationCoverageOptions) as [key, value]}
+									<FormOption value={key}>{value[siteState.language]}</FormOption>
+								{/each}
+							</FormSelect>
+						</AddlCompensationContainer>
+					</div>
 				{/if}
 			</div>
 
