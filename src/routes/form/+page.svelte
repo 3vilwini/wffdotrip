@@ -1,18 +1,10 @@
 <script lang="ts">
-	import {
-		SignedIn,
-		SignedOut,
-		SignIn,
-		SignOutButton,
-	} from 'svelte-clerk';
+	import { SignedIn, SignedOut, SignIn, SignOutButton } from 'svelte-clerk';
 	let { data } = $props();
 </script>
 
 <SignedOut>
-	<div class="px-2 font-mono text-xs">
-	Log-in or Sign up
-
-	</div>
+	<div class="px-2 font-mono text-xs">Log-in or Sign up</div>
 	<SignIn
 		fallbackRedirectUrl="/form"
 		oauthFlow="redirect"
@@ -30,7 +22,8 @@
 				form: '!gap-4',
 				formFieldLabel: '!hidden',
 				formFieldInput: '!text-xs !rounded-none',
-				formButtonPrimary: '!self-end !text-black !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
+				formButtonPrimary:
+					'!self-end !text-black !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
 				footer: '!hidden',
 				header: '!hidden'
 			}
@@ -38,6 +31,8 @@
 	/>
 </SignedOut>
 <SignedIn>
-	<div>{data.user.emailAddresses[0].emailAddress}</div>
+	{#if data && data.user && data.user.emailAddresses && data.user.emailAddresses.length >= 1 && data.user.emailAddresses[0].emailAddress}
+		<div>{data.user.emailAddresses[0].emailAddress}</div>
+	{/if}
 	<SignOutButton></SignOutButton>
 </SignedIn>

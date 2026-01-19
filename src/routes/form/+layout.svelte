@@ -16,7 +16,7 @@
 			<SubmissionFormPreview formPage={data.formPage}></SubmissionFormPreview>
 		</SignedOut>
 		<SignedIn>
-			<SubmissionForm email={data.user.emailAddresses[0].emailAddress} formPage={data.formPage}></SubmissionForm>
+			<SubmissionForm email={data.user ? data.user.emailAddresses[0].emailAddress : ''} formPage={data.formPage}></SubmissionForm>
 		</SignedIn>
 	</div>
 	<div class="relative basis-1/4">

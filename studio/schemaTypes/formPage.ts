@@ -7,7 +7,7 @@ export default defineType({
   groups: [
     {
       name: 'formIntro',
-      title: 'Form Intro',
+      title: 'Form Header',
     },
     {
       name: 'whereWhen',
@@ -41,6 +41,10 @@ export default defineType({
       name: 'artist',
       title: 'Artist Residency Questions',
     },
+    {
+      name: 'formFooter',
+      title: 'Form Footer',
+    },
   ],
   fields: [
     defineField({
@@ -59,6 +63,12 @@ export default defineType({
       group: 'formIntro',
     }),
     defineField({
+      name: 'editFormTitle',
+      title: 'Edit Form Title',
+      type: 'stringInputWithLanguageOptions',
+      group: 'formIntro',
+    }),
+    defineField({
       name: 'formIntro',
       title: 'Form Intro',
       type: 'blockContentInputWithLanguageOptions',
@@ -71,13 +81,18 @@ export default defineType({
       group: 'formIntro',
     }),
 
-
     //////WHERE AND WHEN//////
 
     defineField({
       name: 'whereWhenSectionTitle',
       title: 'Where and When Section Title',
       type: 'stringInputWithLanguageOptions',
+      group: 'whereWhen',
+    }),
+    defineField({
+      name: 'whereWhenHelpText',
+      title: 'Where and When Help Text',
+      type: 'blockContentInputWithLanguageOptions',
       group: 'whereWhen',
     }),
     // defineField({
@@ -135,6 +150,12 @@ export default defineType({
       type: 'stringInputWithLanguageOptions',
       group: 'employer',
     }),
+    defineField({
+      name: 'employerHelpText',
+      title: 'Employer Help Text',
+      type: 'blockContentInputWithLanguageOptions',
+      group: 'employer',
+    }),
     // defineField({
     //   name: 'employerTypeLabel',
     //   title: 'Employer Type Field Label',
@@ -166,6 +187,12 @@ export default defineType({
       name: 'termsSectionTitle',
       title: 'Terms Section Title',
       type: 'stringInputWithLanguageOptions',
+      group: 'terms',
+    }),
+    defineField({
+      name: 'termsHelpText',
+      title: 'Terms Help Text',
+      type: 'blockContentInputWithLanguageOptions',
       group: 'terms',
     }),
     // defineField({
@@ -213,6 +240,12 @@ export default defineType({
       type: 'stringInputWithLanguageOptions',
       group: 'job',
     }),
+    defineField({
+      name: 'jobHelpText',
+      title: 'Job Help Text',
+      type: 'blockContentInputWithLanguageOptions',
+      group: 'job',
+    }),
     // defineField({
     //   name: 'workerCategoryLabel',
     //   title: 'Worker Category Field label',
@@ -258,6 +291,12 @@ export default defineType({
       type: 'stringInputWithLanguageOptions',
       group: 'compensation',
     }),
+    defineField({
+      name: 'compensationHelpText',
+      title: 'Compensation Help Text',
+      type: 'blockContentInputWithLanguageOptions',
+      group: 'compensation',
+    }),
 
     //////SENTIMENT//////
 
@@ -265,6 +304,12 @@ export default defineType({
       name: 'sentimentSectionTitle',
       title: 'Sentiment Section Title',
       type: 'stringInputWithLanguageOptions',
+      group: 'sentiment',
+    }),
+    defineField({
+      name: 'sentimentHelpText',
+      title: 'Sentiment Help Text',
+      type: 'blockContentInputWithLanguageOptions',
       group: 'sentiment',
     }),
 
@@ -277,13 +322,19 @@ export default defineType({
       group: 'addl',
     }),
     defineField({
-      name: 'addlSectionHelpText',
-      title: 'Additonal Info Help Text',
+      name: 'addlSectionPlaceholder',
+      title: 'Additonal Info Placeholder',
       type: 'stringInputWithLanguageOptions',
       group: 'addl',
     }),
+    defineField({
+      name: 'addlSectionHelpText',
+      title: 'Additonal Info Help Text',
+      type: 'blockContentInputWithLanguageOptions',
+      group: 'addl',
+    }),
 
-    //////ADDITIONAL INFO//////
+    //////ARTIST QUESTIONS//////
 
     defineField({
       name: 'artistSectionTitle',
@@ -298,10 +349,29 @@ export default defineType({
       group: 'artist',
     }),
     defineField({
+      name: 'artistSectionHelpText',
+      title: 'Artist Section Help Text',
+      type: 'blockContentInputWithLanguageOptions',
+      group: 'artist',
+    }),
+    defineField({
       name: 'questions',
       title: 'Artist Residency Specific Questions',
       type: 'artistResidencyQuestions',
       group: 'artist',
+    }),
+
+    defineField({
+      name: 'footerDisclaimer',
+      title: 'Disclaimer (end of form)',
+      type: 'textInputWithLanguageOptions',
+      group: 'formFooter',
+    }),
+    defineField({
+      name: 'privacyLinkLabel',
+      title: 'Privacy Link Label',
+      type: 'stringInputWithLanguageOptions',
+      group: 'formFooter',
     }),
   ],
 })

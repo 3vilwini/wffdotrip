@@ -3,7 +3,7 @@
 	import { Language } from '$lib/states.svelte';
 </script>
 
-<div class="flex gap-8">
+<div class="flex gap-8 font-mono text-xs">
 	<LanguageToggleButton language={Language.EN}>EN</LanguageToggleButton>
 	<LanguageToggleButton language={Language.FR}>FR</LanguageToggleButton>
 	<LanguageToggleButton language={Language.IT}>IT</LanguageToggleButton>

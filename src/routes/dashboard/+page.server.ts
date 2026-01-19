@@ -1,4 +1,4 @@
-import { submitForm } from '$lib/baserow';
+import { deleteRow, editRow, submitForm } from '$lib/baserow';
 import type { Actions } from './$types';
 import { fail } from '@sveltejs/kit';
 import { clerkClient } from 'svelte-clerk/server';
@@ -16,19 +16,37 @@ export const load = (async ({ locals }) => {
 	}
 }) satisfies PageLoad;
 
-
 export const actions = {
-	default: async ({ request }) => {
+	edit: async ({ request }) => {
 		const formData = await request.formData();
-		console.log(formData);
 		const reqBody = {} as { [key: string]: any };
+		const row_id = formData.get('row_id')?.toString();
 		formData.forEach((value, key) => {
-			reqBody[key] = value.toString();
+			if (key !== row_id) {
+				reqBody[key] = value.toString();
+			}
 		});
 
-		if (request.method === 'POST') {
+		if (request.method === 'POST' && row_id) {
 			try {
-				const response = await submitForm(reqBody);
+				const response = await editRow(row_id, reqBody);
+				if (response.status === 200) {
+					return { success: true };
+				}
+			} catch (error: any) {
+				console.error(error);
+				const errorMessage = error?.message ? error.message : 'error occurred when submitting form';
+				return fail(422, { error: errorMessage });
+			}
+		}
+	},
+	delete: async ({ request }) => {
+		const formData = await request.formData();
+		const row_id = formData.get('row_id')?.toString();
+
+		if (request.method === 'POST' && row_id) {
+			try {
+				const response = await deleteRow(row_id);
 				if (response.status === 200) {
 					return { success: true };
 				}

@@ -38,7 +38,6 @@ export const getRowsByEmail = async (email: string) => {
 		groups: []
 	});
 
-	console.log(URLSearchParams);
 	try {
 		const response = await fetch(
 			'https://api.baserow.io/api/database/rows/table/797535/?' + params,
@@ -51,6 +50,45 @@ export const getRowsByEmail = async (email: string) => {
 	} catch (error) {
 		console.error(error);
 		return;
+	}
+};
+
+export const editRow = async (row_id: string, data) => {
+	const options = {
+		method: 'PATCH',
+		headers: {
+			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm',
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(data)
+	};
+	try {
+		const response = await fetch(
+			`https://api.baserow.io/api/database/rows/table/797535/${row_id}/?user_field_names=true`,
+			options
+		);
+		return response;
+	} catch (error) {
+		return error;
+	}
+};
+
+export const deleteRow = async (row_id: string) => {
+	const options = {
+		method: 'DELETE',
+		headers: {
+			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm',
+			'Content-Type': 'application/json'
+		}
+	};
+	try {
+		const response = await fetch(
+			`https://api.baserow.io/api/database/rows/table/797535/${row_id}/`,
+			options
+		);
+		return response;
+	} catch (error) {
+		return error;
 	}
 };
 

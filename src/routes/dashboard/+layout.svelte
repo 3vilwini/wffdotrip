@@ -8,9 +8,9 @@
 
 <div class=" flex flex-col gap-12">
 	<div class="flex justify-between p-8">
-		<div>
+		<a href="/">
 			<img src={logo} class="w-48" />
-		</div>
+		</a>
 		<SignedIn>
 			<div class="flex gap-8">
 				<div>
