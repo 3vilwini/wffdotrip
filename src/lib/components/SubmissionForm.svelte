@@ -379,7 +379,7 @@
 				</div>
 			</div>
 
-			<div onmouseenter={() => (siteState.currFormSection = 'addl')}>
+			<div onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
 				<FormSectionHeader>
 					{formPage.addlSectionTitle[siteState.language]}
 				</FormSectionHeader>

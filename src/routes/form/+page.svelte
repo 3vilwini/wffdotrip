@@ -32,7 +32,7 @@
 </SignedOut>
 <SignedIn>
 	{#if data && data.user && data.user.emailAddresses && data.user.emailAddresses.length >= 1 && data.user.emailAddresses[0].emailAddress}
-		<div>{data.user.emailAddresses[0].emailAddress}</div>
+		<div class="font-mono text-xs">{data.user.emailAddresses[0].emailAddress}</div>
 	{/if}
-	<SignOutButton></SignOutButton>
+	<SignOutButton class="font-mono text-xs"></SignOutButton>
 </SignedIn>
