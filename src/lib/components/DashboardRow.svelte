@@ -1,10 +1,14 @@
 <script lang="ts">
+	import X from './X.svelte';
+
 	import { enhance } from '$app/forms';
 
 	import {
 		addlCompensationCoverageOptions,
 		fieldLabels,
-		jobObtainedViaOptions
+		jobObtainedViaOptions,
+		addlCompItems,
+		AddlCompItem
 	} from './../staticContent.ts';
 	import { siteState } from '$lib/states.svelte';
 	import {
@@ -27,9 +31,12 @@
 	afterNavigate(() => {
 		showEditModal = false;
 		showDeleteModal = false;
-		rowExpanded = false;
 		invalidateAll();
 	});
+
+	const closeEditModal = () => {
+		showEditModal = false;
+	};
 </script>
 
 {#if showEditModal}
@@ -37,7 +44,7 @@
 		<div
 			class="relative max-w-2xl overflow-scroll border border-black bg-white px-4 pb-12 font-mono text-xs leading-normal"
 		>
-			<EditRowModal {row} {formPage}></EditRowModal>
+			<EditRowModal bind:showEditModal {row} {formPage}></EditRowModal>
 			<div
 				onclick={() => {
 					showEditModal = false;
@@ -84,10 +91,7 @@
 						showDeleteModal = false;
 					}}
 				>
-					<div class="absolute top-4 right-4 h-4 w-4 origin-center rotate-45 transition-transform">
-						<div class="absolute left-[0.5px] h-4 w-2 border-r"></div>
-						<div class="absolute top-[0.5px] h-2 w-4 border-b"></div>
-					</div>
+					<X></X>
 				</div>
 			</div>
 		</div>
@@ -244,7 +248,7 @@
 							{row.contract_num_hours} hours / week
 						</div>
 					{/if}
-					{#if row.contract_length && row.row.contract_length_unit}
+					{#if row.contract_length && row.contract_length_unit}
 						<div>
 							{row.contract_length}
 							{row.contract_length_unit.value} contract
@@ -262,27 +266,39 @@
 						{#if row.addl_comp_sale_of_work}
 							<div class="flex justify-between gap-2">
 								<div>
-									{fieldLabels.saleOfWork[siteState.language]}
+									{addlCompItems[AddlCompItem.SALE_OF_WORK][siteState.language]}
 								</div>
 								<div>
 									{row.addl_comp_sale_of_work}
 								</div>
 							</div>
 						{/if}
-						{#if row.addl_comp_production}
+						{#if row.addl_comp_production_budget}
 							<div class="flex justify-between gap-2">
 								<div>
-									{fieldLabels.production[siteState.language]}
+									{addlCompItems[AddlCompItem.PRODUCTION_BUDGET][siteState.language]}
 								</div>
 								<div>
-									{row.addl_comp_production}
+									{row.addl_comp_production_budget}
+								</div>
+							</div>
+						{/if}
+						{#if row.addl_comp_transport_of_work}
+							<div class="flex justify-between gap-2">
+								<div>
+									{addlCompItems[AddlCompItem.TRANSPORT_OF_WORK][siteState.language]}
+								</div>
+								<div>
+									{addlCompensationCoverageOptions[row.addl_comp_transport_of_work.value][
+										siteState.language
+									]}
 								</div>
 							</div>
 						{/if}
 						{#if row.addl_comp_travel}
 							<div class="flex justify-between gap-2">
 								<div>
-									{fieldLabels.travel[siteState.language]}
+									{addlCompItems[AddlCompItem.TRAVEL][siteState.language]}
 								</div>
 								<div>
 									{addlCompensationCoverageOptions[row.addl_comp_travel.value][siteState.language]}
@@ -292,7 +308,7 @@
 						{#if row.addl_comp_accommodation}
 							<div class="flex justify-between gap-2">
 								<div>
-									{fieldLabels.accommodation[siteState.language]}
+									{addlCompItems[AddlCompItem.ACCOMMODATION][siteState.language]}
 								</div>
 								<div>
 									{addlCompensationCoverageOptions[row.addl_comp_accommodation.value][
@@ -301,16 +317,60 @@
 								</div>
 							</div>
 						{/if}
-						{#if row.addl_comp_transport_of_works}
+						{#if row.addl_comp_meals}
 							<div class="flex justify-between gap-2">
 								<div>
-									{fieldLabels.transportOfWorks[siteState.language]}
+									{addlCompItems[AddlCompItem.MEALS][siteState.language]}
 								</div>
 								<div>
-									{#if addlCompensationCoverageOptions[row.addl_comp_transport_of_works.value]}
-										{addlCompensationCoverageOptions[row.addl_comp_transport_of_works.value][
-											siteState.language
-										]}
+									{#if addlCompensationCoverageOptions[row.addl_comp_meals.value]}
+										{addlCompensationCoverageOptions[row.addl_comp_meals.value][siteState.language]}
+									{/if}
+								</div>
+							</div>
+						{/if}
+						{#if row.addl_comp_per_diem}
+							<div class="flex justify-between gap-2">
+								<div>
+									{addlCompItems[AddlCompItem.PER_DIEM][siteState.language]}
+								</div>
+								<div>
+									{row.addl_comp_production_budget}
+								</div>
+							</div>
+						{/if}
+						{#if row.addl_comp_health_insurance}
+							<div class="flex justify-between gap-2">
+								<div>
+									{addlCompItems[AddlCompItem.HEALTH_INSURANCE][siteState.language]}
+								</div>
+								<div>
+									{#if addlCompensationCoverageOptions[row.addl_comp_health_insurance.value]}
+										{addlCompensationCoverageOptions[row.addl_comp_health_insurance.value][siteState.language]}
+									{/if}
+								</div>
+							</div>
+						{/if}
+						{#if row.addl_comp_public_transportation}
+							<div class="flex justify-between gap-2">
+								<div>
+									{addlCompItems[AddlCompItem.PUBLIC_TRANSPORTATION][siteState.language]}
+								</div>
+								<div>
+									{#if addlCompensationCoverageOptions[row.addl_comp_public_transportation.value]}
+										{addlCompensationCoverageOptions[row.addl_comp_public_transportation.value][siteState.language]}
+									{/if}
+								</div>
+							</div>
+						{/if}
+						{#if row.addl_comp_commission}
+							<div class="flex justify-between gap-2">
+								<div>
+									{addlCompItems[AddlCompItem.COMMISSION][siteState.language]}
+								</div>
+								<div>
+									{#if addlCompensationCoverageOptions[row.addl_comp_commission.value]}
+										{addlCompensationCoverageOptions[row.addl_comp_commission.value][siteState.language]}
 									{/if}
 								</div>
 							</div>

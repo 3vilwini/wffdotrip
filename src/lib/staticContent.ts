@@ -34,10 +34,10 @@ export const fieldLabels = {
 		[Language.ES]: 'Employer Type in spanish'
 	},
 	employerName: {
-		[Language.EN]: 'Employer Name',
-		[Language.FR]: 'Employer Name in french',
-		[Language.IT]: 'Employer Name in italian',
-		[Language.ES]: 'Employer Name in spanish'
+		[Language.EN]: 'Employer Name (optional)',
+		[Language.FR]: 'Employer Name (optional) in french',
+		[Language.IT]: 'Employer Name (optional) in italian',
+		[Language.ES]: 'Employer Name (optional) in spanish'
 	},
 	numEmployees: {
 		[Language.EN]: '# of Employees',
@@ -2494,5 +2494,81 @@ export const addlCompensationCoverageOptions = {
 		[Language.FR]: 'was covered FR',
 		[Language.IT]: 'was covered IT',
 		[Language.ES]: 'was covered ES'
+	}
+};
+
+export const enum AddlCompItem {
+	SALE_OF_WORK = 'SALE_OF_WORK',
+	PRODUCTION_BUDGET = 'PRODUCTION_BUDGET',
+	TRANSPORT_OF_WORK = 'TRANSPORT_OF_WORK',
+	TRAVEL = 'TRAVEL',
+	ACCOMMODATION = 'ACCOMMODATION',
+	MEALS = 'MEALS',
+	PER_DIEM = 'PER_DIEM',
+	HEALTH_INSURANCE = 'HEALTH_INSURANCE',
+	PUBLIC_TRANSPORTATION = 'PUBLIC_TRANSPORTATION',
+	COMMISSION = 'COMMISSION'
+}
+
+export const addlCompItems = {
+	[AddlCompItem.SALE_OF_WORK]: {
+		[Language.EN]: 'Sale of work',
+		[Language.FR]: 'Sale of work FR',
+		[Language.IT]: 'Sale of work IT',
+		[Language.ES]: 'Sale of work ES'
+	},
+	[AddlCompItem.PRODUCTION_BUDGET]: {
+		[Language.EN]: 'Production budget',
+		[Language.FR]: 'Production budget FR',
+		[Language.IT]: 'Production budget IT',
+		[Language.ES]: 'Production budget ES'
+	},
+	[AddlCompItem.TRANSPORT_OF_WORK]: {
+		[Language.EN]: 'Transport of work',
+		[Language.FR]: 'Transport of work FR',
+		[Language.IT]: 'Transport of work IT',
+		[Language.ES]: 'Transport of work ES'
+	},
+	[AddlCompItem.TRAVEL]: {
+		[Language.EN]: 'Travel',
+		[Language.FR]: 'Travel FR',
+		[Language.IT]: 'Travel IT',
+		[Language.ES]: 'Travel ES'
+	},
+	[AddlCompItem.ACCOMMODATION]: {
+		[Language.EN]: 'Accommodation',
+		[Language.FR]: 'Accommodation FR',
+		[Language.IT]: 'Accommodation IT',
+		[Language.ES]: 'Accommodation ES'
+	},
+	[AddlCompItem.MEALS]: {
+		[Language.EN]: 'Meals',
+		[Language.FR]: 'Meals FR',
+		[Language.IT]: 'Meals IT',
+		[Language.ES]: 'Meals ES'
+	},
+	[AddlCompItem.PER_DIEM]: {
+		[Language.EN]: 'Per Diem',
+		[Language.FR]: 'Per Diem FR',
+		[Language.IT]: 'Per Diem IT',
+		[Language.ES]: 'Per Diem ES'
+	},
+	[AddlCompItem.HEALTH_INSURANCE]: {
+		[Language.EN]: 'Health Insurance',
+		[Language.FR]: 'Health Insurance FR',
+		[Language.IT]: 'Health Insurance IT',
+		[Language.ES]: 'Health Insurance ES'
+	},
+	[AddlCompItem.PUBLIC_TRANSPORTATION]: {
+		[Language.EN]: 'Public Transportation',
+		[Language.FR]: 'Public Transportation FR',
+		[Language.IT]: 'Public Transportation IT',
+		[Language.ES]: 'Public Transportation ES'
+	},
+	[AddlCompItem.COMMISSION]: {
+		[Language.EN]: 'Commission',
+		[Language.FR]: 'Commission FR',
+		[Language.IT]: 'Commission IT',
+		[Language.ES]: 'Commission ES'
 	}
 };

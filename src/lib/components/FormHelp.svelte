@@ -8,9 +8,9 @@
     let helpTextSpecificLanguage = $derived(helpText ? helpText[siteState.language] : '')
 	console.log(`${siteState.currFormSection}HelpText`);
 	console.log(formPage[`${siteState.currFormSection}HelpText`]);
-	console.log(helpText);
+
 </script>
 
-<div class="text-xs font-mono">
+<div class="text-xs font-mono max-w-xs">
 	<BlockContent value={helpTextSpecificLanguage}></BlockContent>
 </div>

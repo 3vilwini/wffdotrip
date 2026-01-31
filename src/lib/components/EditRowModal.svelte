@@ -25,10 +25,10 @@
 	import FormCheckbox from './FormCheckbox.svelte';
 	import FormSimpleInput from './FormSimpleInput.svelte';
 	import FormOption from './FormOption.svelte';
-	import { goto, invalidateAll } from '$app/navigation';
+	import { goto } from '$app/navigation';
 	import AddlCompensationContainer from './AddlCompensationContainer.svelte';
 
-	let { row, formPage } = $props();
+	let { row, formPage, showEditModal = $bindable() } = $props();
 	let isSubmitting = $state(false);
 	let selectedCountry: Country | undefined = $state(row.country);
 	let selectedYear: number | undefined = $state(parseInt(row.year));
@@ -81,7 +81,7 @@
 					{formPage.whereWhenSectionTitle[siteState.language]}
 				</FormSectionHeader>
 				<div class="flex gap-4">
-					<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4" required>
+					<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4">
 						<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
 
 						{#each Object.entries(countryOptions) as [key, value]}
@@ -93,11 +93,10 @@
 						class="basis-1/2"
 						name="city"
 						placeholder={fieldLabels.city[siteState.language]}
-						required
 						value={row.city}
 					></FormSimpleInput>
 
-					<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4" required>
+					<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4">
 						<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
 						{#each yearOptions as year}
 							<FormOption value={year}>{year}</FormOption>
@@ -113,10 +112,9 @@
 				</FormSectionHeader>
 				<div class="flex flex-wrap gap-4">
 					<FormSelect
-						value={row.employer_type}
+						boundValue={row.employer_type}
 						class="w-0 basis-[calc(50%-0.5rem)]"
 						name="employer_type"
-						required
 					>
 						<FormOption value="" isDefault
 							>{fieldLabels.employerType[siteState.language]}</FormOption
@@ -134,15 +132,13 @@
 						class="basis-[calc(50%-0.5rem)]"
 						name="employer_name"
 						placeholder={fieldLabels.employerName[siteState.language]}
-						required
 						value={row.employer_name}
 					></FormSimpleInput>
 
 					<FormSelect
-						value={row.num_employees}
+						boundValue={row.num_employees}
 						name="num_employees"
 						class="basis-[calc(50%-0.5rem)]"
-						required
 					>
 						<FormOption value="" isDefault
 							>{fieldLabels.numEmployees[siteState.language]}</FormOption
@@ -163,8 +159,6 @@
 						bind:boundValue={selectedContractType}
 						name="contract_type"
 						class=" basis-[calc(50%-0.5rem)]"
-						required
-						value={row.contract_type}
 					>
 						<FormOption value="" isDefault
 							>{fieldLabels.contractType[siteState.language]}</FormOption
@@ -176,8 +170,7 @@
 
 					{#if selectedCountry}
 						<FormSelect
-							value={row.worker_status}
-							required
+							boundValue={row.worker_status ? row.worker_status : ''}
 							name="worker_status"
 							class="basis-[calc(50%-0.5rem)]"
 						>
@@ -201,7 +194,7 @@
 							></FormSimpleInput>
 
 							<FormSelect
-								value={row.contract_length_unit.value}
+								boundValue={row.contract_length_unit?.value}
 								name="contract_length_unit"
 								class="w-20"
 							>
@@ -236,7 +229,6 @@
 						bind:boundValue={selectedWorkerType}
 						name="worker_category"
 						class=" basis-[calc(50%-0.5rem)]"
-						required
 					>
 						<FormOption value="" isDefault
 							>{fieldLabels.workerCategory[siteState.language]}</FormOption
@@ -270,7 +262,7 @@
 					></textarea>
 
 					<FormSelect
-						value={row.job_experience}
+						boundValue={row.job_experience}
 						name="job_experience"
 						class="basis-[calc(50%-0.5rem)]"
 					>
@@ -283,7 +275,7 @@
 					</FormSelect>
 
 					<FormSelect
-						value={row.job_obtained_via}
+						boundValue={row.job_obtained_via}
 						name="job_obtained_via"
 						class="basis-[calc(50%-0.5rem)]"
 					>
@@ -308,14 +300,12 @@
 							type="number"
 							placeholder={fieldLabels.compensationAmount[siteState.language]}
 							class="grow"
-							required
 							value={row.compensation_amount}
 						/>
 						<FormSelect
-							value={row.compensation_frequency}
+							boundValue={row.compensation_frequency}
 							name="compensation_frequency"
 							class="w-30"
-							required
 						>
 							<FormOption value=""
 								>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
@@ -346,7 +336,6 @@
 							value={row.addl_comp_sale_of_work}
 							placeholder={fieldLabels.compensationAmount[siteState.language]}
 							class="w-48 border-b-0"
-							required
 						/>
 					</AddlCompensationContainer>
 
@@ -358,7 +347,6 @@
 							type="number"
 							placeholder={fieldLabels.compensationAmount[siteState.language]}
 							class="w-48 border-b-0"
-							required
 						/>
 					</AddlCompensationContainer>
 
@@ -366,10 +354,9 @@
 						{fieldLabels.travel[siteState.language]}
 
 						<FormSelect
-							value={row.addl_comp_travel.value}
+							boundValue={row.addl_comp_travel?.value}
 							name="addl_comp_travel"
 							class="w-48 border-b-0"
-							required
 						>
 							{#each Object.entries(addlCompensationCoverageOptions) as [key, value]}
 								<FormOption value={key}>{value[siteState.language]}</FormOption>
@@ -381,10 +368,9 @@
 						{fieldLabels.accommodation[siteState.language]}
 
 						<FormSelect
-							value={row.addl_comp_accommodation.value}
+							boundValue={row.addl_comp_accommodation?.value}
 							name="addl_comp_accommodation"
 							class="w-48 border-b-0"
-							required
 						>
 							{#each Object.entries(addlCompensationCoverageOptions) as [key, value]}
 								<FormOption value={key}>{value[siteState.language]}</FormOption>
@@ -395,10 +381,9 @@
 					<AddlCompensationContainer>
 						{fieldLabels.transportOfWorks[siteState.language]}
 						<FormSelect
-							value={row.addl_comp_transport_of_works.value}
+							boundValue={row.addl_comp_transport_of_works?.value}
 							name="addl_comp_transport_of_works"
 							class="w-48 border-b-0"
-							required
 						>
 							{#each Object.entries(addlCompensationCoverageOptions) as [key, value]}
 								<FormOption value={key}>{value[siteState.language]}</FormOption>
@@ -445,11 +430,17 @@
 				</div>
 			</div>
 
-			<div class="flex items-center justify-center pt-8">
+			<div class="flex items-center justify-center gap-8 pt-8">
 				<button
 					class="cursor-pointer border px-4 py-2 transition-colors hover:bg-black hover:text-white"
-					>{isSubmitting ? 'Submitting Form...' : 'Submit Form'}</button
+					>{isSubmitting ? 'Submitting...' : 'Submit Edits'}</button
 				>
+				<div
+					onclick={() => (showEditModal = false)}
+					class="cursor-pointer border px-4 py-2 transition-colors hover:bg-black hover:text-white"
+				>
+					Cancel
+				</div>
 			</div>
 		</div>
 	</form>

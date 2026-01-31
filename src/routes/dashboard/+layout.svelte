@@ -1,8 +1,6 @@
 <script lang="ts">
-	import { SignedIn, SignedOut, SignOutButton, SignIn } from 'svelte-clerk';
+	import { SignedIn, SignOutButton } from 'svelte-clerk';
 	import logo from '$lib/assets/logo.png';
-	import { siteState } from '$lib/states.svelte';
-	import DashboardRow from '$lib/components/DashboardRow.svelte';
 	let { data, children } = $props();
 </script>
 
@@ -14,7 +12,7 @@
 		<SignedIn>
 			<div class="flex gap-8">
 				<div>
-					{data.user.emailAddresses[0].emailAddress}
+					{data.user ? data.user.emailAddresses[0].emailAddress : ''}
 				</div>
 				<div>Deactivate account</div>
 				<div>
