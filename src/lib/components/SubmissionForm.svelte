@@ -32,7 +32,7 @@
 	import AddlCompMenuItem from './AddlCompMenuItem.svelte';
 	import X from './X.svelte';
 
-	let { formPage, email } = $props();
+	let { formPage, userID } = $props();
 	let isSubmitting = $state(false);
 	let selectedCountry: Country | undefined = $state();
 	let selectedYear: number | undefined = $state();
@@ -98,8 +98,7 @@
 		action="/form"
 	>
 		<div class="flex flex-col">
-			<input maxlength="250" hidden name="email" value={email} />
-
+			<input maxlength="250" hidden name="user_id" value={userID} />
 			<FormCheckbox required name="disclaimer" label={formPage.disclaimer[siteState.language]}
 			></FormCheckbox>
 
@@ -410,6 +409,30 @@
 						></FormCheckbox>
 					</div>
 				</div>
+
+				{#if formPage.showArtistQuestions}
+					<div onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}>
+						<FormSectionHeader>
+							{formPage.artistSectionTitle[siteState.language]}
+						</FormSectionHeader>
+
+						<div class="flex flex-col gap-4">
+							<BlockContent value={formPage.artistSectionContent[siteState.language]}
+							></BlockContent>
+
+							{#each formPage.artistQuestions.questions as question}
+								<div>
+									<div>{question.questionLabel[siteState.language]}</div>
+									<textarea
+										name={question.dbFieldName}
+										class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+									>
+									</textarea>
+								</div>
+							{/each}
+						</div>
+					</div>
+				{/if}
 
 				<div onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
 					<FormSectionHeader>

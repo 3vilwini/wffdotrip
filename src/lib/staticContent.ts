@@ -167,36 +167,6 @@ export const fieldLabels = {
 		[Language.IT]: 'Add additional compensation in italian',
 		[Language.ES]: 'Add additional compensation in spanish'
 	},
-	saleOfWork: {
-		[Language.EN]: 'Sale of work',
-		[Language.FR]: 'Sale of work in french',
-		[Language.IT]: 'Sale of work in italian',
-		[Language.ES]: 'Sale of work in spanish'
-	},
-	production: {
-		[Language.EN]: 'Production',
-		[Language.FR]: 'Production in french',
-		[Language.IT]: 'Production in italian',
-		[Language.ES]: 'Production in spanish'
-	},
-	travel: {
-		[Language.EN]: 'Travel',
-		[Language.FR]: 'Travel in french',
-		[Language.IT]: 'Travel in italian',
-		[Language.ES]: 'Travel in spanish'
-	},
-	accommodation: {
-		[Language.EN]: 'Accommodation',
-		[Language.FR]: 'Accommodation in french',
-		[Language.IT]: 'Accommodation in italian',
-		[Language.ES]: 'Accommodation in spanish'
-	},
-	transportOfWorks: {
-		[Language.EN]: 'Transport of works',
-		[Language.FR]: 'Transport of works in french',
-		[Language.IT]: 'Transport of works in italian',
-		[Language.ES]: 'Transport of works in spanish'
-	}
 };
 
 export const countryOptions = {

@@ -22,7 +22,7 @@ export const getAllRows = async () => {
 	}
 };
 
-export const getRowsByEmail = async (email: string) => {
+export const getRowsByUserID = async (userID: string) => {
 	const options = {
 		method: 'GET',
 		headers: {
@@ -33,7 +33,7 @@ export const getRowsByEmail = async (email: string) => {
 		user_field_names: 'true',
 		filters: JSON.stringify({
 			filter_type: 'AND',
-			filters: [{ type: 'equal', field: 'email', value: email }]
+			filters: [{ type: 'equal', field: 'user_id', value: userID }]
 		}),
 		groups: []
 	});

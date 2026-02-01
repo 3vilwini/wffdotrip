@@ -19,7 +19,7 @@
 		</SignedOut>
 		<SignedIn>
 			<SubmissionForm
-				email={data.user ? data.user.emailAddresses[0].emailAddress : ''}
+				userID={data.user ? data.user.id : ''}
 				formPage={data.formPage}
 			></SubmissionForm>
 		</SignedIn>

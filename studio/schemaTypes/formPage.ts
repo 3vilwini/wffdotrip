@@ -355,7 +355,13 @@ export default defineType({
       group: 'artist',
     }),
     defineField({
-      name: 'questions',
+      name: 'showArtistQuestions',
+      title: 'Show artist residency specific questions?',
+      type: 'boolean',
+      group: 'artist',
+    }),
+    defineField({
+      name: 'artistQuestions',
       title: 'Artist Residency Specific Questions',
       type: 'artistResidencyQuestions',
       group: 'artist',

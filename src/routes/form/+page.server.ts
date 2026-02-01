@@ -4,26 +4,34 @@ import { fail } from '@sveltejs/kit';
 import { clerkClient } from 'svelte-clerk/server';
 import { getFormPage } from '$lib/sanity';
 import type { PageLoad } from './$types';
+import { siteState } from '$lib/states.svelte';
 export const load = (async ({ locals }) => {
 	const formPage = await getFormPage();
 	const { userId } = locals.auth();
 	if (userId) {
 		let user = await clerkClient.users.getUser(userId);
 		user = JSON.parse(JSON.stringify(user));
+		siteState.user = user;
+
 		return { user, formPage };
 	} else {
 		return { formPage };
 	}
 }) satisfies PageLoad;
 
-
 export const actions = {
-	default: async ({ request }) => {
+	default: async ({ request, locals }) => {
 		const formData = await request.formData();
 		console.log(formData);
 		const reqBody = {} as { [key: string]: any };
 		formData.forEach((value, key) => {
-			reqBody[key] = value.toString();
+			if (key === 'email') {
+				console.log( locals.auth().userId);
+				reqBody[key] = locals.auth().userId;
+				value.toString();
+			} else {
+				reqBody[key] = value.toString();
+			}
 		});
 
 		if (request.method === 'POST') {
