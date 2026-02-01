@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { SignedIn, SignedOut, SignOutButton, SignIn } from 'svelte-clerk';
 	import { siteState } from '$lib/states.svelte';
-	import DashboardRow from '$lib/components/DashboardRow.svelte';
+	import DashboardRow from '$lib/components/dashboard/DashboardRow.svelte';
 	let { data } = $props();
 </script>
 

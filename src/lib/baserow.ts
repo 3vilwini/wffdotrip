@@ -1,15 +1,24 @@
 import { URLSearchParams } from 'url';
 
-export const getAllRows = async () => {
+export const getAllVerifiedRows = async () => {
 	const options = {
 		method: 'GET',
 		headers: {
 			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm'
 		}
 	};
+	const params = new URLSearchParams({
+		user_field_names: 'true',
+		filters: JSON.stringify({
+			filter_type: 'AND',
+			filters: [{ type: 'equal', field: 'verified', value: true }]
+		}),
+		groups: []
+	});
+
 	try {
 		const response = await fetch(
-			'https://api.baserow.io/api/database/rows/table/797535/?user_field_names=true',
+			'https://api.baserow.io/api/database/rows/table/797535/?' + params,
 			options
 		);
 		console.log(response);

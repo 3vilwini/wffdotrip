@@ -8,6 +8,13 @@ export const enum Country {
 	UNSELECTED = 'UNSELECTED'
 }
 
+export const currency = {
+	[Country.UK]: '£',
+	[Country.FRANCE]: '€',
+	[Country.ITALY]: '€',
+	[Country.SPAIN]: '€'
+};
+
 export const fieldLabels = {
 	country: {
 		[Language.EN]: 'Country',
@@ -95,7 +102,7 @@ export const fieldLabels = {
 		[Language.IT]: 'per week in italian',
 		[Language.ES]: 'per week in spanish'
 	},
-	workerCategory: {
+	workerType: {
 		[Language.EN]: 'Worker category',
 		[Language.FR]: 'Worker category in french',
 		[Language.IT]: 'Worker category in italian',
@@ -166,7 +173,7 @@ export const fieldLabels = {
 		[Language.FR]: 'Add additional compensation in french',
 		[Language.IT]: 'Add additional compensation in italian',
 		[Language.ES]: 'Add additional compensation in spanish'
-	},
+	}
 };
 
 export const countryOptions = {

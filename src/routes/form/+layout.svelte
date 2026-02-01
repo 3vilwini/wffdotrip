@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { SignedIn, SignedOut } from 'svelte-clerk';
-	import SubmissionForm from '$lib/components/SubmissionForm.svelte';
-	import SubmissionFormPreview from '$lib/components/SubmissionFormPreview.svelte';
+	import SubmissionForm from '$lib/components/form/SubmissionForm.svelte';
+	import SubmissionFormPreview from '$lib/components/form/SubmissionFormPreview.svelte';
 	import { siteState } from '$lib/states.svelte.js';
-	import FormHelp from '$lib/components/FormHelp.svelte';
+	import FormHelp from '$lib/components/form/FormHelp.svelte';
 	let { data, children } = $props();
 </script>
 

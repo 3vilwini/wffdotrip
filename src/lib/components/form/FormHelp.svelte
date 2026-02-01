@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { siteState } from '$lib/states.svelte';
-	import BlockContent from './blockContent/BlockContent.svelte';
+	import BlockContent from '../blockContent/BlockContent.svelte';
 
 	let { formPage } = $props();
 	console.log(formPage);

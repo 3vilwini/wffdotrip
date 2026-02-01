@@ -1,5 +1,5 @@
 <script lang="ts">
-	import X from './X.svelte';
+	import X from '../X.svelte';
 
 	import { enhance } from '$app/forms';
 
@@ -9,7 +9,7 @@
 		jobObtainedViaOptions,
 		addlCompItems,
 		AddlCompItem
-	} from './../staticContent.ts';
+	} from '../../staticContent.ts';
 	import { siteState } from '$lib/states.svelte';
 	import {
 		Country,
@@ -117,9 +117,9 @@
 		</div>
 
 		<div class="flex basis-1/4 gap-2">
-			{#if row.worker_category}
+			{#if row.worker_type}
 				<div class="font-sans text-lg leading-3">
-					{getWorkerTypeLabel(row.worker_category, siteState.language)}
+					{getWorkerTypeLabel(row.worker_type, siteState.language)}
 				</div>
 			{/if}
 			{#if row.job_title}
