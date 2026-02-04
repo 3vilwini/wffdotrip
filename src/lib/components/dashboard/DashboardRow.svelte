@@ -7,8 +7,11 @@
 		addlCompensationCoverageOptions,
 		fieldLabels,
 		jobObtainedViaOptions,
-		addlCompItems,
-		AddlCompItem
+		AddlCompItem,
+		addlCompItemOptions,
+		currency,
+		contractLengthUnitOptions,
+		indexHeaderLabels
 	} from '../../staticContent.ts';
 	import { siteState } from '$lib/states.svelte';
 	import {
@@ -23,6 +26,7 @@
 	} from '$lib/staticContent';
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
+	import DashboardRowAddlCompLine from './DashboardRowAddlCompLine.svelte';
 	let { row, formPage } = $props();
 	let rowExpanded = $state(false);
 	let showEditModal = $state(false);
@@ -40,9 +44,9 @@
 </script>
 
 {#if showEditModal}
-	<div class="fixed top-0 left-0 flex h-dvh w-dvw justify-center py-12 pb-24">
+	<div class="fixed z-10 top-0 left-0 flex h-dvh w-dvw justify-center py-12 pb-24">
 		<div
-			class="relative max-w-2xl overflow-scroll border border-black bg-white px-4 pb-12 font-mono text-xs leading-normal"
+			class="relative max-w-2xl overflow-auto border border-black bg-white px-4 pb-12 font-mono text-xs leading-normal"
 		>
 			<EditRowModal bind:showEditModal {row} {formPage}></EditRowModal>
 			<div
@@ -103,7 +107,7 @@
 		<div class="flex basis-1/4 gap-4">
 			{#if row.city && row.country}
 				<div class="basis-1/2">
-					{row.city}, {countryOptions[row.country][siteState.language]}
+					{row.city}, {countryOptions[row.country.value][siteState.language]}
 				</div>
 			{/if}
 			<div class="basis-1/3">
@@ -119,7 +123,7 @@
 		<div class="flex basis-1/4 gap-2">
 			{#if row.worker_type}
 				<div class="font-sans text-lg leading-3">
-					{getWorkerTypeLabel(row.worker_type, siteState.language)}
+					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
 			{#if row.job_title}
@@ -129,7 +133,7 @@
 			{/if}
 		</div>
 
-		<div class="basis-1/5 font-serif text-lg leading-2.5">
+		<div class="relative -top-0.5 basis-1/5 font-serif text-lg leading-[1] tracking-tight">
 			{#if row.employer_name}
 				{row.employer_name}
 			{/if}
@@ -137,23 +141,15 @@
 
 		<div class="flex basis-1/5 justify-between">
 			{#if row.contract_type}
-				<div>{contractTypeOptions[row.contract_type][siteState.language]}</div>
+				<div>{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
 			{/if}
-			{#if row.compensation_amount && row.compensation_frequency}
+			{#if row.compensation_amount && row.compensation_frequency && row.country}
 				<div>
 					<div
 						class="-mt-0.5 rounded-full border px-2 py-0.5 text-[9px] whitespace-nowrap uppercase"
 					>
-						{row.compensation_amount}{row.country === Country.UK
-							? '£'
-							: row.country === Country.FRANCE
-								? '€'
-								: row.country === Country.ITALY
-									? '€'
-									: row.country === Country.SPAIN
-										? '€'
-										: ''}
-						{compensationFrequencyOptions[row.compensation_frequency][siteState.language]}
+						{row.compensation_amount}{currency[row.country.value]}
+						{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
 					</div>
 				</div>
 			{/if}
@@ -205,12 +201,12 @@
 					{/if}
 					{#if row.job_experience}
 						<div>
-							{jobExperienceOptions[row.job_experience][siteState.language]} of experience
+							{jobExperienceOptions[row.job_experience.value][siteState.language]} of experience
 						</div>
 					{/if}
 					{#if row.job_obtained_via}
 						<div class="mb-4">
-							{jobObtainedViaOptions[row.job_obtained_via][siteState.language]}
+							{jobObtainedViaOptions[row.job_obtained_via.value][siteState.language]}
 						</div>
 					{/if}
 					{#if row.satisfied_with_compensation}
@@ -235,12 +231,14 @@
 				<div class="basis-1/5">
 					{#if row.employer_type}
 						<div>
-							{getEmployerTypeLabel(row.employer_type, siteState.language)}
+							{getEmployerTypeLabel(row.employer_type.value)}
 						</div>
 					{/if}
 					{#if row.num_employees}
 						<div class="mb-4">
-							{numEmployeesOptions[row.num_employees][siteState.language]}
+							{numEmployeesOptions[row.num_employees.value] +
+								' ' +
+								fieldLabels.employees[siteState.language]}
 						</div>
 					{/if}
 					{#if row.contract_num_hours}
@@ -251,7 +249,8 @@
 					{#if row.contract_length && row.contract_length_unit}
 						<div>
 							{row.contract_length}
-							{row.contract_length_unit.value} contract
+							{contractLengthUnitOptions[row.contract_length_unit.value][siteState.language]}
+							{indexHeaderLabels.contract[siteState.language]?.toLowerCase()}
 						</div>
 					{/if}
 					{#if row.worker_status}
@@ -261,119 +260,81 @@
 					{/if}
 				</div>
 				<div class="basis-1/5">
-					{#if row.addl_comp_sale_of_work || row.addl_comp_production || row.addl_comp_travel || row.addl_comp_accommodation || row.addl_comp_transport_of_works}
-						<div class="mb-4">Additional Compensation</div>
+					{#if row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel}
+						<div class="my-4">{fieldLabels.addlComp[siteState.language]}</div>
 						{#if row.addl_comp_sale_of_work}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.SALE_OF_WORK][siteState.language]}
-								</div>
-								<div>
-									{row.addl_comp_sale_of_work}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.SALE_OF_WORK}
+								value={row.addl_comp_sale_of_work + currency[row.country.value]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_production_budget}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.PRODUCTION_BUDGET][siteState.language]}
-								</div>
-								<div>
-									{row.addl_comp_production_budget}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.PRODUCTION_BUDGET}
+								value={row.addl_comp_production_budget + currency[row.country.value]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_transport_of_work}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.TRANSPORT_OF_WORK][siteState.language]}
-								</div>
-								<div>
-									{addlCompensationCoverageOptions[row.addl_comp_transport_of_work.value][
-										siteState.language
-									]}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.TRANSPORT_OF_WORK}
+								value={addlCompensationCoverageOptions[row.addl_comp_transport_of_work.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_travel}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.TRAVEL][siteState.language]}
-								</div>
-								<div>
-									{addlCompensationCoverageOptions[row.addl_comp_travel.value][siteState.language]}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.TRAVEL}
+								value={addlCompensationCoverageOptions[row.addl_comp_travel.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_accommodation}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.ACCOMMODATION][siteState.language]}
-								</div>
-								<div>
-									{addlCompensationCoverageOptions[row.addl_comp_accommodation.value][
-										siteState.language
-									]}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.ACCOMMODATION}
+								value={addlCompensationCoverageOptions[row.addl_comp_accommodation.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_meals}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.MEALS][siteState.language]}
-								</div>
-								<div>
-									{#if addlCompensationCoverageOptions[row.addl_comp_meals.value]}
-										{addlCompensationCoverageOptions[row.addl_comp_meals.value][siteState.language]}
-									{/if}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.MEALS}
+								value={addlCompensationCoverageOptions[row.addl_comp_meals.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_per_diem}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.PER_DIEM][siteState.language]}
-								</div>
-								<div>
-									{row.addl_comp_production_budget}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.PER_DIEM}
+								value={row.addl_comp_per_diem + currency[row.country.value]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_health_insurance}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.HEALTH_INSURANCE][siteState.language]}
-								</div>
-								<div>
-									{#if addlCompensationCoverageOptions[row.addl_comp_health_insurance.value]}
-										{addlCompensationCoverageOptions[row.addl_comp_health_insurance.value][siteState.language]}
-									{/if}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.HEALTH_INSURANCE}
+								value={addlCompensationCoverageOptions[row.addl_comp_health_insurance.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_public_transportation}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.PUBLIC_TRANSPORTATION][siteState.language]}
-								</div>
-								<div>
-									{#if addlCompensationCoverageOptions[row.addl_comp_public_transportation.value]}
-										{addlCompensationCoverageOptions[row.addl_comp_public_transportation.value][siteState.language]}
-									{/if}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.PUBLIC_TRANSPORTATION}
+								value={addlCompensationCoverageOptions[row.addl_comp_public_transportation.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_commission}
-							<div class="flex justify-between gap-2">
-								<div>
-									{addlCompItems[AddlCompItem.COMMISSION][siteState.language]}
-								</div>
-								<div>
-									{#if addlCompensationCoverageOptions[row.addl_comp_commission.value]}
-										{addlCompensationCoverageOptions[row.addl_comp_commission.value][siteState.language]}
-									{/if}
-								</div>
-							</div>
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.COMMISSION}
+								value={addlCompensationCoverageOptions[row.addl_comp_commission.value][
+									siteState.language
+								]}
+							></DashboardRowAddlCompLine>
 						{/if}
 					{/if}
 				</div>

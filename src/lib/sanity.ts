@@ -51,3 +51,9 @@ export async function getFormPage(): Promise<any> {
         *[_id=="formPage"][0]
     `);
 }
+
+export async function getIndexPage(): Promise<any> {
+	return await client.fetch(groq`
+        *[_id=="indexPage"][0]
+    `);
+}

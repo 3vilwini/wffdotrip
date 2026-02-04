@@ -9,6 +9,7 @@ import selectInputCountryDependent from './selectInputCountryDependent'
 import artistResidencyQuestions from './artistResidencyQuestions'
 import workerCategoryOptions from './workerCategoryOptions'
 import blockContent from './blockContent'
+import indexPage from './indexPage'
 export const schemaTypes = [
   blockContent,
   formPage,
@@ -21,4 +22,5 @@ export const schemaTypes = [
   workerCategoryOptions,
   siteMetadata,
   selectInputCountryDependent,
+  indexPage,
 ]

@@ -7,19 +7,21 @@
 		numEmployeesOptions,
 		contractTypeOptions,
 		yearOption2010OrBefore,
-		employerTypeOptions,
 		workerStatusOptions,
 		Country,
 		ContractType,
 		compensationFrequencyOptions,
-		contractLengthUnit,
-		jobExperienceOptions,
+		contractLengthUnitOptions,
 		jobObtainedViaOptions,
 		workerTypeOptions,
 		WorkerType,
 		addlCompensationCoverageOptions,
-		addlCompItems,
-		AddlCompItem
+		AddlCompItem,
+		addlCompItemOptions,
+		getWorkerTypeHelpText,
+		jobExperienceOptions,
+		employerTypeOptions,
+		currency
 	} from '$lib/staticContent';
 	import FormSectionHeader from './FormSectionHeader.svelte';
 	import { siteState } from '$lib/states.svelte';
@@ -38,12 +40,7 @@
 	let selectedYear: number | undefined = $state();
 	let selectedContractType: ContractType | undefined = $state();
 	let selectedWorkerType: WorkerType | undefined = $state();
-	let selectedWorkerTypeHelpText = $state('');
-
-	let showAddlCompMenu = $state(false);
-	const toggleAddlCompMenu = () => {
-		showAddlCompMenu = !showAddlCompMenu;
-	};
+	let selectedWorkerTypeHelpText = $derived(getWorkerTypeHelpText(selectedWorkerType));
 
 	let thisYear = new Date().getFullYear();
 	let minYear = 2011;
@@ -52,22 +49,17 @@
 		yearOptions.push(i);
 	}
 
-	const setHelpText = (helpText: string) => {
-		selectedWorkerTypeHelpText = helpText;
+	let showAddlCompMenu = $state(false);
+	const toggleAddlCompMenu = () => {
+		showAddlCompMenu = !showAddlCompMenu;
 	};
 
-	let addlCompFieldsShown = $state({
-		SALE_OF_WORK: false,
-		PRODUCTION_BUDGET: false,
-		TRANSPORT_OF_WORK: false,
-		TRAVEL: false,
-		ACCOMMODATION: false,
-		MEALS: false,
-		PER_DIEM: false,
-		HEALTH_INSURANCE: false,
-		PUBLIC_TRANSPORTATION: false,
-		COMMISSION: false
+	let initAddlCompFieldsShown = {};
+	Object.keys(addlCompItemOptions).forEach((key) => {
+		initAddlCompFieldsShown[key] = false;
 	});
+
+	let addlCompFieldsShown = $state(initAddlCompFieldsShown);
 
 	const showAddlCompField = (key: AddlCompItem) => {
 		showAddlCompMenu = false;
@@ -102,7 +94,7 @@
 			<FormCheckbox required name="disclaimer" label={formPage.disclaimer[siteState.language]}
 			></FormCheckbox>
 
-			<div onmouseenter={() => (siteState.currFormSection = 'whereWhen')}>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'whereWhen')}>
 				<FormSectionHeader>
 					{formPage.whereWhenSectionTitle[siteState.language]}
 				</FormSectionHeader>
@@ -132,7 +124,7 @@
 				</div>
 			</div>
 
-			<div onmouseenter={() => (siteState.currFormSection = 'employer')}>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'employer')}>
 				<FormSectionHeader>
 					{formPage.employerSectionTitle[siteState.language]}
 				</FormSectionHeader>
@@ -161,13 +153,15 @@
 							>{fieldLabels.numEmployees[siteState.language]}</FormOption
 						>
 						{#each Object.entries(numEmployeesOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
+							<FormOption value={key}
+								>{value + ' ' + fieldLabels.employees[siteState.language]}</FormOption
+							>
 						{/each}
 					</FormSelect>
 				</div>
 			</div>
 
-			<div onmouseenter={() => (siteState.currFormSection = 'terms')}>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'terms')}>
 				<FormSectionHeader>
 					{formPage.termsSectionTitle[siteState.language]}
 				</FormSectionHeader>
@@ -182,7 +176,7 @@
 							>{fieldLabels.contractType[siteState.language]}</FormOption
 						>
 						{#each Object.entries(contractTypeOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
+							<FormOption value={key}>{value[siteState.language]}</FormOption>addlCompItemOptions
 						{/each}
 					</FormSelect>
 
@@ -207,7 +201,7 @@
 							></FormSimpleInput>
 
 							<FormSelect name="contract_length_unit" class="w-20">
-								{#each Object.entries(contractLengthUnit) as [key, value]}
+								{#each Object.entries(contractLengthUnitOptions) as [key, value]}
 									<FormOption value={key}>{value[siteState.language]}</FormOption>
 								{/each}
 							</FormSelect>
@@ -228,7 +222,7 @@
 				</div>
 			</div>
 
-			<div onmouseenter={() => (siteState.currFormSection = 'job')}>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'job')}>
 				<FormSectionHeader>
 					{formPage.jobSectionTitle[siteState.language]}
 				</FormSectionHeader>
@@ -239,16 +233,12 @@
 						class=" basis-[calc(50%-0.5rem)]"
 						required
 					>
-						<FormOption value="" isDefault
-							>{fieldLabels.workerType[siteState.language]}</FormOption
-						>
+						<FormOption value="" isDefault>{fieldLabels.workerType[siteState.language]}</FormOption>
 						{#each Object.values(workerTypeOptions) as section}
 							<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
 								{#each Object.entries(section.options) as [key, value]}
-									<option
-										onclick={() => setHelpText(value.detail[siteState.language])}
-										value={key}
-										class="pl-8 text-black">{value.label[siteState.language]}</option
+									<option value={key} class="pl-8 text-black"
+										>{value.label[siteState.language]}</option
 									>
 								{/each}
 							</optgroup>
@@ -273,7 +263,9 @@
 							>{fieldLabels.jobExperience[siteState.language]}</FormOption
 						>
 						{#each Object.entries(jobExperienceOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
+							<FormOption value={key}
+								>{value + ' ' + fieldLabels.yearsOfExperience[siteState.language]}</FormOption
+							>
 						{/each}
 					</FormSelect>
 
@@ -288,7 +280,7 @@
 				</div>
 			</div>
 
-			<div onmouseenter={() => (siteState.currFormSection = 'compensation')}>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'compensation')}>
 				<FormSectionHeader>
 					{formPage.compensationSectionTitle[siteState.language]}
 				</FormSectionHeader>
@@ -301,6 +293,11 @@
 							class="grow"
 							required
 						/>
+						{#if selectedCountry}
+							<div class="relative -left-12 flex items-center pr-4">
+								{currency[selectedCountry]}
+							</div>
+						{/if}
 						<FormSelect name="compensation_frequency" class="w-30" required>
 							<FormOption value=""
 								>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
@@ -327,7 +324,7 @@
 					</button>
 					{#if showAddlCompMenu}
 						<div class="absolute top-4 left-8 flex flex-col gap-1 sm:w-50">
-							{#each Object.entries(addlCompItems) as [key, langOptions]}
+							{#each Object.entries(addlCompItemOptions) as [key, langOptions]}
 								{#if !addlCompFieldsShown[key]}
 									<AddlCompMenuItem onclick={() => showAddlCompField(key)}
 										>{langOptions[siteState.language]}</AddlCompMenuItem
@@ -341,32 +338,59 @@
 					{#each Object.entries(addlCompFieldsShown) as [key, val]}
 						{#if val}
 							<AddlCompensationContainer>
-								{addlCompItems[key][siteState.language]}
+								{addlCompItemOptions[key][siteState.language]}
 								<div class="flex items-center gap-4">
 									{#if key === 'SALE_OF_WORK'}
-										<FormSimpleInput
-											name="addl_comp_sale_of_work"
-											type="number"
-											placeholder={fieldLabels.compensationAmount[siteState.language]}
-											class="w-48 border-b-0"
-											required
-										/>
+										<div class="flex w-48">
+											<FormSimpleInput
+												name="addl_comp_sale_of_work"
+												type="number"
+												placeholder={fieldLabels.compensationAmount[siteState.language]}
+												class="w-48 border-b-0"
+												required
+											/>
+											{#if selectedCountry}
+												<div
+													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+												>
+													{currency[selectedCountry]}
+												</div>
+											{/if}
+										</div>
 									{:else if key === 'PRODUCTION_BUDGET'}
-										<FormSimpleInput
-											name="addl_comp_production_budget"
-											type="number"
-											placeholder={fieldLabels.compensationAmount[siteState.language]}
-											class="w-48 border-b-0"
-											required
-										/>
+										<div class="flex w-48">
+											<FormSimpleInput
+												name="addl_comp_production_budget"
+												type="number"
+												placeholder={fieldLabels.compensationAmount[siteState.language]}
+												class="w-48 border-b-0"
+												required
+											/>
+											{#if selectedCountry}
+												<div
+													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+												>
+													{currency[selectedCountry]}
+												</div>
+											{/if}
+										</div>
 									{:else if key === 'PER_DIEM'}
-										<FormSimpleInput
-											name="addl_comp_per_diem"
-											type="number"
-											placeholder={fieldLabels.compensationAmount[siteState.language]}
-											class="w-48 border-b-0"
-											required
-										/>
+										<div class="flex w-48">
+											<FormSimpleInput
+												name="addl_comp_per_diem"
+												type="number"
+												placeholder={fieldLabels.compensationAmount[siteState.language]}
+												class=" w-48 border-b-0"
+												required
+											/>
+											{#if selectedCountry}
+												<div
+													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+												>
+													{currency[selectedCountry]}
+												</div>
+											{/if}
+										</div>
 									{:else}
 										<FormSelect
 											name={'addl_comp_' + key.toLowerCase()}
@@ -390,7 +414,7 @@
 					{/each}
 				</div>
 
-				<div onmouseenter={() => (siteState.currFormSection = 'sentiment')}>
+				<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'sentiment')}>
 					<FormSectionHeader>
 						{formPage.sentimentSectionTitle[siteState.language]}
 					</FormSectionHeader>
@@ -411,7 +435,10 @@
 				</div>
 
 				{#if formPage.showArtistQuestions}
-					<div onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}>
+					<div
+						role="presentation"
+						onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}
+					>
 						<FormSectionHeader>
 							{formPage.artistSectionTitle[siteState.language]}
 						</FormSectionHeader>
@@ -434,7 +461,7 @@
 					</div>
 				{/if}
 
-				<div onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
+				<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
 					<FormSectionHeader>
 						{formPage.addlSectionTitle[siteState.language]}
 					</FormSectionHeader>

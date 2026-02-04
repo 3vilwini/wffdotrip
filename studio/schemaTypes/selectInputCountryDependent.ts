@@ -1,4 +1,3 @@
-export const schemaTypes = []
 import {defineType, defineField} from 'sanity'
 
 export default defineType({

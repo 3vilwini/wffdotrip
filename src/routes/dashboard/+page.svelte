@@ -50,11 +50,13 @@
 					anonymous.
 				</div>
 			</div>
-			<a
-				href="/form"
-				class="flex items-center justify-center border px-4 hover:bg-black hover:text-white"
-				>Submit a new entry</a
-			>
+			<div class="flex items-center">
+				<a
+					href="/form"
+					class="flex items-center justify-center border border-dashed bg-black px-4 py-2 whitespace-nowrap text-white hover:bg-white hover:text-black"
+					>Submit a new entry
+				</a>
+			</div>
 		</div>
 	</div>
 

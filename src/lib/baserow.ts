@@ -21,9 +21,7 @@ export const getAllVerifiedRows = async () => {
 			'https://api.baserow.io/api/database/rows/table/797535/?' + params,
 			options
 		);
-		console.log(response);
 		const data = await response.json();
-		console.log(data);
 		return data;
 	} catch (error) {
 		console.error(error);
@@ -52,9 +50,7 @@ export const getRowsByUserID = async (userID: string) => {
 			'https://api.baserow.io/api/database/rows/table/797535/?' + params,
 			options
 		);
-		console.log(response);
 		const data = await response.json();
-		console.log(data);
 		return data;
 	} catch (error) {
 		console.error(error);
@@ -110,7 +106,6 @@ export const submitForm = async (data) => {
 		},
 		body: JSON.stringify(data)
 	};
-	console.log(options);
 	try {
 		const response = await fetch(
 			'https://api.baserow.io/api/database/rows/table/797535/?user_field_names=true',

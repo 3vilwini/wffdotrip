@@ -3,14 +3,10 @@
 	import BlockContent from '../blockContent/BlockContent.svelte';
 
 	let { formPage } = $props();
-	console.log(formPage);
 	let helpText = $derived(formPage[`${siteState.currFormSection}HelpText`]);
-    let helpTextSpecificLanguage = $derived(helpText ? helpText[siteState.language] : '')
-	console.log(`${siteState.currFormSection}HelpText`);
-	console.log(formPage[`${siteState.currFormSection}HelpText`]);
-
+	let helpTextSpecificLanguage = $derived(helpText ? helpText[siteState.language] : '');
 </script>
 
-<div class="text-xs font-mono max-w-xs">
+<div class="max-w-xs font-mono text-xs">
 	<BlockContent value={helpTextSpecificLanguage}></BlockContent>
 </div>

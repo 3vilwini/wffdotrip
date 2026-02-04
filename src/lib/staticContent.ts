@@ -1,18 +1,51 @@
-import { Language } from './states.svelte';
+import { Language, siteState } from './states.svelte';
 
 export const enum Country {
 	UK = 'UK',
 	FRANCE = 'FRANCE',
 	ITALY = 'ITALY',
-	SPAIN = 'SPAIN',
-	UNSELECTED = 'UNSELECTED'
+	SPAIN = 'SPAIN'
 }
+
+export const countryShortCode = {
+	[Country.UK]: 'UK',
+	[Country.FRANCE]: 'FR',
+	[Country.ITALY]: 'IT',
+	[Country.SPAIN]: 'SP'
+};
 
 export const currency = {
 	[Country.UK]: '£',
 	[Country.FRANCE]: '€',
 	[Country.ITALY]: '€',
 	[Country.SPAIN]: '€'
+};
+
+export const indexHeaderLabels = {
+	worker: {
+		[Language.EN]: 'Worker',
+		[Language.FR]: 'Worker (FR)',
+		[Language.IT]: 'Worker (IT)',
+		[Language.ES]: 'Worker (ES)'
+	},
+	employer: {
+		[Language.EN]: 'Employer',
+		[Language.FR]: 'Employer (FR)',
+		[Language.IT]: 'Employer (IT)',
+		[Language.ES]: 'Employer (ES)'
+	},
+	contract: {
+		[Language.EN]: 'Contract',
+		[Language.FR]: 'Contract (FR)',
+		[Language.IT]: 'Contract (IT)',
+		[Language.ES]: 'Contract (ES)'
+	},
+	wage: {
+		[Language.EN]: 'Wage',
+		[Language.FR]: 'Wage (FR)',
+		[Language.IT]: 'Wage (IT)',
+		[Language.ES]: 'Wage (ES)'
+	}
 };
 
 export const fieldLabels = {
@@ -97,10 +130,10 @@ export const fieldLabels = {
 		[Language.ES]: '# of hours (optional) in spanish'
 	},
 	perWeek: {
-		[Language.EN]: 'per week',
-		[Language.FR]: 'per week in french',
-		[Language.IT]: 'per week in italian',
-		[Language.ES]: 'per week in spanish'
+		[Language.EN]: 'hours per week',
+		[Language.FR]: 'hours per week in french',
+		[Language.IT]: 'hours per week in italian',
+		[Language.ES]: 'hours per week in spanish'
 	},
 	workerType: {
 		[Language.EN]: 'Worker category',
@@ -169,10 +202,28 @@ export const fieldLabels = {
 		[Language.ES]: 'I felt fairly treated against my colleagues in spanish'
 	},
 	addlComp: {
-		[Language.EN]: 'Add additional compensation',
-		[Language.FR]: 'Add additional compensation in french',
-		[Language.IT]: 'Add additional compensation in italian',
-		[Language.ES]: 'Add additional compensation in spanish'
+		[Language.EN]: 'Additional compensation',
+		[Language.FR]: 'Additional compensation in french',
+		[Language.IT]: 'Additional compensation in italian',
+		[Language.ES]: 'Additional compensation in spanish'
+	},
+	employees: {
+		[Language.EN]: 'employees',
+		[Language.FR]: 'employees in french',
+		[Language.IT]: 'employees in italian',
+		[Language.ES]: 'employees in spanish'
+	},
+	yearsOfExperience: {
+		[Language.EN]: 'year(s) of experience',
+		[Language.FR]: 'year(s) of experience in french',
+		[Language.IT]: 'year(s) of experience in italian',
+		[Language.ES]: 'year(s) of experience in spanish'
+	},
+	submitAnEntry: {
+		[Language.EN]: 'Submit an entry',
+		[Language.FR]: 'Submit an entry in french',
+		[Language.IT]: 'Submit an entry in italian',
+		[Language.ES]: 'Submit an entry in spanish'
 	}
 };
 
@@ -653,71 +704,26 @@ export const employerTypeOptions = {
 	}
 };
 
-export const getEmployerTypeLabel = (employerType: EmployerType, language: Language): string => {
+export const getEmployerTypeLabel = (employerType: EmployerType): string => {
 	for (const subgroupKey in employerTypeOptions) {
 		const subgroup = employerTypeOptions[subgroupKey as EmployerTypeSubgroup];
 		if (employerType in subgroup.options) {
-			return subgroup.options[employerType][language];
+			return subgroup.options[employerType][siteState.language];
 		}
 	}
 	return employerType;
 };
 
 export const numEmployeesOptions = {
-	'0_employees': {
-		[Language.EN]: '0 employees',
-		[Language.FR]: '0 employees FR',
-		[Language.IT]: '0 employees IT',
-		[Language.ES]: '0 employees ES'
-	},
-	'1_2': {
-		[Language.EN]: '1-2 employees',
-		[Language.FR]: '1-2 employees FR',
-		[Language.IT]: '1-2 employees IT',
-		[Language.ES]: '1-2 employees ES'
-	},
-	'3_5': {
-		[Language.EN]: '3-5 employees',
-		[Language.FR]: '3-5 employees FR',
-		[Language.IT]: '3-5 employees IT',
-		[Language.ES]: '3-5 employees ES'
-	},
-	'6_10': {
-		[Language.EN]: '6-10 employees',
-		[Language.FR]: '6-10 employees FR',
-		[Language.IT]: '6-10 employees IT',
-		[Language.ES]: '6-10 employees ES'
-	},
-	'11_20': {
-		[Language.EN]: '11-20 employees',
-		[Language.FR]: '11-20 employees FR',
-		[Language.IT]: '11-20 employees IT',
-		[Language.ES]: '11-20 employees ES'
-	},
-	'21_50': {
-		[Language.EN]: '21-50 employees',
-		[Language.FR]: '21-50 employees FR',
-		[Language.IT]: '21-50 employees IT',
-		[Language.ES]: '21-50 employees ES'
-	},
-	'51_100': {
-		[Language.EN]: '51-100 employees',
-		[Language.FR]: '51-100 employees FR',
-		[Language.IT]: '51-100 employees IT',
-		[Language.ES]: '51-100 employees ES'
-	},
-	'101_200': {
-		[Language.EN]: '101-200 employees',
-		[Language.FR]: '101-200 employees FR',
-		[Language.IT]: '101-200 employees IT',
-		[Language.ES]: '101-200 employees ES'
-	},
-	'201_plus': {
-		[Language.EN]: '200+ employees',
-		[Language.FR]: '200+ employees FR',
-		[Language.IT]: '200+ employees IT',
-		[Language.ES]: '200+ employees ES'
-	}
+	'0_EMPLOYEES': '0',
+	'1_TO_2_EMPLOYEES': '1-2',
+	'3_TO_5_EMPLOYEES': '3-5',
+	'6_TO_10_EMPLOYEES': '6-10',
+	'11_TO_20_EMPLOYEES': '11-20',
+	'21_TO_50_EMPLOYEES': '21-50',
+	'51_TO_100_EMPLOYEES': '51-100',
+	'101_TO_200_EMPLOYEES': '101-200',
+	'201_PLUS_EMPLOYEES': '201+'
 };
 
 export const enum ContractType {
@@ -812,7 +818,7 @@ export const enum ContractLengthUnit {
 	MONTHS = 'MONTHS'
 }
 
-export const contractLengthUnit = {
+export const contractLengthUnitOptions = {
 	[ContractLengthUnit.HOURS]: {
 		[Language.EN]: 'hours',
 		[Language.FR]: 'hours FR',
@@ -1028,10 +1034,10 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.JOURNALIST]: {
 				label: {
-					[Language.EN]: 'journalist',
-					[Language.FR]: 'journalist in french',
-					[Language.IT]: 'journalist in italian',
-					[Language.ES]: 'journalist in spanish'
+					[Language.EN]: 'Journalist',
+					[Language.FR]: 'Journalist in french',
+					[Language.IT]: 'Journalist in italian',
+					[Language.ES]: 'Journalist in spanish'
 				},
 				detail: {
 					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
@@ -2271,84 +2277,41 @@ export const workerTypeOptions = {
 		}
 	}
 };
+export const getWorkerTypeHelpText = (workerType: WorkerType | undefined): string => {
+	if (workerType) {
+		for (const subgroupKey in workerTypeOptions) {
+			const subgroup = workerTypeOptions[subgroupKey as WorkerTypeSubgroup];
+			if (workerType in subgroup.options) {
+				return subgroup.options[workerType].detail[siteState.language];
+			}
+		}
+	}
 
-export const getWorkerTypeLabel = (workerType: WorkerType, language: Language): string => {
+	return '';
+};
+
+export const getWorkerTypeLabel = (workerType: WorkerType): string => {
 	for (const subgroupKey in workerTypeOptions) {
 		const subgroup = workerTypeOptions[subgroupKey as WorkerTypeSubgroup];
 		if (workerType in subgroup.options) {
-			return subgroup.options[workerType].label[language];
+			return subgroup.options[workerType].label[siteState.language];
 		}
 	}
 	return workerType;
 };
 
 export const jobExperienceOptions = {
-	'0': {
-		[Language.EN]: 'No experience',
-		[Language.FR]: 'No experience FR',
-		[Language.IT]: 'No experience IT',
-		[Language.ES]: 'No experience ES'
-	},
-	'1': {
-		[Language.EN]: '1 year',
-		[Language.FR]: '1 year FR',
-		[Language.IT]: '1 year IT',
-		[Language.ES]: '1 year ES'
-	},
-	'2': {
-		[Language.EN]: '2 years',
-		[Language.FR]: '2 years FR',
-		[Language.IT]: '2 years IT',
-		[Language.ES]: '2 years ES'
-	},
-	'3': {
-		[Language.EN]: '3 years',
-		[Language.FR]: '3 years FR',
-		[Language.IT]: '3 years IT',
-		[Language.ES]: '3 years ES'
-	},
-	'4': {
-		[Language.EN]: '4 years',
-		[Language.FR]: '4 years FR',
-		[Language.IT]: '4 years IT',
-		[Language.ES]: '4 years ES'
-	},
-	'5': {
-		[Language.EN]: '5 years',
-		[Language.FR]: '5 years FR',
-		[Language.IT]: '5 years IT',
-		[Language.ES]: '5 years ES'
-	},
-	'6_10': {
-		[Language.EN]: '6-10 years',
-		[Language.FR]: '6-10 years FR',
-		[Language.IT]: '6-10 years IT',
-		[Language.ES]: '6-10 years ES'
-	},
-	'11_15': {
-		[Language.EN]: '11-15 years',
-		[Language.FR]: '11-15 years FR',
-		[Language.IT]: '11-15 years IT',
-		[Language.ES]: '11-15 years ES'
-	},
-	'15_20': {
-		[Language.EN]: '15-20 years',
-		[Language.FR]: '15-20 years FR',
-		[Language.IT]: '15-20 years IT',
-		[Language.ES]: '15-20 years ES'
-	},
-	'20_30': {
-		[Language.EN]: '20-30 years',
-		[Language.FR]: '20-30 years FR',
-		[Language.IT]: '20-30 years IT',
-		[Language.ES]: '20-30 years ES'
-	},
-	'31': {
-		[Language.EN]: '30+ years',
-		[Language.FR]: '30+ years FR',
-		[Language.IT]: '30+ years IT',
-		[Language.ES]: '30+ years ES'
-	}
+	'0_EXPERIENCE': '0',
+	'1_YEAR_EXPERIENCE': '1',
+	'2_YEARS_EXPERIENCE': '2',
+	'3_YEARS_EXPERIENCE': '3',
+	'4_YEARS_EXPERIENCE': '4',
+	'5_YEARS_EXPERIENCE': '5',
+	'6_TO_10_YEARS_EXPERIENCE': '6-10',
+	'11_TO_15_YEARS_EXPERIENCE': '11-15',
+	'16_TO_20_YEARS_EXPERIENCE': '16-20',
+	'21_TO_30_YEARS_EXPERIENCE': '21-30',
+	'30_PLUS_YEARS_EXPERIENCE': '30+'
 };
 
 export const enum JobObtainedVia {
@@ -2487,7 +2450,7 @@ export const enum AddlCompItem {
 	COMMISSION = 'COMMISSION'
 }
 
-export const addlCompItems = {
+export const addlCompItemOptions = {
 	[AddlCompItem.SALE_OF_WORK]: {
 		[Language.EN]: 'Sale of work',
 		[Language.FR]: 'Sale of work FR',

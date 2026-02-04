@@ -25,7 +25,11 @@ export const actions = {
 		const row_id = formData.get('row_id')?.toString();
 		formData.forEach((value, key) => {
 			if (key !== row_id) {
-				reqBody[key] = value.toString();
+				if (value === '') {
+					reqBody[key] = null;
+				} else {
+					reqBody[key] = value.toString();
+				}
 			}
 		});
 

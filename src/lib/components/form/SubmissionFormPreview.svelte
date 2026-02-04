@@ -11,7 +11,7 @@
 		Country,
 		ContractType,
 		compensationFrequencyOptions,
-		contractLengthUnit,
+		contractLengthUnitOptions,
 		jobExperienceOptions,
 		jobObtainedViaOptions,
 		workerTypeOptions,
@@ -122,7 +122,9 @@
 							>{fieldLabels.numEmployees[siteState.language]}</FormOption
 						>
 						{#each Object.entries(numEmployeesOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
+							<FormOption value={key}
+								>{value + ' ' + fieldLabels.employees[siteState.language]}</FormOption
+							>
 						{/each}
 					</FormSelect>
 				</div>
@@ -167,7 +169,7 @@
 							></FormSimpleInput>
 
 							<FormSelect name="contract_length_unit">
-								{#each Object.entries(contractLengthUnit) as [key, value]}
+								{#each Object.entries(contractLengthUnitOptions) as [key, value]}
 									<FormOption value={key}>{value[siteState.language]}</FormOption>
 								{/each}
 							</FormSelect>
@@ -198,9 +200,7 @@
 						name="worker_type"
 						class=" basis-[calc(50%-0.5rem)]"
 					>
-						<FormOption value="" isDefault
-							>{fieldLabels.workerType[siteState.language]}</FormOption
-						>
+						<FormOption value="" isDefault>{fieldLabels.workerType[siteState.language]}</FormOption>
 						{#each Object.values(workerTypeOptions) as section}
 							<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
 								{#each Object.entries(section.options) as [key, value]}

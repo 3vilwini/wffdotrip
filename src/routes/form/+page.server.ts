@@ -22,11 +22,9 @@ export const load = (async ({ locals }) => {
 export const actions = {
 	default: async ({ request, locals }) => {
 		const formData = await request.formData();
-		console.log(formData);
 		const reqBody = {} as { [key: string]: any };
 		formData.forEach((value, key) => {
 			if (key === 'email') {
-				console.log( locals.auth().userId);
 				reqBody[key] = locals.auth().userId;
 				value.toString();
 			} else {
