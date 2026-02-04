@@ -176,7 +176,7 @@
 							>{fieldLabels.contractType[siteState.language]}</FormOption
 						>
 						{#each Object.entries(contractTypeOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>addlCompItemOptions
+							<FormOption value={key}>{value[siteState.language]}</FormOption>
 						{/each}
 					</FormSelect>
 
@@ -299,7 +299,7 @@
 							</div>
 						{/if}
 						<FormSelect name="compensation_frequency" class="w-30" required>
-							<FormOption value=""
+							<FormOption value="" isDefault
 								>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
 							>
 							{#each Object.entries(compensationFrequencyOptions) as [key, value]}
@@ -413,73 +413,68 @@
 						{/if}
 					{/each}
 				</div>
+			</div>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'sentiment')}>
+				<FormSectionHeader>
+					{formPage.sentimentSectionTitle[siteState.language]}
+				</FormSectionHeader>
+				<div class="flex flex-col gap-4">
+					<FormCheckbox
+						name="satisfied_with_compensation"
+						label={fieldLabels.satisfiedWithCompensation[siteState.language]}
+					></FormCheckbox>
+					<FormCheckbox
+						name="satisfied_with_conditions"
+						label={fieldLabels.satisfiedWithConditions[siteState.language]}
+					></FormCheckbox>
+					<FormCheckbox name="treated_fairly" label={fieldLabels.treatedFairly[siteState.language]}
+					></FormCheckbox>
+				</div>
+			</div>
 
-				<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'sentiment')}>
+			{#if formPage.showArtistQuestions}
+				<div
+					role="presentation"
+					onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}
+				>
 					<FormSectionHeader>
-						{formPage.sentimentSectionTitle[siteState.language]}
+						{formPage.artistSectionTitle[siteState.language]}
 					</FormSectionHeader>
+
 					<div class="flex flex-col gap-4">
-						<FormCheckbox
-							name="satisfied_with_compensation"
-							label={fieldLabels.satisfiedWithCompensation[siteState.language]}
-						></FormCheckbox>
-						<FormCheckbox
-							name="satisfied_with_conditions"
-							label={fieldLabels.satisfiedWithConditions[siteState.language]}
-						></FormCheckbox>
-						<FormCheckbox
-							name="treated_fairly"
-							label={fieldLabels.treatedFairly[siteState.language]}
-						></FormCheckbox>
+						<BlockContent value={formPage.artistSectionContent[siteState.language]}></BlockContent>
+
+						{#each formPage.artistQuestions.questions as question}
+							<div class="mb-4">
+								<div class="pb-2">{question.questionLabel[siteState.language]}</div>
+								<textarea
+									name={question.dbFieldName}
+									class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+								></textarea>
+							</div>
+						{/each}
 					</div>
 				</div>
+			{/if}
 
-				{#if formPage.showArtistQuestions}
-					<div
-						role="presentation"
-						onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}
-					>
-						<FormSectionHeader>
-							{formPage.artistSectionTitle[siteState.language]}
-						</FormSectionHeader>
-
-						<div class="flex flex-col gap-4">
-							<BlockContent value={formPage.artistSectionContent[siteState.language]}
-							></BlockContent>
-
-							{#each formPage.artistQuestions.questions as question}
-								<div>
-									<div>{question.questionLabel[siteState.language]}</div>
-									<textarea
-										name={question.dbFieldName}
-										class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
-									>
-									</textarea>
-								</div>
-							{/each}
-						</div>
-					</div>
-				{/if}
-
-				<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
-					<FormSectionHeader>
-						{formPage.addlSectionTitle[siteState.language]}
-					</FormSectionHeader>
-					<div>
-						<textarea
-							name="addl_notes"
-							placeholder={formPage.addlSectionPlaceholder[siteState.language]}
-							class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
-						></textarea>
-					</div>
+			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
+				<FormSectionHeader>
+					{formPage.addlSectionTitle[siteState.language]}
+				</FormSectionHeader>
+				<div>
+					<textarea
+						name="addl_notes"
+						placeholder={formPage.addlSectionPlaceholder[siteState.language]}
+						class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+					></textarea>
 				</div>
+			</div>
 
-				<div class="flex items-center justify-center pt-8">
-					<button
-						class="cursor-pointer border px-4 py-2 transition-colors hover:bg-black hover:text-white"
-						>{isSubmitting ? 'Submitting Form...' : 'Submit Form'}</button
-					>
-				</div>
+			<div class="flex items-center justify-center pt-8">
+				<button
+					class="cursor-pointer border border-dashed bg-black px-4 py-2 font-sans text-xl text-white uppercase transition-colors"
+					>{isSubmitting ? 'Submitting Form...' : 'Submit Form'}</button
+				>
 			</div>
 		</div>
 	</form>

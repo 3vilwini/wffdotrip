@@ -26,6 +26,17 @@ body {
 	background-color: var(--color-white);
 }
 
+.cl-formButtonPrimary::after {
+	background-image: none !important;
+	
+}
+
+.cl-formButtonPrimary span {
+		background-color: black !important;
+		padding: 0.25rem 1rem !important;
+	
+}
+
 input,
 select,
 textarea {

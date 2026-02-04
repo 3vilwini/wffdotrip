@@ -25,13 +25,13 @@
 		<div>
 			{indexHeaderLabels.worker[siteState.language]}
 		</div>
-		<div class="font-serif">
+		<div class="font-serif tracking-tight">
 			{indexHeaderLabels.employer[siteState.language]}
 		</div>
 		<div>
 			{indexHeaderLabels.contract[siteState.language]}
 		</div>
-		<div>
+		<div class="font-serif tracking-tight">
 			{indexHeaderLabels.wage[siteState.language]}
 		</div>
 	</div>
@@ -53,11 +53,11 @@
 </div>
 {#if filteredResultsState.rows}
 	<div class="h-14 border-b p-3 flex gap-4 items-center justify-between">
-		<div>
+		<div class="font-mono text-xs">
 			{filteredResultsState?.rows?.results?.length} Filtered Results
 		</div>
 		<div>
-			<button onclick={() => filteredResultsState.rows = null} class="cursor pointer bg-black border-dashed border px-3 py-1 text-white">
+			<button onclick={() => filteredResultsState.rows = null} class="cursor-pointer bg-black border-dashed border px-3 py-1 text-white">
 				Show All Rows
 			</button>
 		</div>

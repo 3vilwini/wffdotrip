@@ -55,7 +55,18 @@ export default defineType({
     }),
 
     //////Form Intro//////
-
+    defineField({
+      name: 'loginHeader',
+      title: 'Login Title',
+      type: 'stringInputWithLanguageOptions',
+      group: 'formIntro',
+    }),
+    defineField({
+      name: 'loginDek',
+      title: 'Login Description',
+      type: 'blockContentInputWithLanguageOptions',
+      group: 'formIntro',
+    }),
     defineField({
       name: 'formTitle',
       title: 'Form Title',

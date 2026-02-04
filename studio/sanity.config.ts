@@ -6,7 +6,7 @@ import {DocumentIcon} from '@sanity/icons'
 import {CogIcon} from '@sanity/icons'
 
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
-const singletonTypes = new Set(['formPage', 'siteMetadata', 'indexPage'])
+const singletonTypes = new Set(['formPage', 'siteMetadata', 'indexPage', 'faqPage'])
 
 export default defineConfig({
   name: 'default',
@@ -43,6 +43,13 @@ export default defineConfig({
               .icon(DocumentIcon)
               .child(
                 S.document().schemaType('indexPage').documentId('indexPage').title('Index Page'),
+              ),
+            S.listItem()
+              .title('FAQ Page')
+              .id('faqPage')
+              .icon(DocumentIcon)
+              .child(
+                S.document().schemaType('faqPage').documentId('faqPage').title('FAQ Page'),
               ),
           ]),
     }),

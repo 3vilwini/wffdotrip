@@ -1,38 +1,79 @@
 <script lang="ts">
+	import { siteState } from '$lib/states.svelte.js';
+	import { onMount } from 'svelte';
 	import { SignedIn, SignedOut, SignIn, SignOutButton } from 'svelte-clerk';
 	let { data } = $props();
+	let field: HTMLElement | null = $state(null);
+
+	onMount(() => {
+		field = document.getElementById('identifier-field');
+		if (field) {
+			field.setAttribute('placeholder', 'Email Address');
+		} else {
+			setTimeout(() => {
+				setPlaceholder();
+			}, 150);
+		}
+	});
+
+	let setPlaceholder = () => {
+		field = document.getElementById('identifier-field');
+		if (field) {
+			field.setAttribute('placeholder', 'Email Address');
+		} else {
+			setTimeout(() => {
+				setPlaceholder();
+			}, 150);
+		}
+	};
 </script>
 
 <SignedOut>
-	<div class="px-2 font-mono text-xs">Log-in or Sign up</div>
-	<SignIn
-		fallbackRedirectUrl="/form"
-		oauthFlow="redirect"
-		routing="path"
-		path="/form"
-		signUpFallbackRedirectUrl="/form"
-		signUpForceRedirectUrl="/form"
-		withSignUp={true}
-		appearance={{
-			elements: {
-				main: '!flex-shrink !max-w-sm !w-full !font-mono',
-				rootBox: '!flex-shrink !w-full !flex-grow !flex',
-				cardBox: '!shadow-none !rounded-none',
-				card: '!bg-transparent !rounded-none !p-2 !pr-4',
-				form: '!gap-4',
-				formFieldLabel: '!hidden',
-				formFieldInput: '!text-xs !rounded-none',
-				formButtonPrimary:
-					'!self-end !text-black !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
-				footer: '!hidden',
-				header: '!hidden'
-			}
-		}}
-	/>
+	<div class="mb-4 pt-8 text-2xl leading-tight">
+		{data.formPage.loginHeader[siteState.language]}
+	</div>
+	<div class={field ? '' : 'opacity-0'}>
+		<SignIn
+			fallbackRedirectUrl="/form"
+			oauthFlow="redirect"
+			routing="path"
+			path="/form"
+			signUpFallbackRedirectUrl="/form"
+			signUpForceRedirectUrl="/form"
+			withSignUp={true}
+			appearance={{
+				elements: {
+					main: '!flex-shrink !max-w-sm !w-full !font-mono',
+					rootBox: '!flex-shrink !w-full !flex-grow !flex',
+					cardBox: '!shadow-none !rounded-none',
+					card: '!bg-transparent !rounded-none !p-2 !pr-4',
+					form: '!gap-4',
+					formFieldLabel: '!hidden',
+					formFieldInput:
+						'!text-xl !px-1 !font-serif !shadow-none !tracking-tight !rounded-none !bg-transparent !border-0 !border-b !border-b-black',
+					formButtonPrimary:
+						'!self-end !text-white !text-lg !font-sans !bg-transparent !p-0 !uppercase !border-dashed !border !border-black !rounded-none  ![appearence:none]  !shadow-none !rounded-none !w-min',
+					buttonArrowIcon: '!hidden',
+					footer: '!hidden',
+					header: '!hidden'
+				}
+			}}
+		/>
+	</div>
 </SignedOut>
 <SignedIn>
-	{#if data && data.user && data.user.emailAddresses && data.user.emailAddresses.length >= 1 && data.user.emailAddresses[0].emailAddress}
-		<div class="font-mono text-xs">{data.user.emailAddresses[0].emailAddress}</div>
-	{/if}
-	<SignOutButton class="font-mono text-xs"></SignOutButton>
+	<div class="flex flex-col gap-4">
+		<div class="border border-dashed px-4 pt-2 py-3">
+			{#if data && data.user && data.user.emailAddresses && data.user.emailAddresses.length >= 1 && data.user.emailAddresses[0].emailAddress}
+				<div class="font-serif text-xl tracking-tight">
+					{data.user.emailAddresses[0].emailAddress}
+				</div>
+			{/if}
+			<div class="flex gap-4 justify-between mt-2">
+				<SignOutButton class="cursor-pointer text-left font-mono text-xs hover:underline"
+				></SignOutButton>
+				<a href="/dashboard" class="cursor-pointer font-mono text-xs hover:underline">Dashboard →</a>
+			</div>
+		</div>
+	</div>
 </SignedIn>
