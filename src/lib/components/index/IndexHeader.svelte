@@ -58,7 +58,7 @@
 		</div>
 		<div>
 			<button onclick={() => filteredResultsState.rows = null} class="cursor pointer bg-black border-dashed border px-3 py-1 text-white">
-				Show All Results
+				Show All Rows
 			</button>
 		</div>
 	</div>
