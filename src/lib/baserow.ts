@@ -11,8 +11,36 @@ export const getAllVerifiedRows = async () => {
 		user_field_names: 'true',
 		filters: JSON.stringify({
 			filter_type: 'AND',
-			filters: [{ type: 'equal', field: 'verified', value: true }]
+			filters: [{ type: 'boolean', field: 'verified', value: '1' }]
 		}),
+		order_by: '-Created on',
+		groups: []
+	});
+
+	try {
+		const response = await fetch(
+			'https://api.baserow.io/api/database/rows/table/797535/?' + params,
+			options
+		);
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error(error);
+		return;
+	}
+};
+
+export const getRowsByFilter = async (filterObj: any) => {
+	const options = {
+		method: 'GET',
+		headers: {
+			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm'
+		}
+	};
+	const params = new URLSearchParams({
+		user_field_names: 'true',
+		filters: JSON.stringify(filterObj),
+		order_by: '-Created on',
 		groups: []
 	});
 

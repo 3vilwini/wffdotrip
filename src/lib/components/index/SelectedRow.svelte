@@ -1,5 +1,11 @@
 <script lang="ts">
-	import { jobExperienceOptions, compensationFrequencyOptions, contractTypeOptions } from './../../staticContent.ts';
+	import DoubleArrowButton from './DoubleArrowButton.svelte';
+
+	import {
+		jobExperienceOptions,
+		compensationFrequencyOptions,
+		contractTypeOptions
+	} from './../../staticContent.ts';
 	import {
 		countryOptions,
 		countryShortCode,
@@ -40,9 +46,9 @@ verified: true
 -->
 
 <div
-	class="{row
+	class="transition-transform {row
 		? 'translate-x-0'
-		: 'translate-x-full'} absolute top-0 right-0 w-[25dvw] max-w-sm min-w-xs border-l bg-lightgrey transition-transform"
+		: 'translate-x-full '} absolute top-0 right-0 h-[calc(100dvh-3.5rem)] w-[25dvw] max-w-sm min-w-xs border-l bg-lightgrey z-2"
 >
 	{#if row}
 		<div class="flex h-[calc(100dvh-3.5rem)] flex-col gap-6 overflow-auto p-6">
@@ -98,7 +104,9 @@ verified: true
 
 			<div>
 				{#if row.contract_type}
-					<div class="text-lg">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
+					<div class="text-lg">
+						{contractTypeOptions[row.contract_type.value][siteState.language]}
+					</div>
 				{/if}
 				<div class="font-mono text-xs">
 					{#if row.contract_num_hours}
@@ -172,9 +180,7 @@ verified: true
 			onclick={() => (row = null)}
 			class="absolute top-[calc(50dvh-2.5rem)] left-0 -translate-x-6.5 cursor-pointer border border-dashed"
 		>
-			<div class="size-6 bg-black p-1">
-				<img src={doubleArrow} class=" w-full rotate-180" />
-			</div>
+			<DoubleArrowButton flip={true}></DoubleArrowButton>
 		</button>
 	{/if}
 </div>

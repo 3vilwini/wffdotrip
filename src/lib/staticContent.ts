@@ -232,25 +232,29 @@ export const countryOptions = {
 		[Language.EN]: 'UK',
 		[Language.FR]: 'UK in french',
 		[Language.IT]: 'UK in italian',
-		[Language.ES]: 'UK in spanish'
+		[Language.ES]: 'UK in spanish',
+		id: '5207042'
 	},
 	[Country.FRANCE]: {
 		[Language.EN]: 'France',
 		[Language.FR]: 'France in french',
 		[Language.IT]: 'France in italian',
-		[Language.ES]: 'France in spanish'
+		[Language.ES]: 'France in spanish',
+		id: '5207043'
 	},
 	[Country.ITALY]: {
 		[Language.EN]: 'Italy',
 		[Language.FR]: 'Italy in french',
 		[Language.IT]: 'Italy in italian',
-		[Language.ES]: 'Italy in spanish'
+		[Language.ES]: 'Italy in spanish',
+		id: '5207041'
 	},
 	[Country.SPAIN]: {
 		[Language.EN]: 'Spain',
 		[Language.FR]: 'Spain in french',
 		[Language.IT]: 'Spain in italian',
-		[Language.ES]: 'Spain in spanish'
+		[Language.ES]: 'Spain in spanish',
+		id: '5207044'
 	}
 };
 
@@ -336,61 +340,71 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Museum',
 				[Language.FR]: 'Museum in french',
 				[Language.IT]: 'Museum in italian',
-				[Language.ES]: 'Museum in spanish'
+				[Language.ES]: 'Museum in spanish',
+				id: '5207059'
 			},
 			[EmployerType.ART_CENTER]: {
 				[Language.EN]: 'Art Center',
 				[Language.FR]: 'Art Center in french',
 				[Language.IT]: 'Art Center in italian',
-				[Language.ES]: 'Art Center in spanish'
+				[Language.ES]: 'Art Center in spanish',
+				id: '5207060'
 			},
 			[EmployerType.REGIONAL_CULTURAL_INSTITUTION]: {
 				[Language.EN]: 'Regional Cultural Institution (FRAC, Kunstverein)',
 				[Language.FR]: 'Regional Cultural Institution (FRAC, Kunstverein) in french',
 				[Language.IT]: 'Regional Cultural Institution (FRAC, Kunstverein) in italian',
-				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish'
+				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
+				id: '5207061'
 			},
 			[EmployerType.NATIONAL_CULTURAL_INSTITUTION]: {
 				[Language.EN]: 'National Cultural Institution (EPCC...)',
 				[Language.FR]: 'National Cultural Institution (EPCC...) in french',
 				[Language.IT]: 'National Cultural Institution (EPCC...) in italian',
-				[Language.ES]: 'National Cultural Institution (EPCC...) in spanish'
+				[Language.ES]: 'National Cultural Institution (EPCC...) in spanish',
+				id: '5207062'
 			},
 			[EmployerType.GALLERY]: {
 				[Language.EN]: 'Gallery',
 				[Language.FR]: 'Gallery in french',
 				[Language.IT]: 'Gallery in italian',
-				[Language.ES]: 'Gallery in spanish'
+				[Language.ES]: 'Gallery in spanish',
+				id: '5207063'
 			},
 			[EmployerType.ARTIST_RUN_SPACE]: {
 				[Language.EN]: 'Artist-Run Space',
 				[Language.FR]: 'Artist-Run Space in french',
 				[Language.IT]: 'Artist-Run Space in italian',
-				[Language.ES]: 'Artist-Run Space in spanish'
+				[Language.ES]: 'Artist-Run Space in spanish',
+				id: '5207064'
 			},
 			[EmployerType.FOUNDATION]: {
 				[Language.EN]: 'Foundation',
 				[Language.FR]: 'Foundation in french',
 				[Language.IT]: 'Foundation in italian',
-				[Language.ES]: 'Foundation in spanish'
+				[Language.ES]: 'Foundation in spanish',
+				id: '5207065'
 			},
 			[EmployerType.CULTURAL_CENTER]: {
 				[Language.EN]: 'Cultural Center',
 				[Language.FR]: 'Cultural Center in french',
 				[Language.IT]: 'Cultural Center in italian',
-				[Language.ES]: 'Cultural Center in spanish'
+				[Language.ES]: 'Cultural Center in spanish',
+				id: '5207066'
 			},
 			[EmployerType.THIRD_PLACES]: {
 				[Language.EN]: 'Third Places',
 				[Language.FR]: 'Third Places in french',
 				[Language.IT]: 'Third Places in italian',
-				[Language.ES]: 'Third Places in spanish'
+				[Language.ES]: 'Third Places in spanish',
+				id: '5207067'
 			},
 			[EmployerType.NON_PROFIT_ORGANIZATION]: {
 				[Language.EN]: 'Non-Profit Organization',
 				[Language.FR]: 'Non-Profit Organization in french',
 				[Language.IT]: 'Non-Profit Organization in italian',
-				[Language.ES]: 'Non-Profit Organization in spanish'
+				[Language.ES]: 'Non-Profit Organization in spanish',
+				id: '5207068'
 			}
 		}
 	},
@@ -406,55 +420,64 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Public School',
 				[Language.FR]: 'Public School in french',
 				[Language.IT]: 'Public School in italian',
-				[Language.ES]: 'Public School in spanish'
+				[Language.ES]: 'Public School in spanish',
+				id: '5207069'
 			},
 			[EmployerType.PRIVATE_SCHOOL]: {
 				[Language.EN]: 'Private School',
 				[Language.FR]: 'Private School in french',
 				[Language.IT]: 'Private School in italian',
-				[Language.ES]: 'Private School in spanish'
+				[Language.ES]: 'Private School in spanish',
+				id: '5207070'
 			},
 			[EmployerType.PUBLIC_UNIVERSITY]: {
 				[Language.EN]: 'Public University',
 				[Language.FR]: 'Public University in french',
 				[Language.IT]: 'Public University in italian',
-				[Language.ES]: 'Public University in spanish'
+				[Language.ES]: 'Public University in spanish',
+				id: '5207071'
 			},
 			[EmployerType.PRIVATE_UNIVERSITY]: {
 				[Language.EN]: 'Private University',
 				[Language.FR]: 'Private University in french',
 				[Language.IT]: 'Private University in italian',
-				[Language.ES]: 'Private University in spanish'
+				[Language.ES]: 'Private University in spanish',
+				id: '5207072'
 			},
 			[EmployerType.LIBRARY]: {
 				[Language.EN]: 'Library',
 				[Language.FR]: 'Library in french',
 				[Language.IT]: 'Library in italian',
-				[Language.ES]: 'Library in spanish'
+				[Language.ES]: 'Library in spanish',
+				id: '5207073'
 			},
 			[EmployerType.ARCHIVE]: {
 				[Language.EN]: 'Archive',
 				[Language.FR]: 'Archive in french',
 				[Language.IT]: 'Archive in italian',
-				[Language.ES]: 'Archive in spanish'
+				[Language.ES]: 'Archive in spanish',
+				id: '5207074'
 			},
 			[EmployerType.FOUNDATION]: {
 				[Language.EN]: 'Foundation',
 				[Language.FR]: 'Foundation in french',
 				[Language.IT]: 'Foundation in italian',
-				[Language.ES]: 'Foundation in spanish'
+				[Language.ES]: 'Foundation in spanish',
+				id: '5207065'
 			},
 			[EmployerType.RESEARCH_CENTER]: {
 				[Language.EN]: 'Research Center',
 				[Language.FR]: 'Research Center in french',
 				[Language.IT]: 'Research Center in italian',
-				[Language.ES]: 'Research Center in spanish'
+				[Language.ES]: 'Research Center in spanish',
+				id: '5207075'
 			},
 			[EmployerType.LABORATORY]: {
 				[Language.EN]: 'Laboratory',
 				[Language.FR]: 'Laboratory in french',
 				[Language.IT]: 'Laboratory in italian',
-				[Language.ES]: 'Third Places in spanish'
+				[Language.ES]: 'Laboratory in spanish',
+				id: '5207076'
 			}
 		}
 	},
@@ -470,37 +493,43 @@ export const employerTypeOptions = {
 				[Language.EN]: 'National Cultural Authority',
 				[Language.FR]: 'National Cultural Authority in french',
 				[Language.IT]: 'National Cultural Authority in italian',
-				[Language.ES]: 'National Cultural Authority in spanish'
+				[Language.ES]: 'National Cultural Authority in spanish',
+				id: '5207077'
 			},
 			[EmployerType.ARTS_COUNCIL]: {
 				[Language.EN]: 'Arts Council or Arm’s-Length Body',
 				[Language.FR]: 'Arts Council or Arm’s-Length Body in french',
 				[Language.IT]: 'Arts Council or Arm’s-Length Body in italian',
-				[Language.ES]: 'Arts Council or Arm’s-Length Body in spanish'
+				[Language.ES]: 'Arts Council or Arm’s-Length Body in spanish',
+				id: '5207078'
 			},
 			[EmployerType.LOCAL_GOVT]: {
 				[Language.EN]: 'Regional or Local Government',
 				[Language.FR]: 'Regional or Local Government in french',
 				[Language.IT]: 'Regional or Local Government in italian',
-				[Language.ES]: 'Regional or Local Government in spanish'
+				[Language.ES]: 'Regional or Local Government in spanish',
+				id: '5207079'
 			},
 			[EmployerType.PUBLIC_FUNDING_AGENCY]: {
 				[Language.EN]: 'Public Funding Agency',
 				[Language.FR]: 'Public Funding Agency in french',
 				[Language.IT]: 'Public Funding Agency in italian',
-				[Language.ES]: 'Public Funding Agency in spanish'
+				[Language.ES]: 'Public Funding Agency in spanish',
+				id: '5207080'
 			},
 			[EmployerType.ENDOWMENT_FUND]: {
 				[Language.EN]: 'Endowment Fund or Public-Interest Foundation',
 				[Language.FR]: 'Endowment Fund or Public-Interest Foundation in french',
 				[Language.IT]: 'Endowment Fund or Public-Interest Foundation in italian',
-				[Language.ES]: 'Endowment Fund or Public-Interest Foundation in spanish'
+				[Language.ES]: 'Endowment Fund or Public-Interest Foundation in spanish',
+				id: '5207081'
 			},
 			[EmployerType.CULTURAL_DIPLOMACY_BODY]: {
 				[Language.EN]: 'Cultural Diplomacy Body (Embassy / Cultural Institute)',
 				[Language.FR]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in french',
 				[Language.IT]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in italian',
-				[Language.ES]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in spanish'
+				[Language.ES]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in spanish',
+				id: '5207082'
 			}
 		}
 	},
@@ -516,25 +545,29 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Auction House',
 				[Language.FR]: 'Auction House in french',
 				[Language.IT]: 'Auction House in italian',
-				[Language.ES]: 'Auction House in spanish'
+				[Language.ES]: 'Auction House in spanish',
+				id: '5207083'
 			},
 			[EmployerType.ART_DEALER]: {
 				[Language.EN]: 'Art Dealer',
 				[Language.FR]: 'Art Dealer in french',
 				[Language.IT]: 'Art Dealer in italian',
-				[Language.ES]: 'Art Dealer in spanish'
+				[Language.ES]: 'Art Dealer in spanish',
+				id: '5207084'
 			},
 			[EmployerType.ART_ADVISOR]: {
 				[Language.EN]: 'Art Advisor',
 				[Language.FR]: 'Art Advisor in french',
 				[Language.IT]: 'Art Advisor in italian',
-				[Language.ES]: 'Art Advisor in spanish'
+				[Language.ES]: 'Art Advisor in spanish',
+				id: '5207085'
 			},
 			[EmployerType.ONLINE_SALES_PLATFORM]: {
 				[Language.EN]: 'Online Sales Platform',
 				[Language.FR]: 'Online Sales Platform in french',
 				[Language.IT]: 'Online Sales Platform in italian',
-				[Language.ES]: 'Online Sales Platform in spanish'
+				[Language.ES]: 'Online Sales Platform in spanish',
+				id: '5207086'
 			}
 		}
 	},
@@ -550,25 +583,29 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Publishing House',
 				[Language.FR]: 'Publishing House in french',
 				[Language.IT]: 'Publishing House in italian',
-				[Language.ES]: 'Publishing House in spanish'
+				[Language.ES]: 'Publishing House in spanish',
+				id: '5207087'
 			},
 			[EmployerType.MEDIA]: {
 				[Language.EN]: 'Media',
 				[Language.FR]: 'Media in french',
 				[Language.IT]: 'Media in italian',
-				[Language.ES]: 'Media in spanish'
+				[Language.ES]: 'Media in spanish',
+				id: '5207088'
 			},
 			[EmployerType.MAGAZINE]: {
 				[Language.EN]: 'Magazine',
 				[Language.FR]: 'Magazine in french',
 				[Language.IT]: 'Magazine in italian',
-				[Language.ES]: 'Magazine in spanish'
+				[Language.ES]: 'Magazine in spanish',
+				id: '5207089'
 			},
 			[EmployerType.ONLINE_PLATFORM]: {
 				[Language.EN]: 'Online Platform',
 				[Language.FR]: 'Online Platform in french',
 				[Language.IT]: 'Online Platform in italian',
-				[Language.ES]: 'Online Platform in spanish'
+				[Language.ES]: 'Online Platform in spanish',
+				id: '5207090'
 			}
 		}
 	},
@@ -584,25 +621,29 @@ export const employerTypeOptions = {
 				[Language.EN]: "Artist's Studio",
 				[Language.FR]: "Artist's Studio in french",
 				[Language.IT]: "Artist's Studio in italian",
-				[Language.ES]: "Artist's Studio in spanish"
+				[Language.ES]: "Artist's Studio in spanish",
+				id: '5207091'
 			},
 			[EmployerType.FABRICATION_WORKSHOP]: {
 				[Language.EN]: 'Fabrication Workshops',
 				[Language.FR]: 'Fabrication Workshops in french',
 				[Language.IT]: 'Fabrication Workshops in italian',
-				[Language.ES]: 'Fabrication Workshops in spanish'
+				[Language.ES]: 'Fabrication Workshops in spanish',
+				id: '5207092'
 			},
 			[EmployerType.FAB_LAB]: {
 				[Language.EN]: 'Fab Lab',
 				[Language.FR]: 'Fab Lab in french',
 				[Language.IT]: 'Fab Lab in italian',
-				[Language.ES]: 'Fab Lab in spanish'
+				[Language.ES]: 'Fab Lab in spanish',
+				id: '5207093'
 			},
 			[EmployerType.ART_LOGISTICS]: {
 				[Language.EN]: 'Art Logistics (Shipping, Storage, Handling)',
 				[Language.FR]: 'Art Logistics (Shipping, Storage, Handling) in french',
 				[Language.IT]: 'Art Logistics (Shipping, Storage, Handling) in italian',
-				[Language.ES]: 'Art Logistics (Shipping, Storage, Handling) in spanish'
+				[Language.ES]: 'Art Logistics (Shipping, Storage, Handling) in spanish',
+				id: '5207094'
 			}
 		}
 	},
@@ -618,31 +659,36 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Festival',
 				[Language.FR]: 'Festival in french',
 				[Language.IT]: 'Festival in italian',
-				[Language.ES]: 'Festival in spanish'
+				[Language.ES]: 'Festival in spanish',
+				id: '5207095'
 			},
 			[EmployerType.BIENNIAL]: {
 				[Language.EN]: 'Biennial',
 				[Language.FR]: 'Biennial in french',
 				[Language.IT]: 'Biennial in italian',
-				[Language.ES]: 'Biennial in spanish'
+				[Language.ES]: 'Biennial in spanish',
+				id: '5207096'
 			},
 			[EmployerType.TRIENNIAL]: {
 				[Language.EN]: 'Triennial',
 				[Language.FR]: 'Triennial in french',
 				[Language.IT]: 'Triennial in italian',
-				[Language.ES]: 'Triennial in spanish'
+				[Language.ES]: 'Triennial in spanish',
+				id: '5207097'
 			},
 			[EmployerType.FAIR]: {
 				[Language.EN]: 'Fair',
 				[Language.FR]: 'Fair in french',
 				[Language.IT]: 'Fair in italian',
-				[Language.ES]: 'Fair in spanish'
+				[Language.ES]: 'Fair in spanish',
+				id: '5207098'
 			},
 			[EmployerType.LOCAL_EVENT]: {
 				[Language.EN]: 'Local Event',
 				[Language.FR]: 'Local Event in french',
 				[Language.IT]: 'Local Event in italian',
-				[Language.ES]: 'Local Event in spanish'
+				[Language.ES]: 'Local Event in spanish',
+				id: '5207099'
 			}
 		}
 	},
@@ -658,31 +704,36 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Union',
 				[Language.FR]: 'Union in french',
 				[Language.IT]: 'Union in italian',
-				[Language.ES]: 'Union in spanish'
+				[Language.ES]: 'Union in spanish',
+				id: '5207100'
 			},
 			[EmployerType.ARTIST_SERVICES_ORGANIZATION]: {
 				[Language.EN]: 'Artist Services Organization',
 				[Language.FR]: 'Artist Services Organization in french',
 				[Language.IT]: 'Artist Services Organization in italian',
-				[Language.ES]: 'Artist Services Organization in spanish'
+				[Language.ES]: 'Artist Services Organization in spanish',
+				id: '5207101'
 			},
 			[EmployerType.RIGHTS_ORGANIZATION]: {
 				[Language.EN]: 'Rights Organization (ADAGP, Artist Rights Society)',
 				[Language.FR]: 'Rights Organization (ADAGP, Artist Rights Society) in french',
 				[Language.IT]: 'Rights Organization (ADAGP, Artist Rights Society) in italian',
-				[Language.ES]: 'Rights Organization (ADAGP, Artist Rights Society) in spanish'
+				[Language.ES]: 'Rights Organization (ADAGP, Artist Rights Society) in spanish',
+				id: '5207102'
 			},
 			[EmployerType.RESIDENCY_PROGRAM]: {
 				[Language.EN]: 'Residency Program',
 				[Language.FR]: 'Residency Program in french',
 				[Language.IT]: 'Residency Program in italian',
-				[Language.ES]: 'Residency Program in spanish'
+				[Language.ES]: 'Residency Program in spanish',
+				id: '5207103'
 			},
 			[EmployerType.COOPERATIVE_STRUCTURE]: {
 				[Language.EN]: 'Cooperative Structure',
 				[Language.FR]: 'Cooperative Structure in french',
 				[Language.IT]: 'Cooperative Structure in italian',
-				[Language.ES]: 'Cooperative Structure in spanish'
+				[Language.ES]: 'Cooperative Structure in spanish',
+				id: '5207104'
 			}
 		}
 	},
@@ -698,7 +749,8 @@ export const employerTypeOptions = {
 				[Language.EN]: 'Other',
 				[Language.FR]: 'Other in french',
 				[Language.IT]: 'Other in italian',
-				[Language.ES]: 'Other in spanish'
+				[Language.ES]: 'Other in spanish',
+				id: '5207105'
 			}
 		}
 	}
@@ -741,43 +793,50 @@ export const contractTypeOptions = {
 		[Language.EN]: 'Full-time',
 		[Language.FR]: 'Full-time FR',
 		[Language.IT]: 'Full-time IT',
-		[Language.ES]: 'Full-time ES'
+		[Language.ES]: 'Full-time ES',
+		id: '5207121'
 	},
 	[ContractType.PARTTIME]: {
 		[Language.EN]: 'Part-time',
 		[Language.FR]: 'Part-time FR',
 		[Language.IT]: 'Part-time IT',
-		[Language.ES]: 'Part-time ES'
+		[Language.ES]: 'Part-time ES',
+		id: '5207124'
 	},
 	[ContractType.FULLTIME_TEMP]: {
 		[Language.EN]: 'Full-time (temporary)',
 		[Language.FR]: 'Full-time (temporary) FR',
 		[Language.IT]: 'Full-time (temporary) IT',
-		[Language.ES]: 'Full-time (temporary) ES'
+		[Language.ES]: 'Full-time (temporary) ES',
+		id: '5207122'
 	},
 	[ContractType.PARTTIME_TEMP]: {
 		[Language.EN]: 'Part-time (temporary)',
 		[Language.FR]: 'Part-time (temporary) FR',
 		[Language.IT]: 'Part-time (temporary) IT',
-		[Language.ES]: 'Part-time (temporary) ES'
+		[Language.ES]: 'Part-time (temporary) ES',
+		id: '5207120'
 	},
 	[ContractType.INDEPENDENT]: {
 		[Language.EN]: 'Independent',
 		[Language.FR]: 'Independent FR',
 		[Language.IT]: 'Independent IT',
-		[Language.ES]: 'Independent ES'
+		[Language.ES]: 'Independent ES',
+		id: '5207125'
 	},
 	[ContractType.INTERNSHIP]: {
 		[Language.EN]: 'Internship',
 		[Language.FR]: 'Internship FR',
 		[Language.IT]: 'Internship IT',
-		[Language.ES]: 'Internship ES'
+		[Language.ES]: 'Internship ES',
+		id: '5207123'
 	},
 	[ContractType.APPRENTICESHIP]: {
 		[Language.EN]: 'Apprenticeship',
 		[Language.FR]: 'Apprenticeship FR',
 		[Language.IT]: 'Apprenticeship IT',
-		[Language.ES]: 'Apprenticeship ES'
+		[Language.ES]: 'Apprenticeship ES',
+		id: '5207126'
 	}
 };
 
@@ -964,7 +1023,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207127'
 			},
 			[WorkerType.PERFORMING_ARTIST]: {
 				label: {
@@ -978,7 +1038,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) type of performance, duration, number of collaborators, etc.',
 					[Language.IT]: '(IT) type of performance, duration, number of collaborators, etc.',
 					[Language.ES]: '(ES) type of performance, duration, number of collaborators, etc.'
-				}
+				},
+				id: '5207128'
 			}
 		}
 	},
@@ -1002,7 +1063,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207129'
 			},
 			[WorkerType.ART_CRITIC]: {
 				label: {
@@ -1016,7 +1078,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207130'
 			},
 			[WorkerType.EDITOR]: {
 				label: {
@@ -1030,7 +1093,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207131'
 			},
 			[WorkerType.JOURNALIST]: {
 				label: {
@@ -1044,7 +1108,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207132'
 			},
 			[WorkerType.TRANSLATOR]: {
 				label: {
@@ -1058,7 +1123,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207133'
 			},
 			[WorkerType.COPYWRITER]: {
 				label: {
@@ -1072,7 +1138,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207134'
 			},
 			[WorkerType.GHOSTWRITER]: {
 				label: {
@@ -1086,7 +1153,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207135'
 			},
 			[WorkerType.ARCHIVIST]: {
 				label: {
@@ -1100,7 +1168,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207136'
 			}
 		}
 	},
@@ -1124,7 +1193,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207137'
 			},
 			[WorkerType.RESEARCHER]: {
 				label: {
@@ -1138,7 +1208,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207138'
 			},
 			[WorkerType.ART_HISTORIAN]: {
 				label: {
@@ -1152,7 +1223,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207139'
 			},
 			[WorkerType.ARTISTIC_PROGAMMER]: {
 				label: {
@@ -1166,7 +1238,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207140'
 			},
 			[WorkerType.CURATORIAL_FELLOW]: {
 				label: {
@@ -1180,7 +1253,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207141'
 			},
 			[WorkerType.CURATORIAL_ASSISTANT]: {
 				label: {
@@ -1194,7 +1268,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207142'
 			},
 			[WorkerType.PUBLIC_PROGRAMS_COORDINATOR]: {
 				label: {
@@ -1208,7 +1283,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207143'
 			},
 			[WorkerType.RESEARCH_ASSOCIATE]: {
 				label: {
@@ -1222,7 +1298,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207144'
 			}
 		}
 	},
@@ -1246,7 +1323,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207145'
 			},
 			[WorkerType.PRODUCTION_MANAGER]: {
 				label: {
@@ -1260,7 +1338,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207146'
 			},
 			[WorkerType.PRODUCTION_ASSISTANT]: {
 				label: {
@@ -1274,7 +1353,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207147'
 			},
 			[WorkerType.FABRICATOR]: {
 				label: {
@@ -1288,7 +1368,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207148'
 			},
 			[WorkerType.ARTISAN]: {
 				label: {
@@ -1302,7 +1383,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207149'
 			},
 			[WorkerType.TECHNICIAN]: {
 				label: {
@@ -1316,7 +1398,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207150'
 			},
 			[WorkerType.LIGHTING_TECHNICIAN]: {
 				label: {
@@ -1330,7 +1413,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207151'
 			},
 			[WorkerType.LIGHTING_DESIGNER]: {
 				label: {
@@ -1344,7 +1428,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207152'
 			},
 			[WorkerType.PROJECTION_AV_SPECIALIST]: {
 				label: {
@@ -1358,7 +1443,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207153'
 			},
 			[WorkerType.SOUND_TECHNICIAN]: {
 				label: {
@@ -1372,7 +1458,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207154'
 			},
 			[WorkerType.SOUND_DESIGNER]: {
 				label: {
@@ -1386,7 +1473,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207155'
 			},
 			[WorkerType.EXHIBITION_DESIGNER]: {
 				label: {
@@ -1400,7 +1488,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207156'
 			},
 			[WorkerType.ART_HANDLER]: {
 				label: {
@@ -1414,7 +1503,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207157'
 			},
 			[WorkerType.THREED_VISUALIZER]: {
 				label: {
@@ -1428,7 +1518,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207158'
 			},
 			[WorkerType.UI_UX]: {
 				label: {
@@ -1442,7 +1533,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207159'
 			},
 			[WorkerType.STAGE_MANAGER]: {
 				label: {
@@ -1456,7 +1548,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207160'
 			},
 			[WorkerType.COSTUME_DESIGNER]: {
 				label: {
@@ -1470,7 +1563,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207161'
 			}
 		}
 	},
@@ -1494,7 +1588,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207162'
 			},
 			[WorkerType.TOUR_GUIDE]: {
 				label: {
@@ -1508,7 +1603,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207163'
 			},
 			[WorkerType.TRAINER_EDUCATOR]: {
 				label: {
@@ -1522,7 +1618,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207164'
 			},
 			[WorkerType.TICKETING_AGENT]: {
 				label: {
@@ -1536,7 +1633,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207165'
 			},
 			[WorkerType.HOST]: {
 				label: {
@@ -1550,7 +1648,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207166'
 			}
 		}
 	},
@@ -1574,7 +1673,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207167'
 			},
 			[WorkerType.PROJECT_MANAGER]: {
 				label: {
@@ -1588,7 +1688,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207168'
 			},
 			[WorkerType.EVENT_PRODUCER]: {
 				label: {
@@ -1602,7 +1703,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207169'
 			},
 			[WorkerType.EXHIBITION_MANAGER]: {
 				label: {
@@ -1616,7 +1718,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207170'
 			},
 			[WorkerType.PROGRAM_COORDINATOR]: {
 				label: {
@@ -1630,7 +1733,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207171'
 			},
 			[WorkerType.PROJECT_ASSISTANT]: {
 				label: {
@@ -1644,7 +1748,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207172'
 			},
 			[WorkerType.RESIDENCY_COORDINATOR]: {
 				label: {
@@ -1658,7 +1763,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207173'
 			},
 			[WorkerType.ARTS_ADMINISTRATOR]: {
 				label: {
@@ -1672,7 +1778,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207174'
 			},
 			[WorkerType.PROGRAM_DIRECTOR]: {
 				label: {
@@ -1686,7 +1793,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207175'
 			},
 			[WorkerType.COLLECTIONS_MANAGER]: {
 				label: {
@@ -1700,7 +1808,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207176'
 			},
 			[WorkerType.GALLERY_MANAGER]: {
 				label: {
@@ -1714,7 +1823,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207177'
 			},
 			[WorkerType.GALLERY_ASSISTANT]: {
 				label: {
@@ -1728,7 +1838,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207178'
 			},
 			[WorkerType.ARTIST_LIAISON]: {
 				label: {
@@ -1742,7 +1853,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207179'
 			},
 			[WorkerType.GENERAL_COORDINATOR]: {
 				label: {
@@ -1756,7 +1868,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207180'
 			},
 			[WorkerType.GENERAL_DIRECTOR]: {
 				label: {
@@ -1770,7 +1883,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207181'
 			},
 			[WorkerType.ADMINISTRATIVE_SUPPORT]: {
 				label: {
@@ -1784,7 +1898,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207182'
 			},
 			[WorkerType.CHIEF_OF_STAFF]: {
 				label: {
@@ -1798,7 +1913,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207183'
 			},
 			[WorkerType.HR_STAFF_MANAGER]: {
 				label: {
@@ -1812,7 +1928,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207184'
 			}
 		}
 	},
@@ -1836,7 +1953,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207185'
 			},
 			[WorkerType.PHOTOGRAPHER]: {
 				label: {
@@ -1850,7 +1968,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207186'
 			},
 			[WorkerType.WEB_DEVELOPER]: {
 				label: {
@@ -1864,7 +1983,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207187'
 			},
 			[WorkerType.WEB_DESIGNER]: {
 				label: {
@@ -1878,7 +1998,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207188'
 			},
 			[WorkerType.VIDEOGRAPHER]: {
 				label: {
@@ -1892,7 +2013,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207189'
 			},
 			[WorkerType.COMMUNITY_MANAGER]: {
 				label: {
@@ -1906,7 +2028,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207190'
 			},
 			[WorkerType.DIGITAL_CONTENT_MANAGER]: {
 				label: {
@@ -1920,7 +2043,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207191'
 			},
 			[WorkerType.SOCIAL_MEDIA_STRATEGIST]: {
 				label: {
@@ -1934,7 +2058,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207192'
 			},
 			[WorkerType.MARKETING_MANAGER]: {
 				label: {
@@ -1948,7 +2073,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207193'
 			},
 			[WorkerType.PRESS_LIAISON]: {
 				label: {
@@ -1962,7 +2088,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207194'
 			}
 		}
 	},
@@ -1986,7 +2113,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207195'
 			},
 			[WorkerType.CUSTODIAL_STAFF]: {
 				label: {
@@ -2000,7 +2128,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207196'
 			},
 			[WorkerType.FACILITIES_MANAGER]: {
 				label: {
@@ -2014,7 +2143,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207197'
 			},
 			[WorkerType.IT_SUPPORT]: {
 				label: {
@@ -2028,7 +2158,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207198'
 			},
 			[WorkerType.SYSTEMS_ADMIN]: {
 				label: {
@@ -2042,7 +2173,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207199'
 			},
 			[WorkerType.COLLECTIONS_DATABASE_MANAGER]: {
 				label: {
@@ -2056,7 +2188,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207200'
 			}
 		}
 	},
@@ -2080,7 +2213,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207201'
 			},
 			[WorkerType.ACCOUNTANT]: {
 				label: {
@@ -2094,7 +2228,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207202'
 			},
 			[WorkerType.ART_SALES_ASSOCIATE]: {
 				label: {
@@ -2108,7 +2243,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207203'
 			},
 			[WorkerType.GRANTS_MANAGER]: {
 				label: {
@@ -2122,7 +2258,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207204'
 			},
 			[WorkerType.ART_ADVISOR]: {
 				label: {
@@ -2136,7 +2273,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207205'
 			},
 			[WorkerType.STRATEGY_POLICY_OFFICER]: {
 				label: {
@@ -2150,7 +2288,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207206'
 			},
 			[WorkerType.DEVELOPMENT_DIRECTOR]: {
 				label: {
@@ -2164,7 +2303,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207207'
 			},
 			[WorkerType.FUNDRAISING_OFFICER]: {
 				label: {
@@ -2178,7 +2318,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207208'
 			},
 			[WorkerType.SPONSORSHIP_COORDINATOR]: {
 				label: {
@@ -2192,7 +2333,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207209'
 			},
 			[WorkerType.MEMBERSHIP_PATRON_RELATIONS_MANAGER]: {
 				label: {
@@ -2206,7 +2348,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207210'
 			},
 			[WorkerType.LEGAL_ADVISOR]: {
 				label: {
@@ -2220,7 +2363,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207211'
 			},
 			[WorkerType.ART_LAWYER]: {
 				label: {
@@ -2234,7 +2378,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207212'
 			},
 			[WorkerType.CONTRACTS_MANAGER]: {
 				label: {
@@ -2248,7 +2393,8 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
-				}
+				},
+				id: '5207213'
 			}
 		}
 	},
@@ -2272,11 +2418,13 @@ export const workerTypeOptions = {
 					[Language.FR]: '(FR) department title, task types, team size, etc.',
 					[Language.IT]: '(IT) department title, task types, team size, etc.',
 					[Language.ES]: '(ES) department title, task types, team size, etc.'
-				}
+				},
+				id: '5207214'
 			}
 		}
 	}
 };
+
 export const getWorkerTypeHelpText = (workerType: WorkerType | undefined): string => {
 	if (workerType) {
 		for (const subgroupKey in workerTypeOptions) {
@@ -2382,31 +2530,36 @@ export const compensationFrequencyOptions = {
 		[Language.EN]: 'Hourly',
 		[Language.FR]: 'Hourly FR',
 		[Language.IT]: 'Hourly IT',
-		[Language.ES]: 'Hourly ES'
+		[Language.ES]: 'Hourly ES',
+		id: '5207257'
 	},
 	[CompensationFrequency.DAILY]: {
 		[Language.EN]: 'Daily',
 		[Language.FR]: 'Daily FR',
 		[Language.IT]: 'Daily IT',
-		[Language.ES]: 'Daily ES'
+		[Language.ES]: 'Daily ES',
+		id: '5207256'
 	},
 	[CompensationFrequency.WEEKLY]: {
 		[Language.EN]: 'Weekly',
 		[Language.FR]: 'Weekly FR',
 		[Language.IT]: 'Weekly IT',
-		[Language.ES]: 'Weekly ES'
+		[Language.ES]: 'Weekly ES',
+		id: '5207255'
 	},
 	[CompensationFrequency.MONTHLY]: {
 		[Language.EN]: 'Monthly',
 		[Language.FR]: 'Monthly FR',
 		[Language.IT]: 'Monthly IT',
-		[Language.ES]: 'Monthly ES'
+		[Language.ES]: 'Monthly ES',
+		id: '5207254'
 	},
 	[CompensationFrequency.FLAT_FEE]: {
 		[Language.EN]: 'Flat Fee',
 		[Language.FR]: 'Flat Fee FR',
 		[Language.IT]: 'Flat Fee IT',
-		[Language.ES]: 'Flat Fee ES'
+		[Language.ES]: 'Flat Fee ES',
+		id: '5207253'
 	}
 };
 

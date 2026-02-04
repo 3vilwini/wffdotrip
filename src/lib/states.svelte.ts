@@ -1,8 +1,8 @@
 export const enum Language {
-	EN="EN",
-	FR="FR",
-	IT="IT",
-	ES="ES"
+	EN = 'EN',
+	FR = 'FR',
+	IT = 'IT',
+	ES = 'ES'
 }
 
 export const siteState = $state({
@@ -10,5 +10,10 @@ export const siteState = $state({
 	userEmail: '',
 	user: {},
 	formSubmitted: false,
-	currFormSection: ''
+	currFormSection: '',
+	showFilterPanel: false
+});
+
+export const filteredResultsState = $state({
+	rows: null
 });

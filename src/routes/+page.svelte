@@ -6,14 +6,18 @@
 	import CurrentResidentBanner from '$lib/components/index/CurrentResidentBanner.svelte';
 	import IndexHeader from '$lib/components/index/IndexHeader.svelte';
 	import SelectedRow from '$lib/components/index/SelectedRow.svelte';
-	import { siteState } from '$lib/states.svelte';
+	import { filteredResultsState, siteState } from '$lib/states.svelte';
 	let { data } = $props();
 	let numRowsPerCountry = $state({});
 	let selectedRow = $state(null);
+	let rows = $derived(
+		filteredResultsState.rows ? filteredResultsState.rows.results : data.rows.results
+	);
 	onMount(() => {
 		for (let country of Object.keys(countryOptions)) {
+			console.log(data.rows.results);
 			numRowsPerCountry[country] = data.rows.results.filter((row) => {
-				return row.country === country;
+				return row.country.value === country;
 			}).length;
 		}
 	});
@@ -24,7 +28,7 @@
 	<div class="flex-grow">
 		<IndexHeader></IndexHeader>
 		<div class="flex flex-col">
-			{#each data.rows.results as row}
+			{#each rows as row}
 				<Row {row} onclick={() => (selectedRow = row)}></Row>
 			{/each}
 		</div>
