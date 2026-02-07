@@ -1,10 +1,11 @@
 import { URLSearchParams } from 'url';
 
+import { BASEROW_SECRET_KEY } from '$env/static/private';
 export const getAllVerifiedRows = async () => {
 	const options = {
 		method: 'GET',
 		headers: {
-			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm'
+			Authorization: `Token ${BASEROW_SECRET_KEY}`
 		}
 	};
 	const params = new URLSearchParams({
@@ -34,7 +35,7 @@ export const getRowsByFilter = async (filterObj: any) => {
 	const options = {
 		method: 'GET',
 		headers: {
-			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm'
+			Authorization: `Token ${BASEROW_SECRET_KEY}`
 		}
 	};
 	const params = new URLSearchParams({
@@ -61,7 +62,7 @@ export const getRowsByUserID = async (userID: string) => {
 	const options = {
 		method: 'GET',
 		headers: {
-			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm'
+			Authorization: `Token ${BASEROW_SECRET_KEY}`
 		}
 	};
 	const params = new URLSearchParams({
@@ -90,7 +91,7 @@ export const editRow = async (row_id: string, data) => {
 	const options = {
 		method: 'PATCH',
 		headers: {
-			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm',
+			Authorization: `Token ${BASEROW_SECRET_KEY}`,
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify(data)
@@ -110,7 +111,7 @@ export const deleteRow = async (row_id: string) => {
 	const options = {
 		method: 'DELETE',
 		headers: {
-			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm',
+			Authorization: `Token ${BASEROW_SECRET_KEY}`,
 			'Content-Type': 'application/json'
 		}
 	};
@@ -129,7 +130,7 @@ export const submitForm = async (data) => {
 	const options = {
 		method: 'POST',
 		headers: {
-			Authorization: 'Token 14u0xgaBt3kLdjPsfVWOh0GajJZMt1fm',
+			Authorization: `Token ${BASEROW_SECRET_KEY}`,
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify(data)
