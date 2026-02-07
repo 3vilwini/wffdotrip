@@ -27,8 +27,10 @@ export const actions = {
 			if (key === 'user_id') {
 				reqBody[key] = locals.auth().userId;
 				value.toString();
-			} else {
-				reqBody[key] = value.toString();
+			} else if (key !== 'disclaimer') {
+				if (value.toString().trim() !== '') {
+					reqBody[key] = value.toString();
+				}
 			}
 		});
 
@@ -39,6 +41,8 @@ export const actions = {
 				console.log(response);
 				if (response.status === 200) {
 					return { success: true };
+				} else {
+					return fail(422, { error: 'error occurred when submitting form' });
 				}
 			} catch (error: any) {
 				console.error(error);

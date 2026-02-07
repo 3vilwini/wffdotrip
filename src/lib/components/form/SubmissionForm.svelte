@@ -82,6 +82,8 @@
 				if (result.type === 'success') {
 					siteState.formSubmitted = true;
 					goto('/dashboard');
+				} else {
+					goto('/error');
 				}
 				// update();
 			};
