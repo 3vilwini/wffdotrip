@@ -24,7 +24,7 @@ export const actions = {
 		const formData = await request.formData();
 		const reqBody = {} as { [key: string]: any };
 		formData.forEach((value, key) => {
-			if (key === 'email') {
+			if (key === 'user_id') {
 				reqBody[key] = locals.auth().userId;
 				value.toString();
 			} else {
@@ -34,7 +34,9 @@ export const actions = {
 
 		if (request.method === 'POST') {
 			try {
+				console.log(reqBody);
 				const response = await submitForm(reqBody);
+				console.log(response);
 				if (response.status === 200) {
 					return { success: true };
 				}
