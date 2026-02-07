@@ -1,6 +1,7 @@
 import { URLSearchParams } from 'url';
 
 import { BASEROW_SECRET_KEY } from '$env/static/private';
+
 export const getAllVerifiedRows = async () => {
 	const options = {
 		method: 'GET',
