@@ -6,7 +6,7 @@
 
 <div class=" flex flex-col gap-12">
 	<div class="flex items-start justify-between p-8">
-		<a href="/">
+		<a href="/" class="cursor-pointer">
 			<img src={logo} class="w-48" />
 		</a>
 		<SignedIn>
@@ -16,7 +16,7 @@
 				</div>
 				<div class="font-mono text-xs">Deactivate account</div>
 				<div class="cursor-pointer font-mono text-xs hover:underline">
-					<SignOutButton class="hover:underline cursor-pointer"></SignOutButton>
+					<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
 				</div>
 			</div>
 		</SignedIn>

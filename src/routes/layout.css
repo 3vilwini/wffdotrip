@@ -87,3 +87,7 @@ textarea::placeholder {
 input:checked {
 	background-color: var(--color-black);
 }
+
+a {
+	cursor: pointer;
+}
