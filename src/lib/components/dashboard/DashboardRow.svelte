@@ -13,7 +13,7 @@
 		contractLengthUnitOptions,
 		indexHeaderLabels
 	} from '../../staticContent.ts';
-	import { siteState } from '$lib/states.svelte';
+	import { siteState, yarndingsText } from '$lib/states.svelte';
 	import {
 		Country,
 		countryOptions,
@@ -44,7 +44,7 @@
 </script>
 
 {#if showEditModal}
-	<div class="fixed z-10 top-0 left-0 flex h-dvh w-dvw justify-center py-12 pb-24">
+	<div class="fixed top-0 left-0 z-10 flex h-dvh w-dvw justify-center py-12 pb-24">
 		<div
 			class="relative max-w-2xl overflow-auto border border-black bg-white px-4 pb-12 font-mono text-xs leading-normal"
 		>
@@ -103,18 +103,21 @@
 {/if}
 
 <div class="border-t pr-4 pl-8 font-mono text-xs leading-normal last:border-b">
-	<div class="align-center flex justify-between gap-4 pt-3 pb-2">
+	<div class="align-center flex justify-between gap-4 pt-1 pb-1.5">
 		<div class="flex basis-1/4 gap-4">
 			{#if row.city && row.country}
-				<div class="basis-1/2">
+				<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
+					{yarndingsText[row.city.length % yarndingsText.length]}
+				</div>
+				<div class="basis-1/2 pt-2">
 					{row.city}, {countryOptions[row.country.value][siteState.language]}
 				</div>
 			{/if}
-			<div class="basis-1/3">
+			<div class="basis-1/3 pt-2">
 				{row.verified ? 'Validated' : 'Pending'}
 			</div>
 			{#if row.year}
-				<div class="basis-1/6">
+				<div class="basis-1/6 pt-2">
 					{row.year}
 				</div>
 			{/if}
@@ -122,18 +125,18 @@
 
 		<div class="flex basis-1/4 gap-2">
 			{#if row.worker_type}
-				<div class="font-sans text-lg leading-3">
+				<div class="pt-2.25 font-sans text-lg leading-3">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
 			{#if row.job_title}
-				<div>
+				<div class="pt-2">
 					{row.job_title}
 				</div>
 			{/if}
 		</div>
 
-		<div class="relative -top-0.5 basis-1/5 font-serif text-lg leading-[1] tracking-tight">
+		<div class="relative basis-1/5 pt-1.5 font-serif text-lg leading-[1] tracking-tight">
 			{#if row.employer_name}
 				{row.employer_name}
 			{/if}
@@ -141,10 +144,10 @@
 
 		<div class="flex basis-1/5 justify-between">
 			{#if row.contract_type}
-				<div>{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
+				<div class="pt-2">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
 			{/if}
 			{#if row.compensation_amount && row.compensation_frequency && row.country}
-				<div>
+				<div class="pt-2">
 					<div
 						class="-mt-0.5 rounded-full border px-2 py-0.5 text-[9px] whitespace-nowrap uppercase"
 					>
@@ -158,6 +161,7 @@
 			onclick={() => {
 				rowExpanded = !rowExpanded;
 			}}
+			class="pt-2"
 		>
 			<div
 				class="relative h-4 w-4 {rowExpanded
@@ -201,7 +205,9 @@
 					{/if}
 					{#if row.job_experience}
 						<div>
-							{jobExperienceOptions[row.job_experience.value][siteState.language]} of experience
+							{jobExperienceOptions[row.job_experience.value] +
+								' ' +
+								fieldLabels.yearsOfExperience[siteState.language]}
 						</div>
 					{/if}
 					{#if row.job_obtained_via}
@@ -210,19 +216,19 @@
 						</div>
 					{/if}
 					{#if row.satisfied_with_compensation}
-						<div class="my-2 flex gap-2">
+						<div class="mt-2 flex gap-2">
 							<div>❀</div>
 							<div>satisfied with compensation</div>
 						</div>
 					{/if}
 					{#if row.satisfied_with_conditions}
-						<div class="my-2 flex gap-2">
+						<div class="mt-2 flex gap-2">
 							<div>❀</div>
 							<div>satisfied with working conditions</div>
 						</div>
 					{/if}
 					{#if row.treated_fairly}
-						<div class="my-2 flex gap-2">
+						<div class="mt-2 flex gap-2">
 							<div>❀</div>
 							<div>treated fairly</div>
 						</div>

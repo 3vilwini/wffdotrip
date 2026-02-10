@@ -48,9 +48,12 @@ export default defineConfig({
               .title('FAQ Page')
               .id('faqPage')
               .icon(DocumentIcon)
-              .child(
-                S.document().schemaType('faqPage').documentId('faqPage').title('FAQ Page'),
-              ),
+              .child(S.document().schemaType('faqPage').documentId('faqPage').title('FAQ Page')),
+            S.listItem()
+              .title('Cost Page')
+              .id('costPage')
+              .icon(DocumentIcon)
+              .child(S.document().schemaType('costPage').documentId('costPage').title('Cost Page')),
           ]),
     }),
     visionTool(),

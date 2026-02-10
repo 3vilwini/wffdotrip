@@ -20,7 +20,7 @@
 		jobObtainedViaOptions,
 		contractLengthUnitOptions
 	} from '$lib/staticContent';
-	import { siteState } from '$lib/states.svelte';
+	import { siteState, yarndingsText } from '$lib/states.svelte';
 	import doubleArrow from '$lib/assets/doubleArrow.svg';
 	let { row = $bindable() } = $props();
 </script>
@@ -48,13 +48,21 @@ verified: true
 <div
 	class="transition-transform {row
 		? 'translate-x-0'
-		: 'translate-x-full '} absolute top-0 right-0 h-[calc(100dvh-3.5rem)] w-[25dvw] max-w-sm min-w-xs border-l bg-lightgrey z-2"
+		: 'translate-x-full '} absolute top-0 right-0 z-2 h-[calc(100dvh-3.5rem)] w-[25dvw] max-w-sm min-w-xs border-l bg-lightgrey"
 >
 	{#if row}
 		<div class="flex h-[calc(100dvh-3.5rem)] flex-col gap-6 overflow-auto p-6">
-			{#if row.worker_type}
-				<div class="text-2xl">{getWorkerTypeLabel(row.worker_type.value)}</div>
-			{/if}
+			<div class="flex items-center gap-2">
+				{#if row.city}
+					<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
+						{yarndingsText[row.city.length % yarndingsText.length]}
+					</div>
+				{/if}
+				{#if row.worker_type}
+					<div class="text-2xl leading-none">{getWorkerTypeLabel(row.worker_type.value)}</div>
+				{/if}
+			</div>
+
 			<div class="">
 				{#if row.year}
 					<div class="text-lg">{row.year}</div>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { compensationFrequencyOptions } from './../../staticContent.ts';
-	import { siteState } from '$lib/states.svelte';
+	import { siteState, yarndingsText } from '$lib/states.svelte';
 	import {
 		currency,
 		contractTypeOptions,
@@ -11,14 +11,20 @@
 	let { row, onclick } = $props();
 </script>
 
-<div {onclick} class="items-top flex cursor-pointer gap-2 border-b pl-3 pr-1.5 py-2 hover:bg-lightgrey">
+<div
+	{onclick}
+	class="items-top flex cursor-pointer gap-2 border-b py-1 pr-2 pl-2 hover:bg-lightgrey"
+>
 	{#if row.city}
-		<div class="w-40 shrink-0 grow-0 pt-1.5 font-mono text-xs">
+		<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
+			{yarndingsText[row.city.length % yarndingsText.length]}
+		</div>
+		<div class="w-40 shrink-0 grow-0 pt-3 font-mono text-xs">
 			{row.city}
 		</div>
 	{/if}
 	<div class="items-top flex grow justify-between gap-4">
-		<span class="leading-none">
+		<span class="pt-1.75 leading-none">
 			{#if row.worker_type}
 				<span class="text-lg leading-tight">
 					{getWorkerTypeLabel(row.worker_type.value)}
@@ -31,7 +37,7 @@
 			{/if}
 		</span>
 
-		<span class="leading-none">
+		<span class="pt-1.5 leading-none">
 			{#if row.employer_type}
 				<span class="font-serif text-lg leading-tight tracking-tight">
 					{getEmployerTypeLabel(row.employer_type.value)}
@@ -46,13 +52,13 @@
 		</span>
 
 		{#if row.contract_type}
-			<div class="pt-1 font-mono text-xs">
+			<div class="pt-3 font-mono text-xs">
 				{contractTypeOptions[row.contract_type.value][siteState.language]}
 			</div>
 		{/if}
 
 		{#if row.compensation_amount && row.compensation_frequency && row.country}
-			<div>
+			<div class="pt-1.75">
 				<div class="rounded-full border px-2 py-1 font-mono text-[9px] whitespace-nowrap">
 					{row.compensation_amount}{currency[row.country]}
 					{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}

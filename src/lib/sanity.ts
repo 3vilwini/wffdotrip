@@ -63,3 +63,9 @@ export async function getFAQPage(): Promise<any> {
         *[_id=="faqPage"][0]
     `);
 }
+
+export async function getCostPage(): Promise<any> {
+	return await client.fetch(groq`
+        *[_id=="costPage"][0]
+    `);
+}

@@ -17,3 +17,5 @@ export const siteState = $state({
 export const filteredResultsState = $state({
 	rows: null
 });
+
+export const yarndingsText = 'abcdefgijmnEFGHIPSTU';

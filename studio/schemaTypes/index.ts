@@ -11,6 +11,7 @@ import workerCategoryOptions from './workerCategoryOptions'
 import blockContent from './blockContent'
 import indexPage from './indexPage'
 import faqPage from './faqPage'
+import costPage from './costPage'
 export const schemaTypes = [
   blockContent,
   formPage,
@@ -24,5 +25,6 @@ export const schemaTypes = [
   siteMetadata,
   selectInputCountryDependent,
   indexPage,
-  faqPage
+  faqPage,
+  costPage,
 ]

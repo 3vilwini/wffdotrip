@@ -96,379 +96,452 @@
 			<FormCheckbox required name="disclaimer" label={formPage.disclaimer[siteState.language]}
 			></FormCheckbox>
 
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'whereWhen')}>
-				<FormSectionHeader>
-					{formPage.whereWhenSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div class="flex gap-4">
-					<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4" required>
-						<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
-
-						{#each Object.entries(countryOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
-						{/each}
-					</FormSelect>
-
-					<FormSimpleInput
-						class="basis-1/2"
-						name="city"
-						placeholder={fieldLabels.city[siteState.language]}
-						required
-					></FormSimpleInput>
-
-					<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4" required>
-						<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
-						{#each yearOptions as year}
-							<FormOption value={year}>{year}</FormOption>
-						{/each}
-						<FormOption value="2010">{yearOption2010OrBefore[siteState.language]}</FormOption>
-					</FormSelect>
+			<div class="my-8 flex w-full gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					a
 				</div>
-			</div>
+				<div
+					role="presentation"
+					onmouseenter={() => (siteState.currFormSection = 'whereWhen')}
+					class="w-full"
+				>
+					<FormSectionHeader>
+						{formPage.whereWhenSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div class="flex gap-4">
+						<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4" required>
+							<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
 
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'employer')}>
-				<FormSectionHeader>
-					{formPage.employerSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div class="flex flex-wrap gap-4">
-					<FormSelect class="w-0 basis-[calc(50%-0.5rem)]" name="employer_type" required>
-						<FormOption value="" isDefault
-							>{fieldLabels.employerType[siteState.language]}</FormOption
-						>
-						{#each Object.values(employerTypeOptions) as section}
-							<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
-								{#each Object.entries(section.options) as [key, value]}
-									<option class="pl-8 text-black" value={key}>{value[siteState.language]}</option>
-								{/each}
-							</optgroup>
-						{/each}
-					</FormSelect>
-
-					<FormSimpleInput
-						class="basis-[calc(50%-0.5rem)]"
-						name="employer_name"
-						placeholder={fieldLabels.employerName[siteState.language]}
-					></FormSimpleInput>
-
-					<FormSelect name="num_employees" class="basis-[calc(50%-0.5rem)]" required>
-						<FormOption value="" isDefault
-							>{fieldLabels.numEmployees[siteState.language]}</FormOption
-						>
-						{#each Object.entries(numEmployeesOptions) as [key, value]}
-							<FormOption value={key}
-								>{value + ' ' + fieldLabels.employees[siteState.language]}</FormOption
-							>
-						{/each}
-					</FormSelect>
-				</div>
-			</div>
-
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'terms')}>
-				<FormSectionHeader>
-					{formPage.termsSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div class="flex flex-wrap gap-4">
-					<FormSelect
-						bind:boundValue={selectedContractType}
-						name="contract_type"
-						class=" basis-[calc(50%-0.5rem)]"
-						required
-					>
-						<FormOption value="" isDefault
-							>{fieldLabels.contractType[siteState.language]}</FormOption
-						>
-						{#each Object.entries(contractTypeOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
-						{/each}
-					</FormSelect>
-
-					{#if selectedCountry}
-						<FormSelect required name="worker_status" class="basis-[calc(50%-0.5rem)]">
-							<FormOption value="" isDefault>
-								{fieldLabels.workerStatus[siteState.language][selectedCountry]}
-							</FormOption>
-							{#each workerStatusOptions[selectedCountry] as option}
-								<FormOption value={option}>{option}</FormOption>
+							{#each Object.entries(countryOptions) as [key, value]}
+								<FormOption value={key}>{value[siteState.language]}</FormOption>
 							{/each}
 						</FormSelect>
-					{/if}
 
-					{#if selectedContractType && selectedContractType !== ContractType.FULLTIME}
-						<div class="flex basis-[calc(50%-0.5rem)]">
+						<FormSimpleInput
+							class="basis-1/2"
+							name="city"
+							placeholder={fieldLabels.city[siteState.language]}
+							required
+						></FormSimpleInput>
+
+						<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4" required>
+							<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
+							{#each yearOptions as year}
+								<FormOption value={year}>{year}</FormOption>
+							{/each}
+							<FormOption value="2010">{yearOption2010OrBefore[siteState.language]}</FormOption>
+						</FormSelect>
+					</div>
+				</div>
+			</div>
+
+			<div class="my-8 flex gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					b
+				</div>
+
+				<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'employer')}>
+					<FormSectionHeader>
+						{formPage.employerSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div class="flex flex-wrap gap-4">
+						<FormSelect class="w-0 basis-[calc(50%-0.5rem)]" name="employer_type" required>
+							<FormOption value="" isDefault
+								>{fieldLabels.employerType[siteState.language]}</FormOption
+							>
+							{#each Object.values(employerTypeOptions) as section}
+								<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
+									{#each Object.entries(section.options) as [key, value]}
+										<option class="pl-8 text-black" value={key}>{value[siteState.language]}</option>
+									{/each}
+								</optgroup>
+							{/each}
+						</FormSelect>
+
+						<FormSimpleInput
+							class="basis-[calc(50%-0.5rem)]"
+							name="employer_name"
+							placeholder={fieldLabels.employerName[siteState.language]}
+						></FormSimpleInput>
+
+						<FormSelect name="num_employees" class="basis-[calc(50%-0.5rem)]" required>
+							<FormOption value="" isDefault
+								>{fieldLabels.numEmployees[siteState.language]}</FormOption
+							>
+							{#each Object.entries(numEmployeesOptions) as [key, value]}
+								<FormOption value={key}
+									>{value + ' ' + fieldLabels.employees[siteState.language]}</FormOption
+								>
+							{/each}
+						</FormSelect>
+					</div>
+				</div>
+			</div>
+			<div class="my-8 flex w-full gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					c
+				</div>
+
+				<div
+					role="presentation"
+					onmouseenter={() => (siteState.currFormSection = 'terms')}
+					class="w-full"
+				>
+					<FormSectionHeader>
+						{formPage.termsSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div class="flex w-full flex-wrap gap-4">
+						<FormSelect
+							bind:boundValue={selectedContractType}
+							name="contract_type"
+							class=" basis-[calc(50%-0.5rem)]"
+							required
+						>
+							<FormOption value="" isDefault
+								>{fieldLabels.contractType[siteState.language]}</FormOption
+							>
+							{#each Object.entries(contractTypeOptions) as [key, value]}
+								<FormOption value={key}>{value[siteState.language]}</FormOption>
+							{/each}
+						</FormSelect>
+
+						{#if selectedCountry}
+							<FormSelect required name="worker_status" class="basis-[calc(50%-0.5rem)]">
+								<FormOption value="" isDefault>
+									{fieldLabels.workerStatus[siteState.language][selectedCountry]}
+								</FormOption>
+								{#each workerStatusOptions[selectedCountry] as option}
+									<FormOption value={option}>{option}</FormOption>
+								{/each}
+							</FormSelect>
+						{/if}
+
+						{#if selectedContractType && selectedContractType !== ContractType.FULLTIME}
+							<div class="flex basis-[calc(50%-0.5rem)]">
+								<FormSimpleInput
+									name="contract_length"
+									type="number"
+									placeholder={fieldLabels.contractLength[siteState.language]}
+									class="flex-grow border-r-0"
+								></FormSimpleInput>
+
+								<FormSelect name="contract_length_unit" class="w-20">
+									{#each Object.entries(contractLengthUnitOptions) as [key, value]}
+										<FormOption value={key}>{value[siteState.language]}</FormOption>
+									{/each}
+								</FormSelect>
+							</div>
+
+							<label class="flex basis-[calc(50%-0.5rem)] items-center">
+								<FormSimpleInput
+									name="contract_num_hours"
+									type="number"
+									placeholder={fieldLabels.contractNumHours[siteState.language]}
+									class="grow"
+								></FormSimpleInput>
+								<span class="flex h-full items-center justify-center border-b px-2">
+									{fieldLabels.perWeek[siteState.language]}
+								</span>
+							</label>
+						{/if}
+					</div>
+				</div>
+			</div>
+
+			<div class="my-8 flex w-full gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					d
+				</div>
+				<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'job')}>
+					<FormSectionHeader>
+						{formPage.jobSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div class="flex flex-wrap gap-4">
+						<FormSelect
+							bind:boundValue={selectedWorkerType}
+							name="worker_type"
+							class=" basis-[calc(50%-0.5rem)]"
+							required
+						>
+							<FormOption value="" isDefault
+								>{fieldLabels.workerType[siteState.language]}</FormOption
+							>
+							{#each Object.values(workerTypeOptions) as section}
+								<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
+									{#each Object.entries(section.options) as [key, value]}
+										<option value={key} class="pl-8 text-black"
+											>{value.label[siteState.language]}</option
+										>
+									{/each}
+								</optgroup>
+							{/each}
+						</FormSelect>
+
+						<FormSimpleInput
+							name="job_title"
+							placeholder={fieldLabels.jobTitle[siteState.language]}
+							class="basis-[calc(50%-0.5rem)]"
+						/>
+
+						<textarea
+							name="job_details"
+							placeholder="{fieldLabels.jobDetails[
+								siteState.language
+							]} {selectedWorkerTypeHelpText}"
+							class="field-sizing-content basis-full border-0 border-b text-xs"
+							maxlength="250"
+						></textarea>
+
+						<FormSelect name="job_experience" class="basis-[calc(50%-0.5rem)]">
+							<FormOption value="" isDefault
+								>{fieldLabels.jobExperience[siteState.language]}</FormOption
+							>
+							{#each Object.entries(jobExperienceOptions) as [key, value]}
+								<FormOption value={key}
+									>{value + ' ' + fieldLabels.yearsOfExperience[siteState.language]}</FormOption
+								>
+							{/each}
+						</FormSelect>
+
+						<FormSelect name="job_obtained_via" class="basis-[calc(50%-0.5rem)]">
+							<FormOption value="" isDefault
+								>{fieldLabels.jobObtainedVia[siteState.language]}</FormOption
+							>
+							{#each Object.entries(jobObtainedViaOptions) as [key, value]}
+								<FormOption value={key}>{value[siteState.language]}</FormOption>
+							{/each}
+						</FormSelect>
+					</div>
+				</div>
+			</div>
+			<div class="my-8 flex w-full gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					e
+				</div>
+				<div
+					role="presentation"
+					onmouseenter={() => (siteState.currFormSection = 'compensation')}
+					class="w-full"
+				>
+					<FormSectionHeader>
+						{formPage.compensationSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div class="flex flex-wrap gap-4">
+						<div class="relative flex w-0 basis-[calc(50%-0.5rem)]">
 							<FormSimpleInput
-								name="contract_length"
+								name="compensation_amount"
 								type="number"
-								placeholder={fieldLabels.contractLength[siteState.language]}
-								class="flex-grow border-r-0"
-							></FormSimpleInput>
-
-							<FormSelect name="contract_length_unit" class="w-20">
-								{#each Object.entries(contractLengthUnitOptions) as [key, value]}
+								placeholder={fieldLabels.compensationAmount[siteState.language]}
+								class="grow"
+								required
+							/>
+							{#if selectedCountry}
+								<div class="relative -left-12 flex items-center pr-4">
+									{currency[selectedCountry]}
+								</div>
+							{/if}
+							<FormSelect name="compensation_frequency" class="w-30" required>
+								<FormOption value="" isDefault
+									>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
+								>
+								{#each Object.entries(compensationFrequencyOptions) as [key, value]}
 									<FormOption value={key}>{value[siteState.language]}</FormOption>
 								{/each}
 							</FormSelect>
 						</div>
 
-						<label class="flex basis-[calc(50%-0.5rem)] items-center">
-							<FormSimpleInput
-								name="contract_num_hours"
-								type="number"
-								placeholder={fieldLabels.contractNumHours[siteState.language]}
-								class="grow"
-							></FormSimpleInput>
-							<span class="flex h-full items-center justify-center border-b px-2">
-								{fieldLabels.perWeek[siteState.language]}
-							</span>
-						</label>
-					{/if}
-				</div>
-			</div>
-
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'job')}>
-				<FormSectionHeader>
-					{formPage.jobSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div class="flex flex-wrap gap-4">
-					<FormSelect
-						bind:boundValue={selectedWorkerType}
-						name="worker_type"
-						class=" basis-[calc(50%-0.5rem)]"
-						required
-					>
-						<FormOption value="" isDefault>{fieldLabels.workerType[siteState.language]}</FormOption>
-						{#each Object.values(workerTypeOptions) as section}
-							<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
-								{#each Object.entries(section.options) as [key, value]}
-									<option value={key} class="pl-8 text-black"
-										>{value.label[siteState.language]}</option
-									>
-								{/each}
-							</optgroup>
-						{/each}
-					</FormSelect>
-
-					<FormSimpleInput
-						name="job_title"
-						placeholder={fieldLabels.jobTitle[siteState.language]}
-						class="basis-[calc(50%-0.5rem)]"
-					/>
-
-					<textarea
-						name="job_details"
-						placeholder="{fieldLabels.jobDetails[siteState.language]} {selectedWorkerTypeHelpText}"
-						class="field-sizing-content basis-full border-0 border-b text-xs"
-						maxlength="250"
-					></textarea>
-
-					<FormSelect name="job_experience" class="basis-[calc(50%-0.5rem)]">
-						<FormOption value="" isDefault
-							>{fieldLabels.jobExperience[siteState.language]}</FormOption
+						<div class=" basis-[calc(50%-0.5rem)] pt-1.5 pl-4">
+							<FormCheckbox
+								name="paid_late"
+								label={fieldLabels.compensationLate[siteState.language]}
+							></FormCheckbox>
+						</div>
+					</div>
+					<div class="relative py-4">
+						<button
+							type="button"
+							onclick={toggleAddlCompMenu}
+							class="group flex items-center gap-4"
 						>
-						{#each Object.entries(jobExperienceOptions) as [key, value]}
-							<FormOption value={key}
-								>{value + ' ' + fieldLabels.yearsOfExperience[siteState.language]}</FormOption
+							<div
+								class="flex h-6 w-6 cursor-pointer items-center justify-center border group-hover:bg-black group-hover:text-white"
 							>
-						{/each}
-					</FormSelect>
-
-					<FormSelect name="job_obtained_via" class="basis-[calc(50%-0.5rem)]">
-						<FormOption value="" isDefault
-							>{fieldLabels.jobObtainedVia[siteState.language]}</FormOption
-						>
-						{#each Object.entries(jobObtainedViaOptions) as [key, value]}
-							<FormOption value={key}>{value[siteState.language]}</FormOption>
-						{/each}
-					</FormSelect>
-				</div>
-			</div>
-
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'compensation')}>
-				<FormSectionHeader>
-					{formPage.compensationSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div class="flex flex-wrap gap-4">
-					<div class="relative flex w-0 basis-[calc(50%-0.5rem)]">
-						<FormSimpleInput
-							name="compensation_amount"
-							type="number"
-							placeholder={fieldLabels.compensationAmount[siteState.language]}
-							class="grow"
-							required
-						/>
-						{#if selectedCountry}
-							<div class="relative -left-12 flex items-center pr-4">
-								{currency[selectedCountry]}
+								+
+							</div>
+							<div class="">{fieldLabels.addlComp[siteState.language]}</div>
+						</button>
+						{#if showAddlCompMenu}
+							<div class="absolute top-4 left-8 flex flex-col gap-1 sm:w-50">
+								{#each Object.entries(addlCompItemOptions) as [key, langOptions]}
+									{#if !addlCompFieldsShown[key]}
+										<AddlCompMenuItem onclick={() => showAddlCompField(key)}
+											>{langOptions[siteState.language]}</AddlCompMenuItem
+										>
+									{/if}
+								{/each}
 							</div>
 						{/if}
-						<FormSelect name="compensation_frequency" class="w-30" required>
-							<FormOption value="" isDefault
-								>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
-							>
-							{#each Object.entries(compensationFrequencyOptions) as [key, value]}
-								<FormOption value={key}>{value[siteState.language]}</FormOption>
-							{/each}
-						</FormSelect>
 					</div>
-
-					<div class=" basis-[calc(50%-0.5rem)] pt-1.5 pl-4">
-						<FormCheckbox name="paid_late" label={fieldLabels.compensationLate[siteState.language]}
-						></FormCheckbox>
-					</div>
-				</div>
-				<div class="relative py-4">
-					<button type="button" onclick={toggleAddlCompMenu} class="group flex items-center gap-4">
-						<div
-							class="flex h-6 w-6 cursor-pointer items-center justify-center border group-hover:bg-black group-hover:text-white"
-						>
-							+
-						</div>
-						<div class="">{fieldLabels.addlComp[siteState.language]}</div>
-					</button>
-					{#if showAddlCompMenu}
-						<div class="absolute top-4 left-8 flex flex-col gap-1 sm:w-50">
-							{#each Object.entries(addlCompItemOptions) as [key, langOptions]}
-								{#if !addlCompFieldsShown[key]}
-									<AddlCompMenuItem onclick={() => showAddlCompField(key)}
-										>{langOptions[siteState.language]}</AddlCompMenuItem
-									>
-								{/if}
-							{/each}
-						</div>
-					{/if}
-				</div>
-				<div class="flex flex-col gap-2">
-					{#each Object.entries(addlCompFieldsShown) as [key, val]}
-						{#if val}
-							<AddlCompensationContainer>
-								{addlCompItemOptions[key][siteState.language]}
-								<div class="flex items-center gap-4">
-									{#if key === 'SALE_OF_WORK'}
-										<div class="flex w-48">
-											<FormSimpleInput
-												name="addl_comp_sale_of_work"
-												type="number"
-												placeholder={fieldLabels.compensationAmount[siteState.language]}
+					<div class="flex flex-col gap-2">
+						{#each Object.entries(addlCompFieldsShown) as [key, val]}
+							{#if val}
+								<AddlCompensationContainer>
+									{addlCompItemOptions[key][siteState.language]}
+									<div class="flex items-center gap-4">
+										{#if key === 'SALE_OF_WORK'}
+											<div class="flex w-48">
+												<FormSimpleInput
+													name="addl_comp_sale_of_work"
+													type="number"
+													placeholder={fieldLabels.compensationAmount[siteState.language]}
+													class="w-48 border-b-0"
+													required
+												/>
+												{#if selectedCountry}
+													<div
+														class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+													>
+														{currency[selectedCountry]}
+													</div>
+												{/if}
+											</div>
+										{:else if key === 'PRODUCTION_BUDGET'}
+											<div class="flex w-48">
+												<FormSimpleInput
+													name="addl_comp_production_budget"
+													type="number"
+													placeholder={fieldLabels.compensationAmount[siteState.language]}
+													class="w-48 border-b-0"
+													required
+												/>
+												{#if selectedCountry}
+													<div
+														class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+													>
+														{currency[selectedCountry]}
+													</div>
+												{/if}
+											</div>
+										{:else if key === 'PER_DIEM'}
+											<div class="flex w-48">
+												<FormSimpleInput
+													name="addl_comp_per_diem"
+													type="number"
+													placeholder={fieldLabels.compensationAmount[siteState.language]}
+													class=" w-48 border-b-0"
+													required
+												/>
+												{#if selectedCountry}
+													<div
+														class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+													>
+														{currency[selectedCountry]}
+													</div>
+												{/if}
+											</div>
+										{:else}
+											<FormSelect
+												name={'addl_comp_' + key.toLowerCase()}
 												class="w-48 border-b-0"
 												required
-											/>
-											{#if selectedCountry}
-												<div
-													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
-												>
-													{currency[selectedCountry]}
-												</div>
-											{/if}
-										</div>
-									{:else if key === 'PRODUCTION_BUDGET'}
-										<div class="flex w-48">
-											<FormSimpleInput
-												name="addl_comp_production_budget"
-												type="number"
-												placeholder={fieldLabels.compensationAmount[siteState.language]}
-												class="w-48 border-b-0"
-												required
-											/>
-											{#if selectedCountry}
-												<div
-													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
-												>
-													{currency[selectedCountry]}
-												</div>
-											{/if}
-										</div>
-									{:else if key === 'PER_DIEM'}
-										<div class="flex w-48">
-											<FormSimpleInput
-												name="addl_comp_per_diem"
-												type="number"
-												placeholder={fieldLabels.compensationAmount[siteState.language]}
-												class=" w-48 border-b-0"
-												required
-											/>
-											{#if selectedCountry}
-												<div
-													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
-												>
-													{currency[selectedCountry]}
-												</div>
-											{/if}
-										</div>
-									{:else}
-										<FormSelect
-											name={'addl_comp_' + key.toLowerCase()}
-											class="w-48 border-b-0"
-											required
+											>
+												{#each Object.entries(addlCompensationCoverageOptions) as [optKey, value]}
+													<FormOption value={optKey}>{value[siteState.language]}</FormOption>
+												{/each}
+											</FormSelect>
+										{/if}
+										<div
+											class=" relative flex cursor-pointer items-center justify-center text-sm font-bold"
+											onclick={() => (addlCompFieldsShown[key] = false)}
 										>
-											{#each Object.entries(addlCompensationCoverageOptions) as [optKey, value]}
-												<FormOption value={optKey}>{value[siteState.language]}</FormOption>
-											{/each}
-										</FormSelect>
-									{/if}
-									<div
-										class=" relative flex cursor-pointer items-center justify-center text-sm font-bold"
-										onclick={() => (addlCompFieldsShown[key] = false)}
-									>
-										<X></X>
+											<X></X>
+										</div>
 									</div>
-								</div>
-							</AddlCompensationContainer>
-						{/if}
-					{/each}
+								</AddlCompensationContainer>
+							{/if}
+						{/each}
+					</div>
 				</div>
 			</div>
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'sentiment')}>
-				<FormSectionHeader>
-					{formPage.sentimentSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div class="flex flex-col gap-4">
-					<FormCheckbox
-						name="satisfied_with_compensation"
-						label={fieldLabels.satisfiedWithCompensation[siteState.language]}
-					></FormCheckbox>
-					<FormCheckbox
-						name="satisfied_with_conditions"
-						label={fieldLabels.satisfiedWithConditions[siteState.language]}
-					></FormCheckbox>
-					<FormCheckbox name="treated_fairly" label={fieldLabels.treatedFairly[siteState.language]}
-					></FormCheckbox>
+			<div class="my-8 flex w-full gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					f
+				</div>
+				<div
+					role="presentation"
+					onmouseenter={() => (siteState.currFormSection = 'sentiment')}
+					class="w-full"
+				>
+					<FormSectionHeader>
+						{formPage.sentimentSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div class="flex w-full flex-col gap-4">
+						<FormCheckbox
+							name="satisfied_with_compensation"
+							label={fieldLabels.satisfiedWithCompensation[siteState.language]}
+						></FormCheckbox>
+						<FormCheckbox
+							name="satisfied_with_conditions"
+							label={fieldLabels.satisfiedWithConditions[siteState.language]}
+						></FormCheckbox>
+						<FormCheckbox
+							name="treated_fairly"
+							label={fieldLabels.treatedFairly[siteState.language]}
+						></FormCheckbox>
+					</div>
 				</div>
 			</div>
 
 			{#if formPage.showArtistQuestions}
-				<div
-					role="presentation"
-					onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}
-				>
-					<FormSectionHeader>
-						{formPage.artistSectionTitle[siteState.language]}
-					</FormSectionHeader>
+				<div class="my-8 flex w-full gap-4">
+					<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+						g
+					</div>
+					<div
+						role="presentation"
+						onmouseenter={() => (siteState.currFormSection = 'artistQuestions')}
+						class="w-full"
+					>
+						<FormSectionHeader>
+							{formPage.artistSectionTitle[siteState.language]}
+						</FormSectionHeader>
 
-					<div class="flex flex-col gap-4">
-						<BlockContent value={formPage.artistSectionContent[siteState.language]}></BlockContent>
+						<div class="flex flex-col gap-4">
+							<BlockContent value={formPage.artistSectionContent[siteState.language]}
+							></BlockContent>
 
-						{#each formPage.artistQuestions.questions as question}
-							<div class="mb-4">
-								<div class="pb-2">{question.questionLabel[siteState.language]}</div>
-								<textarea
-									name={question.dbFieldName}
-									class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
-								></textarea>
-							</div>
-						{/each}
+							{#each formPage.artistQuestions.questions as question}
+								<div class="mb-4">
+									<div class="pb-2">{question.questionLabel[siteState.language]}</div>
+									<textarea
+										name={question.dbFieldName}
+										class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+									></textarea>
+								</div>
+							{/each}
+						</div>
 					</div>
 				</div>
 			{/if}
-
-			<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'addlSection')}>
-				<FormSectionHeader>
-					{formPage.addlSectionTitle[siteState.language]}
-				</FormSectionHeader>
-				<div>
-					<textarea
-						name="addl_notes"
-						placeholder={formPage.addlSectionPlaceholder[siteState.language]}
-						class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
-					></textarea>
+			<div class="my-8 flex w-full gap-4">
+				<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
+					h
+				</div>
+				<div
+					class="w-full"
+					role="presentation"
+					onmouseenter={() => (siteState.currFormSection = 'addlSection')}
+				>
+					<FormSectionHeader>
+						{formPage.addlSectionTitle[siteState.language]}
+					</FormSectionHeader>
+					<div>
+						<textarea
+							name="addl_notes"
+							placeholder={formPage.addlSectionPlaceholder[siteState.language]}
+							class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+						></textarea>
+					</div>
 				</div>
 			</div>
 

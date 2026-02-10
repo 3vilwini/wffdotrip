@@ -9,6 +9,13 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Yarndings';
+	src: url('/fonts/Yarndings20-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
 @theme {
 	--color-black: #1a1a1a;
 	--color-white: #f8f8f8;
@@ -17,6 +24,7 @@
 	--font-mono: 'MartianMono', monospace;
 	--font-sans: 'Arial', sans-serif;
 	--font-serif: 'Times New Roman', serif;
+	--font-yarndings: 'Yarndings';
 	--text-xs: 10px;
 }
 
