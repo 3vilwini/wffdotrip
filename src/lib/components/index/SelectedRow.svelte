@@ -65,7 +65,7 @@ verified: true
 
 			<div class="">
 				{#if row.year}
-					<div class="text-lg">{row.year}</div>
+					<div class="text-[17.25px] ">{row.year}</div>
 				{/if}
 				<div class="font-mono text-xs">
 					{#if row.job_title}
@@ -88,7 +88,7 @@ verified: true
 			</div>
 			<div>
 				{#if row.employer_name}
-					<div class="font-serif text-lg tracking-tight">{row.employer_name}</div>
+					<div class="font-serif text-lg tracking-[-0.01em]">{row.employer_name}</div>
 				{/if}
 				<div class="font-mono text-xs">
 					{#if row.employer_type}
@@ -112,7 +112,7 @@ verified: true
 
 			<div>
 				{#if row.contract_type}
-					<div class="text-lg">
+					<div class="text-[17.25px] tracking-[-0.01em]">
 						{contractTypeOptions[row.contract_type.value][siteState.language]}
 					</div>
 				{/if}
@@ -137,20 +137,22 @@ verified: true
 			{#if row.compensation_amount && row.compensation_frequency && row.country}
 				<div class="border border-dashed">
 					<div class="flex justify-between bg-black p-3 text-lg text-white">
-						<div class="font-serif tracking-tight">
+						<div class="font-serif">
 							{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
 						</div>
-						{row.compensation_amount}{currency[row.country.value]}
+						<div class="tracking-wide">
+							{row.compensation_amount}{currency[row.country.value]}
+						</div>
 					</div>
 				</div>
 			{/if}
 			{#if row.country && (row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel)}
 				<div>
-					<div class="text-lg">Additional Compensation</div>
+					<div class="text-lg mb-1 tracking-[-0.01em]">{fieldLabels.addlComp[siteState.language]}</div>
 					<div class="font-mono text-xs">
 						{#each Object.keys(AddlCompItem) as key}
 							{#if row['addl_comp_' + key.toLowerCase()]}
-								<div class="flex justify-between gap-2 py-0.5 not-last:border-b">
+								<div class="flex justify-between gap-2 py-1 not-last:border-b">
 									<div>
 										{addlCompItemOptions[AddlCompItem[key]][siteState.language]}
 									</div>
@@ -169,18 +171,38 @@ verified: true
 					</div>
 				</div>
 			{/if}
-			<div class="flex flex-col gap-2 font-mono text-xs">
+			<div class="flex flex-col gap-3 font-mono text-xs">
 				{#if row.satisfied_with_compensation}
-					<div>{fieldLabels.satisfiedWithCompensation[siteState.language]}</div>
+					<div class="flex gap-2">
+						<div class="text-sm leading-[0.75]">❀</div>
+						<div>
+							{fieldLabels.satisfiedWithCompensation[siteState.language]}
+						</div>
+					</div>
 				{/if}
 				{#if row.satisfied_with_conditions}
-					<div>{fieldLabels.satisfiedWithConditions[siteState.language]}</div>
+					<div class="flex gap-2">
+						<div class="text-sm leading-[0.75]">❀</div>
+						<div>
+							{fieldLabels.satisfiedWithConditions[siteState.language]}
+						</div>
+					</div>
 				{/if}
 				{#if row.treated_fairly}
-					<div>{fieldLabels.treatedFairly[siteState.language]}</div>
+					<div class="flex gap-2">
+						<div class="text-sm leading-[0.75]">❀</div>
+						<div>
+							{fieldLabels.treatedFairly[siteState.language]}
+						</div>
+					</div>
 				{/if}
 				{#if row.paid_late}
-					<div>{fieldLabels.compensationLate[siteState.language]}</div>
+					<div class="flex gap-2">
+						<div class="text-sm leading-[0.75]">⚑</div>	
+						<div>
+							{fieldLabels.compensationLate[siteState.language]}
+						</div>
+					</div>
 				{/if}
 			</div>
 		</div>

@@ -32,7 +32,7 @@
 	>
 		<div class="flex justify-between gap-4">
 			<div>
-				<div class="mb-4 font-sans text-xl">
+				<div class="mb-4 font-sans text-[19px] leading-none">
 					{fieldLabels.country[siteState.language]}
 				</div>
 				<div class="flex flex-col gap-2">
@@ -42,7 +42,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="mb-4 font-sans text-xl">
+				<div class="mb-4 font-sans text-[19px] leading-none">
 					{indexHeaderLabels.worker[siteState.language]}
 				</div>
 				<div class="flex flex-col gap-2">
@@ -53,7 +53,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="mb-4 font-serif text-xl tracking-tight">
+				<div class="mb-4 font-serif text-xl leading-none tracking-tight">
 					{indexHeaderLabels.employer[siteState.language]}
 				</div>
 				<div class="flex flex-col gap-2">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="mb-4 font-sans text-xl">
+				<div class="mb-4 font-sans text-[19px] leading-none">
 					{indexHeaderLabels.contract[siteState.language]}
 				</div>
 				<div class="flex flex-col gap-2">
@@ -75,7 +75,7 @@
 				</div>
 			</div>
 			<div>
-				<div class="mb-4 font-serif text-xl tracking-tight">
+				<div class="mb-4 font-serif text-xl leading-none tracking-tight">
 					{indexHeaderLabels.wage[siteState.language]}
 				</div>
 				<div class="flex flex-col gap-2">

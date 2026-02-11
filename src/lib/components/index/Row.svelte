@@ -19,14 +19,14 @@
 		<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
 			{yarndingsText[row.city.length % yarndingsText.length]}
 		</div>
-		<div class="w-40 shrink-0 grow-0 pt-3 font-mono text-xs">
+		<div class="w-24 shrink-0 grow-0 pt-3 font-mono text-xs">
 			{row.city}
 		</div>
 	{/if}
 	<div class="items-top flex grow justify-between gap-4">
 		<span class="pt-1.75 leading-none">
 			{#if row.worker_type}
-				<span class="text-lg leading-tight">
+				<span class="text-[17.25px] leading-tight tracking-[-0.01em]">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</span>
 			{/if}
@@ -39,7 +39,7 @@
 
 		<span class="pt-1.5 leading-none">
 			{#if row.employer_type}
-				<span class="font-serif text-lg leading-tight tracking-tight">
+				<span class="font-serif text-lg leading-tight tracking-[-0.01em]">
 					{getEmployerTypeLabel(row.employer_type.value)}
 				</span>
 			{/if}

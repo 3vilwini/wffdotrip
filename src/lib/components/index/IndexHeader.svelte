@@ -8,7 +8,7 @@
 </script>
 
 <div class="relative flex h-14 items-center border-b pr-2 pl-3 text-2xl">
-	<div class="flex w-42 shrink-0 grow-0 items-center gap-3">
+	<div class="flex w-33 shrink-0 grow-0 items-center gap-3">
 		<div class="flex h-8 w-8 cursor-pointer border border-dashed">
 			<button
 				onclick={() => (siteState.showFilterPanel = !siteState.showFilterPanel)}
@@ -21,14 +21,14 @@
 			<img src={sortIcon} />
 		</div> -->
 	</div>
-	<div class="flex w-full justify-between">
-		<div>
+	<div class="flex w-full justify-between items-center">
+		<div class="text-[23px]">
 			{indexHeaderLabels.worker[siteState.language]}
 		</div>
 		<div class="font-serif tracking-tight">
 			{indexHeaderLabels.employer[siteState.language]}
 		</div>
-		<div>
+		<div class="text-[23px]">
 			{indexHeaderLabels.contract[siteState.language]}
 		</div>
 		<div class="font-serif tracking-tight">
@@ -52,12 +52,15 @@
 	</div>
 </div>
 {#if filteredResultsState.rows}
-	<div class="h-14 border-b p-3 flex gap-4 items-center justify-between">
+	<div class="flex h-14 items-center justify-between gap-4 border-b p-3">
 		<div class="font-mono text-xs">
 			{filteredResultsState?.rows?.results?.length} Filtered Results
 		</div>
 		<div>
-			<button onclick={() => filteredResultsState.rows = null} class="cursor-pointer bg-black border-dashed border px-3 py-1 text-white">
+			<button
+				onclick={() => (filteredResultsState.rows = null)}
+				class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
+			>
 				Show All Rows
 			</button>
 		</div>

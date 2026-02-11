@@ -125,7 +125,7 @@
 
 		<div class="flex basis-1/4 gap-2">
 			{#if row.worker_type}
-				<div class="pt-2.25 font-sans text-lg leading-3">
+				<div class="pt-2.25 font-sans text-[17.25px] leading-3">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
