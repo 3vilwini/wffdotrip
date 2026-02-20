@@ -8,16 +8,26 @@
 	let { indexPage, numRowsPerCountry } = $props();
 
 	let collapsed = $state(false);
+	let innerContainerW = $state(0);
 </script>
 
-<div class="relative">
+<div
+	bind:clientWidth={innerContainerW}
+	class="{collapsed
+		? 'w-14 min-w-14 shrink-0 grow-0'
+		: 'w-[25dvw] max-w-sm min-w-xs'} relative flex h-[calc(100dvh-3.5rem)]   transition-[width,min-width]"
+>
 	<div
+		style="width: {innerContainerW}px;"
 		class=" flex h-[calc(100dvh-3.5rem)] {collapsed
-			? 'w-14 min-w-14 shrink-0 grow-0'
-			: 'w-[25dvw] max-w-sm min-w-xs p-6'} relative flex-col gap-4 overflow-auto border-r font-mono text-xs transition-[width,min-width]"
+			? ''
+			: ' p-6'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs"
 	>
 		{#if collapsed}
-			<img src={logo2} class="w-40 min-w-40 absolute grow-0 shrink-0 rotate-90 origin-top-left left-12.25 top-3  " />
+			<img
+				src={logo2}
+				class="absolute top-3 left-12.25 w-40 min-w-40 shrink-0 grow-0 origin-top-left rotate-90"
+			/>
 		{:else}
 			<img src={logo} class="w-60" />
 			<div>

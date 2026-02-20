@@ -7,7 +7,7 @@
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
 </script>
 
-<div class="relative flex h-14 items-center border-b pr-2 pl-3 text-2xl">
+<div class="relative flex h-14 items-center border-b pr-2 pl-3 text-lg xl:text-2xl">
 	<div class="flex w-33 shrink-0 grow-0 items-center gap-3">
 		<div class="flex h-8 w-8 cursor-pointer border border-dashed">
 			<button
@@ -21,14 +21,14 @@
 			<img src={sortIcon} />
 		</div> -->
 	</div>
-	<div class="flex w-full justify-between items-center">
-		<div class="text-[23px]">
+	<div class="flex w-full justify-between items-baseline">
+		<div class="text-[17px] xl:text-[23px]">
 			{indexHeaderLabels.worker[siteState.language]}
 		</div>
 		<div class="font-serif tracking-tight">
 			{indexHeaderLabels.employer[siteState.language]}
 		</div>
-		<div class="text-[23px]">
+		<div class="text-[17px] xl:text-[23px]">
 			{indexHeaderLabels.contract[siteState.language]}
 		</div>
 		<div class="font-serif tracking-tight">

@@ -14,6 +14,8 @@
 		filteredResultsState.rows ? filteredResultsState.rows.results : data.rows.results
 	);
 
+	let rowContainerW = $state(0);
+
 	const addRow = (row) => {
 		if (selectedRows.length < 5) {
 			if (selectedRows.find((r) => r.id === row.id)) {
@@ -46,11 +48,12 @@
 
 <div class="relative flex w-full overflow-x-hidden">
 	<IndexSidebar indexPage={data.indexPage} {numRowsPerCountry}></IndexSidebar>
+
 	<div class="grow">
 		<IndexHeader></IndexHeader>
-		<div class="flex flex-col">
+		<div bind:clientWidth={rowContainerW} class="flex flex-col">
 			{#each rows as row}
-				<Row {row} isSelected={selectedRows.find(r => r.id === row.id)} onclick={() => addRow(row)}></Row>
+				<Row {row} {rowContainerW} isSelected={selectedRows.find(r => r.id === row.id)} onclick={() => addRow(row)}></Row>
 			{/each}
 		</div>
 	</div>
