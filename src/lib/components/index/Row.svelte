@@ -8,12 +8,12 @@
 		getWorkerTypeLabel,
 		numEmployeesOptions
 	} from '$lib/staticContent';
-	let { row, onclick } = $props();
+	let { row, isSelected, onclick } = $props();
 </script>
 
 <div
 	{onclick}
-	class="items-top flex cursor-pointer gap-2 border-b py-1 pr-2 pl-2 hover:bg-lightgrey"
+	class="items-top flex cursor-pointer gap-2 border-b py-1 pr-2 pl-2 {isSelected ? 'bg-lightgrey' : ''} hover:bg-lightgrey"
 >
 	{#if row.city}
 		<div class="flex w-6 justify-center text-center font-yarndings text-3xl">

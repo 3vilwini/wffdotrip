@@ -9,10 +9,31 @@
 	import { filteredResultsState, siteState } from '$lib/states.svelte';
 	let { data } = $props();
 	let numRowsPerCountry = $state({});
-	let selectedRow = $state(null);
+	let selectedRows = $state([]);
 	let rows = $derived(
 		filteredResultsState.rows ? filteredResultsState.rows.results : data.rows.results
 	);
+
+	const addRow = (row) => {
+		if (selectedRows.length < 5) {
+			if (selectedRows.find((r) => r.id === row.id)) {
+				// if the row is already selected, deselect it
+				selectedRows = selectedRows.filter((r) => r.id !== row.id);
+				row.isSelected = false;
+				return;
+			}
+			if (selectedRows.length > 0) {
+				selectedRows.forEach((r) => {
+					r.isExpanded = false;
+				});
+			}
+			row.isExpanded = true;
+			row.isSelected = true;
+
+			selectedRows = [...selectedRows, row];
+		}
+	};
+
 	onMount(() => {
 		for (let country of Object.keys(countryOptions)) {
 			console.log(data.rows.results);
@@ -25,16 +46,16 @@
 
 <div class="relative flex w-full overflow-x-hidden">
 	<IndexSidebar indexPage={data.indexPage} {numRowsPerCountry}></IndexSidebar>
-	<div class="flex-grow">
+	<div class="grow">
 		<IndexHeader></IndexHeader>
 		<div class="flex flex-col">
 			{#each rows as row}
-				<Row {row} onclick={() => (selectedRow = row)}></Row>
+				<Row {row} isSelected={selectedRows.find(r => r.id === row.id)} onclick={() => addRow(row)}></Row>
 			{/each}
 		</div>
 	</div>
+	<SelectedRow bind:rows={selectedRows}></SelectedRow>
 	<CurrentResidentBanner></CurrentResidentBanner>
-	<SelectedRow bind:row={selectedRow}></SelectedRow>
 </div>
 
 <a
