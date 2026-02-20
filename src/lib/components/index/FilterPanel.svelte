@@ -30,7 +30,7 @@
 		action="/"
 		class=" font-mono text-xs"
 	>
-		<div class="flex justify-between gap-4">
+		<div class="flex flex-wrap justify-between gap-4">
 			<div>
 				<div class="mb-4 font-sans text-[19px] leading-none">
 					{fieldLabels.country[siteState.language]}

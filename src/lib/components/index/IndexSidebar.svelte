@@ -58,7 +58,7 @@
 	</div>
 	<button
 		onclick={() => (collapsed = !collapsed)}
-		class="absolute top-[calc(50dvh-2.5rem)] -right-12.75 -translate-x-6.5 cursor-pointer border border-dashed"
+		class="absolute top-[calc(50dvh-2.5rem)] -right-12.75 -translate-x-6.5 cursor-pointer border border-dashed z-10"
 	>
 		<DoubleArrowButton flip={collapsed}></DoubleArrowButton>
 	</button>

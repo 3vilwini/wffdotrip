@@ -48,7 +48,10 @@
 			{/if}
 		</div>
 
-		<div class="pt-1.5 leading-none">
+		<div
+			class="{w > 768 ? 'pt-1.5' : ''}
+			 leading-none"
+		>
 			{#if row.employer_type}
 				<span class="font-serif text-lg leading-tight tracking-[-0.01em]">
 					{getEmployerTypeLabel(row.employer_type.value)}
@@ -63,13 +66,13 @@
 		</div>
 
 		{#if row.contract_type}
-			<div class="pt-3 font-mono text-xs">
+			<div class="{w > 768 ? 'pt-3 ' : 'pt-1'} font-mono text-xs">
 				{contractTypeOptions[row.contract_type.value][siteState.language]}
 			</div>
 		{/if}
 
 		{#if row.compensation_amount && row.compensation_frequency && row.country}
-			<div class="pt-1.75">
+			<div class="{w > 768 ? 'pt-1.75' : 'pt-1.5 '} ">
 				<div class="w-min rounded-full border px-2 py-1 font-mono text-[9px] whitespace-nowrap">
 					{row.compensation_amount}{currency[row.country]}
 					{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
