@@ -7,7 +7,6 @@
 	import MobileNavSelector from './MobileNavSelector.svelte';
 	import MobileNavMenu from './MobileNavMenu.svelte';
 
-	let { indexPage } = $props();
 	let showMobileLanguageMenu = $state(false);
 	let showMobileNavMenu = $state(false);
 
@@ -22,10 +21,12 @@
 	};
 </script>
 
-<div class="flex flex-col gap-6 border-b p-2 h-14">
+<div class="flex h-14 flex-col gap-6 border-b p-2">
 	<div class="flex items-center justify-between">
-		<img src={logo2} class="w-36" />
-		<div class="flex gap-4 items-center">
+		<a href="/">
+			<img src={logo2} class="w-36" />
+		</a>
+		<div class="flex items-center gap-4">
 			<div onclick={toggleLanguageMenu}>
 				<MobileLanguageSelector bind:showMobileLanguageMenu></MobileLanguageSelector>
 			</div>
@@ -34,10 +35,7 @@
 			</div>
 		</div>
 	</div>
-
 </div>
-
-
 
 <div
 	class="grid {showMobileLanguageMenu
@@ -48,8 +46,6 @@
 		<MobileLanguageMenu></MobileLanguageMenu>
 	</div>
 </div>
-
-
 
 <div
 	class="grid {showMobileNavMenu

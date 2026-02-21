@@ -5,15 +5,16 @@
 	import { siteState } from '$lib/states.svelte.js';
 	import FormHelp from '$lib/components/form/FormHelp.svelte';
 	import logo from '$lib/assets/logo2.png';
+	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';
 	let { data, children } = $props();
 </script>
 
-<div class=" flex w-full divide-x">
-	<div class=" w-0 min-w-60 grow basis-1/4">
-		<div class="sticky top-0 p-4">
-			<a href="/">
-				<img src={logo} class="mb-4 w-60" />
-			</a>
+<div class="sticky top-0 z-10 bg-white lg:hidden">
+	<MobileIndexHeader></MobileIndexHeader>
+</div>
+<div class=" flex w-full flex-col max-lg:items-center lg:flex-row lg:divide-x">
+	<div class=" max-sm:w-full lg:w-0 lg:min-w-60 lg:grow lg:basis-1/4">
+		<div class="sticky top-0 p-2 max-lg:w-full sm:p-4">
 			{@render children()}
 		</div>
 	</div>
@@ -26,7 +27,7 @@
 			></SubmissionForm>
 		</SignedIn>
 	</div>
-	<div class="  w-0 shrink grow basis-1/4">
+	<div class="  hidden w-0 shrink grow basis-1/4 lg:block">
 		<div class="fixed top-0 p-4">
 			<FormHelp formPage={data.formPage}></FormHelp>
 		</div>
