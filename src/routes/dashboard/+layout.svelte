@@ -7,7 +7,7 @@
 </script>
 
 <div class=" flex flex-col sm:gap-12">
-	<div class="hidden sm:flex items-start justify-between p-8">
+	<div class="hidden items-start justify-between p-8 sm:flex">
 		<a href="/" class="cursor-pointer">
 			<img src={logo} class="w-48" />
 		</a>
@@ -24,8 +24,21 @@
 		</SignedIn>
 	</div>
 
-	<div class="sm:hidden sticky top-0 bg-white">
+	<div class="sticky top-0 bg-white sm:hidden">
 		<MobileIndexHeader></MobileIndexHeader>
+		<SignedIn>
+			<div class="flex w-full items-center justify-between gap-8 p-3 mb-8">
+				<div class="font-serif text-xl tracking-tight">
+					{data.user ? data.user.emailAddresses[0].emailAddress : ''}
+				</div>
+				<div class="flex gap-8">
+					<div class="font-mono text-xs">Deactivate account</div>
+					<div class="cursor-pointer font-mono text-xs hover:underline">
+						<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
+					</div>
+				</div>
+			</div>
+		</SignedIn>
 	</div>
 
 	{@render children()}
