@@ -24,7 +24,7 @@
 		</SignedIn>
 	</div>
 
-	<div class="sm:hidden">
+	<div class="sm:hidden sticky top-0 bg-white">
 		<MobileIndexHeader></MobileIndexHeader>
 	</div>
 
