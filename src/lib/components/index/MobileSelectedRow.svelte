@@ -70,7 +70,7 @@ verified: true
 					<div class=" border border-dashed border-black text-white">
 						<div
 							onclick={() => (row = null)}
-							class="flex size-6 cursor-pointer items-center justify-center bg-black"
+							class="flex size-8 cursor-pointer items-center justify-center bg-black"
 						>
 							×
 						</div>
