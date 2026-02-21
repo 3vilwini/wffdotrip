@@ -8,16 +8,15 @@
 		getWorkerTypeLabel,
 		numEmployeesOptions
 	} from '$lib/staticContent';
-	let { row, isSelected, rowContainerW, onclick } = $props();
-	let w = $derived(rowContainerW);
+	let { row, isSelected, onclick } = $props();
 </script>
 
 <div
 	{onclick}
-	class="items-top flex {w > 768
+	class="items-top flex flex-row {siteState.indexW > 768
 		? ''
-		: ' pb-2'} cursor-pointer gap-x-2 border-b py-1 pr-2 pl-2 {isSelected
-		? 'sm:bg-lightgrey'
+		: ' pb-3'} cursor-pointer gap-x-2 border-b px-3 py-1 {isSelected
+		? 'bg-lightgrey'
 		: ''} hover:bg-lightgrey"
 >
 	{#if row.city}
@@ -25,17 +24,15 @@
 			<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
 				{yarndingsText[row.city.length % yarndingsText.length]}
 			</div>
-			<div class="w-24 shrink-0 grow-0 pt-3 font-mono text-xs">
+			<div
+				class="{siteState.indexW > 768 ? 'w-24' : 'w-18'} shrink-0 grow-0 pt-3 font-mono text-xs"
+			>
 				{row.city}
 			</div>
 		</div>
 	{/if}
-	<div
-		class="items-top flex {w > 768
-			? 'flex-row'
-			: 'flex-col'} grow flex-wrap justify-between gap-x-4"
-	>
-		<div class="pt-1.75 leading-none">
+	<div class="items-top flex grow flex-wrap justify-between gap-x-4">
+		<div class=" pt-1.75 leading-none {siteState.indexW > 768 ? '' : 'flex flex-col gap-2'}">
 			{#if row.worker_type}
 				<span class="text-[17.25px] leading-tight tracking-[-0.01em]">
 					{getWorkerTypeLabel(row.worker_type.value)}
@@ -49,7 +46,7 @@
 		</div>
 
 		<div
-			class="{w > 768 ? 'pt-1.5' : ''}
+			class="{siteState.indexW > 768 ? 'pt-1.5' : 'flex flex-col gap-2 pt-1.25'}
 			 leading-none"
 		>
 			{#if row.employer_type}
@@ -66,16 +63,24 @@
 		</div>
 
 		{#if row.contract_type}
-			<div class="{w > 768 ? 'pt-3 ' : 'pt-1'} font-mono text-xs">
+			<div class=" pt-3 font-mono text-[9px]">
 				{contractTypeOptions[row.contract_type.value][siteState.language]}
 			</div>
 		{/if}
 
 		{#if row.compensation_amount && row.compensation_frequency && row.country}
-			<div class="{w > 768 ? 'pt-1.75' : 'pt-1.5 '} ">
-				<div class="w-min rounded-full border px-2 py-1 font-mono text-[9px] whitespace-nowrap">
-					{row.compensation_amount}{currency[row.country]}
-					{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
+			<div class="{siteState.indexW > 768 ? 'pt-1.75' : 'pt-1.5 '} ">
+				<div
+					class="{siteState.indexW > 768
+						? 'flex-row gap-1'
+						: 'flex-col items-center'} flex w-min border border-dashed px-2 py-1 font-mono text-[9px] whitespace-nowrap"
+				>
+					<div>
+						{row.compensation_amount}{currency[row.country.value]}
+					</div>
+					<div>
+						{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
+					</div>
 				</div>
 			</div>
 		{/if}

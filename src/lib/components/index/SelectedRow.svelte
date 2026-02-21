@@ -80,7 +80,7 @@ verified: true
 						class="flex min-h-14 flex-col {row.isExpanded ? 'gap-6 overflow-auto ' : ' '} border-b"
 					>
 						<div
-							class="flex cursor-pointer items-center justify-between p-3"
+							class="flex cursor-pointer items-center justify-between  {row.isExpanded ? 'p-6 pb-0 ' : ' px-6 py-3 '} "
 							onclick={() => expandRow(row)}
 						>
 							<div class="flex items-center gap-2">

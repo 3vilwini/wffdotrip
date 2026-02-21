@@ -21,10 +21,10 @@
 	};
 </script>
 
-<div class="flex h-14 flex-col gap-6 border-b p-2">
+<div class="flex h-16 flex-col gap-6 border-b p-3">
 	<div class="flex items-center justify-between">
 		<a href="/">
-			<img src={logo2} class="w-36" />
+			<img src={logo2} class="w-38" />
 		</a>
 		<div class="flex items-center gap-4">
 			<div onclick={toggleLanguageMenu}>

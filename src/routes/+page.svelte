@@ -15,6 +15,7 @@
 	import MobileFilterButton from '$lib/components/index/MobileFilterButton.svelte';
 	import MobileFilterPanel from '$lib/components/index/MobileFilterPanel.svelte';
 	import MobileSelectedRow from '$lib/components/index/MobileSelectedRow.svelte';
+	import MobileRow from '$lib/components/index/MobileRow.svelte';
 
 	let { data } = $props();
 	let numRowsPerCountry = $state({});
@@ -25,6 +26,9 @@
 	);
 
 	let rowContainerW = $state(0);
+	$effect(() => {
+		siteState.indexW = rowContainerW;
+	})
 
 	const addRow = (row) => {
 		selectedRowMobile = row;
@@ -63,8 +67,10 @@
 	<MobileIndexHeader indexPage={data.indexPage}></MobileIndexHeader>
 </div>
 
-<div class="border-b p-2 font-mono text-xs leading-[1.3] sm:hidden">
-	<BlockContent value={data.indexPage.siteDescription[siteState.language]}></BlockContent>
+<div class="border-b p-3 font-mono text-xs leading-[1.3] sm:hidden">
+	<a href="/faq">
+		<BlockContent value={data.indexPage.siteDescription[siteState.language]}></BlockContent>
+	</a>
 </div>
 
 <div>
@@ -73,7 +79,7 @@
 
 <div class="sm:hidden">
 	{#if filteredResultsState.rows}
-		<div class="flex h-14 items-center justify-between gap-4 border-b p-2">
+		<div class="flex h-12 items-center justify-between gap-4 border-b p-3">
 			<div class="font-mono text-xs">
 				{filteredResultsState?.rows?.results?.length} Filtered Results
 			</div>
@@ -98,7 +104,7 @@
 </div>
 
 <div
-	class="fixed top-14 z-5 grid w-full bg-white {showMobileFilterPanel
+	class="fixed top-16 z-5 grid w-full bg-white {showMobileFilterPanel
 		? 'grid-rows-[1fr]'
 		: 'grid-rows-[0fr]'} transition-[grid-template-rows] sm:hidden"
 >
@@ -120,12 +126,20 @@
 		</div>
 		<div bind:clientWidth={rowContainerW} class="flex flex-col">
 			{#each rows as row}
-				<Row
-					{row}
-					{rowContainerW}
-					isSelected={selectedRows.find((r) => r.id === row.id)}
-					onclick={() => addRow(row)}
-				></Row>
+				<div class="hidden sm:block">
+					<Row
+						{row}
+						isSelected={selectedRows.find((r) => r.id === row.id)}
+						onclick={() => addRow(row)}
+					></Row>
+				</div>
+				<div class="sm:hidden">
+					<MobileRow
+						{row}
+						isSelected={selectedRows.find((r) => r.id === row.id)}
+						onclick={() => addRow(row)}
+					></MobileRow>
+				</div>
 			{/each}
 		</div>
 	</div>

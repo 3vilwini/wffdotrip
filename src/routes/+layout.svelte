@@ -10,7 +10,7 @@
 
 <svelte:head><link rel="icon" href={favicon} /></svelte:head>
 <ClerkProvider>
-	<div class="pb-14.5 sm:pb-13.75">
+	<div class="pb-16 sm:pb-13.75">
 		{@render children()}
 	</div>
 </ClerkProvider>

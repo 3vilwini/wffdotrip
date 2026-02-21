@@ -1,11 +1,13 @@
 <script lang="ts">
 	import { SignedIn, SignOutButton } from 'svelte-clerk';
 	import logo from '$lib/assets/logo.png';
+	import IndexHeader from '$lib/components/index/IndexHeader.svelte';
+	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';
 	let { data, children } = $props();
 </script>
 
-<div class=" flex flex-col gap-12">
-	<div class="flex items-start justify-between p-8">
+<div class=" flex flex-col sm:gap-12">
+	<div class="hidden sm:flex items-start justify-between p-8">
 		<a href="/" class="cursor-pointer">
 			<img src={logo} class="w-48" />
 		</a>
@@ -20,6 +22,10 @@
 				</div>
 			</div>
 		</SignedIn>
+	</div>
+
+	<div class="sm:hidden">
+		<MobileIndexHeader></MobileIndexHeader>
 	</div>
 
 	{@render children()}

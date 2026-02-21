@@ -22,7 +22,7 @@
 			style="width: {innerContainerW}px;"
 			class=" flex h-[calc(100dvh-3.5rem)] {collapsed
 				? ''
-				: ' p-6'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs"
+				: ' p-6 pt-3'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs"
 		>
 			{#if collapsed}
 				<img
@@ -34,9 +34,7 @@
 				<div>
 					<BlockContent value={indexPage.siteDescription[siteState.language]}></BlockContent>
 				</div>
-				<div>
-					<div>{indexPage.representedCountriesHeader[siteState.language]}</div>
-				</div>
+				<div class="mt-4">{indexPage.representedCountriesHeader[siteState.language]}</div>
 				<div>
 					<BlockContent value={indexPage.representedCountriesDescription[siteState.language]}
 					></BlockContent>
@@ -49,7 +47,7 @@
 						</div>
 					{/each}
 				</div>
-				<div>
+				<div class="mt-4">
 					{indexPage.getInvolvedHeader[siteState.language]}
 				</div>
 				<div>

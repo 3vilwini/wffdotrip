@@ -11,7 +11,8 @@ export const siteState = $state({
 	user: {},
 	formSubmitted: false,
 	currFormSection: '',
-	showFilterPanel: false
+	showFilterPanel: false,
+	indexW: 0
 });
 
 export const filteredResultsState = $state({

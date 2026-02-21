@@ -1,0 +1,76 @@
+<script lang="ts">
+	import { compensationFrequencyOptions } from './../../staticContent.ts';
+	import { siteState, yarndingsText } from '$lib/states.svelte';
+	import {
+		currency,
+		contractTypeOptions,
+		getEmployerTypeLabel,
+		getWorkerTypeLabel,
+		numEmployeesOptions
+	} from '$lib/staticContent';
+	let { row, onclick } = $props();
+</script>
+
+<div {onclick} class="items-top flex cursor-pointer gap-x-2 border-b p-3 pt-2 hover:bg-lightgrey">
+	<div class="items-top flex grow flex-col flex-wrap justify-between gap-0.25">
+		{#if row.city}
+			<div class="mb-1.75 flex shrink-0 gap-x-2">
+				<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
+					{yarndingsText[row.city.length % yarndingsText.length]}
+				</div>
+				<div class=" shrink-0 grow-0 pt-3 font-mono text-xs">
+					{row.city}
+				</div>
+			</div>
+		{/if}
+		<div class="leading-none">
+			{#if row.worker_type}
+				<span class="text-[17.25px] leading-tight tracking-[-0.01em]">
+					{getWorkerTypeLabel(row.worker_type.value)}
+				</span>
+			{/if}
+			{#if row.job_title}
+				<span class="relative font-mono text-[9px]">
+					{row.job_title}
+				</span>
+			{/if}
+		</div>
+
+		<div
+			class="
+			 leading-none"
+		>
+			{#if row.employer_type}
+				<span class="font-serif text-lg leading-tight tracking-[-0.01em]">
+					{getEmployerTypeLabel(row.employer_type.value)}
+				</span>
+			{/if}
+
+			{#if row.num_employees}
+				<span class="relative font-mono text-[9px] whitespace-nowrap">
+					{numEmployeesOptions[row.num_employees.value]}
+				</span>
+			{/if}
+		</div>
+
+		{#if row.contract_type}
+			<div class="pt-1 font-mono text-xs">
+				{contractTypeOptions[row.contract_type.value][siteState.language]}
+			</div>
+		{/if}
+	</div>
+	{#if row.compensation_amount && row.compensation_frequency && row.country}
+		<div class="pt-1">
+			<div
+				class="flex w-min flex-col items-center border border-dashed px-2 py-1 font-mono text-xs whitespace-nowrap"
+			>
+				<div class="font-sans text-base">
+					{row.compensation_amount}{currency[row.country.value]}
+				</div>
+				<div>
+					{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
+				</div>
+			</div>
+		</div>
+	{/if}
+</div>

@@ -18,18 +18,18 @@
 	let { showFilterPanel = $bindable() } = $props();
 </script>
 
-<div class="sticky top-6 right-6 flex justify-end pr-6">
+<div class="sticky top-3 right-3 flex justify-end pr-3  z-10">
 	<div class=" border border-dashed border-black text-white">
 		<div
 			onclick={() => (showFilterPanel = false)}
-			class="flex size-6 cursor-pointer items-center justify-center bg-black"
+			class="flex size-8 cursor-pointer items-center justify-center bg-black"
 		>
 			×
 		</div>
 	</div>
 </div>
 
-<div class=" w-full border-b bg-white p-6 pt-0 pb-14">
+<div class=" w-full border-b bg-white p-3 relative pt-0 -top-3 pb-14">
 	<form
 		use:enhance={({ formElement, formData, action, cancel, submitter }) => {
 			isSubmitting = true;

@@ -25,10 +25,11 @@
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
 	import DashboardRowAddlCompLine from './DashboardRowAddlCompLine.svelte';
+	import MobileSelectedRow from '../index/MobileSelectedRow.svelte';
 	let { row, formPage } = $props();
-	let rowExpanded = $state(false);
 	let showEditModal = $state(false);
 	let showDeleteModal = $state(false);
+	let showExpandedEntry = $state(true);
 
 	afterNavigate(() => {
 		showEditModal = false;
@@ -100,78 +101,81 @@
 	</div>
 {/if}
 
-<div class="border-t pr-4 pl-8 font-mono text-xs leading-normal last:border-b">
-	<div class="align-center flex justify-between gap-4 pt-1 pb-1.5">
-		<div class="flex basis-1/4 gap-4">
+<div
+	onclick={() => (showExpandedEntry = true)}
+	class="flex w-full justify-between gap-4 border-t p-2 font-mono text-xs leading-normal last:border-b"
+>
+	<div class="align-center flex grow flex-col gap-1">
+		<div class="flex items-center gap-4 pb-1">
 			{#if row.city && row.country}
-				<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
-					{yarndingsText[row.city.length % yarndingsText.length]}
-				</div>
-				<div class="basis-1/2 pt-2">
-					{row.city}, {countryOptions[row.country.value][siteState.language]}
+				<div class="flex basis-1/2 items-center gap-2">
+					<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
+						{yarndingsText[row.city.length % yarndingsText.length]}
+					</div>
+					<div>
+						{row.city}, {countryOptions[row.country.value][siteState.language]}
+					</div>
 				</div>
 			{/if}
-			<div class="basis-1/3 pt-2">
-				{row.verified ? 'Validated' : 'Pending'}
+			<div class="flex basis-1/2 justify-between">
+				<div>
+					{row.verified ? 'Validated' : 'Pending'}
+				</div>
+				{#if row.year}
+					<div>
+						{row.year}
+					</div>
+				{/if}
 			</div>
-			{#if row.year}
-				<div class="basis-1/6 pt-2">
-					{row.year}
-				</div>
-			{/if}
 		</div>
 
-		<div class="flex basis-1/4 gap-2">
+		<div class="flex items-baseline gap-2">
 			{#if row.worker_type}
-				<div class="pt-2.25 font-sans text-[17.25px] leading-3">
+				<div class=" font-sans text-[17.25px] leading-3">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
 			{#if row.job_title}
-				<div class="pt-2">
+				<div class="">
 					{row.job_title}
 				</div>
 			{/if}
 		</div>
-
-		<div class="relative basis-1/5 pt-1.5 font-serif text-lg leading-[1] tracking-tight">
+		<div class="flex items-baseline gap-2">
 			{#if row.employer_name}
-				{row.employer_name}
-			{/if}
-		</div>
-
-		<div class="flex basis-1/5 justify-between">
-			{#if row.contract_type}
-				<div class="pt-2">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
-			{/if}
-			{#if row.compensation_amount && row.compensation_frequency && row.country}
-				<div class="pt-2">
-					<div
-						class="-mt-0.5 rounded-full border px-2 py-0.5 text-[9px] whitespace-nowrap uppercase"
-					>
-						{row.compensation_amount}{currency[row.country.value]}
-						{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
-					</div>
+				<div class="relative font-serif text-lg leading-[1] tracking-tight">
+					{row.employer_name}
 				</div>
 			{/if}
-		</div>
-		<div
-			onclick={() => {
-				rowExpanded = !rowExpanded;
-			}}
-			class="pt-2"
-		>
-			<div
-				class="relative h-4 w-4 {rowExpanded
-					? 'rotate-45'
-					: 'rotate-0'} origin-center transition-transform"
-			>
-				<div class="absolute left-[0.5px] h-4 w-2 border-r"></div>
-				<div class="absolute top-[0.5px] h-2 w-4 border-b"></div>
-			</div>
+
+			{#if row.contract_type}
+				<div class="">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
+			{/if}
 		</div>
 	</div>
-	<div
+	{#if row.compensation_amount && row.compensation_frequency && row.country}
+		<div class="flex items-center">
+			<div
+				class=" flex flex-col items-center justify-center border border-dashed px-3 py-1 text-[9px] whitespace-nowrap uppercase"
+			>
+				<div class="font-sans text-base">
+					{row.compensation_amount}{currency[row.country.value]}
+				</div>
+				<div>
+					{compensationFrequencyOptions[row.compensation_frequency.value][siteState.language]}
+				</div>
+			</div>
+		</div>
+	{/if}
+</div>
+
+{#if showExpandedEntry}
+	<div class="fixed bottom-0 w-full border-t bg-lightgrey p-2">
+		<MobileSelectedRow {row}></MobileSelectedRow>
+	</div>
+{/if}
+<!-- 
+<div
 		class="grid {rowExpanded
 			? 'grid-rows-[1fr]'
 			: 'grid-rows-[0fr]'} transition-[grid-template-rows]"
@@ -345,5 +349,4 @@
 				<div class="h-4 w-4"></div>
 			</div>
 		</div>
-	</div>
-</div>
+	</div> -->

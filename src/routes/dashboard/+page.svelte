@@ -2,6 +2,7 @@
 	import { SignedIn, SignedOut, SignOutButton, SignIn } from 'svelte-clerk';
 	import { siteState } from '$lib/states.svelte';
 	import DashboardRow from '$lib/components/dashboard/DashboardRow.svelte';
+	import MobileDashboardRow from '$lib/components/dashboard/MobileDashboardRow.svelte';
 	let { data } = $props();
 </script>
 
@@ -36,8 +37,8 @@
 </SignedOut>
 
 <SignedIn>
-	<div class=" p-8">
-		<div class="flex justify-between border border-dotted p-4">
+	<div class="p-2 sm:p-8">
+		<div class="flex flex-col sm:flex-row justify-between border border-dotted p-4 gap-4">
 			<div class="flex flex-col gap-1">
 				{#if siteState.formSubmitted}
 					<div>Thanks, your submission has been recorded!</div>
@@ -61,12 +62,17 @@
 	</div>
 
 	<div>
-		<div class="flex items-baseline gap-4 px-8 py-4">
+		<div class="flex items-baseline gap-4 px-8 py-4 max-sm:pt-12">
 			<div class="text-2xl">Your Submissions</div>
 			<div class="font-mono text-xs">{data.rows.results.length} entries</div>
 		</div>
 
-		<div>
+		<div class="sm:hidden">
+			{#each data.rows.results as row}
+				<MobileDashboardRow {row} formPage={data.formPage}></MobileDashboardRow>
+			{/each}
+		</div>
+		<div class="sm:block hidden">
 			{#each data.rows.results as row}
 				<DashboardRow {row} formPage={data.formPage}></DashboardRow>
 			{/each}

@@ -3,7 +3,7 @@
 	import { page } from '$app/state';
 </script>
 
-<div class="hidden sm:flex fixed bottom-0 left-0  h-14 w-full justify-between border-t bg-white p-4">
+<div class="hidden sm:flex fixed z-10 bottom-0 left-0  h-14 w-full justify-between border-t bg-white p-4">
 	<div class="flex basis-1/3 items-center">
 		<LanguageToggle></LanguageToggle>
 	</div>
