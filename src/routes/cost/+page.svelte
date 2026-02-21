@@ -18,8 +18,8 @@
 	</div>
 </div>
 
-<div class="mx-auto flex w-full max-w-[1500px] flex-col gap-16 p-16">
-	<div class="flex flex-wrap justify-evenly gap-16">
+<div class="mx-auto flex w-full max-w-[1500px] flex-col gap-16 p-3 sm:p-16">
+	<div class="flex flex-wrap justify-evenly gap-4 sm:gap-16">
 		{#each data.costPage.sectionOne as item, idx}
 			<div class="flex basis-1/4 flex-col items-center">
 				<div
@@ -38,9 +38,9 @@
 	<div class=" mx-auto max-w-3xl text-center font-mono text-xs">
 		<BlockContent value={data.costPage.sectionTwo[siteState.language]}></BlockContent>
 	</div>
-	<div class="flex flex-wrap justify-between">
+	<div class="flex flex-wrap justify-between gap-16 sm:gap-0">
 		{#each data.costPage.sectionThree as item, idx}
-			<div class="flex basis-1/5 flex-col items-center">
+			<div class="flex sm:basis-1/5 flex-col items-center">
 				<div
 					class="{idx % 2 === 0
 						? 'font-sans text-[22px]'
