@@ -7,14 +7,16 @@
 	let { data } = $props();
 </script>
 
-<MobileIndexHeader></MobileIndexHeader>
-<div class="flex justify-center items-center px-3 pt-8 font-mono text-xs sm:hidden">
+<div class="sticky top-0 bg-white">
+	<MobileIndexHeader></MobileIndexHeader>
+</div>
+<div class="flex items-center justify-center px-3 pt-8 font-mono text-xs sm:hidden">
 	How much does this website cost?
 </div>
 <div class="mx-auto flex w-full max-w-[1500px] flex-col gap-16 p-3 pt-16 sm:p-16">
-	<div class="flex flex-wrap justify-evenly gap-4 sm:gap-16">
+	<div class="flex flex-wrap justify-evenly gap-16">
 		{#each data.costPage.sectionOne as item, idx}
-			<div class="flex basis-1/4 flex-col items-center">
+			<div class="flex basis-full flex-col items-center sm:basis-1/4">
 				<div
 					class="{idx % 2 === 0
 						? 'font-sans text-[22px] '
