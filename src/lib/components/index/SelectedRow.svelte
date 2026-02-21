@@ -61,12 +61,14 @@ user_id: "user_38DwbOwozKaMYrb50IznRmw9t7R"
 verified: true
 -->
 
-<div bind:clientWidth={outerContainerW}
-	class="relative  transition-[width,min-width] {rows.length > 0
+<div
+	bind:clientWidth={outerContainerW}
+	class="relative transition-[width,min-width] {rows.length > 0
 		? 'z-2  w-[25dvw] max-w-sm min-w-xs'
 		: ' z-1 w-14 min-w-14 '}  h-[calc(100dvh-55px)]"
 >
-	<div style="width: {outerContainerW}px"
+	<div
+		style="width: {outerContainerW}px"
 		class=" {rows.length > 0
 			? 'z-2  w-[25dvw] max-w-sm min-w-xs'
 			: ' z-1 w-14 min-w-14 '} fixed top-0 right-0 h-[calc(100dvh-55px)] border-l bg-lightgrey"
@@ -75,7 +77,7 @@ verified: true
 			<div class="flex h-[calc(100dvh-55px)] flex-col">
 				{#each rows as row}
 					<div
-						class="flex flex-col min-h-14 {row.isExpanded ? 'gap-6 overflow-auto ' : ' '} border-b"
+						class="flex min-h-14 flex-col {row.isExpanded ? 'gap-6 overflow-auto ' : ' '} border-b"
 					>
 						<div
 							class="flex cursor-pointer items-center justify-between p-3"
@@ -90,7 +92,7 @@ verified: true
 									</div>
 								{/if}
 								{#if row.worker_type}
-									<div class="text-lg xl:text-2xl leading-none">
+									<div class="text-lg leading-none xl:text-2xl">
 										{getWorkerTypeLabel(row.worker_type.value)}
 									</div>
 								{/if}

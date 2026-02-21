@@ -48,6 +48,27 @@ export const indexHeaderLabels = {
 	}
 };
 
+export const navMenuItems = {
+	faq: {
+		[Language.EN]: 'Frequenctly asked questions',
+		[Language.FR]: 'Frequenctly asked questions (FR)',
+		[Language.IT]: 'Frequenctly asked questions (IT)',
+		[Language.ES]: 'Frequenctly asked questions (ES)'
+	},
+	privacy: {
+		[Language.EN]: 'Privacy & data',
+		[Language.FR]: 'Privacy & data (FR)',
+		[Language.IT]: 'Privacy & data (IT)',
+		[Language.ES]: 'Privacy & data (ES)'
+	},
+	cost: {
+		[Language.EN]: 'How much does this website cost?',
+		[Language.FR]: 'How much does this website cost? (FR)',
+		[Language.IT]: 'How much does this website cost? (IT)',
+		[Language.ES]: 'How much does this website cost? (ES)'
+	}
+};
+
 export const fieldLabels = {
 	country: {
 		[Language.EN]: 'Country',
@@ -227,6 +248,13 @@ export const fieldLabels = {
 	}
 };
 
+export const languageOptions = {
+	[Language.EN]: 'English',
+	[Language.FR]: 'Français',
+	[Language.IT]: 'Italiano'
+	// [Language.ES]: 'Español'
+};
+
 export const countryOptions = {
 	[Country.UK]: {
 		[Language.EN]: 'UK',
@@ -249,13 +277,13 @@ export const countryOptions = {
 		[Language.ES]: 'Italy in spanish',
 		id: '5207041'
 	},
-	[Country.SPAIN]: {
-		[Language.EN]: 'Spain',
-		[Language.FR]: 'Spain in french',
-		[Language.IT]: 'Spain in italian',
-		[Language.ES]: 'Spain in spanish',
-		id: '5207044'
-	}
+	// [Country.SPAIN]: {
+	// 	[Language.EN]: 'Spain',
+	// 	[Language.FR]: 'Spain in french',
+	// 	[Language.IT]: 'Spain in italian',
+	// 	[Language.ES]: 'Spain in spanish',
+	// 	id: '5207044'
+	// }
 };
 
 export const yearOption2010OrBefore = {

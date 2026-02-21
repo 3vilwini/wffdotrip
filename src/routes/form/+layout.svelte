@@ -9,9 +9,11 @@
 </script>
 
 <div class=" flex w-full divide-x">
-	<div class=" w-0  basis-1/4 grow min-w-60">
+	<div class=" w-0 min-w-60 grow basis-1/4">
 		<div class="sticky top-0 p-4">
-			<img src={logo} class="w-60 mb-4">
+			<a href="/">
+				<img src={logo} class="mb-4 w-60" />
+			</a>
 			{@render children()}
 		</div>
 	</div>
@@ -20,13 +22,11 @@
 			<SubmissionFormPreview formPage={data.formPage}></SubmissionFormPreview>
 		</SignedOut>
 		<SignedIn>
-			<SubmissionForm
-				userID={data.user ? data.user.id : ''}
-				formPage={data.formPage}
+			<SubmissionForm userID={data.user ? data.user.id : ''} formPage={data.formPage}
 			></SubmissionForm>
 		</SignedIn>
 	</div>
-	<div class="  w-0 basis-1/4 grow shrink">
+	<div class="  w-0 shrink grow basis-1/4">
 		<div class="fixed top-0 p-4">
 			<FormHelp formPage={data.formPage}></FormHelp>
 		</div>

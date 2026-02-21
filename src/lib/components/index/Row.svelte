@@ -17,7 +17,7 @@
 	class="items-top flex {w > 768
 		? ''
 		: ' pb-2'} cursor-pointer gap-x-2 border-b py-1 pr-2 pl-2 {isSelected
-		? 'bg-lightgrey'
+		? 'sm:bg-lightgrey'
 		: ''} hover:bg-lightgrey"
 >
 	{#if row.city}

@@ -7,7 +7,7 @@
 	<a
 		href={portableText.value.href}
 		target="_blank"
-		class="underline cursor-pointer"
+		class=" cursor-pointer hover:underline"
 	>
 		{portableText.plainTextContent}
 	</a>
