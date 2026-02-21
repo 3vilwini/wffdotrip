@@ -7,7 +7,7 @@
 	let { data } = $props();
 </script>
 
-<div class="sticky top-0 bg-white">
+<div class="sticky top-0 bg-white z-10">
 	<MobileIndexHeader></MobileIndexHeader>
 </div>
 <div class="flex items-center justify-center px-3 pt-8 font-mono text-xs sm:hidden">
@@ -31,7 +31,7 @@
 		{/each}
 	</div>
 
-	<div class=" mx-auto max-w-3xl text-center font-mono text-xs">
+	<div class="mx-auto max-w-3xl text-center font-mono text-xs">
 		<BlockContent value={data.costPage.sectionTwo[siteState.language]}></BlockContent>
 	</div>
 

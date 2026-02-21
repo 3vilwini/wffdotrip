@@ -26,20 +26,21 @@
 
 	<div class="sticky top-0 bg-white sm:hidden">
 		<MobileIndexHeader></MobileIndexHeader>
-		<SignedIn>
-			<div class="flex w-full items-center justify-between gap-8 p-3 mb-8">
-				<div class="font-serif text-xl tracking-tight">
-					{data.user ? data.user.emailAddresses[0].emailAddress : ''}
-				</div>
-				<div class="flex gap-8">
-					<div class="font-mono text-xs">Deactivate account</div>
-					<div class="cursor-pointer font-mono text-xs hover:underline">
-						<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
-					</div>
+	</div>
+
+	<SignedIn>
+		<div class="mb-8 flex w-full items-center justify-between gap-8 p-3">
+			<div class="font-serif text-xl tracking-tight">
+				{data.user ? data.user.emailAddresses[0].emailAddress : ''}
+			</div>
+			<div class="flex gap-8">
+				<div class="font-mono text-xs">Deactivate account</div>
+				<div class="cursor-pointer font-mono text-xs hover:underline">
+					<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
 				</div>
 			</div>
-		</SignedIn>
-	</div>
+		</div>
+	</SignedIn>
 
 	{@render children()}
 </div>
