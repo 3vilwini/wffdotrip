@@ -92,7 +92,7 @@
 		method="POST"
 		action="/dashboard?/edit"
 	>
-		<div class="flex flex-col">
+		<div class="flex flex-col gap-8">
 			<input maxlength="250" hidden name="row_id" value={row.id} />
 
 			<FormCheckbox required name="disclaimer" label={formPage.disclaimer[siteState.language]}

@@ -37,8 +37,8 @@
 </SignedOut>
 
 <SignedIn>
-	<div class="p-2 sm:p-8">
-		<div class="flex flex-col sm:flex-row justify-between border border-dotted p-4 gap-4">
+	<div class="p-3 sm:p-8">
+		<div class="flex flex-col justify-between gap-4 sm:flex-row sm:border sm:border-dashed sm:p-4">
 			<div class="flex flex-col gap-1">
 				{#if siteState.formSubmitted}
 					<div>Thanks, your submission has been recorded!</div>
@@ -51,7 +51,12 @@
 					anonymous.
 				</div>
 			</div>
-			<div class="flex items-center">
+			<div class="flex items-center gap-3">
+				<a
+					href="/"
+					class="flex items-center justify-center border border-dashed bg-black px-4 py-2 whitespace-nowrap text-white hover:bg-white hover:text-black"
+					>Back to Index
+				</a>
 				<a
 					href="/form"
 					class="flex items-center justify-center border border-dashed bg-black px-4 py-2 whitespace-nowrap text-white hover:bg-white hover:text-black"
@@ -62,17 +67,17 @@
 	</div>
 
 	<div>
-		<div class="flex items-baseline gap-4 px-8 py-4 max-sm:pt-12">
+		<div class="flex items-baseline gap-4 px-3 py-4 max-sm:pt-12 sm:px-8">
 			<div class="text-2xl">Your Submissions</div>
 			<div class="font-mono text-xs">{data.rows.results.length} entries</div>
 		</div>
 
-		<div class="sm:hidden">
+		<div class="border-t sm:hidden">
 			{#each data.rows.results as row}
 				<MobileDashboardRow {row} formPage={data.formPage}></MobileDashboardRow>
 			{/each}
 		</div>
-		<div class="sm:block hidden">
+		<div class="hidden sm:block">
 			{#each data.rows.results as row}
 				<DashboardRow {row} formPage={data.formPage}></DashboardRow>
 			{/each}
