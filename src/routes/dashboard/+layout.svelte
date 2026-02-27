@@ -29,7 +29,7 @@
 	</div>
 
 	<SignedIn>
-		<div class="mb-8 flex w-full items-center justify-between gap-8 p-3">
+		<div class="mb-8 flex w-full items-center justify-between gap-8 p-3 sm:hidden">
 			<div class="font-serif text-xl tracking-tight">
 				{data.user ? data.user.emailAddresses[0].emailAddress : ''}
 			</div>
