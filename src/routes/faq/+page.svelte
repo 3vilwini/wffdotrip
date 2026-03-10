@@ -5,16 +5,16 @@
 	let { data } = $props();
 </script>
 
-<div class="flex flex-col gap-8 p-3 font-mono text-xs sm:flex-row sm:p-8">
+<div class="flex flex-col gap-8 p-3 font-mono text-xs sm:flex-row sm:p-6 sm:pt-4">
 	<div class="relative sm:w-0 sm:basis-1/2 lg:basis-1/3">
 		<a href="/" class="mb-8 flex w-[80%] max-w-80">
-			<img src={logo} class="w-full" />
+			<img src={logo} class="w-full max-w-60" />
 		</a>
 		<div>
 			<BlockContent value={data.faqPage.intro[siteState.language]}></BlockContent>
 		</div>
 	</div>
-	<div class="flex flex-col sm:w-0 sm:basis-1/2 lg:basis-2/3 lg:flex-row lg:gap-8">
+	<div class="flex flex-col sm:w-0 sm:basis-1/2 lg:basis-2/3 lg:flex-row lg:gap-8 pt-2">
 		<div class="sm:basis-1/2">
 			{#each data.faqPage.col2Questions as qa}
 				<div class="mb-8">

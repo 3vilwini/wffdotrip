@@ -108,8 +108,8 @@
 					<FormSectionHeader>
 						{formPage.whereWhenSectionTitle[siteState.language]}
 					</FormSectionHeader>
-					<div class="flex gap-4">
-						<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4" required>
+					<div class="flex gap-4 max-sm:flex-wrap">
+						<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-full sm:basis-1/4" required>
 							<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
 
 							{#each Object.entries(countryOptions) as [key, value]}
@@ -118,13 +118,13 @@
 						</FormSelect>
 
 						<FormSimpleInput
-							class="basis-1/2"
+							class="basis-full sm:basis-1/2"
 							name="city"
 							placeholder={fieldLabels.city[siteState.language]}
 							required
 						></FormSimpleInput>
 
-						<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4" required>
+						<FormSelect bind:boundValue={selectedYear} name="year" class="basis-full sm:basis-1/4" required>
 							<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
 							{#each yearOptions as year}
 								<FormOption value={year}>{year}</FormOption>
@@ -145,7 +145,7 @@
 						{formPage.employerSectionTitle[siteState.language]}
 					</FormSectionHeader>
 					<div class="flex flex-wrap gap-4">
-						<FormSelect class="w-0 basis-[calc(50%-0.5rem)]" name="employer_type" required>
+						<FormSelect class="w-full sm:w-0 sm:basis-[calc(50%-0.5rem)]" name="employer_type" required>
 							<FormOption value="" isDefault
 								>{fieldLabels.employerType[siteState.language]}</FormOption
 							>
@@ -159,12 +159,12 @@
 						</FormSelect>
 
 						<FormSimpleInput
-							class="basis-[calc(50%-0.5rem)]"
+							class="w-full sm:basis-[calc(50%-0.5rem)]"
 							name="employer_name"
 							placeholder={fieldLabels.employerName[siteState.language]}
 						></FormSimpleInput>
 
-						<FormSelect name="num_employees" class="basis-[calc(50%-0.5rem)]" required>
+						<FormSelect name="num_employees" class="w-full sm:basis-[calc(50%-0.5rem)]" required>
 							<FormOption value="" isDefault
 								>{fieldLabels.numEmployees[siteState.language]}</FormOption
 							>
@@ -194,7 +194,7 @@
 						<FormSelect
 							bind:boundValue={selectedContractType}
 							name="contract_type"
-							class=" basis-[calc(50%-0.5rem)]"
+							class="w-full sm:basis-[calc(50%-0.5rem)]"
 							required
 						>
 							<FormOption value="" isDefault
@@ -206,7 +206,7 @@
 						</FormSelect>
 
 						{#if selectedCountry}
-							<FormSelect required name="worker_status" class="basis-[calc(50%-0.5rem)]">
+							<FormSelect required name="worker_status" class="w-full sm:basis-[calc(50%-0.5rem)]">
 								<FormOption value="" isDefault>
 									{fieldLabels.workerStatus[siteState.language][selectedCountry]}
 								</FormOption>
@@ -217,7 +217,7 @@
 						{/if}
 
 						{#if selectedContractType && selectedContractType !== ContractType.FULLTIME}
-							<div class="flex basis-[calc(50%-0.5rem)]">
+							<div class="flex w-full sm:basis-[calc(50%-0.5rem)]">
 								<FormSimpleInput
 									name="contract_length"
 									type="number"
@@ -232,7 +232,7 @@
 								</FormSelect>
 							</div>
 
-							<label class="flex basis-[calc(50%-0.5rem)] items-center">
+							<label class="flex w-full sm:basis-[calc(50%-0.5rem)] items-center">
 								<FormSimpleInput
 									name="contract_num_hours"
 									type="number"
@@ -260,7 +260,7 @@
 						<FormSelect
 							bind:boundValue={selectedWorkerType}
 							name="worker_type"
-							class=" basis-[calc(50%-0.5rem)]"
+							class="w-full sm:basis-[calc(50%-0.5rem)]"
 							required
 						>
 							<FormOption value="" isDefault
@@ -280,7 +280,7 @@
 						<FormSimpleInput
 							name="job_title"
 							placeholder={fieldLabels.jobTitle[siteState.language]}
-							class="basis-[calc(50%-0.5rem)]"
+							class="w-full sm:basis-[calc(50%-0.5rem)]"
 						/>
 
 						<textarea
@@ -292,7 +292,7 @@
 							maxlength="250"
 						></textarea>
 
-						<FormSelect name="job_experience" class="basis-[calc(50%-0.5rem)]">
+						<FormSelect name="job_experience" class="w-full sm:basis-[calc(50%-0.5rem)]">
 							<FormOption value="" isDefault
 								>{fieldLabels.jobExperience[siteState.language]}</FormOption
 							>
@@ -303,7 +303,7 @@
 							{/each}
 						</FormSelect>
 
-						<FormSelect name="job_obtained_via" class="basis-[calc(50%-0.5rem)]">
+						<FormSelect name="job_obtained_via" class="w-full sm:basis-[calc(50%-0.5rem)]">
 							<FormOption value="" isDefault
 								>{fieldLabels.jobObtainedVia[siteState.language]}</FormOption
 							>
@@ -327,7 +327,7 @@
 						{formPage.compensationSectionTitle[siteState.language]}
 					</FormSectionHeader>
 					<div class="flex flex-wrap gap-4">
-						<div class="relative flex w-0 basis-[calc(50%-0.5rem)]">
+						<div class="relative flex w-full sm:w-0 sm:basis-[calc(50%-0.5rem)]">
 							<FormSimpleInput
 								name="compensation_amount"
 								type="number"
@@ -350,7 +350,7 @@
 							</FormSelect>
 						</div>
 
-						<div class=" basis-[calc(50%-0.5rem)] pt-1.5 pl-4">
+						<div class="w-full sm:basis-[calc(50%-0.5rem)] max-sm:pb-4 pt-1.5 sm:pl-4">
 							<FormCheckbox
 								name="paid_late"
 								label={fieldLabels.compensationLate[siteState.language]}

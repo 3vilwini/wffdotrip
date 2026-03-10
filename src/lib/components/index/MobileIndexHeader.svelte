@@ -1,7 +1,5 @@
 <script lang="ts">
-	import BlockContent from '../blockContent/BlockContent.svelte';
 	import logo2 from '$lib/assets/logo2.png';
-	import { siteState } from '$lib/states.svelte';
 	import MobileLanguageSelector from './MobileLanguageSelector.svelte';
 	import MobileLanguageMenu from './MobileLanguageMenu.svelte';
 	import MobileNavSelector from './MobileNavSelector.svelte';

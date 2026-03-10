@@ -22,7 +22,7 @@
 			style="width: {innerContainerW}px;"
 			class=" flex h-[calc(100dvh-3.5rem)] {collapsed
 				? ''
-				: ' p-6 pt-3'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs"
+				: ' p-6 pt-4'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs"
 		>
 			{#if collapsed}
 				<img

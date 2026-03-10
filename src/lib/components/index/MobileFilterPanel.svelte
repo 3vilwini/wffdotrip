@@ -13,7 +13,6 @@
 	import { enhance } from '$app/forms';
 
 	let isSubmitting = $state(false);
-	import logo2 from '$lib/assets/logo2.png';
 
 	let { showFilterPanel = $bindable() } = $props();
 </script>

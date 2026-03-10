@@ -1,5 +1,4 @@
 <script lang="ts">
-	import logo3 from '$lib/assets/logo3.png';
 	import { siteState } from '$lib/states.svelte';
 	import BlockContent from '$lib/components/blockContent/BlockContent.svelte';
 	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';

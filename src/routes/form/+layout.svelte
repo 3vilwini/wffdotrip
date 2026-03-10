@@ -1,10 +1,9 @@
 <script lang="ts">
+	import logo from '$lib/assets/logo.png';
 	import { SignedIn, SignedOut } from 'svelte-clerk';
 	import SubmissionForm from '$lib/components/form/SubmissionForm.svelte';
 	import SubmissionFormPreview from '$lib/components/form/SubmissionFormPreview.svelte';
-	import { siteState } from '$lib/states.svelte.js';
 	import FormHelp from '$lib/components/form/FormHelp.svelte';
-	import logo from '$lib/assets/logo2.png';
 	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';
 	let { data, children } = $props();
 </script>
@@ -13,21 +12,28 @@
 	<MobileIndexHeader></MobileIndexHeader>
 </div>
 <div class=" flex w-full flex-col max-lg:items-center lg:flex-row lg:divide-x">
-	<div class=" max-sm:w-full lg:w-0 lg:min-w-60 lg:grow lg:basis-1/4">
-		<div class="sticky top-0 p-2 max-lg:w-full sm:p-4">
+	<div class=" max-sm:w-full lg:w-[25dvw] lg:max-w-sm lg:min-w-xs lg:grow-0">
+		<div class="sticky top-0 p-2 max-lg:w-full sm:p-6 sm:pt-4">
+			<a href="/" class="mb-8 flex hidden w-[80%] max-w-80 lg:block">
+				<img src={logo} class="w-full max-w-60" />
+			</a>
+
 			{@render children()}
 		</div>
 	</div>
-	<div class="max-w-2xl">
-		<SignedOut>
-			<SubmissionFormPreview formPage={data.formPage}></SubmissionFormPreview>
-		</SignedOut>
-		<SignedIn>
-			<SubmissionForm userID={data.user ? data.user.id : ''} formPage={data.formPage}
-			></SubmissionForm>
-		</SignedIn>
+	<div class="flex grow shrink justify-center w-full">
+		<div class="max-w-2xl w-full">
+			<SignedOut>
+				<SubmissionFormPreview formPage={data.formPage}></SubmissionFormPreview>
+			</SignedOut>
+			<SignedIn>
+				<SubmissionForm userID={data.user ? data.user.id : ''} formPage={data.formPage}
+				></SubmissionForm>
+			</SignedIn>
+		</div>
 	</div>
-	<div class="  hidden w-0 shrink grow basis-1/4 lg:block">
+
+	<div class="  hidden w-0 lg:block lg:w-[25dvw] lg:max-w-sm lg:min-w-xs lg:grow-0">
 		<div class="fixed top-0 p-4">
 			<FormHelp formPage={data.formPage}></FormHelp>
 		</div>

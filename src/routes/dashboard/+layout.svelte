@@ -7,9 +7,9 @@
 </script>
 
 <div class=" flex flex-col sm:gap-12">
-	<div class="hidden items-start justify-between p-8 sm:flex">
+	<div class="hidden items-start justify-between p-6 pt-4 sm:flex">
 		<a href="/" class="cursor-pointer">
-			<img src={logo} class="w-48" />
+			<img src={logo} class="w-60" />
 		</a>
 		<SignedIn>
 			<div class="flex items-center gap-8">
