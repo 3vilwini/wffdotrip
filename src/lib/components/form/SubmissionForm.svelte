@@ -109,7 +109,12 @@
 						{formPage.whereWhenSectionTitle[siteState.language]}
 					</FormSectionHeader>
 					<div class="flex gap-4 max-sm:flex-wrap">
-						<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-full sm:basis-1/4" required>
+						<FormSelect
+							bind:boundValue={selectedCountry}
+							name="country"
+							class="basis-full sm:basis-1/4"
+							required
+						>
 							<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
 
 							{#each Object.entries(countryOptions) as [key, value]}
@@ -124,7 +129,12 @@
 							required
 						></FormSimpleInput>
 
-						<FormSelect bind:boundValue={selectedYear} name="year" class="basis-full sm:basis-1/4" required>
+						<FormSelect
+							bind:boundValue={selectedYear}
+							name="year"
+							class="basis-full sm:basis-1/4"
+							required
+						>
 							<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
 							{#each yearOptions as year}
 								<FormOption value={year}>{year}</FormOption>
@@ -145,7 +155,11 @@
 						{formPage.employerSectionTitle[siteState.language]}
 					</FormSectionHeader>
 					<div class="flex flex-wrap gap-4">
-						<FormSelect class="w-full sm:w-0 sm:basis-[calc(50%-0.5rem)]" name="employer_type" required>
+						<FormSelect
+							class="w-full sm:w-0 sm:basis-[calc(50%-0.5rem)]"
+							name="employer_type"
+							required
+						>
 							<FormOption value="" isDefault
 								>{fieldLabels.employerType[siteState.language]}</FormOption
 							>
@@ -232,7 +246,7 @@
 								</FormSelect>
 							</div>
 
-							<label class="flex w-full sm:basis-[calc(50%-0.5rem)] items-center">
+							<label class="flex w-full items-center sm:basis-[calc(50%-0.5rem)]">
 								<FormSimpleInput
 									name="contract_num_hours"
 									type="number"
@@ -350,7 +364,7 @@
 							</FormSelect>
 						</div>
 
-						<div class="w-full sm:basis-[calc(50%-0.5rem)] max-sm:pb-4 pt-1.5 sm:pl-4">
+						<div class="w-full pt-1.5 max-sm:pb-4 sm:basis-[calc(50%-0.5rem)] sm:pl-4">
 							<FormCheckbox
 								name="paid_late"
 								label={fieldLabels.compensationLate[siteState.language]}

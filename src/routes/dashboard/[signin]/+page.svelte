@@ -20,7 +20,7 @@
 			formFieldLabel: '!hidden',
 			formFieldInput: '!text-xs !rounded-none',
 			formButtonPrimary:
-				'!self-end !text-black !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
+				'!self-end !text-white !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
 			footer: '!hidden',
 			header: '!font-mono !text-xs',
 			headerTitle: '!text-xs !font-normal',

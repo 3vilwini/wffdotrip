@@ -32,7 +32,7 @@
 
 	const addRow = (row) => {
 		selectedRowMobile = row;
-		if (selectedRows.length < 5) {
+		if (selectedRows.length < 10) {
 			if (selectedRows.find((r) => r.id === row.id)) {
 				// if the row is already selected, deselect it
 				selectedRows = selectedRows.filter((r) => r.id !== row.id);

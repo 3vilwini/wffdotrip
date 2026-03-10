@@ -4,6 +4,7 @@
 	import MobileLanguageMenu from './MobileLanguageMenu.svelte';
 	import MobileNavSelector from './MobileNavSelector.svelte';
 	import MobileNavMenu from './MobileNavMenu.svelte';
+	import { page } from '$app/state';
 
 	let showMobileLanguageMenu = $state(false);
 	let showMobileNavMenu = $state(false);
@@ -24,10 +25,14 @@
 		<a href="/">
 			<img src={logo2} class="w-38" />
 		</a>
-		<div class="flex items-center gap-4">
+			<div class="font-mono text-xs leading-[1.4] {page.url.pathname === '/cost' ? 'hidden sm:flex' : 'hidden'}">
+				How much does this website cost?
+			</div>
+		<div class="flex items-center justify-end gap-4 sm:w-38">
 			<div onclick={toggleLanguageMenu}>
 				<MobileLanguageSelector bind:showMobileLanguageMenu></MobileLanguageSelector>
 			</div>
+		
 			<div onclick={toggleNavMenu}>
 				<MobileNavSelector bind:showMobileNavMenu></MobileNavSelector>
 			</div>

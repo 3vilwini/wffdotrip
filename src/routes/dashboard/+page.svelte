@@ -7,7 +7,7 @@
 </script>
 
 <SignedOut>
-	<div class="flex w-dvw flex-col justify-center gap-4">
+	<div class="flex w-dvw flex-col justify-center items-center gap-4">
 		<div class="px-2 text-center font-mono text-xs">Log-in or Sign up to view Dashboard</div>
 		<SignIn
 			fallbackRedirectUrl="/dashboard"
@@ -19,15 +19,17 @@
 			withSignUp={true}
 			appearance={{
 				elements: {
-					main: '!flex-shrink !max-w-sm !w-full !font-mono',
-					rootBox: '!flex-shrink !w-full !flex-grow !flex !justify-center',
+					main: '!flex-shrink !max-w-sm  !font-mono',
+					rootBox: '!flex-shrink !flex-grow !flex',
 					cardBox: '!shadow-none !rounded-none',
-					card: '!bg-transparent !rounded-none !p-2 !pr-4',
+					card: '!bg-transparent !rounded-none !p-0.5',
 					form: '!gap-4',
 					formFieldLabel: '!hidden',
-					formFieldInput: '!text-xs !rounded-none',
+					formFieldInput:
+						'!text-xl !px-1 !font-serif !shadow-none !tracking-tight !rounded-none !bg-transparent !border-0 !border-b !border-b-black',
 					formButtonPrimary:
-						'!self-end !text-black !rounded-none !bg-transparent ![appearence:none]  !text-xs  !border-none !shadow-none !rounded-none !w-min !p-0 hover:underline',
+						' !text-white !text-lg !font-sans !bg-transparent !p-0 !uppercase !border-dashed !border !border-black !rounded-none  ![appearence:none]  !shadow-none !rounded-none !w-min',
+					buttonArrowIcon: '!hidden',
 					footer: '!hidden',
 					header: '!hidden'
 				}

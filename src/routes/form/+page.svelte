@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { navMenuItems } from '$lib/staticContent';
+	import BlockContent from '$lib/components/blockContent/BlockContent.svelte';
 	import { siteState } from '$lib/states.svelte.js';
 	import { onMount } from 'svelte';
 	import { SignedIn, SignedOut, SignIn, SignOutButton } from 'svelte-clerk';
@@ -32,6 +34,9 @@
 	<div class="mb-4 pt-8 text-2xl leading-tight">
 		{data.formPage.loginHeader[siteState.language]}
 	</div>
+	<div class="font-mono text-xs leading-[1.4]">
+		<BlockContent value={data.formPage.loginDek[siteState.language]}></BlockContent>
+	</div>
 	<div class={field ? '' : 'opacity-0'}>
 		<SignIn
 			fallbackRedirectUrl="/form"
@@ -46,7 +51,7 @@
 					main: '!flex-shrink !max-w-sm !w-full !font-mono',
 					rootBox: '!flex-shrink !w-full !flex-grow !flex',
 					cardBox: '!shadow-none !rounded-none',
-					card: '!bg-transparent !rounded-none !p-2 !pr-4',
+					card: '!bg-transparent !rounded-none !p-0.5',
 					form: '!gap-4',
 					formFieldLabel: '!hidden',
 					formFieldInput:
@@ -59,6 +64,9 @@
 				}
 			}}
 		/>
+	</div>
+	<div class="mt-12">
+		<a href="/faq#privacy-policy" class="text-xs font-mono hover:underline">{navMenuItems.privacy[siteState.language]} &rightarrow;&#xFE0E;</a>
 	</div>
 </SignedOut>
 <SignedIn>

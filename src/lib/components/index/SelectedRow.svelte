@@ -119,7 +119,7 @@ verified: true
 										{#if row.year}
 											<div class="text-[17.25px]">{row.year}</div>
 										{/if}
-										<div class="font-mono text-xs">
+										<div class="font-mono text-xs leading-[1.4]">
 											{#if row.job_title}
 												<div>{row.job_title}</div>
 											{/if}
@@ -211,14 +211,14 @@ verified: true
 											<div class="mb-1 text-lg tracking-[-0.01em]">
 												{fieldLabels.addlComp[siteState.language]}
 											</div>
-											<div class="font-mono text-xs">
+											<div class="font-mono text-xs leading-[1.4]">
 												{#each Object.keys(AddlCompItem) as key}
 													{#if row['addl_comp_' + key.toLowerCase()]}
 														<div class="flex justify-between gap-2 py-1 not-last:border-b">
 															<div>
 																{addlCompItemOptions[AddlCompItem[key]][siteState.language]}
 															</div>
-															<div>
+															<div class="text-right">
 																{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM'}
 																	{row['addl_comp_' + key.toLowerCase()]}{currency[
 																		row.country.value
@@ -235,7 +235,7 @@ verified: true
 											</div>
 										</div>
 									{/if}
-									<div class="flex flex-col gap-3 font-mono text-xs">
+									<div class="flex flex-col gap-3 font-mono text-xs leading-[1.4]">
 										{#if row.satisfied_with_compensation}
 											<div class="flex gap-2">
 												<div class="text-sm leading-[0.75]">❀</div>
