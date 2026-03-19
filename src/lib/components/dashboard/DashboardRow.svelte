@@ -10,7 +10,8 @@
 		AddlCompItem,
 		currency,
 		contractLengthUnitOptions,
-		indexHeaderLabels
+		indexHeaderLabels,
+		countryIcons
 	} from '../../staticContent.ts';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 	import {
@@ -36,9 +37,9 @@
 		invalidateAll();
 	});
 
-	const closeEditModal = () => {
-		showEditModal = false;
-	};
+	// const closeEditModal = () => {
+	// 	showEditModal = false;
+	// };
 </script>
 
 {#if showEditModal}
@@ -78,7 +79,7 @@
 					}}
 					method="POST"
 					action="/dashboard?/delete"
-					class="flex items-center justify-center"
+					class="flex items-center justify-center gap-4"
 				>
 					<input maxlength="250" hidden name="row_id" value={row.id ? row.id : ''} />
 
@@ -87,8 +88,15 @@
 					>
 						Delete
 					</button>
+					<div onclick={() => {
+						showDeleteModal = false;
+					}}
+						class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
+					>
+						Cancel
+					</div>
 				</form>
-				<div
+				<div class="absolute top-4 right-4"
 					onclick={() => {
 						showDeleteModal = false;
 					}}
@@ -100,22 +108,24 @@
 	</div>
 {/if}
 
-<div class="border-t pr-4 pl-8 font-mono text-xs leading-normal last:border-b">
+<div onclick={() => {
+				rowExpanded = !rowExpanded;
+			}} class=" cursor-pointer border-t pr-4 pl-8 font-mono text-xs leading-normal last:border-b">
 	<div class="align-center flex justify-between gap-4 pt-1 pb-1.5">
-		<div class="flex basis-1/4 gap-4">
+		<div class="flex items-center basis-1/4 gap-4">
 			{#if row.city && row.country}
-				<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
-					{yarndingsText[row.city.length % yarndingsText.length]}
+				<div class="flex w-6 h-8.5 text-center font-yarndings text-3xl leading-none">
+					{countryIcons[row.country.value]}
 				</div>
-				<div class="basis-1/2 pt-2">
+				<div class="basis-1/2 pt-0.75">
 					{row.city}, {countryOptions[row.country.value][siteState.language]}
 				</div>
 			{/if}
-			<div class="basis-1/3 pt-2">
+			<div class="basis-1/3 pt-0.75">
 				{row.verified ? 'Validated' : 'Pending'}
 			</div>
 			{#if row.year}
-				<div class="basis-1/6 pt-2">
+				<div class="basis-1/6 pt-0.75">
 					{row.year}
 				</div>
 			{/if}
@@ -123,18 +133,18 @@
 
 		<div class="flex basis-1/4 gap-2">
 			{#if row.worker_type}
-				<div class="pt-2.25 font-sans text-[17.25px] leading-3">
+				<div class="pt-3 font-sans text-[17.25px] leading-3">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
 			{#if row.job_title}
-				<div class="pt-2">
+				<div class="pt-2.75">
 					{row.job_title}
 				</div>
 			{/if}
 		</div>
 
-		<div class="relative basis-1/5 pt-1.5 font-serif text-lg leading-[1] tracking-tight">
+		<div class="relative basis-1/5 pt-2 font-serif text-lg leading-[1] tracking-tight">
 			{#if row.employer_name}
 				{row.employer_name}
 			{/if}
@@ -142,10 +152,10 @@
 
 		<div class="flex basis-1/5 justify-between">
 			{#if row.contract_type}
-				<div class="pt-2">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
+				<div class="pt-2.75">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
 			{/if}
 			{#if row.compensation_amount && row.compensation_frequency && row.country}
-				<div class="pt-2">
+				<div class="pt-2.75">
 					<div
 						class="-mt-0.5 rounded-full border px-2 py-0.5 text-[9px] whitespace-nowrap uppercase"
 					>
@@ -156,9 +166,7 @@
 			{/if}
 		</div>
 		<div
-			onclick={() => {
-				rowExpanded = !rowExpanded;
-			}}
+
 			class="pt-2"
 		>
 			<div
@@ -181,13 +189,13 @@
 				<div class="basis-1/4">
 					<div class="flex gap-2">
 						<button
-							onclick={() => (showEditModal = true)}
+							onclick={(e) => {e.stopImmediatePropagation(); showEditModal = true}}
 							class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 						>
 							Edit
 						</button>
 						<button
-							onclick={() => (showDeleteModal = true)}
+							onclick={(e) => {e.stopImmediatePropagation(); showDeleteModal = true}}
 							class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 						>
 							Delete

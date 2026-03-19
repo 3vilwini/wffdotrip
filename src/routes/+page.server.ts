@@ -8,10 +8,11 @@ import {
 	employerTypeOptions,
 	workerTypeOptions
 } from '$lib/staticContent';
+import { shuffle } from '$lib/utils';
 export const load = (async ({ locals }) => {
 	const indexPage = await getIndexPage();
-
 	const rows = await getAllVerifiedRows();
+	shuffle(rows.results);
 	return { rows, indexPage };
 }) satisfies PageLoad;
 

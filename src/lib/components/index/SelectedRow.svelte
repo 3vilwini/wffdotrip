@@ -21,8 +21,6 @@
 		contractLengthUnitOptions
 	} from '$lib/staticContent';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
-	import doubleArrow from '$lib/assets/doubleArrow.svg';
-	import P from '../blockContent/P.svelte';
 	let { rows = $bindable() } = $props();
 
 	const expandRow = (row) => {
@@ -75,12 +73,14 @@ verified: true
 	>
 		{#if rows && rows.length > 0}
 			<div class="flex h-[calc(100dvh-55px)] flex-col">
-				{#each rows as row}
+				{#each rows as row, idx}
 					<div
 						class="flex min-h-14 flex-col {row.isExpanded ? 'gap-6 overflow-auto ' : ' '} border-b"
 					>
 						<div
-							class="flex cursor-pointer items-center justify-between  {row.isExpanded ? 'p-6 pb-0 ' : ' px-6 py-3 '} "
+							class="flex cursor-pointer items-center justify-between {row.isExpanded
+								? 'p-3 pb-0 '
+								: ' px-3 py-3 '} "
 							onclick={() => expandRow(row)}
 						>
 							<div class="flex items-center gap-2">
@@ -88,11 +88,11 @@ verified: true
 									<div
 										class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none"
 									>
-										{yarndingsText[row.city.length % yarndingsText.length]}
+										{yarndingsText[idx]}
 									</div>
 								{/if}
 								{#if row.worker_type}
-									<div class="text-lg leading-none xl:text-2xl">
+									<div class="text-lg leading-none">
 										{getWorkerTypeLabel(row.worker_type.value)}
 									</div>
 								{/if}
@@ -119,7 +119,7 @@ verified: true
 										{#if row.year}
 											<div class="text-[17.25px]">{row.year}</div>
 										{/if}
-										<div class="font-mono text-xs leading-[1.4]">
+										<div class="font-mono text-xs leading-[1.6]">
 											{#if row.job_title}
 												<div>{row.job_title}</div>
 											{/if}
@@ -142,10 +142,12 @@ verified: true
 									</div>
 									<div>
 										{#if row.employer_name}
-											<div class="font-serif text-lg tracking-[-0.01em]">{row.employer_name}</div>
+											<div class="font-serif text-lg tracking-[-0.01em] leading-[1.2]">{row.employer_name}</div>
+										{:else if row.employer_type}
+											<div class="font-serif text-lg tracking-[-0.01em] leading-[1.2]">{getEmployerTypeLabel(row.employer_type.value)}</div>
 										{/if}
-										<div class="font-mono text-xs">
-											{#if row.employer_type}
+										<div class="font-mono text-xs leading-[1.6]">
+											{#if row.employer_type && row.employer_name}
 												<div>{getEmployerTypeLabel(row.employer_type.value)}</div>
 											{/if}
 											{#if row.city && row.country}
@@ -172,7 +174,7 @@ verified: true
 												{contractTypeOptions[row.contract_type.value][siteState.language]}
 											</div>
 										{/if}
-										<div class="font-mono text-xs">
+										<div class="font-mono text-xs leading-[1.6]">
 											{#if row.contract_num_hours}
 												<div>
 													{row.contract_num_hours + ' ' + fieldLabels.perWeek[siteState.language]}
@@ -194,14 +196,15 @@ verified: true
 
 									{#if row.compensation_amount && row.compensation_frequency && row.country}
 										<div class="border border-dashed">
-											<div class="flex justify-between bg-black p-3 text-lg text-white">
+											<div class="flex justify-between p-3 py-2 text-lg">
+												<div class="tracking-wide">
+													{row.compensation_amount}
+													{currency[row.country.value]}
+												</div>
 												<div class="font-serif">
 													{compensationFrequencyOptions[row.compensation_frequency.value][
 														siteState.language
 													]}
-												</div>
-												<div class="tracking-wide">
-													{row.compensation_amount}{currency[row.country.value]}
 												</div>
 											</div>
 										</div>
@@ -235,7 +238,7 @@ verified: true
 											</div>
 										</div>
 									{/if}
-									<div class="flex flex-col gap-3 font-mono text-xs leading-[1.4]">
+									<div class="flex flex-col gap-3 font-mono text-xs leading-[1.6]">
 										{#if row.satisfied_with_compensation}
 											<div class="flex gap-2">
 												<div class="text-sm leading-[0.75]">❀</div>

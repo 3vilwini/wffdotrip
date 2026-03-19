@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { compensationFrequencyOptions } from './../../staticContent.ts';
-	import { siteState, yarndingsText } from '$lib/states.svelte';
+	import { siteState } from '$lib/states.svelte';
 	import {
 		currency,
 		contractTypeOptions,
 		getEmployerTypeLabel,
 		getWorkerTypeLabel,
-		numEmployeesOptions
+		numEmployeesOptions,
+		countryIcons
 	} from '$lib/staticContent';
 	let { row, onclick } = $props();
 </script>
@@ -14,11 +15,11 @@
 <div {onclick} class="items-top flex cursor-pointer gap-x-2 border-b p-3 pt-2 hover:bg-lightgrey">
 	<div class="items-top flex grow flex-col flex-wrap justify-between gap-0.25">
 		{#if row.city}
-			<div class="mb-1.75 flex shrink-0 gap-x-2">
+			<div class="mb-1.75 flex items-center shrink-0 gap-x-2">
 				<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
-					{yarndingsText[row.city.length % yarndingsText.length]}
+					{countryIcons[row.country.value]}
 				</div>
-				<div class=" shrink-0 grow-0 pt-3 font-mono text-xs">
+				<div class=" shrink-0 grow-0 pt-1 font-mono text-xs">
 					{row.city}
 				</div>
 			</div>

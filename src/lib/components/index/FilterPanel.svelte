@@ -13,7 +13,6 @@
 	import { enhance } from '$app/forms';
 
 	let isSubmitting = $state(false);
-	$inspect(filteredResultsState);
 </script>
 
 <div class=" w-full border-b bg-white p-6">
@@ -24,6 +23,32 @@
 				isSubmitting = false;
 				siteState.showFilterPanel = false;
 				filteredResultsState.rows = result.data.response;
+				filteredResultsState.filtersApplied = {
+					country: [],
+					workerType: [],
+					employerType: [],
+					contractType: [],
+					compensationFrequency: []
+				};
+				formData.forEach((value, key) => {
+					if (key.startsWith('country-')) {
+						const country = key.split('-')[1];
+						filteredResultsState.filtersApplied.country.push(country);
+					} else if (key.startsWith('worker_type-')) {
+						const workerTypeGroup = key.split('-')[1];
+						filteredResultsState.filtersApplied.workerType.push(workerTypeGroup);
+					} else if (key.startsWith('employer_type-')) {
+						const employerTypeGroup = key.split('-')[1];
+						filteredResultsState.filtersApplied.employerType.push(employerTypeGroup);
+					} else if (key.startsWith('contract_type-')) {
+						const contractType = key.split('-')[1];
+						filteredResultsState.filtersApplied.contractType.push(contractType);
+					} else if (key.startsWith('compensation_frequency-')) {
+						const compensationFrequency = key.split('-')[1];
+						filteredResultsState.filtersApplied.compensationFrequency.push(compensationFrequency);
+					}
+				});
+				console.log(filteredResultsState.filtersApplied);
 			};
 		}}
 		method="POST"

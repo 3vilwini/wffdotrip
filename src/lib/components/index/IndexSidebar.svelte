@@ -1,8 +1,8 @@
 <script lang="ts">
 	import logo from '$lib/assets/logo.png';
 	import logo2 from '$lib/assets/logo2.png';
-	import { siteState } from '$lib/states.svelte';
-	import { countryOptions } from '$lib/staticContent';
+	import { siteState, yarndingsText } from '$lib/states.svelte';
+	import { countryOptions, countryIcons } from '$lib/staticContent';
 	import BlockContent from '../blockContent/BlockContent.svelte';
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
 	let { indexPage, numRowsPerCountry } = $props();
@@ -34,7 +34,10 @@
 				<div>
 					<BlockContent value={indexPage.siteDescription[siteState.language]}></BlockContent>
 				</div>
-				<div class="mt-4">{indexPage.representedCountriesHeader[siteState.language]}</div>
+				<div class="mt-4 flex justify-between font-sans text-xl">
+					<span class="font-yarndings">{yarndingsText[0]}</span>
+					{indexPage.representedCountriesHeader[siteState.language]}
+				</div>
 				<div>
 					<BlockContent value={indexPage.representedCountriesDescription[siteState.language]}
 					></BlockContent>
@@ -42,12 +45,16 @@
 				<div class="flex flex-col gap-2 border border-dashed p-2">
 					{#each Object.entries(countryOptions) as [key, labels]}
 						<div class="flex justify-between">
-							<div>{labels[siteState.language]}</div>
+							<div>
+								<span class="text-lg leading-0">{countryIcons[key]}</span>
+								{labels[siteState.language]}
+							</div>
 							<div>{numRowsPerCountry[key]}</div>
 						</div>
 					{/each}
 				</div>
-				<div class="mt-4">
+				<div class="mt-4 flex justify-between font-sans text-xl">
+					<span class="font-yarndings">{yarndingsText[1]}</span>
 					{indexPage.getInvolvedHeader[siteState.language]}
 				</div>
 				<div>

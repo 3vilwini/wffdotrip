@@ -4,7 +4,14 @@
 	import Row from '$lib/components/index/Row.svelte';
 	import IndexSidebar from '$lib/components/index/IndexSidebar.svelte';
 	import { onMount } from 'svelte';
-	import { countryOptions, fieldLabels } from '$lib/staticContent.js';
+	import {
+		compensationFrequencyOptions,
+		contractTypeOptions,
+		countryOptions,
+		employerTypeOptions,
+		fieldLabels,
+		workerTypeOptions
+	} from '$lib/staticContent.js';
 	import CurrentResidentBanner from '$lib/components/index/CurrentResidentBanner.svelte';
 	import IndexHeader from '$lib/components/index/IndexHeader.svelte';
 	import SelectedRow from '$lib/components/index/SelectedRow.svelte';
@@ -28,7 +35,7 @@
 	let rowContainerW = $state(0);
 	$effect(() => {
 		siteState.indexW = rowContainerW;
-	})
+	});
 
 	const addRow = (row) => {
 		selectedRowMobile = row;
@@ -79,17 +86,46 @@
 
 <div class="sm:hidden">
 	{#if filteredResultsState.rows}
-		<div class="flex h-12 items-center justify-between gap-4 border-b p-3">
-			<div class="font-mono text-xs">
-				{filteredResultsState?.rows?.results?.length} Filtered Results
+		<div class="flex flex-col min-h-12 items-center justify-between gap-4 border-b p-3">
+			<div class='flex flex-row justify-between items-center w-full'>
+				<div class="font-mono text-xs">
+					{filteredResultsState?.rows?.results?.length} Filtered Results
+				</div>
+				<div>
+					<button
+						onclick={() => (filteredResultsState.rows = null)}
+						class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
+					>
+						Show All Rows
+					</button>
+				</div>
 			</div>
-			<div>
-				<button
-					onclick={() => (filteredResultsState.rows = null)}
-					class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
-				>
-					Show All Rows
-				</button>
+
+			<div class="w-full font-mono text-xs">
+				{#each Object.entries(filteredResultsState.filtersApplied) as [key, value] (key)}
+					{#if value.length > 0}
+						<div>
+							<span>{fieldLabels[key][siteState.language]}: </span>
+							{#each value as filterValue, idx (idx)}
+								<span>
+									{#if key === 'country'}
+										{countryOptions[filterValue][siteState.language]}
+									{:else if key === 'workerType'}
+										{workerTypeOptions[filterValue].groupLabel[siteState.language]}
+									{:else if key === 'employerType'}
+										{employerTypeOptions[filterValue].groupLabel[siteState.language]}
+									{:else if key === 'contractType'}
+										{contractTypeOptions[filterValue][siteState.language]}
+									{:else if key === 'compensationFrequency'}
+										{compensationFrequencyOptions[filterValue][siteState.language]}
+									{/if}
+									{#if idx < value.length - 1}{', '}
+									{/if}
+								</span>
+							{/each}
+						</div>
+					{/if}
+				{/each}
 			</div>
 		</div>
 	{:else}

@@ -6,7 +6,8 @@
 		contractTypeOptions,
 		getEmployerTypeLabel,
 		getWorkerTypeLabel,
-		numEmployeesOptions
+		numEmployeesOptions,
+		countryIcons
 	} from '$lib/staticContent';
 	let { row, isSelected, onclick } = $props();
 </script>
@@ -21,17 +22,17 @@
 >
 	{#if row.city}
 		<div class="flex shrink-0 gap-x-2">
-			<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
-				{yarndingsText[row.city.length % yarndingsText.length]}
+			<div class="flex w-6 h-8.5 text-center font-yarndings text-3xl leading-[1]">
+				{countryIcons[row.country.value]}
 			</div>
 			<div
-				class="{siteState.indexW > 768 ? 'w-24' : 'w-18'} shrink-0 grow-0 pt-3 font-mono text-xs"
+				class="{siteState.indexW > 768 ? 'w-23' : 'w-18'} shrink-0 grow-0 pt-3 font-mono text-xs"
 			>
 				{row.city}
 			</div>
 		</div>
 	{/if}
-	<div class="items-top flex grow flex-wrap justify-between gap-x-4">
+	<div class="items-top flex grow  justify-between gap-x-4">
 		<div class=" pt-2 leading-none">
 			{#if row.worker_type}
 				<span class="text-[17.25px] leading-tight tracking-[-0.01em]">
@@ -39,7 +40,7 @@
 				</span>
 			{/if}
 			{#if row.job_title}
-				<span class="relative -top-0.25 -mb-1.25 font-mono text-[9px] ml-1">
+				<span class="relative -top-0.25 -mb-1.25 ml-1 font-mono text-[9px]">
 					{row.job_title}
 				</span>
 			{/if}
@@ -71,7 +72,7 @@
 		{#if row.compensation_amount && row.compensation_frequency && row.country}
 			<div class="{siteState.indexW > 768 ? 'pt-1.75' : 'pt-1.5 '} ">
 				<div
-					class="flex-row gap-1 flex w-min border rounded-full px-2 py-1 font-mono text-[9px] whitespace-nowrap"
+					class="flex w-min flex-row gap-1 rounded-full border px-2 py-1 font-mono text-[9px] whitespace-nowrap"
 				>
 					<span>
 						{row.compensation_amount}{currency[row.country.value]}

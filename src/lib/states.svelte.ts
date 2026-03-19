@@ -16,7 +16,14 @@ export const siteState = $state({
 });
 
 export const filteredResultsState = $state({
-	rows: null
+	rows: null,
+	filtersApplied: {
+		country: [],
+		workerType: [],
+		employerType: [],
+		contractType: [],
+		compensationFrequency: []
+	}
 });
 
 export const yarndingsText = 'abcdefgijmnEFGHIPSTU';

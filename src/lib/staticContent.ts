@@ -14,6 +14,13 @@ export const countryShortCode = {
 	[Country.SPAIN]: 'SP'
 };
 
+export const countryIcons = {
+	[Country.UK]: '❋',
+	[Country.FRANCE]: '✸',
+	[Country.ITALY]: '✤',
+	[Country.SPAIN]: '✣'
+}
+
 export const currency = {
 	[Country.UK]: '£',
 	[Country.FRANCE]: '€',

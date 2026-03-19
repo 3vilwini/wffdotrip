@@ -17,7 +17,7 @@
 	let { showFilterPanel = $bindable() } = $props();
 </script>
 
-<div class="sticky top-3 right-3 flex justify-end pr-3  z-10">
+<div class="sticky top-3 right-3 z-10 flex justify-end pr-3">
 	<div class=" border border-dashed border-black text-white">
 		<div
 			onclick={() => (showFilterPanel = false)}
@@ -28,14 +28,40 @@
 	</div>
 </div>
 
-<div class=" w-full border-b bg-white p-3 relative pt-0 -top-3 pb-14">
+<div class=" relative -top-3 w-full border-b bg-white p-3 pt-0 pb-14">
 	<form
 		use:enhance={({ formElement, formData, action, cancel, submitter }) => {
 			isSubmitting = true;
 			return async ({ result, update }) => {
 				isSubmitting = false;
-                showFilterPanel = false;
+				showFilterPanel = false;
 				filteredResultsState.rows = result.data.response;
+				filteredResultsState.filtersApplied = {
+					country: [],
+					workerType: [],
+					employerType: [],
+					contractType: [],
+					compensationFrequency: []
+				};
+				formData.forEach((value, key) => {
+					if (key.startsWith('country-')) {
+						const country = key.split('-')[1];
+						filteredResultsState.filtersApplied.country.push(country);
+					} else if (key.startsWith('worker_type-')) {
+						const workerTypeGroup = key.split('-')[1];
+						filteredResultsState.filtersApplied.workerType.push(workerTypeGroup);
+					} else if (key.startsWith('employer_type-')) {
+						const employerTypeGroup = key.split('-')[1];
+						filteredResultsState.filtersApplied.employerType.push(employerTypeGroup);
+					} else if (key.startsWith('contract_type-')) {
+						const contractType = key.split('-')[1];
+						filteredResultsState.filtersApplied.contractType.push(contractType);
+					} else if (key.startsWith('compensation_frequency-')) {
+						const compensationFrequency = key.split('-')[1];
+						filteredResultsState.filtersApplied.compensationFrequency.push(compensationFrequency);
+					}
+				});
+				console.log(filteredResultsState.filtersApplied);
 			};
 		}}
 		method="POST"

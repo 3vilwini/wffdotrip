@@ -1,10 +1,20 @@
 <script lang="ts">
 	import sortIcon from '$lib/assets/sort.svg';
 	import searchIcon from '$lib/assets/search.svg';
-	import { indexHeaderLabels } from '$lib/staticContent';
+	import {
+		indexHeaderLabels,
+		fieldLabels,
+		getWorkerTypeLabel,
+		compensationFrequencyOptions,
+		contractTypeOptions,
+		countryOptions,
+		employerTypeOptions,
+		workerTypeOptions
+	} from '$lib/staticContent';
 	import { filteredResultsState, siteState } from '$lib/states.svelte';
 	import FilterPanel from './FilterPanel.svelte';
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
+	$inspect(filteredResultsState.filtersApplied);
 </script>
 
 <div class="relative flex h-14 items-center border-b pr-2 pl-3 text-lg xl:text-2xl">
@@ -21,7 +31,7 @@
 			<img src={sortIcon} />
 		</div> -->
 	</div>
-	<div class="flex w-full justify-between items-baseline">
+	<div class="flex w-full items-baseline justify-between">
 		<div class="text-[17px] xl:text-[23px]">
 			{indexHeaderLabels.worker[siteState.language]}
 		</div>
@@ -52,17 +62,54 @@
 	</div>
 </div>
 {#if filteredResultsState.rows}
-	<div class="flex h-14 items-center justify-between gap-4 border-b p-3">
-		<div class="font-mono text-xs">
-			{filteredResultsState?.rows?.results?.length} Filtered Results
+	<div class="flex min-h-14 flex-col justify-center gap-4 border-b p-3 ">
+		<div class="flex w-full items-center justify-between">
+			<div class="font-mono text-xs">
+				{filteredResultsState?.rows?.results?.length} Filtered Results
+			</div>
+			<div>
+				<button
+					onclick={() => {
+						filteredResultsState.rows = null;
+						filteredResultsState.filtersApplied = {
+							country: [],
+							workerType: [],
+							employerType: [],
+							contractType: [],
+							compensationFrequency: []
+						};
+					}}
+					class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
+				>
+					Show All Rows
+				</button>
+			</div>
 		</div>
-		<div>
-			<button
-				onclick={() => (filteredResultsState.rows = null)}
-				class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
-			>
-				Show All Rows
-			</button>
+		<div class="w-full font-mono text-xs">
+			{#each Object.entries(filteredResultsState.filtersApplied) as [key, value] (key)}
+				{#if value.length > 0}
+					<div>
+						<span>{fieldLabels[key][siteState.language]}: </span>
+						{#each value as filterValue, idx (idx)}
+							<span>
+								{#if key === 'country'}
+									{countryOptions[filterValue][siteState.language]}
+								{:else if key === 'workerType'}
+									{workerTypeOptions[filterValue].groupLabel[siteState.language]}
+								{:else if key === 'employerType'}
+									{employerTypeOptions[filterValue].groupLabel[siteState.language]}
+								{:else if key === 'contractType'}
+									{contractTypeOptions[filterValue][siteState.language]}
+								{:else if key === 'compensationFrequency'}
+									{compensationFrequencyOptions[filterValue][siteState.language]}
+								{/if}
+								{#if idx < value.length - 1}{', '}
+								{/if}
+							</span>
+						{/each}
+					</div>
+				{/if}
+			{/each}
 		</div>
 	</div>
 {/if}
