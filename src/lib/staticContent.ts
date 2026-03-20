@@ -2131,21 +2131,21 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.OPERATIONS_AND_IT]: {
 		groupLabel: {
 			[Language.EN]: 'Operations & IT',
-			[Language.FR]: 'Operations & IT in french',
+			[Language.FR]: 'Opérations & Services Informatiques',
 			[Language.IT]: 'Operations & IT in italian',
 			[Language.ES]: 'Operations & IT in spanish'
 		},
 		options: {
 			[WorkerType.SECURITY_AGENT]: {
 				label: {
-					[Language.EN]: 'Security agent',
-					[Language.FR]: 'Security agent in french',
+					[Language.EN]: 'Security Guard',
+					[Language.FR]: 'Agent·e de sécurité',
 					[Language.IT]: 'Security agent in italian',
 					[Language.ES]: 'Security agent in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- building size, protocols assigned, etc.',
+					[Language.FR]: '- superficie du bâtiment, horaires spécifiques, protocoles assignés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2153,14 +2153,14 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.CUSTODIAL_STAFF]: {
 				label: {
-					[Language.EN]: 'Custodial Staff',
-					[Language.FR]: 'Custodial Staff in french',
+					[Language.EN]: 'Maintenance Worker',
+					[Language.FR]: 'Agent·e d’entretien',
 					[Language.IT]: 'Custodial Staff in italian',
 					[Language.ES]: 'Custodial Staff in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- building coverage, cleaning routines, etc.',
+					[Language.FR]: '- surface couverte, horaires spécifiques, routines de nettoyage, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2168,14 +2168,14 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.FACILITIES_MANAGER]: {
 				label: {
-					[Language.EN]: 'Facilities Manager',
-					[Language.FR]: 'Facilities Manager in french',
+					[Language.EN]: 'Building / Facilities Manager',
+					[Language.FR]: 'Responsable des infrastructures',
 					[Language.IT]: 'Facilities Manager in italian',
 					[Language.ES]: 'Facilities Manager in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- maintenance operations, building systems, etc. ',
+					[Language.FR]: '- opérations de maintenance, systèmes du bâtiment, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2184,13 +2184,13 @@ export const workerTypeOptions = {
 			[WorkerType.IT_SUPPORT]: {
 				label: {
 					[Language.EN]: 'IT Support',
-					[Language.FR]: 'IT Support in french',
+					[Language.FR]: 'Assistant informatique',
 					[Language.IT]: 'IT Support in italian',
 					[Language.ES]: 'IT Support in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- hardware/software supported, ticket volume, systems managed, etc.',
+					[Language.FR]: '- matériel/logiciels gérés, volume de tickets, systèmes administrés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2199,13 +2199,13 @@ export const workerTypeOptions = {
 			[WorkerType.SYSTEMS_ADMIN]: {
 				label: {
 					[Language.EN]: 'Systems Admin',
-					[Language.FR]: 'Systems Admin in french',
+					[Language.FR]: 'Administrateur·ice système',
 					[Language.IT]: 'Systems Admin in italian',
 					[Language.ES]: 'Systems Admin in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- infrastructure managed, uptime, tools deployed, etc.',
+					[Language.FR]: '- infrastructure gérée, outils déployés, taux de disponibilité, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2214,13 +2214,13 @@ export const workerTypeOptions = {
 			[WorkerType.COLLECTIONS_DATABASE_MANAGER]: {
 				label: {
 					[Language.EN]: 'Collections Database Manager',
-					[Language.FR]: 'Collections Database Manager in french',
+					[Language.FR]: 'Gestionnaire de base de données',
 					[Language.IT]: 'Collections Database Manager in italian',
 					[Language.ES]: 'Collections Database Manager in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- database used, number of records, digitisation scope, etc.',
+					[Language.FR]: '- base de données utilisée, nombre de notices, périmètre de numérisation, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2231,7 +2231,7 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.LEGAL_AND_FINANCE]: {
 		groupLabel: {
 			[Language.EN]: 'Legal & Finance',
-			[Language.FR]: 'Legal & Finance in french',
+			[Language.FR]: 'Services Légaux & Financiers',
 			[Language.IT]: 'Legal & Finance in italian',
 			[Language.ES]: 'Legal & Finance in spanish'
 		},
@@ -2239,13 +2239,13 @@ export const workerTypeOptions = {
 			[WorkerType.FINANCIAL_ADMINISTRATOR]: {
 				label: {
 					[Language.EN]: 'Financial Administrator',
-					[Language.FR]: 'Financial Administrator in french',
+					[Language.FR]: 'Directeur·ice financier·ère',
 					[Language.IT]: 'Financial Administrator in italian',
 					[Language.ES]: 'Financial Administrator in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- departments managed, software used, etc.',
+					[Language.FR]: '- départements gérés, logiciels utilisés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2254,13 +2254,13 @@ export const workerTypeOptions = {
 			[WorkerType.ACCOUNTANT]: {
 				label: {
 					[Language.EN]: 'Accountant',
-					[Language.FR]: 'Accountant in french',
+					[Language.FR]: 'Comptable',
 					[Language.IT]: 'Accountant in italian',
 					[Language.ES]: 'Accountant in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- bookkeeping volume, reconciliations, financial controls, etc..',
+					[Language.FR]: '- volume de comptabilité, rapprochements, contrôles financiers, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2268,14 +2268,14 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.ART_SALES_ASSOCIATE]: {
 				label: {
-					[Language.EN]: 'Art Sales Associate',
-					[Language.FR]: 'Art Sales Associate in french',
+					[Language.EN]: 'Sales Manager',
+					[Language.FR]: 'Chargé·e des ventes',
 					[Language.IT]: 'Art Sales Associate in italian',
 					[Language.ES]: 'Art Sales Associate in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- sales volume, client types, artists represented, etc.',
+					[Language.FR]: '- volume des ventes, clients, artistes représentés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2284,13 +2284,13 @@ export const workerTypeOptions = {
 			[WorkerType.GRANTS_MANAGER]: {
 				label: {
 					[Language.EN]: 'Grants Manager',
-					[Language.FR]: 'Grants Manager in french',
+					[Language.FR]: 'Chargé·e de mécenat',
 					[Language.IT]: 'Grants Manager in italian',
 					[Language.ES]: 'Grants Manager in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- grants written, awarded amounts, reporting tasks, etc.',
+					[Language.FR]: '- subventions rédigées, montants attribués, missions de reporting, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2299,13 +2299,13 @@ export const workerTypeOptions = {
 			[WorkerType.ART_ADVISOR]: {
 				label: {
 					[Language.EN]: 'Art Advisor',
-					[Language.FR]: 'Art Advisor in french',
+					[Language.FR]: 'Art advisor',
 					[Language.IT]: 'Art Advisor in italian',
 					[Language.ES]: 'Art Advisor in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- client base, collection types, acquisitions recommended, etc.',
+					[Language.FR]: '- base de clients, types de collections, acquisitions recommandées, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2314,13 +2314,13 @@ export const workerTypeOptions = {
 			[WorkerType.STRATEGY_POLICY_OFFICER]: {
 				label: {
 					[Language.EN]: 'Strategy / Policy Officer',
-					[Language.FR]: 'Strategy / Policy Officer in french',
+					[Language.FR]: 'Responsable de la stratégie',
 					[Language.IT]: 'Strategy / Policy Officer in italian',
 					[Language.ES]: 'Strategy / Policy Officer in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- policies developed, research areas, stakeholder coordination, etc.',
+					[Language.FR]: '- politiques élaborées, axes de recherche, missions de coordination, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2329,13 +2329,13 @@ export const workerTypeOptions = {
 			[WorkerType.DEVELOPMENT_DIRECTOR]: {
 				label: {
 					[Language.EN]: 'Development Director',
-					[Language.FR]: 'Development Director in french',
+					[Language.FR]: 'Responsable du développement',
 					[Language.IT]: 'Development Director in italian',
 					[Language.ES]: 'Development Director in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- fundraising goals, target donors, team size, etc.',
+					[Language.FR]: '- objectifs de collecte de fonds, portefeuille de donateurs, taille de l’équipe, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2344,13 +2344,13 @@ export const workerTypeOptions = {
 			[WorkerType.FUNDRAISING_OFFICER]: {
 				label: {
 					[Language.EN]: 'Fundraising Officer',
-					[Language.FR]: 'Fundraising Officer in french',
+					[Language.FR]: 'Responsable des financements',
 					[Language.IT]: 'Fundraising Officer in italian',
 					[Language.ES]: 'Fundraising Officer in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- campaigns, donor cultivation, grant success rate, etc.',
+					[Language.FR]: '- campagnes, fidélisation des donateurs, taux de réussite des subventions, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2359,13 +2359,13 @@ export const workerTypeOptions = {
 			[WorkerType.SPONSORSHIP_COORDINATOR]: {
 				label: {
 					[Language.EN]: 'Sponsorship Coordinator',
-					[Language.FR]: 'Sponsorship Coordinator in french',
+					[Language.FR]: 'Responsable des partenariats',
 					[Language.IT]: 'Sponsorship Coordinator in italian',
 					[Language.ES]: 'Sponsorship Coordinator in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- corporate partners, contracts, sponsorship value, etc.',
+					[Language.FR]: '- partenaires, contrats, valeur des partenariats, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2373,14 +2373,14 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.MEMBERSHIP_PATRON_RELATIONS_MANAGER]: {
 				label: {
-					[Language.EN]: 'Membership/Patron Relations Manager',
-					[Language.FR]: 'Membership/Patron Relations Manager in french',
+					[Language.EN]: 'Membership / Patron Relations Manager',
+					[Language.FR]: 'Responsable du mécénat',
 					[Language.IT]: 'Membership/Patron Relations Manager in italian',
 					[Language.ES]: 'Membership/Patron Relations Manager in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- membership tiers, events, donor communication, etc.',
+					[Language.FR]: '- objectifs d’adhésion, événements, communication avec les donateurs, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2389,13 +2389,13 @@ export const workerTypeOptions = {
 			[WorkerType.LEGAL_ADVISOR]: {
 				label: {
 					[Language.EN]: 'Legal Advisor',
-					[Language.FR]: 'Legal Advisor in french',
+					[Language.FR]: 'Conseiller·ère juridique',
 					[Language.IT]: 'Legal Advisor in italian',
 					[Language.ES]: 'Legal Advisor in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- contract types, compliance issues, legal areas covered, etc.',
+					[Language.FR]: '- types de contrats, questions de conformité, domaines juridiques couverts, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2404,13 +2404,13 @@ export const workerTypeOptions = {
 			[WorkerType.ART_LAWYER]: {
 				label: {
 					[Language.EN]: 'Art Lawyer',
-					[Language.FR]: 'Art Lawyer in french',
+					[Language.FR]: 'Avocat·e spécialisé·e',
 					[Language.IT]: 'Art Lawyer in italian',
 					[Language.ES]: 'Art Lawyer in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: 'IP cases, contract negotiations, artist rights advocacy, etc.',
+					[Language.FR]: 'question de propriété intellectuelle, négociations contractuelles, défense des droits des artistes, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2419,13 +2419,13 @@ export const workerTypeOptions = {
 			[WorkerType.CONTRACTS_MANAGER]: {
 				label: {
 					[Language.EN]: 'Contracts Manager',
-					[Language.FR]: 'Contracts Manager in french',
+					[Language.FR]: 'Gestionnaire des contrats',
 					[Language.IT]: 'Contracts Manager in italian',
 					[Language.ES]: 'Contracts Manager in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- contract volume, types drafted, approval workflows, etc.',
+					[Language.FR]: '- volume de contrats, missions de rédaction, processus d’approbation, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2444,7 +2444,7 @@ export const workerTypeOptions = {
 			[WorkerType.OTHER]: {
 				label: {
 					[Language.EN]: 'Other',
-					[Language.FR]: 'Other in french',
+					[Language.FR]: 'Autre',
 					[Language.IT]: 'Other in italian',
 					[Language.ES]: 'Other in spanish'
 				},
