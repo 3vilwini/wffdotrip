@@ -2619,7 +2619,7 @@ export const addlCompensationCoverageOptions = {
 	},
 	[AddlCompensationCoverage.COVERED]: {
 		[Language.EN]: 'fully covered',
-		[Language.FR]: 'integrellement couvert',
+		[Language.FR]: 'intégralement couvert',
 		[Language.IT]: 'was covered IT',
 		[Language.ES]: 'was covered ES'
 	}
