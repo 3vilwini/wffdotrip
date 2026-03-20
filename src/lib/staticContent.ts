@@ -2510,43 +2510,43 @@ export const enum JobObtainedVia {
 export const jobObtainedViaOptions = {
 	[JobObtainedVia.INTERNAL_PROMOTION]: {
 		[Language.EN]: 'Internal Promotion',
-		[Language.FR]: 'Internal Promotion FR',
+		[Language.FR]: 'Promotion interne',
 		[Language.IT]: 'Internal Promotion IT',
 		[Language.ES]: 'Internal Promotion ES'
 	},
 	[JobObtainedVia.CALL_FOR_APPLICATIONS]: {
 		[Language.EN]: 'Call for Applications',
-		[Language.FR]: 'Call for Applications FR',
+		[Language.FR]: 'Appel à candidatures',
 		[Language.IT]: 'Call for Applications IT',
 		[Language.ES]: 'Call for Applications ES'
 	},
 	[JobObtainedVia.CALL_FOR_PROJECTS]: {
 		[Language.EN]: 'Call for Projects',
-		[Language.FR]: 'Call for Projects FR',
+		[Language.FR]: 'Appel à projets',
 		[Language.IT]: 'Call for Projects IT',
 		[Language.ES]: 'Call for Projects ES'
 	},
 	[JobObtainedVia.JOB_OFFER]: {
 		[Language.EN]: 'Job Offer',
-		[Language.FR]: 'Job Offer FR',
+		[Language.FR]: 'Offre d’emploi',
 		[Language.IT]: 'Job Offer IT',
 		[Language.ES]: 'Job Offer ES'
 	},
 	[JobObtainedVia.INVITATION_REFERRAL]: {
-		[Language.EN]: 'Invitation Referral',
-		[Language.FR]: 'Invitation Referral FR',
+		[Language.EN]: 'Invitation',
+		[Language.FR]: 'Invitation',
 		[Language.IT]: 'Invitation Referral IT',
 		[Language.ES]: 'Invitation Referral ES'
 	},
 	[JobObtainedVia.DIRECT_OUTREACH]: {
 		[Language.EN]: 'Direct Outreach',
-		[Language.FR]: 'Direct Outreach FR',
+		[Language.FR]: 'Candidature spontanée',
 		[Language.IT]: 'Direct Outreach IT',
 		[Language.ES]: 'Direct Outreach ES'
 	},
 	[JobObtainedVia.PURE_NEPOTISM]: {
-		[Language.EN]: 'Pure Nepotism',
-		[Language.FR]: 'Pure Nepotism FR',
+		[Language.EN]: 'Nepotism / Friendship',
+		[Language.FR]: 'Népotisme / amitié',
 		[Language.IT]: 'Pure Nepotism IT',
 		[Language.ES]: 'Pure Nepotism ES'
 	}
@@ -2562,36 +2562,36 @@ export const enum CompensationFrequency {
 
 export const compensationFrequencyOptions = {
 	[CompensationFrequency.HOURLY]: {
-		[Language.EN]: 'Hourly',
-		[Language.FR]: 'Hourly FR',
+		[Language.EN]: '/ hour',
+		[Language.FR]: '/ heure',
 		[Language.IT]: 'Hourly IT',
 		[Language.ES]: 'Hourly ES',
 		id: '5207257'
 	},
 	[CompensationFrequency.DAILY]: {
-		[Language.EN]: 'Daily',
-		[Language.FR]: 'Daily FR',
+		[Language.EN]: '/ day',
+		[Language.FR]: '/ jour',
 		[Language.IT]: 'Daily IT',
 		[Language.ES]: 'Daily ES',
 		id: '5207256'
 	},
 	[CompensationFrequency.WEEKLY]: {
-		[Language.EN]: 'Weekly',
-		[Language.FR]: 'Weekly FR',
+		[Language.EN]: '/ week',
+		[Language.FR]: '/ semaine',
 		[Language.IT]: 'Weekly IT',
 		[Language.ES]: 'Weekly ES',
 		id: '5207255'
 	},
 	[CompensationFrequency.MONTHLY]: {
-		[Language.EN]: 'Monthly',
-		[Language.FR]: 'Monthly FR',
+		[Language.EN]: '/ month',
+		[Language.FR]: '/ mois',
 		[Language.IT]: 'Monthly IT',
 		[Language.ES]: 'Monthly ES',
 		id: '5207254'
 	},
 	[CompensationFrequency.FLAT_FEE]: {
 		[Language.EN]: 'Flat Fee',
-		[Language.FR]: 'Flat Fee FR',
+		[Language.FR]: 'Forfait',
 		[Language.IT]: 'Flat Fee IT',
 		[Language.ES]: 'Flat Fee ES',
 		id: '5207253'
@@ -2607,19 +2607,19 @@ export const enum AddlCompensationCoverage {
 export const addlCompensationCoverageOptions = {
 	[AddlCompensationCoverage.NOT_COVERED]: {
 		[Language.EN]: 'not covered',
-		[Language.FR]: 'not covered FR',
+		[Language.FR]: 'pas couvert',
 		[Language.IT]: 'not covered IT',
 		[Language.ES]: 'not covered ES'
 	},
 	[AddlCompensationCoverage.PARTIALLY_COVERED]: {
 		[Language.EN]: 'partially covered',
-		[Language.FR]: 'partially covered FR',
+		[Language.FR]: 'partiellement couvert',
 		[Language.IT]: 'partially covered IT',
 		[Language.ES]: 'partially covered ES'
 	},
 	[AddlCompensationCoverage.COVERED]: {
-		[Language.EN]: 'was covered',
-		[Language.FR]: 'was covered FR',
+		[Language.EN]: 'fully covered',
+		[Language.FR]: 'integrellement couvert',
 		[Language.IT]: 'was covered IT',
 		[Language.ES]: 'was covered ES'
 	}
@@ -2640,62 +2640,62 @@ export const enum AddlCompItem {
 
 export const addlCompItemOptions = {
 	[AddlCompItem.SALE_OF_WORK]: {
-		[Language.EN]: 'Sale of work',
-		[Language.FR]: 'Sale of work FR',
+		[Language.EN]: 'Sale of Work',
+		[Language.FR]: 'Vente d’œuvres',
 		[Language.IT]: 'Sale of work IT',
 		[Language.ES]: 'Sale of work ES'
 	},
 	[AddlCompItem.PRODUCTION_BUDGET]: {
-		[Language.EN]: 'Production budget',
-		[Language.FR]: 'Production budget FR',
+		[Language.EN]: 'Production Budget',
+		[Language.FR]: 'Budget de production',
 		[Language.IT]: 'Production budget IT',
 		[Language.ES]: 'Production budget ES'
 	},
 	[AddlCompItem.TRANSPORT_OF_WORK]: {
-		[Language.EN]: 'Transport of work',
-		[Language.FR]: 'Transport of work FR',
+		[Language.EN]: 'Transport of Works',
+		[Language.FR]: 'Transport d’œuvres',
 		[Language.IT]: 'Transport of work IT',
 		[Language.ES]: 'Transport of work ES'
 	},
 	[AddlCompItem.TRAVEL]: {
 		[Language.EN]: 'Travel',
-		[Language.FR]: 'Travel FR',
+		[Language.FR]: 'Transport',
 		[Language.IT]: 'Travel IT',
 		[Language.ES]: 'Travel ES'
 	},
 	[AddlCompItem.ACCOMMODATION]: {
 		[Language.EN]: 'Accommodation',
-		[Language.FR]: 'Accommodation FR',
+		[Language.FR]: 'Hébergement',
 		[Language.IT]: 'Accommodation IT',
 		[Language.ES]: 'Accommodation ES'
 	},
 	[AddlCompItem.MEALS]: {
 		[Language.EN]: 'Meals',
-		[Language.FR]: 'Meals FR',
+		[Language.FR]: 'Repas',
 		[Language.IT]: 'Meals IT',
 		[Language.ES]: 'Meals ES'
 	},
 	[AddlCompItem.PER_DIEM]: {
 		[Language.EN]: 'Per Diem',
-		[Language.FR]: 'Per Diem FR',
+		[Language.FR]: 'Per diem',
 		[Language.IT]: 'Per Diem IT',
 		[Language.ES]: 'Per Diem ES'
 	},
 	[AddlCompItem.HEALTH_INSURANCE]: {
 		[Language.EN]: 'Health Insurance',
-		[Language.FR]: 'Health Insurance FR',
+		[Language.FR]: 'Mutuelle',
 		[Language.IT]: 'Health Insurance IT',
 		[Language.ES]: 'Health Insurance ES'
 	},
 	[AddlCompItem.PUBLIC_TRANSPORTATION]: {
 		[Language.EN]: 'Public Transportation',
-		[Language.FR]: 'Public Transportation FR',
+		[Language.FR]: 'Transport public',
 		[Language.IT]: 'Public Transportation IT',
 		[Language.ES]: 'Public Transportation ES'
 	},
 	[AddlCompItem.COMMISSION]: {
 		[Language.EN]: 'Commission',
-		[Language.FR]: 'Commission FR',
+		[Language.FR]: 'Commission',
 		[Language.IT]: 'Commission IT',
 		[Language.ES]: 'Commission ES'
 	}
