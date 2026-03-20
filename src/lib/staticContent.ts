@@ -826,49 +826,49 @@ export const enum ContractType {
 export const contractTypeOptions = {
 	[ContractType.FULLTIME]: {
 		[Language.EN]: 'Full-time',
-		[Language.FR]: 'Full-time FR',
+		[Language.FR]: 'CDI temps plein',
 		[Language.IT]: 'Full-time IT',
 		[Language.ES]: 'Full-time ES',
 		id: '5207121'
 	},
 	[ContractType.PARTTIME]: {
 		[Language.EN]: 'Part-time',
-		[Language.FR]: 'Part-time FR',
+		[Language.FR]: 'CDI temps partiel',
 		[Language.IT]: 'Part-time IT',
 		[Language.ES]: 'Part-time ES',
 		id: '5207124'
 	},
 	[ContractType.FULLTIME_TEMP]: {
 		[Language.EN]: 'Full-time (temporary)',
-		[Language.FR]: 'Full-time (temporary) FR',
+		[Language.FR]: 'CDD temps plein',
 		[Language.IT]: 'Full-time (temporary) IT',
 		[Language.ES]: 'Full-time (temporary) ES',
 		id: '5207122'
 	},
 	[ContractType.PARTTIME_TEMP]: {
 		[Language.EN]: 'Part-time (temporary)',
-		[Language.FR]: 'Part-time (temporary) FR',
+		[Language.FR]: 'CDD temps partiel',
 		[Language.IT]: 'Part-time (temporary) IT',
 		[Language.ES]: 'Part-time (temporary) ES',
 		id: '5207120'
 	},
 	[ContractType.INDEPENDENT]: {
-		[Language.EN]: 'Independent',
-		[Language.FR]: 'Independent FR',
+		[Language.EN]: 'Freelance',
+		[Language.FR]: 'Indépendant',
 		[Language.IT]: 'Independent IT',
 		[Language.ES]: 'Independent ES',
 		id: '5207125'
 	},
 	[ContractType.INTERNSHIP]: {
 		[Language.EN]: 'Internship',
-		[Language.FR]: 'Internship FR',
+		[Language.FR]: 'Stage',
 		[Language.IT]: 'Internship IT',
 		[Language.ES]: 'Internship ES',
 		id: '5207123'
 	},
 	[ContractType.APPRENTICESHIP]: {
 		[Language.EN]: 'Apprenticeship',
-		[Language.FR]: 'Apprenticeship FR',
+		[Language.FR]: 'Apprentissage',
 		[Language.IT]: 'Apprenticeship IT',
 		[Language.ES]: 'Apprenticeship ES',
 		id: '5207126'
@@ -1341,7 +1341,7 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.PRODUCTION]: {
 		groupLabel: {
 			[Language.EN]: 'Production',
-			[Language.FR]: 'Production in french',
+			[Language.FR]: 'Production',
 			[Language.IT]: 'Production in italian',
 			[Language.ES]: 'Production in spanish'
 		},
@@ -1606,7 +1606,7 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.MEDIATION_AND_HOSPITALITY]: {
 		groupLabel: {
 			[Language.EN]: 'Mediation & Hospitality',
-			[Language.FR]: 'Médiation & acceuil',
+			[Language.FR]: 'Médiation & accueil',
 			[Language.IT]: 'Mediation & Hospitality in italian',
 			[Language.ES]: 'Mediation & Hospitality in spanish'
 		},
@@ -1970,9 +1970,9 @@ export const workerTypeOptions = {
 	},
 	[WorkerTypeSubgroup.COMMUNICATION_AND_DOCUMENTATION]: {
 		groupLabel: {
-			[Language.EN]: 'Communcation & Documentation',
-			[Language.FR]: 'Communcation & Documentation in french',
-			[Language.IT]: 'Communcation & Documentation in italian',
+			[Language.EN]: 'Communication & Documentation',
+			[Language.FR]: 'Communication & Documentation',
+			[Language.IT]: 'Communication & Documentation in italian',
 			[Language.ES]: 'Communcation & Documentation in spanish'
 		},
 		options: {
@@ -2436,7 +2436,7 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.OTHER]: {
 		groupLabel: {
 			[Language.EN]: 'Other',
-			[Language.FR]: 'Other in french',
+			[Language.FR]: 'Autre',
 			[Language.IT]: 'Other in italian',
 			[Language.ES]: 'Other in spanish'
 		},
