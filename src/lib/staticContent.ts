@@ -31,25 +31,25 @@ export const currency = {
 export const indexHeaderLabels = {
 	worker: {
 		[Language.EN]: 'Worker',
-		[Language.FR]: 'Worker (FR)',
+		[Language.FR]: 'Travailleur·se',
 		[Language.IT]: 'Worker (IT)',
 		[Language.ES]: 'Worker (ES)'
 	},
 	employer: {
 		[Language.EN]: 'Employer',
-		[Language.FR]: 'Employer (FR)',
+		[Language.FR]: 'Employeur',
 		[Language.IT]: 'Employer (IT)',
 		[Language.ES]: 'Employer (ES)'
 	},
 	contract: {
 		[Language.EN]: 'Contract',
-		[Language.FR]: 'Contract (FR)',
+		[Language.FR]: 'Contrat',
 		[Language.IT]: 'Contract (IT)',
 		[Language.ES]: 'Contract (ES)'
 	},
 	wage: {
 		[Language.EN]: 'Wage',
-		[Language.FR]: 'Wage (FR)',
+		[Language.FR]: 'Paie',
 		[Language.IT]: 'Wage (IT)',
 		[Language.ES]: 'Wage (ES)'
 	}
@@ -57,20 +57,20 @@ export const indexHeaderLabels = {
 
 export const navMenuItems = {
 	faq: {
-		[Language.EN]: 'Frequenctly asked questions',
-		[Language.FR]: 'Frequenctly asked questions (FR)',
-		[Language.IT]: 'Frequenctly asked questions (IT)',
-		[Language.ES]: 'Frequenctly asked questions (ES)'
+		[Language.EN]: 'FAQ',
+		[Language.FR]: 'FAQ',
+		[Language.IT]: 'FAQ',
+		[Language.ES]: 'FAQ'
 	},
 	privacy: {
 		[Language.EN]: 'Privacy & data',
-		[Language.FR]: 'Privacy & data (FR)',
+		[Language.FR]: 'Confidentialité & données',
 		[Language.IT]: 'Privacy & data (IT)',
 		[Language.ES]: 'Privacy & data (ES)'
 	},
 	cost: {
 		[Language.EN]: 'How much does this website cost?',
-		[Language.FR]: 'How much does this website cost? (FR)',
+		[Language.FR]: 'Combien coûte cette plateforme ?',
 		[Language.IT]: 'How much does this website cost? (IT)',
 		[Language.ES]: 'How much does this website cost? (ES)'
 	}
@@ -79,58 +79,58 @@ export const navMenuItems = {
 export const fieldLabels = {
 	country: {
 		[Language.EN]: 'Country',
-		[Language.FR]: 'Country in french',
+		[Language.FR]: 'Pays',
 		[Language.IT]: 'Country in italian',
 		[Language.ES]: 'Country in spanish'
 	},
 	city: {
-		[Language.EN]: 'City',
-		[Language.FR]: 'City in french',
+		[Language.EN]: 'City (optional)',
+		[Language.FR]: 'Ville (optionnel)',
 		[Language.IT]: 'City in italian',
 		[Language.ES]: 'City in spanish'
 	},
 	year: {
 		[Language.EN]: 'Year',
-		[Language.FR]: 'Year in french',
+		[Language.FR]: 'Année',
 		[Language.IT]: 'Year in italian',
 		[Language.ES]: 'Year in spanish'
 	},
 	employerType: {
-		[Language.EN]: 'Employer Type',
-		[Language.FR]: 'Employer Type in french',
+		[Language.EN]: 'Employer Category',
+		[Language.FR]: 'Catégorie d’employeur',
 		[Language.IT]: 'Employer Type in italian',
 		[Language.ES]: 'Employer Type in spanish'
 	},
 	employerName: {
 		[Language.EN]: 'Employer Name (optional)',
-		[Language.FR]: 'Employer Name (optional) in french',
+		[Language.FR]: 'Nom de l’employeur (optionnel)',
 		[Language.IT]: 'Employer Name (optional) in italian',
 		[Language.ES]: 'Employer Name (optional) in spanish'
 	},
 	numEmployees: {
 		[Language.EN]: '# of Employees',
-		[Language.FR]: '# of Employees in french',
+		[Language.FR]: '# d’employé·es',
 		[Language.IT]: '# of Employees in italian',
 		[Language.ES]: '# of Employees in spanish'
 	},
 	contractType: {
 		[Language.EN]: 'Contract Type',
-		[Language.FR]: 'Contract Type in french',
+		[Language.FR]: 'Type de contrat',
 		[Language.IT]: 'Contract Type in italian',
 		[Language.ES]: 'Contract Type in spanish'
 	},
 	workerStatus: {
 		[Language.EN]: {
-			[Country.UK]: 'UK Worker status',
-			[Country.SPAIN]: 'Spanish Worker status',
-			[Country.ITALY]: 'Italian Worker status',
-			[Country.FRANCE]: 'French Worker status'
+			[Country.UK]: 'Worker Status (UK)',
+			[Country.SPAIN]: 'Worker Status',
+			[Country.ITALY]: 'Worker Status (IT)',
+			[Country.FRANCE]: 'Worker Status (FR)'
 		},
 		[Language.FR]: {
-			[Country.UK]: 'UK Worker status (FR)',
-			[Country.SPAIN]: 'Spanish Worker status (FR)',
-			[Country.ITALY]: 'Italian Worker status (FR)',
-			[Country.FRANCE]: 'French Worker status (FR)'
+			[Country.UK]: 'Statut / régime (UK)',
+			[Country.SPAIN]: 'Statut / régime',
+			[Country.ITALY]: 'Statut / régime (IT)',
+			[Country.FRANCE]: 'Statut / régime (FR)'
 		},
 		[Language.IT]: {
 			[Country.UK]: 'UK Worker status (IT)',
@@ -147,109 +147,109 @@ export const fieldLabels = {
 	},
 	contractLength: {
 		[Language.EN]: 'Contract Length (optional)',
-		[Language.FR]: 'Contract Length (optional) in french',
+		[Language.FR]: 'Durée du contrat (optionnel)',
 		[Language.IT]: 'Contract Length (optional) in italian',
 		[Language.ES]: 'Contract Length (optional) in spanish'
 	},
 	contractNumHours: {
-		[Language.EN]: '# of hours (optional)',
-		[Language.FR]: '# of hours (optional) in french',
+		[Language.EN]: '# hours (optional)',
+		[Language.FR]: '# d’heures (optionnel)',
 		[Language.IT]: '# of hours (optional) in italian',
 		[Language.ES]: '# of hours (optional) in spanish'
 	},
 	perWeek: {
-		[Language.EN]: 'hours per week',
-		[Language.FR]: 'hours per week in french',
+		[Language.EN]: 'hours / week',
+		[Language.FR]: 'heures / semaine',
 		[Language.IT]: 'hours per week in italian',
 		[Language.ES]: 'hours per week in spanish'
 	},
 	workerType: {
-		[Language.EN]: 'Worker category',
-		[Language.FR]: 'Worker category in french',
+		[Language.EN]: 'Worker Category',
+		[Language.FR]: 'Catégorie de travailleur·ses',
 		[Language.IT]: 'Worker category in italian',
 		[Language.ES]: 'Worker category in spanish'
 	},
 	jobTitle: {
-		[Language.EN]: 'Job title (optional)',
-		[Language.FR]: 'Job title (optional) in french',
+		[Language.EN]: 'Labor Category (optional)',
+		[Language.FR]: 'Type de projet (optionnel)',
 		[Language.IT]: 'Job title (optional) in italian',
 		[Language.ES]: 'Job title (optional) in spanish'
 	},
 	jobDetails: {
 		[Language.EN]: 'Details (optional)',
-		[Language.FR]: 'Details (optional) in french',
+		[Language.FR]: 'Détails (optionnel)',
 		[Language.IT]: 'Details (optional) in italian',
 		[Language.ES]: 'Details (optional) in spanish'
 	},
 	jobExperience: {
 		[Language.EN]: 'Experience (optional)',
-		[Language.FR]: 'Experience (optional) in french',
+		[Language.FR]: 'Expérience (optionnel)',
 		[Language.IT]: 'Experience (optional) in italian',
 		[Language.ES]: 'Experience (optional) in spanish'
 	},
 	jobObtainedVia: {
 		[Language.EN]: 'Job obtained via (optional)',
-		[Language.FR]: 'Job obtained via (optional) in french',
+		[Language.FR]: 'Travail obtenu via (optionnel)',
 		[Language.IT]: 'Job obtained via (optional) in italian',
 		[Language.ES]: 'Job obtained via (optional) in spanish'
 	},
 	compensationAmount: {
 		[Language.EN]: 'Amount',
-		[Language.FR]: 'Amount in french',
+		[Language.FR]: 'Montant',
 		[Language.IT]: 'Amount in italian',
 		[Language.ES]: 'Amount in spanish'
 	},
 	compensationFrequency: {
 		[Language.EN]: 'frequency',
-		[Language.FR]: 'frequency in french',
+		[Language.FR]: 'fréquence',
 		[Language.IT]: 'frequency in italian',
 		[Language.ES]: 'frequency in spanish'
 	},
 	compensationLate: {
 		[Language.EN]: 'I was paid late',
-		[Language.FR]: 'I was paid late in french',
+		[Language.FR]: 'J’ai été payé·e en retard',
 		[Language.IT]: 'I was paid late in italian',
 		[Language.ES]: 'I was paid late in spanish'
 	},
 	satisfiedWithCompensation: {
 		[Language.EN]: 'I was satisfied with the compensation',
-		[Language.FR]: 'I was satisfied with the compensation in french',
+		[Language.FR]: 'La rémunération m’est apparue satisfaisante',
 		[Language.IT]: 'I was satisfied with the compensation in italian',
 		[Language.ES]: 'I was satisfied with the compensation in spanish'
 	},
 	satisfiedWithConditions: {
 		[Language.EN]: 'I was satisfied with the working conditions',
-		[Language.FR]: 'I was satisfied with the working conditions in french',
+		[Language.FR]: 'Les conditions de travail me sont apparues satisfaisantes',
 		[Language.IT]: 'I was satisfied with the working conditions in italian',
 		[Language.ES]: 'I was satisfied with the working conditions in spanish'
 	},
 	treatedFairly: {
 		[Language.EN]: 'I felt fairly treated against my colleagues',
-		[Language.FR]: 'I felt fairly treated against my colleagues in french',
+		[Language.FR]: 'Je me suis senti·e traité·e de manière équitable par rapport à mes collègues',
 		[Language.IT]: 'I felt fairly treated against my colleagues in italian',
 		[Language.ES]: 'I felt fairly treated against my colleagues in spanish'
 	},
 	addlComp: {
 		[Language.EN]: 'Additional compensation',
-		[Language.FR]: 'Additional compensation in french',
+		[Language.FR]: 'Compensations additionelles',
 		[Language.IT]: 'Additional compensation in italian',
 		[Language.ES]: 'Additional compensation in spanish'
 	},
 	employees: {
 		[Language.EN]: 'employees',
-		[Language.FR]: 'employees in french',
+		[Language.FR]: 'employé·es',
 		[Language.IT]: 'employees in italian',
 		[Language.ES]: 'employees in spanish'
 	},
 	yearsOfExperience: {
 		[Language.EN]: 'year(s) of experience',
-		[Language.FR]: 'year(s) of experience in french',
+		[Language.FR]: 'année(s) d’expérience',
 		[Language.IT]: 'year(s) of experience in italian',
 		[Language.ES]: 'year(s) of experience in spanish'
 	},
 	submitAnEntry: {
 		[Language.EN]: 'Submit an entry',
-		[Language.FR]: 'Submit an entry in french',
+		[Language.FR]: 'Partager une rémuneration',
 		[Language.IT]: 'Submit an entry in italian',
 		[Language.ES]: 'Submit an entry in spanish'
 	}
@@ -265,21 +265,21 @@ export const languageOptions = {
 export const countryOptions = {
 	[Country.UK]: {
 		[Language.EN]: 'UK',
-		[Language.FR]: 'UK in french',
+		[Language.FR]: 'Royaume-Uni',
 		[Language.IT]: 'UK in italian',
 		[Language.ES]: 'UK in spanish',
 		id: '5207042'
 	},
 	[Country.FRANCE]: {
 		[Language.EN]: 'France',
-		[Language.FR]: 'France in french',
+		[Language.FR]: 'France',
 		[Language.IT]: 'France in italian',
 		[Language.ES]: 'France in spanish',
 		id: '5207043'
 	},
 	[Country.ITALY]: {
 		[Language.EN]: 'Italy',
-		[Language.FR]: 'Italy in french',
+		[Language.FR]: 'Italie',
 		[Language.IT]: 'Italy in italian',
 		[Language.ES]: 'Italy in spanish',
 		id: '5207041'
@@ -295,7 +295,7 @@ export const countryOptions = {
 
 export const yearOption2010OrBefore = {
 	[Language.EN]: '2010 or before',
-	[Language.FR]: '2010 or before in french',
+	[Language.FR]: '2010 ou avant',
 	[Language.IT]: '2010 or before in italian',
 	[Language.ES]: '2010 or before in spanish'
 };
