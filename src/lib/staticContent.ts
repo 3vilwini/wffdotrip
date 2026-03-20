@@ -2590,8 +2590,8 @@ export const compensationFrequencyOptions = {
 		id: '5207254'
 	},
 	[CompensationFrequency.FLAT_FEE]: {
-		[Language.EN]: 'Flat Fee',
-		[Language.FR]: 'Forfait',
+		[Language.EN]: 'flat fee',
+		[Language.FR]: 'forfait',
 		[Language.IT]: 'Flat Fee IT',
 		[Language.ES]: 'Flat Fee ES',
 		id: '5207253'
