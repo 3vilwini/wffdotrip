@@ -1,1 +1,1 @@
-<div class="sm:hidden px-2 py-1 h-16 bg-black text-white justify-center items-center flex">Sophia Giovannitti</div>
+<div class="flex h-16 items-center justify-center bg-black px-2 py-1 text-white sm:hidden"></div>
