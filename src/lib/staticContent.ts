@@ -1103,7 +1103,7 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.ART_CRITIC]: {
 				label: {
-					[Language.EN]: 'Art critic',
+					[Language.EN]: 'Art Critic',
 					[Language.FR]: 'Critique d’art',
 					[Language.IT]: 'Criticə d’arte',
 					[Language.ES]: 'Art critic in spanish'
