@@ -32,25 +32,25 @@ export const indexHeaderLabels = {
 	worker: {
 		[Language.EN]: 'Worker',
 		[Language.FR]: 'Travailleur·se',
-		[Language.IT]: 'Worker (IT)',
+		[Language.IT]: 'Lavoratorɜ',
 		[Language.ES]: 'Worker (ES)'
 	},
 	employer: {
 		[Language.EN]: 'Employer',
 		[Language.FR]: 'Employeur',
-		[Language.IT]: 'Employer (IT)',
+		[Language.IT]: 'Datorɜ di lavoro',
 		[Language.ES]: 'Employer (ES)'
 	},
 	contract: {
 		[Language.EN]: 'Contract',
 		[Language.FR]: 'Contrat',
-		[Language.IT]: 'Contract (IT)',
+		[Language.IT]: 'Contratto',
 		[Language.ES]: 'Contract (ES)'
 	},
 	wage: {
 		[Language.EN]: 'Wage',
 		[Language.FR]: 'Paie',
-		[Language.IT]: 'Wage (IT)',
+		[Language.IT]: 'Retribuzione',
 		[Language.ES]: 'Wage (ES)'
 	}
 };
@@ -71,7 +71,7 @@ export const navMenuItems = {
 	cost: {
 		[Language.EN]: 'How much does this website cost?',
 		[Language.FR]: 'Combien coûte cette plateforme ?',
-		[Language.IT]: 'How much does this website cost? (IT)',
+		[Language.IT]: 'Quanto costa questo sito web?',
 		[Language.ES]: 'How much does this website cost? (ES)'
 	}
 };
@@ -80,43 +80,43 @@ export const fieldLabels = {
 	country: {
 		[Language.EN]: 'Country',
 		[Language.FR]: 'Pays',
-		[Language.IT]: 'Country in italian',
+		[Language.IT]: 'Paese',
 		[Language.ES]: 'Country in spanish'
 	},
 	city: {
 		[Language.EN]: 'City (optional)',
-		[Language.FR]: 'Ville (optionnel)',
-		[Language.IT]: 'City in italian',
+		[Language.FR]: 'Ville (facultatif)',
+		[Language.IT]: 'Città',
 		[Language.ES]: 'City in spanish'
 	},
 	year: {
-		[Language.EN]: 'Year',
-		[Language.FR]: 'Année',
-		[Language.IT]: 'Year in italian',
+		[Language.EN]: 'Year (optional)',
+		[Language.FR]: 'Année (facultatif)',
+		[Language.IT]: 'Anno (facoltativo)',
 		[Language.ES]: 'Year in spanish'
 	},
 	employerType: {
 		[Language.EN]: 'Employer Category',
 		[Language.FR]: 'Catégorie d’employeur',
-		[Language.IT]: 'Employer Type in italian',
+		[Language.IT]: 'Tipologia di datore di lavoro',
 		[Language.ES]: 'Employer Type in spanish'
 	},
 	employerName: {
 		[Language.EN]: 'Employer Name (optional)',
-		[Language.FR]: 'Nom de l’employeur (optionnel)',
-		[Language.IT]: 'Employer Name (optional) in italian',
+		[Language.FR]: 'Nom de l’employeur (facultatif)',
+		[Language.IT]: 'Nome del datore di lavoro (facoltativo)',
 		[Language.ES]: 'Employer Name (optional) in spanish'
 	},
 	numEmployees: {
 		[Language.EN]: '# of Employees',
 		[Language.FR]: '# d’employé·es',
-		[Language.IT]: '# of Employees in italian',
+		[Language.IT]: '# di dipendentɜ',
 		[Language.ES]: '# of Employees in spanish'
 	},
 	contractType: {
 		[Language.EN]: 'Contract Type',
 		[Language.FR]: 'Type de contrat',
-		[Language.IT]: 'Contract Type in italian',
+		[Language.IT]: 'Tipologia di contratto',
 		[Language.ES]: 'Contract Type in spanish'
 	},
 	workerStatus: {
@@ -133,10 +133,10 @@ export const fieldLabels = {
 			[Country.FRANCE]: 'Statut / régime (FR)'
 		},
 		[Language.IT]: {
-			[Country.UK]: 'UK Worker status (IT)',
+			[Country.UK]: 'Status del lavoratorɜ in Regno Unito',
 			[Country.SPAIN]: 'Spanish Worker status (IT)',
-			[Country.ITALY]: 'Italian Worker status (IT)',
-			[Country.FRANCE]: 'French Worker status (IT)'
+			[Country.ITALY]: 'Status del lavoratorɜ in Italia',
+			[Country.FRANCE]: 'Status del lavoratorɜ in France'
 		},
 		[Language.ES]: {
 			[Country.UK]: 'UK Worker status (ES)',
@@ -147,110 +147,110 @@ export const fieldLabels = {
 	},
 	contractLength: {
 		[Language.EN]: 'Contract Length (optional)',
-		[Language.FR]: 'Durée du contrat (optionnel)',
-		[Language.IT]: 'Contract Length (optional) in italian',
+		[Language.FR]: 'Durée du contrat (facultatif)',
+		[Language.IT]: 'Durata del contratto (facoltativo)',
 		[Language.ES]: 'Contract Length (optional) in spanish'
 	},
 	contractNumHours: {
 		[Language.EN]: '# hours (optional)',
-		[Language.FR]: '# d’heures (optionnel)',
-		[Language.IT]: '# of hours (optional) in italian',
+		[Language.FR]: '# d’heures (facultatif)',
+		[Language.IT]: '# di ore (facoltativo)',
 		[Language.ES]: '# of hours (optional) in spanish'
 	},
 	perWeek: {
-		[Language.EN]: 'hours / week',
-		[Language.FR]: 'heures / semaine',
-		[Language.IT]: 'hours per week in italian',
+		[Language.EN]: 'hours / week (optional)',
+		[Language.FR]: 'heures / semaine (facultatif)',
+		[Language.IT]: 'Cadenza settimanale (facoltativo)',
 		[Language.ES]: 'hours per week in spanish'
 	},
 	workerType: {
 		[Language.EN]: 'Worker Category',
-		[Language.FR]: 'Catégorie de travailleur·ses',
-		[Language.IT]: 'Worker category in italian',
+		[Language.FR]: 'Catégorie de travailleur·se',
+		[Language.IT]: 'Categoria del lavoratorɜ',
 		[Language.ES]: 'Worker category in spanish'
 	},
 	jobTitle: {
-		[Language.EN]: 'Labor Category (optional)',
-		[Language.FR]: 'Type de projet (optionnel)',
-		[Language.IT]: 'Job title (optional) in italian',
+		[Language.EN]: 'Project Category (optional)',
+		[Language.FR]: 'Type de projet (facultatif)',
+		[Language.IT]: 'Tipologia di progetto (facoltativo)',
 		[Language.ES]: 'Job title (optional) in spanish'
 	},
 	jobDetails: {
 		[Language.EN]: 'Details (optional)',
-		[Language.FR]: 'Détails (optionnel)',
-		[Language.IT]: 'Details (optional) in italian',
+		[Language.FR]: 'Détails (facultatif)',
+		[Language.IT]: 'Dettagli (facoltativo)',
 		[Language.ES]: 'Details (optional) in spanish'
 	},
 	jobExperience: {
 		[Language.EN]: 'Experience (optional)',
-		[Language.FR]: 'Expérience (optionnel)',
-		[Language.IT]: 'Experience (optional) in italian',
+		[Language.FR]: 'Expérience (facultatif)',
+		[Language.IT]: 'Esperienza (facoltativo)',
 		[Language.ES]: 'Experience (optional) in spanish'
 	},
 	jobObtainedVia: {
 		[Language.EN]: 'Job obtained via (optional)',
-		[Language.FR]: 'Travail obtenu via (optionnel)',
-		[Language.IT]: 'Job obtained via (optional) in italian',
+		[Language.FR]: 'Travail obtenu via (facultatif)',
+		[Language.IT]: 'Modalità di ottenimento del lavoro (facoltativo)',
 		[Language.ES]: 'Job obtained via (optional) in spanish'
 	},
 	compensationAmount: {
 		[Language.EN]: 'Amount',
 		[Language.FR]: 'Montant',
-		[Language.IT]: 'Amount in italian',
+		[Language.IT]: 'Importo',
 		[Language.ES]: 'Amount in spanish'
 	},
 	compensationFrequency: {
 		[Language.EN]: 'frequency',
 		[Language.FR]: 'fréquence',
-		[Language.IT]: 'frequency in italian',
+		[Language.IT]: 'frequenza',
 		[Language.ES]: 'frequency in spanish'
 	},
 	compensationLate: {
 		[Language.EN]: 'I was paid late',
 		[Language.FR]: 'J’ai été payé·e en retard',
-		[Language.IT]: 'I was paid late in italian',
+		[Language.IT]: 'Sono statɜ pagatɜ in ritardo',
 		[Language.ES]: 'I was paid late in spanish'
 	},
 	satisfiedWithCompensation: {
 		[Language.EN]: 'I was satisfied with the compensation',
 		[Language.FR]: 'La rémunération m’est apparue satisfaisante',
-		[Language.IT]: 'I was satisfied with the compensation in italian',
+		[Language.IT]: 'Ero soddisfattɜ del compenso',
 		[Language.ES]: 'I was satisfied with the compensation in spanish'
 	},
 	satisfiedWithConditions: {
 		[Language.EN]: 'I was satisfied with the working conditions',
 		[Language.FR]: 'Les conditions de travail me sont apparues satisfaisantes',
-		[Language.IT]: 'I was satisfied with the working conditions in italian',
+		[Language.IT]: 'Ero soddisfattɜ delle condizioni di lavoro',
 		[Language.ES]: 'I was satisfied with the working conditions in spanish'
 	},
 	treatedFairly: {
 		[Language.EN]: 'I felt fairly treated against my colleagues',
 		[Language.FR]: 'Je me suis senti·e traité·e de manière équitable par rapport à mes collègues',
-		[Language.IT]: 'I felt fairly treated against my colleagues in italian',
+		[Language.IT]: 'Mi sono sentitɜ trattatɜ in modo equo rispetto ai miei colleghi',
 		[Language.ES]: 'I felt fairly treated against my colleagues in spanish'
 	},
 	addlComp: {
 		[Language.EN]: 'Additional compensation',
 		[Language.FR]: 'Compensations additionelles',
-		[Language.IT]: 'Additional compensation in italian',
+		[Language.IT]: 'Compensi aggiuntivi',
 		[Language.ES]: 'Additional compensation in spanish'
 	},
 	employees: {
 		[Language.EN]: 'employees',
 		[Language.FR]: 'employé·es',
-		[Language.IT]: 'employees in italian',
+		[Language.IT]: 'dipendentɜ',
 		[Language.ES]: 'employees in spanish'
 	},
 	yearsOfExperience: {
 		[Language.EN]: 'year(s) of experience',
 		[Language.FR]: 'année(s) d’expérience',
-		[Language.IT]: 'year(s) of experience in italian',
+		[Language.IT]: 'anni di esperienza',
 		[Language.ES]: 'year(s) of experience in spanish'
 	},
 	submitAnEntry: {
 		[Language.EN]: 'Submit an entry',
 		[Language.FR]: 'Partager une rémuneration',
-		[Language.IT]: 'Submit an entry in italian',
+		[Language.IT]: 'Condividere una remunerazione',
 		[Language.ES]: 'Submit an entry in spanish'
 	}
 };
@@ -266,21 +266,21 @@ export const countryOptions = {
 	[Country.UK]: {
 		[Language.EN]: 'UK',
 		[Language.FR]: 'Royaume-Uni',
-		[Language.IT]: 'UK in italian',
+		[Language.IT]: 'Regno Unito',
 		[Language.ES]: 'UK in spanish',
 		id: '5207042'
 	},
 	[Country.FRANCE]: {
 		[Language.EN]: 'France',
 		[Language.FR]: 'France',
-		[Language.IT]: 'France in italian',
+		[Language.IT]: 'Francia',
 		[Language.ES]: 'France in spanish',
 		id: '5207043'
 	},
 	[Country.ITALY]: {
 		[Language.EN]: 'Italy',
 		[Language.FR]: 'Italie',
-		[Language.IT]: 'Italy in italian',
+		[Language.IT]: 'Italia',
 		[Language.ES]: 'Italy in spanish',
 		id: '5207041'
 	},
@@ -296,7 +296,7 @@ export const countryOptions = {
 export const yearOption2010OrBefore = {
 	[Language.EN]: '2010 or before',
 	[Language.FR]: '2010 ou avant',
-	[Language.IT]: '2010 or before in italian',
+	[Language.IT]: '2010 o anni precedenti',
 	[Language.ES]: '2010 or before in spanish'
 };
 
@@ -827,21 +827,21 @@ export const contractTypeOptions = {
 	[ContractType.FULLTIME]: {
 		[Language.EN]: 'Full-time',
 		[Language.FR]: 'CDI temps plein',
-		[Language.IT]: 'Full-time IT',
+		[Language.IT]: 'Tempo pieno',
 		[Language.ES]: 'Full-time ES',
 		id: '5207121'
 	},
 	[ContractType.PARTTIME]: {
 		[Language.EN]: 'Part-time',
 		[Language.FR]: 'CDI temps partiel',
-		[Language.IT]: 'Part-time IT',
+		[Language.IT]: 'Part-time',
 		[Language.ES]: 'Part-time ES',
 		id: '5207124'
 	},
 	[ContractType.FULLTIME_TEMP]: {
 		[Language.EN]: 'Full-time (temporary)',
 		[Language.FR]: 'CDD temps plein',
-		[Language.IT]: 'Full-time (temporary) IT',
+		[Language.IT]: 'Tempo pieno (a tempo determinato)',
 		[Language.ES]: 'Full-time (temporary) ES',
 		id: '5207122'
 	},
