@@ -65,7 +65,7 @@ export const navMenuItems = {
 	privacy: {
 		[Language.EN]: 'Privacy & data',
 		[Language.FR]: 'Confidentialité & données',
-		[Language.IT]: 'Privacy & data (IT)',
+		[Language.IT]: 'Privacy e dati',
 		[Language.ES]: 'Privacy & data (ES)'
 	},
 	cost: {
