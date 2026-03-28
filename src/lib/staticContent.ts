@@ -2592,7 +2592,7 @@ export const compensationFrequencyOptions = {
 	[CompensationFrequency.FLAT_FEE]: {
 		[Language.EN]: 'flat fee',
 		[Language.FR]: 'forfait',
-		[Language.IT]: '/ Compenso forfettario',
+		[Language.IT]: 'Compenso forfettario',
 		[Language.ES]: 'Flat Fee ES',
 		id: '5207253'
 	}
@@ -2608,19 +2608,19 @@ export const addlCompensationCoverageOptions = {
 	[AddlCompensationCoverage.NOT_COVERED]: {
 		[Language.EN]: 'not covered',
 		[Language.FR]: 'pas couvert',
-		[Language.IT]: 'not covered IT',
+		[Language.IT]: 'non coperti',
 		[Language.ES]: 'not covered ES'
 	},
 	[AddlCompensationCoverage.PARTIALLY_COVERED]: {
 		[Language.EN]: 'partially covered',
 		[Language.FR]: 'partiellement couvert',
-		[Language.IT]: 'partially covered IT',
+		[Language.IT]: 'parzialmente coperti',
 		[Language.ES]: 'partially covered ES'
 	},
 	[AddlCompensationCoverage.COVERED]: {
 		[Language.EN]: 'fully covered',
 		[Language.FR]: 'intégralement couvert',
-		[Language.IT]: 'was covered IT',
+		[Language.IT]: 'completamente coperti',
 		[Language.ES]: 'was covered ES'
 	}
 };
@@ -2642,61 +2642,61 @@ export const addlCompItemOptions = {
 	[AddlCompItem.SALE_OF_WORK]: {
 		[Language.EN]: 'Sale of Work',
 		[Language.FR]: 'Vente d’œuvres',
-		[Language.IT]: 'Sale of work IT',
+		[Language.IT]: 'Vendita dell’opera',
 		[Language.ES]: 'Sale of work ES'
 	},
 	[AddlCompItem.PRODUCTION_BUDGET]: {
 		[Language.EN]: 'Production Budget',
 		[Language.FR]: 'Budget de production',
-		[Language.IT]: 'Production budget IT',
+		[Language.IT]: 'Budget di produzione',
 		[Language.ES]: 'Production budget ES'
 	},
 	[AddlCompItem.TRANSPORT_OF_WORK]: {
 		[Language.EN]: 'Transport of Works',
 		[Language.FR]: 'Transport d’œuvres',
-		[Language.IT]: 'Transport of work IT',
+		[Language.IT]: 'Trasporto delle opere',
 		[Language.ES]: 'Transport of work ES'
 	},
 	[AddlCompItem.TRAVEL]: {
 		[Language.EN]: 'Travel',
 		[Language.FR]: 'Transport',
-		[Language.IT]: 'Travel IT',
+		[Language.IT]: 'Viaggio',
 		[Language.ES]: 'Travel ES'
 	},
 	[AddlCompItem.ACCOMMODATION]: {
 		[Language.EN]: 'Accommodation',
 		[Language.FR]: 'Hébergement',
-		[Language.IT]: 'Accommodation IT',
+		[Language.IT]: 'Alloggio',
 		[Language.ES]: 'Accommodation ES'
 	},
 	[AddlCompItem.MEALS]: {
 		[Language.EN]: 'Meals',
 		[Language.FR]: 'Repas',
-		[Language.IT]: 'Meals IT',
+		[Language.IT]: 'Pasti',
 		[Language.ES]: 'Meals ES'
 	},
 	[AddlCompItem.PER_DIEM]: {
 		[Language.EN]: 'Per Diem',
 		[Language.FR]: 'Per diem',
-		[Language.IT]: 'Per Diem IT',
+		[Language.IT]: 'Diaria',
 		[Language.ES]: 'Per Diem ES'
 	},
 	[AddlCompItem.HEALTH_INSURANCE]: {
 		[Language.EN]: 'Health Insurance',
 		[Language.FR]: 'Mutuelle',
-		[Language.IT]: 'Health Insurance IT',
+		[Language.IT]: 'Assicurazione sanitaria',
 		[Language.ES]: 'Health Insurance ES'
 	},
 	[AddlCompItem.PUBLIC_TRANSPORTATION]: {
 		[Language.EN]: 'Public Transportation',
 		[Language.FR]: 'Transport public',
-		[Language.IT]: 'Public Transportation IT',
+		[Language.IT]: 'Trasporto pubblico',
 		[Language.ES]: 'Public Transportation ES'
 	},
 	[AddlCompItem.COMMISSION]: {
 		[Language.EN]: 'Commission',
 		[Language.FR]: 'Commission',
-		[Language.IT]: 'Commission IT',
+		[Language.IT]: 'Commissione',
 		[Language.ES]: 'Commission ES'
 	}
 };
