@@ -313,10 +313,13 @@ export const enum EmployerTypeSubgroup {
 }
 
 export const enum EmployerType {
-	REGIONAL_CULTURAL_INSTITUTION = 'REGIONAL_CULTURAL_INSTITUTION',
 	NATIONAL_CULTURAL_INSTITUTION = 'NATIONAL_CULTURAL_INSTITUTION',
-	ARTIST_RUN_SPACE = 'ARTIST_RUN_SPACE',
+	REGIONAL_CULTURAL_INSTITUTION = 'REGIONAL_CULTURAL_INSTITUTION',
+	LOCAL_CULTURAL_INSTITUTION = 'LOCAL_CULTURAL_INSTITUTION',
+	PRIVATE_FOUNDATION = 'PRIVATE_FOUNDATION',
+	ARTS_COMMISSIONER = 'ARTS_COMMISSIONER',
 	NON_PROFIT_ORGANIZATION = 'NON_PROFIT_ORGANIZATION',
+	ARTIST_RUN_SPACE = 'ARTIST_RUN_SPACE',
 	PUBLIC_SCHOOL = 'PUBLIC_SCHOOL',
 	PRIVATE_SCHOOL = 'PRIVATE_SCHOOL',
 	PUBLIC_UNIVERSITY = 'PUBLIC_UNIVERSITY',
@@ -356,38 +359,66 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.CULTURAL_INSTITUTIONS]: {
 		groupLabel: {
 			[Language.EN]: 'Cultural Institutions',
-			[Language.FR]: 'Cultural Institutions in french',
-			[Language.IT]: 'Cultural Institutions in italian',
+			[Language.FR]: 'Institutions culturelles',
+			[Language.IT]: 'Istituzioni culturali',
 			[Language.ES]: 'Cultural Institutions in spanish'
 		},
 		options: {
-			[EmployerType.REGIONAL_CULTURAL_INSTITUTION]: {
-				[Language.EN]: 'Regional Cultural Institution (FRAC, Kunstverein)',
-				[Language.FR]: 'Regional Cultural Institution (FRAC, Kunstverein) in french',
-				[Language.IT]: 'Regional Cultural Institution (FRAC, Kunstverein) in italian',
-				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
-				id: '5207061'
-			},
 			[EmployerType.NATIONAL_CULTURAL_INSTITUTION]: {
-				[Language.EN]: 'National Cultural Institution (EPCC...)',
-				[Language.FR]: 'National Cultural Institution (EPCC...) in french',
-				[Language.IT]: 'National Cultural Institution (EPCC...) in italian',
+				[Language.EN]: 'National Cultural Institution (e.g. Tate, National Galleries of Scotland)',
+				[Language.FR]: 'Institution culturelle nationale (ex: Centre Pompidou, Palais de Tokyo, MUCEM)',
+				[Language.IT]: 'Istituzione pubblica di grandi dimensioni (ex: MAXXI, GNAM)',
 				[Language.ES]: 'National Cultural Institution (EPCC...) in spanish',
 				id: '5207062'
 			},
+			[EmployerType.REGIONAL_CULTURAL_INSTITUTION]: {
+				[Language.EN]: 'Regional Cutural Institution (e.g. FACT, Turner Contemporary, Chapter)',
+				[Language.FR]: 'Institution culturelle régionale (ex: FRAC)',
+				[Language.IT]: 'Istituzione pubblica di medie dimensioni (ex: Castello di Rivoli, CRAC, MART)',
+				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
+				id: '5207061'
+			},
+			[EmployerType.LOCAL_CULTURAL_INSTITUTION]: {
+				[Language.EN]: 'Local Cultural Institution  (e.g. Metroland Cultures, Devonshire Collective)',
+				[Language.FR]: 'Institution culturelle locale (ex: La Friche Belle de Mai, CAC Bretigny)',
+				[Language.IT]: 'Istituzione pubblica di piccole dimensioni (ex: PAC Milano, MAMbo, Galleria Civica di Modena)',
+				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
+				id: '5768056'
+			},
+			[EmployerType.PRIVATE_FOUNDATION]: {
+				[Language.EN]: 'Private Cultural Institution (e.g. Wellcome Collection, Royal Academy)',
+				[Language.FR]: 'Fondation privée (ex: Fondation Cartier, Fondation d’entreprise Ricard)',
+				[Language.IT]: 'Istituzione privata o fondazione (ex: Fondazione Prada, Palazzo Grassi)',
+				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
+				id: '5768057'
+			},
+			[EmployerType.ARTS_COMMISSIONER]: {
+				[Language.EN]: 'Arts Commissioner (e.g. Create London, Art Angel)',
+				[Language.FR]: 'Fonds de dotation (ex: Kadist, Fonds de dotation agnès b.)',
+				[Language.IT]: 'Fondazione filantropica per le arti (ex: Dena Foundation for Contemporary Art, Fondazione Nicola Trussardi)',
+				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
+				id: '5768058'
+			},
+			[EmployerType.NON_PROFIT_ORGANIZATION]: {
+				[Language.EN]: 'Nonprofit Art Space (e.g. The Perimeter, Raven Row)',
+				[Language.FR]: 'Espace associatif (ex: Bétonsalon, Triangle-Astérides)',
+				[Language.IT]: 'Spazi d’arte non profit (ex: Pirelli HangarBicocca, Fondazione ICA Milano)',
+				[Language.ES]: 'Non-Profit Organization in spanish',
+				id: '5207068'
+			},
 			[EmployerType.ARTIST_RUN_SPACE]: {
 				[Language.EN]: 'Artist-Run Space',
-				[Language.FR]: 'Artist-Run Space in french',
-				[Language.IT]: 'Artist-Run Space in italian',
+				[Language.FR]: 'Artist-run space',
+				[Language.IT]: 'Artist-run space',
 				[Language.ES]: 'Artist-Run Space in spanish',
 				id: '5207064'
 			},
-			[EmployerType.NON_PROFIT_ORGANIZATION]: {
-				[Language.EN]: 'Non-Profit Organization',
-				[Language.FR]: 'Non-Profit Organization in french',
-				[Language.IT]: 'Non-Profit Organization in italian',
-				[Language.ES]: 'Non-Profit Organization in spanish',
-				id: '5207068'
+			[EmployerType.STAFFING_AGENCY]: {
+				[Language.EN]: 'Staffing Agency',
+				[Language.FR]: 'Agence en sous-traitance',
+				[Language.IT]: 'Cooperativa di servizi culturali',
+				[Language.ES]: 'Regional Cultural Institution (FRAC, Kunstverein) in spanish',
+				id: '5768059'
 			}
 		}
 	},
