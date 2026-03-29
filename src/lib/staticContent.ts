@@ -339,10 +339,13 @@ export const enum EmployerType {
 	ONLINE_SALES_PLATFORM = 'ONLINE_SALES_PLATFORM',
 	CORPORATE_ENTERPRISE = 'CORPORATE_ENTERPRISE',
 	PUBLISHING_HOUSE = 'PUBLISHING_HOUSE',
+	IND_PUBLISHING_HOUSE = 'IND_PUBLISHING_HOUSE',
 	MEDIA = 'MEDIA',
 	MAGAZINE = 'MAGAZINE',
+	IND_MAGAZINE = 'IND_MAGAZINE',
 	ONLINE_PLATFORM = 'ONLINE_PLATFORM',
 	ARTIST_STUDIO = 'ARTIST_STUDIO',
+	IND_ARTIST = 'IND_ARTIST',
 	FABRICATION_WORKSHOP = 'FABRICATION_WORKSHOP',
 	FAB_LAB = 'FAB_LAB',
 	ART_LOGISTICS = 'ART_LOGISTICS',
@@ -352,6 +355,7 @@ export const enum EmployerType {
 	LOCAL_EVENT = 'LOCAL_EVENT',
 	UNION = 'UNION',
 	ARTIST_SERVICES_ORGANIZATION = 'ARTIST_SERVICES_ORGANIZATION',
+	PROFESSIONAL_MEMBERSHIP_ORG = 'PROFESSIONAL_MEMBERSHIP_ORG',
 	RIGHTS_ORGANIZATION = 'RIGHTS_ORGANIZATION',
 	RESIDENCY_PROGRAM = 'RESIDENCY_PROGRAM',
 	COOPERATIVE_STRUCTURE = 'COOPERATIVE_STRUCTURE',
@@ -584,36 +588,50 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.PUBLISHING]: {
 		groupLabel: {
 			[Language.EN]: 'Publishing',
-			[Language.FR]: 'Publishing in french',
-			[Language.IT]: 'Publishing in italian',
+			[Language.FR]: 'Édition & presse',
+			[Language.IT]: 'Editoria',
 			[Language.ES]: 'Publishing in spanish'
 		},
 		options: {
 			[EmployerType.PUBLISHING_HOUSE]: {
 				[Language.EN]: 'Publishing House',
-				[Language.FR]: 'Publishing House in french',
-				[Language.IT]: 'Publishing House in italian',
+				[Language.FR]: 'Maison d’édition',
+				[Language.IT]: 'Casa editrice',
 				[Language.ES]: 'Publishing House in spanish',
 				id: '5207087'
 			},
+			[EmployerType.IND_PUBLISHING_HOUSE]: {
+				[Language.EN]: 'Independent Publishing House',
+				[Language.FR]: 'Maison d’édition indépendante',
+				[Language.IT]: 'Casa editrice indipendente',
+				[Language.ES]: 'Publishing House in spanish',
+				id: '5768101'
+			},
 			[EmployerType.MEDIA]: {
 				[Language.EN]: 'Media',
-				[Language.FR]: 'Media in french',
-				[Language.IT]: 'Media in italian',
+				[Language.FR]: 'Média',
+				[Language.IT]: 'Media',
 				[Language.ES]: 'Media in spanish',
 				id: '5207088'
 			},
 			[EmployerType.MAGAZINE]: {
 				[Language.EN]: 'Magazine',
-				[Language.FR]: 'Magazine in french',
-				[Language.IT]: 'Magazine in italian',
+				[Language.FR]: 'Magazine',
+				[Language.IT]: 'Rivista',
 				[Language.ES]: 'Magazine in spanish',
 				id: '5207089'
 			},
+			[EmployerType.IND_MAGAZINE]: {
+				[Language.EN]: 'Independent Magazine',
+				[Language.FR]: 'Magazine indépendante',
+				[Language.IT]: 'Rivista indipendente',
+				[Language.ES]: 'Magazine in spanish',
+				id: '5768102'
+			},
 			[EmployerType.ONLINE_PLATFORM]: {
 				[Language.EN]: 'Online Platform',
-				[Language.FR]: 'Online Platform in french',
-				[Language.IT]: 'Online Platform in italian',
+				[Language.FR]: 'Plateforme éditoriale en ligne',
+				[Language.IT]: 'Piattaforma online',
 				[Language.ES]: 'Online Platform in spanish',
 				id: '5207090'
 			}
@@ -622,36 +640,43 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.PRODUCTION_AND_CREATION]: {
 		groupLabel: {
 			[Language.EN]: 'Production & Creation',
-			[Language.FR]: 'Production & Creation in french',
-			[Language.IT]: 'Production & Creation in italian',
+			[Language.FR]: 'Production & création',
+			[Language.IT]: 'Produzione & creazione',
 			[Language.ES]: 'Production & Creation in spanish'
 		},
 		options: {
 			[EmployerType.ARTIST_STUDIO]: {
 				[Language.EN]: "Artist's Studio",
-				[Language.FR]: "Artist's Studio in french",
-				[Language.IT]: "Artist's Studio in italian",
+				[Language.FR]: "Studio d’artiste",
+				[Language.IT]: "Studio d’artista",
 				[Language.ES]: "Artist's Studio in spanish",
 				id: '5207091'
 			},
+			[EmployerType.IND_ARTIST]: {
+				[Language.EN]: 'Independent Artist',
+				[Language.FR]: 'Artiste indépendant·e',
+				[Language.IT]: 'Artista indipente',
+				[Language.ES]: 'Magazine in spanish',
+				id: '5768104'
+			},
 			[EmployerType.FABRICATION_WORKSHOP]: {
-				[Language.EN]: 'Fabrication Workshops',
-				[Language.FR]: 'Fabrication Workshops in french',
-				[Language.IT]: 'Fabrication Workshops in italian',
+				[Language.EN]: 'Fabrication Workshop',
+				[Language.FR]: 'Atelier industriel',
+				[Language.IT]: 'Laboratori di produzione',
 				[Language.ES]: 'Fabrication Workshops in spanish',
 				id: '5207092'
 			},
 			[EmployerType.FAB_LAB]: {
-				[Language.EN]: 'Fab Lab',
-				[Language.FR]: 'Fab Lab in french',
-				[Language.IT]: 'Fab Lab in italian',
+				[Language.EN]: 'Maker Space',
+				[Language.FR]: 'Fab lab',
+				[Language.IT]: 'Fab lab',
 				[Language.ES]: 'Fab Lab in spanish',
 				id: '5207093'
 			},
 			[EmployerType.ART_LOGISTICS]: {
-				[Language.EN]: 'Art Logistics (Shipping, Storage, Handling)',
-				[Language.FR]: 'Art Logistics (Shipping, Storage, Handling) in french',
-				[Language.IT]: 'Art Logistics (Shipping, Storage, Handling) in italian',
+				[Language.EN]: 'Art Logistics',
+				[Language.FR]: 'Entreprise de logistique',
+				[Language.IT]: 'Logistica per l’arte',
 				[Language.ES]: 'Art Logistics (Shipping, Storage, Handling) in spanish',
 				id: '5207094'
 			}
@@ -660,36 +685,36 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.EVENTS]: {
 		groupLabel: {
 			[Language.EN]: 'Events',
-			[Language.FR]: 'Events in french',
-			[Language.IT]: 'Events in italian',
+			[Language.FR]: 'Événements',
+			[Language.IT]: 'Eventi',
 			[Language.ES]: 'Events in spanish'
 		},
 		options: {
 			[EmployerType.FESTIVAL]: {
 				[Language.EN]: 'Festival',
-				[Language.FR]: 'Festival in french',
-				[Language.IT]: 'Festival in italian',
+				[Language.FR]: 'Festival',
+				[Language.IT]: 'Festival',
 				[Language.ES]: 'Festival in spanish',
 				id: '5207095'
 			},
 			[EmployerType.BIENNIAL]: {
 				[Language.EN]: 'Biennial',
-				[Language.FR]: 'Biennial in french',
-				[Language.IT]: 'Biennial in italian',
+				[Language.FR]: 'Bienniale',
+				[Language.IT]: 'Bienniale',
 				[Language.ES]: 'Biennial in spanish',
 				id: '5207096'
 			},
 			[EmployerType.TRIENNIAL]: {
 				[Language.EN]: 'Triennial',
-				[Language.FR]: 'Triennial in french',
-				[Language.IT]: 'Triennial in italian',
+				[Language.FR]: 'Trienniale',
+				[Language.IT]: 'Trienniale',
 				[Language.ES]: 'Triennial in spanish',
 				id: '5207097'
 			},
 			[EmployerType.LOCAL_EVENT]: {
 				[Language.EN]: 'Local Event',
-				[Language.FR]: 'Local Event in french',
-				[Language.IT]: 'Local Event in italian',
+				[Language.FR]: 'Evènement local',
+				[Language.IT]: 'Evento locale',
 				[Language.ES]: 'Local Event in spanish',
 				id: '5207099'
 			}
@@ -698,43 +723,50 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.ARTIST_SUPPORT_STRUCTURES]: {
 		groupLabel: {
 			[Language.EN]: 'Artist Support Structures',
-			[Language.FR]: 'Artist Support Structures in french',
-			[Language.IT]: 'Artist Support Structures in italian',
+			[Language.FR]: 'Structures de soutien aux artistes',
+			[Language.IT]: 'Strutture di supporto allə artistə',
 			[Language.ES]: 'Artist Support Structures in spanish'
 		},
 		options: {
 			[EmployerType.UNION]: {
 				[Language.EN]: 'Union',
-				[Language.FR]: 'Union in french',
-				[Language.IT]: 'Union in italian',
+				[Language.FR]: 'Syndicat',
+				[Language.IT]: 'Sindacato',
 				[Language.ES]: 'Union in spanish',
 				id: '5207100'
 			},
 			[EmployerType.ARTIST_SERVICES_ORGANIZATION]: {
-				[Language.EN]: 'Artist Services Organization',
-				[Language.FR]: 'Artist Services Organization in french',
-				[Language.IT]: 'Artist Services Organization in italian',
+				[Language.EN]: 'Artists’ Support Services',
+				[Language.FR]: 'Plateforme d’accompagnement d’artistes',
+				[Language.IT]: 'Servizi di supporto allə artistə',
 				[Language.ES]: 'Artist Services Organization in spanish',
 				id: '5207101'
 			},
+			[EmployerType.PROFESSIONAL_MEMBERSHIP_ORG]: {
+				[Language.EN]: 'Professional Membership Organisation',
+				[Language.FR]: 'Association de professionnel·les de l’art (ex: AICA, c-e-a)',
+				[Language.IT]: 'Associazioni di categoria (ex: AWI)',
+				[Language.ES]: 'Magazine in spanish',
+				id: '5768104'
+			},
 			[EmployerType.RIGHTS_ORGANIZATION]: {
-				[Language.EN]: 'Rights Organization (ADAGP, Artist Rights Society)',
-				[Language.FR]: 'Rights Organization (ADAGP, Artist Rights Society) in french',
-				[Language.IT]: 'Rights Organization (ADAGP, Artist Rights Society) in italian',
+				[Language.EN]: 'Artists’ Rights Organisation',
+				[Language.FR]: 'Organisme de gestion collective (ex: ADAGP)',
+				[Language.IT]: 'Associazione per i diritti dellə artistə',
 				[Language.ES]: 'Rights Organization (ADAGP, Artist Rights Society) in spanish',
 				id: '5207102'
 			},
 			[EmployerType.RESIDENCY_PROGRAM]: {
-				[Language.EN]: 'Residency Program',
-				[Language.FR]: 'Residency Program in french',
-				[Language.IT]: 'Residency Program in italian',
+				[Language.EN]: 'Residency Programme',
+				[Language.FR]: 'Programme de résidence',
+				[Language.IT]: 'Programma di residenza',
 				[Language.ES]: 'Residency Program in spanish',
 				id: '5207103'
 			},
 			[EmployerType.COOPERATIVE_STRUCTURE]: {
-				[Language.EN]: 'Cooperative Structure',
-				[Language.FR]: 'Cooperative Structure in french',
-				[Language.IT]: 'Cooperative Structure in italian',
+				[Language.EN]: 'Cooperative',
+				[Language.FR]: 'Coopérative',
+				[Language.IT]: 'Cooperativa',
 				[Language.ES]: 'Cooperative Structure in spanish',
 				id: '5207104'
 			}
