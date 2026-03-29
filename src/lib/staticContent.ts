@@ -327,14 +327,17 @@ export const enum EmployerType {
 	LIBRARY = 'LIBRARY',
 	ARCHIVE = 'ARCHIVE',
 	RESEARCH_CENTER = 'RESEARCH_CENTER',
-	NATIONAL_CULTURAL_AUTHORITY = 'NATIONAL_CULTURAL_AUTHORITY',
+	MINISTER_CULTURE = 'MINISTER_CULTURE',
 	ARTS_COUNCIL = 'ARTS_COUNCIL',
 	LOCAL_GOVT = 'LOCAL_GOVT',
 	CULTURAL_DIPLOMACY_BODY = 'CULTURAL_DIPLOMACY_BODY',
 	AUCTION_HOUSE = 'AUCTION_HOUSE',
+	COMMERCIAL_GALLERY = 'COMMERCIAL_GALLERY',
 	ART_DEALER = 'ART_DEALER',
 	ART_ADVISOR = 'ART_ADVISOR',
+	ART_FAIR = 'ART_FAIR',
 	ONLINE_SALES_PLATFORM = 'ONLINE_SALES_PLATFORM',
+	CORPORATE_ENTERPRISE = 'CORPORATE_ENTERPRISE',
 	PUBLISHING_HOUSE = 'PUBLISHING_HOUSE',
 	MEDIA = 'MEDIA',
 	MAGAZINE = 'MAGAZINE',
@@ -425,57 +428,57 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.EDUCATION_AND_RESEARCH]: {
 		groupLabel: {
 			[Language.EN]: 'Education & Research',
-			[Language.FR]: 'Education & Research in french',
-			[Language.IT]: 'Education & Research in italian',
+			[Language.FR]: 'Éducation & recherche',
+			[Language.IT]: 'Educazione & ricerca',
 			[Language.ES]: 'Education & Research in spanish'
 		},
 		options: {
 			[EmployerType.PUBLIC_SCHOOL]: {
 				[Language.EN]: 'Public School',
-				[Language.FR]: 'Public School in french',
-				[Language.IT]: 'Public School in italian',
+				[Language.FR]: 'École publique',
+				[Language.IT]: 'Scuola pubblica',
 				[Language.ES]: 'Public School in spanish',
 				id: '5207069'
 			},
 			[EmployerType.PRIVATE_SCHOOL]: {
 				[Language.EN]: 'Private School',
-				[Language.FR]: 'Private School in french',
-				[Language.IT]: 'Private School in italian',
+				[Language.FR]: 'École privée',
+				[Language.IT]: 'Scuola privata',
 				[Language.ES]: 'Private School in spanish',
 				id: '5207070'
 			},
 			[EmployerType.PUBLIC_UNIVERSITY]: {
 				[Language.EN]: 'Public University',
-				[Language.FR]: 'Public University in french',
-				[Language.IT]: 'Public University in italian',
+				[Language.FR]: 'Université publique',
+				[Language.IT]: 'Università pubblica',
 				[Language.ES]: 'Public University in spanish',
 				id: '5207071'
 			},
 			[EmployerType.PRIVATE_UNIVERSITY]: {
 				[Language.EN]: 'Private University',
-				[Language.FR]: 'Private University in french',
-				[Language.IT]: 'Private University in italian',
+				[Language.FR]: 'Université privée',
+				[Language.IT]: 'Università privata',
 				[Language.ES]: 'Private University in spanish',
 				id: '5207072'
 			},
 			[EmployerType.LIBRARY]: {
 				[Language.EN]: 'Library',
-				[Language.FR]: 'Library in french',
-				[Language.IT]: 'Library in italian',
+				[Language.FR]: 'Bibliothèque',
+				[Language.IT]: 'Biblioteca',
 				[Language.ES]: 'Library in spanish',
 				id: '5207073'
 			},
 			[EmployerType.ARCHIVE]: {
 				[Language.EN]: 'Archive',
-				[Language.FR]: 'Archive in french',
-				[Language.IT]: 'Archive in italian',
+				[Language.FR]: 'Centre d’archives',
+				[Language.IT]: 'Archivio',
 				[Language.ES]: 'Archive in spanish',
 				id: '5207074'
 			},
 			[EmployerType.RESEARCH_CENTER]: {
 				[Language.EN]: 'Research Center',
-				[Language.FR]: 'Research Center in french',
-				[Language.IT]: 'Research Center in italian',
+				[Language.FR]: 'Centre de recherche',
+				[Language.IT]: 'Centro di ricerca',
 				[Language.ES]: 'Research Center in spanish',
 				id: '5207075'
 			},
@@ -484,36 +487,36 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.GOVERNMENT_AND_FUNDING_BODIES]: {
 		groupLabel: {
 			[Language.EN]: 'Government & Funding Bodies',
-			[Language.FR]: 'Government & Funding Bodies in french',
-			[Language.IT]: 'Government & Funding Bodies in italian',
+			[Language.FR]: 'Gouvernement & organismes de financement public',
+			[Language.IT]: 'Enti governativi & finanziatori',
 			[Language.ES]: 'Government & Funding Bodies in spanish'
 		},
 		options: {
-			[EmployerType.NATIONAL_CULTURAL_AUTHORITY]: {
-				[Language.EN]: 'National Cultural Authority',
-				[Language.FR]: 'National Cultural Authority in french',
-				[Language.IT]: 'National Cultural Authority in italian',
+			[EmployerType.MINISTER_CULTURE]: {
+				[Language.EN]: 'Central Government — Culture (e.g. DCMS)',
+				[Language.FR]: 'Ministère de la Culture (ex: DRAC)',
+				[Language.IT]: 'Ministero della Cultura (ex: MiC)',
 				[Language.ES]: 'National Cultural Authority in spanish',
 				id: '5207077'
 			},
 			[EmployerType.ARTS_COUNCIL]: {
-				[Language.EN]: 'Arts Council or Arm’s-Length Body',
-				[Language.FR]: 'Arts Council or Arm’s-Length Body in french',
-				[Language.IT]: 'Arts Council or Arm’s-Length Body in italian',
+				[Language.EN]: 'Arts Council / Arm’s-Length Body (e.g. Arts Council England)',
+				[Language.FR]: 'Organisme public culturel (ex: CNAP)',
+				[Language.IT]: 'Ente pubblico per la cultura',
 				[Language.ES]: 'Arts Council or Arm’s-Length Body in spanish',
 				id: '5207078'
 			},
 			[EmployerType.LOCAL_GOVT]: {
-				[Language.EN]: 'Regional or Local Government',
-				[Language.FR]: 'Regional or Local Government in french',
-				[Language.IT]: 'Regional or Local Government in italian',
+				[Language.EN]: 'Regional or Local Authority',
+				[Language.FR]: 'Collectivité ou réseau territorial',
+				[Language.IT]: 'Enti regionali, provinciali e municipali',
 				[Language.ES]: 'Regional or Local Government in spanish',
 				id: '5207079'
 			},
 			[EmployerType.CULTURAL_DIPLOMACY_BODY]: {
-				[Language.EN]: 'Cultural Diplomacy Body (Embassy / Cultural Institute)',
-				[Language.FR]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in french',
-				[Language.IT]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in italian',
+				[Language.EN]: 'Cultural Diplomacy Body (e.g. Embassy, Cultural Institute)',
+				[Language.FR]: 'Organisme de diplomatie culturelle (ex: Institut Français)',
+				[Language.IT]: 'Ente di diplomazia culturale (ex: Istituto Italiano di Cultura)',
 				[Language.ES]: 'Cultural Diplomacy Body (Embassy / Cultural Institute) in spanish',
 				id: '5207082'
 			}
@@ -522,31 +525,45 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.COMMERCIAL_AND_MARKET]: {
 		groupLabel: {
 			[Language.EN]: 'Commercial & Market',
-			[Language.FR]: 'Commercial & Market in french',
-			[Language.IT]: 'Commercial & Market in italian',
+			[Language.FR]: 'Marché de l’art',
+			[Language.IT]: 'Mercato dell’arte',
 			[Language.ES]: 'Commercial & Market in spanish'
 		},
 		options: {
 			[EmployerType.AUCTION_HOUSE]: {
 				[Language.EN]: 'Auction House',
-				[Language.FR]: 'Auction House in french',
-				[Language.IT]: 'Auction House in italian',
+				[Language.FR]: 'Maison de ventes',
+				[Language.IT]: 'Case d’asta',
+				[Language.ES]: 'Auction House in spanish',
+				id: '5207083'
+			},
+			[EmployerType.COMMERCIAL_GALLERY]: {
+				[Language.EN]: 'Commercial Gallery',
+				[Language.FR]: 'Galerie d’art',
+				[Language.IT]: 'Galleria commerciale',
 				[Language.ES]: 'Auction House in spanish',
 				id: '5207083'
 			},
 			[EmployerType.ART_DEALER]: {
 				[Language.EN]: 'Art Dealer',
-				[Language.FR]: 'Art Dealer in french',
-				[Language.IT]: 'Art Dealer in italian',
+				[Language.FR]: 'Marchand d’art',
+				[Language.IT]: 'Mercante d’arte',
 				[Language.ES]: 'Art Dealer in spanish',
 				id: '5207084'
 			},
 			[EmployerType.ART_ADVISOR]: {
 				[Language.EN]: 'Art Advisor',
-				[Language.FR]: 'Art Advisor in french',
-				[Language.IT]: 'Art Advisor in italian',
+				[Language.FR]: 'Art advisor',
+				[Language.IT]: 'Consulente d’arte',
 				[Language.ES]: 'Art Advisor in spanish',
 				id: '5207085'
+			},
+			[EmployerType.ART_FAIR]: {
+				[Language.EN]: 'Art Fair',
+				[Language.FR]: 'Foire d’art contemporain',
+				[Language.IT]: 'Fiera d’arte',
+				[Language.ES]: 'Auction House in spanish',
+				id: '5207083'
 			},
 			[EmployerType.ONLINE_SALES_PLATFORM]: {
 				[Language.EN]: 'Online Sales Platform',
@@ -554,6 +571,13 @@ export const employerTypeOptions = {
 				[Language.IT]: 'Online Sales Platform in italian',
 				[Language.ES]: 'Online Sales Platform in spanish',
 				id: '5207086'
+			},
+			[EmployerType.CORPORATE_ENTERPRISE]: {
+				[Language.EN]: 'Corporate Enterprise',
+				[Language.FR]: 'Entreprise privée',
+				[Language.IT]: 'Impresa privata',
+				[Language.ES]: 'Auction House in spanish',
+				id: '5207083'
 			}
 		}
 	},
