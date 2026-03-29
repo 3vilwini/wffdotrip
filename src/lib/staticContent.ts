@@ -188,7 +188,7 @@ export const fieldLabels = {
 		[Language.ES]: 'Experience (optional) in spanish'
 	},
 	jobObtainedVia: {
-		[Language.EN]: 'Job obtained via (optional)',
+		[Language.EN]: 'Job Obtained Via (optional)',
 		[Language.FR]: 'Travail obtenu via (facultatif)',
 		[Language.IT]: 'Modalità di ottenimento del lavoro (facoltativo)',
 		[Language.ES]: 'Job obtained via (optional) in spanish'
