@@ -775,15 +775,15 @@ export const employerTypeOptions = {
 	[EmployerTypeSubgroup.OTHER]: {
 		groupLabel: {
 			[Language.EN]: 'Other',
-			[Language.FR]: 'Other in french',
-			[Language.IT]: 'Other in italian',
+			[Language.FR]: 'Autre',
+			[Language.IT]: 'Altro',
 			[Language.ES]: 'Other in spanish'
 		},
 		options: {
 			[EmployerType.OTHER]: {
 				[Language.EN]: 'Other',
-				[Language.FR]: 'Other in french',
-				[Language.IT]: 'Other in italian',
+				[Language.FR]: 'Autre',
+				[Language.IT]: 'Altro',
 				[Language.ES]: 'Other in spanish',
 				id: '5207105'
 			}
@@ -820,7 +820,9 @@ export const enum ContractType {
 	PARTTIME_TEMP = 'PARTTIME_TEMP',
 	INDEPENDENT = 'INDEPENDENT',
 	INTERNSHIP = 'INTERNSHIP',
-	APPRENTICESHIP = 'APPRENTICESHIP'
+	APPRENTICESHIP = 'APPRENTICESHIP',
+	ZERO_HOURS = 'ZERO_HOURS'
+	
 }
 
 export const contractTypeOptions = {
@@ -872,6 +874,13 @@ export const contractTypeOptions = {
 		[Language.IT]: 'Apprendistato',
 		[Language.ES]: 'Apprenticeship ES',
 		id: '5207126'
+	},
+	[ContractType.ZERO_HOURS]: {
+		[Language.EN]: 'Zero Hours',
+		[Language.FR]: 'Zero Hours',
+		[Language.IT]: 'Zero Hours',
+		[Language.ES]: 'Apprenticeship ES',
+		id: '5768112'
 	}
 };
 
@@ -887,19 +896,20 @@ export const workerStatusOptions = {
 	[Country.ITALY]: [
 		'Partita IVA (forfettario)',
 		'Partita IVA (ordinario)',
-		'Prestazione Occasionale',
-		'Lavoratore dello Spettacolo',
-		'Employee',
+		'Prestazione occasionale',
+		'Lavoratore dello spettacolo',
+		'Dipendente',
 		'Tirocinio curriculare',
 		'Other'
 	],
 	[Country.UK]: [
-		'Sole Trader',
-		'Limited Company',
-		'Worker status',
-		'PAYE Employee',
-		'Umbrella company / agency payroll',
-		'Intern',
+		'Self Employed',
+		'Salaried Employee',
+		'Worker',
+		'Contractor',
+		'Director',
+		'Trainee / Intern',
+		'Office Holder',
 		'Other'
 	],
 
