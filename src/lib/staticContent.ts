@@ -839,23 +839,23 @@ export const contractTypeOptions = {
 		id: '5207124'
 	},
 	[ContractType.FULLTIME_TEMP]: {
-		[Language.EN]: 'Full-time (temporary)',
+		[Language.EN]: 'Full-time (fixed-term)',
 		[Language.FR]: 'CDD temps plein',
-		[Language.IT]: 'Tempo pieno (a tempo determinato)',
+		[Language.IT]: 'Tempo pieno (TI)',
 		[Language.ES]: 'Full-time (temporary) ES',
 		id: '5207122'
 	},
 	[ContractType.PARTTIME_TEMP]: {
-		[Language.EN]: 'Part-time (temporary)',
+		[Language.EN]: 'Part-time (fixed-term)',
 		[Language.FR]: 'CDD temps partiel',
-		[Language.IT]: 'Part-time (a tempo determinato)',
+		[Language.IT]: 'Part-time (TD)',
 		[Language.ES]: 'Part-time (temporary) ES',
 		id: '5207120'
 	},
 	[ContractType.INDEPENDENT]: {
 		[Language.EN]: 'Freelance',
 		[Language.FR]: 'Indépendant',
-		[Language.IT]: 'Libera professione / Freelance',
+		[Language.IT]: 'Freelance',
 		[Language.ES]: 'Independent ES',
 		id: '5207125'
 	},
