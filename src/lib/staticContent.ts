@@ -86,13 +86,13 @@ export const fieldLabels = {
 	city: {
 		[Language.EN]: 'City (optional)',
 		[Language.FR]: 'Ville (facultatif)',
-		[Language.IT]: 'Città',
+		[Language.IT]: 'Città (facoltativo)',
 		[Language.ES]: 'City in spanish'
 	},
 	year: {
-		[Language.EN]: 'Year (optional)',
-		[Language.FR]: 'Année (facultatif)',
-		[Language.IT]: 'Anno (facoltativo)',
+		[Language.EN]: 'Year',
+		[Language.FR]: 'Année',
+		[Language.IT]: 'Anno',
 		[Language.ES]: 'Year in spanish'
 	},
 	employerType: {
