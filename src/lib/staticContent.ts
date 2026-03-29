@@ -1607,21 +1607,66 @@ export const workerTypeOptions = {
 		groupLabel: {
 			[Language.EN]: 'Mediation & Hospitality',
 			[Language.FR]: 'Médiation & accueil',
-			[Language.IT]: 'Mediation & Hospitality in italian',
+			[Language.IT]: 'Mediazione & Ospitalità',
 			[Language.ES]: 'Mediation & Hospitality in spanish'
 		},
 		options: {
-			[WorkerType.CULTURAL_MEDIATOR]: {
+			[WorkerType.HEAD_OF_PUBLIC_ENG]: {
 				label: {
-					[Language.EN]: 'Cultural Mediator',
-					[Language.FR]: 'Cultural Mediator in french',
-					[Language.IT]: 'Cultural Mediator in italian',
+					[Language.EN]: 'Head of Public Engagement',
+					[Language.FR]: 'Responsable des publics',
+					[Language.IT]: 'Responsabile della mediazione culturale',
 					[Language.ES]: 'Cultural Mediator in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
-					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- number of projects, team size, etc.',
+					[Language.FR]: '- nombre de projets, taille de l’équipe gérée, etc.',
+					[Language.IT]: '- numero di progetti, numero di persone gestite, ecc.',
+					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
+				},
+				id: '5767891'
+			},
+			[WorkerType.PUBLIC_ENGAG_OFFICER]: {
+				label: {
+					[Language.EN]: 'Public Engagement Officer',
+					[Language.FR]: 'Chargé·e des publics',
+					[Language.IT]: 'Responsabile public engagement',
+					[Language.ES]: 'Cultural Mediator in spanish'
+				},
+				detail: {
+					[Language.EN]: '- audience type, tours, workshops, topics covered, etc.',
+					[Language.FR]: '- type de public, visites, ateliers, sujets abordés, etc.',
+					[Language.IT]: '- tipo di pubblico, visite guidate, laboratori, temi affrontati, ecc.',
+					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
+				},
+				id: '5767892'
+			},
+			[WorkerType.VISITOR_SERVICES_ASST]: {
+				label: {
+					[Language.EN]: 'Visitor Services Assistant',
+					[Language.FR]: 'Chargé·e d’accueil',
+					[Language.IT]: 'Addettə all’accoglienza',
+					[Language.ES]: 'Cultural Mediator in spanish'
+				},
+				detail: {
+					[Language.EN]: '- audience type, tours, workshops, topics covered, etc.',
+					[Language.FR]: '- type de public, visites, ateliers, sujets abordés, etc.',
+					[Language.IT]: '- tipo di pubblico, visite guidate, laboratori, temi affrontati, ecc.',
+					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
+				},
+				id: '5767893'
+			},
+			[WorkerType.CULTURAL_MEDIATOR]: {
+				label: {
+					[Language.EN]: 'Cultural Outreach / Visitor Engagement',
+					[Language.FR]: 'Médiateur·ice culturel·le',
+					[Language.IT]: 'Mediatorə culturale',
+					[Language.ES]: 'Cultural Mediator in spanish'
+				},
+				detail: {
+					[Language.EN]: '- audience type, tours, workshops, topics covered, etc.',
+					[Language.FR]: '- type de public, visites, ateliers, sujets abordés, etc.',
+					[Language.IT]: '- tipologia di pubblico, visite, workshop, temi trattati, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207162'
@@ -1629,59 +1674,59 @@ export const workerTypeOptions = {
 			[WorkerType.TOUR_GUIDE]: {
 				label: {
 					[Language.EN]: 'Tour Guide',
-					[Language.FR]: 'Tour Guide in french',
-					[Language.IT]: 'Tour Guide in italian',
+					[Language.FR]: 'Guide conférencier·ère',
+					[Language.IT]: 'Guidə / accompagnatorə',
 					[Language.ES]: 'Tour Guide in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
-					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- tour frequency, group sizes, languages, thematic expertise, etc.',
+					[Language.FR]: '- fréquence des visites, tailles des groupes, langues, expertise thématique, etc.',
+					[Language.IT]: '- frequenza delle visite, dimensione dei gruppi, lingue, competenze tematiche, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207163'
 			},
 			[WorkerType.TRAINER_EDUCATOR]: {
 				label: {
-					[Language.EN]: 'Trainer/Educator',
-					[Language.FR]: 'Trainer/Educator in french',
-					[Language.IT]: 'Trainer/Educator in italian',
+					[Language.EN]: 'Educator',
+					[Language.FR]: 'Formateur',
+					[Language.IT]: 'Educatorə',
 					[Language.ES]: 'Trainer/Educator in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
-					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- curriculum developed, class size, workshop formats, etc.',
+					[Language.FR]: '- programme pédagogique développé, taille des classes, formats d’ateliers, etc.',
+					[Language.IT]: '- programma didattico sviluppato, dimensione delle classi, formati dei workshop, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207164'
 			},
 			[WorkerType.TICKETING_AGENT]: {
 				label: {
-					[Language.EN]: 'Ticketing Agent',
-					[Language.FR]: 'Ticketing Agent in french',
-					[Language.IT]: 'Ticketing Agent in italian',
+					[Language.EN]: 'Ticket Sales',
+					[Language.FR]: 'Agent·e de billeterie',
+					[Language.IT]: 'Addettə vendita biglietti',
 					[Language.ES]: 'Ticketing Agent in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
-					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- ticket volume, software systems, customer interactions, etc.',
+					[Language.FR]: '- volume de billets, gestion de logiciels, interactions avec la clientèle, etc.',
+					[Language.IT]: '- volume di biglietti, sistemi software, interazioni con il pubblico, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207165'
 			},
 			[WorkerType.HOST]: {
 				label: {
-					[Language.EN]: 'Host',
-					[Language.FR]: 'Host in french',
-					[Language.IT]: 'Host in italian',
+					[Language.EN]: 'Front of House',
+					[Language.FR]: 'Hôte·sse accueil',
+					[Language.IT]: 'Accoglienza',
 					[Language.ES]: 'Host in spanish'
 				},
 				detail: {
-					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: '(FR) mediums used, new or old works, number of works produced, etc.',
-					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
+					[Language.EN]: '- event types, visitor flow, hospitality tasks, etc.',
+					[Language.FR]: '- types d’événements, flux de visiteurs, missions d’accueil, etc.',
+					[Language.IT]: '- tipologie di eventi, flussi di visitatori, mansioni di accoglienza, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207166'
