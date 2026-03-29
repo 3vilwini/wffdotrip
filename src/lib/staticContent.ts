@@ -2478,6 +2478,7 @@ export const workerTypeOptions = {
 			}
 		}
 	},
+	/*
 	[WorkerTypeSubgroup.OTHER]: {
 		groupLabel: {
 			[Language.EN]: 'Other',
@@ -2503,6 +2504,7 @@ export const workerTypeOptions = {
 			}
 		}
 	}
+	*/
 };
 
 export const getWorkerTypeHelpText = (workerType: WorkerType | undefined): string => {
