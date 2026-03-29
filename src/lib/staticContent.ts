@@ -1223,7 +1223,7 @@ export const workerTypeOptions = {
 				label: {
 					[Language.EN]: 'Curator',
 					[Language.FR]: 'Curateur·ice',
-					[Language.IT]: 'Curatorə',
+					[Language.IT]: 'Curatela',
 					[Language.ES]: 'Curator in spanish'
 				},
 				detail: {
@@ -1610,7 +1610,7 @@ export const workerTypeOptions = {
 		groupLabel: {
 			[Language.EN]: 'Mediation & Hospitality',
 			[Language.FR]: 'Médiation & accueil',
-			[Language.IT]: 'Mediazione & Ospitalità',
+			[Language.IT]: 'Mediazione & ospitalità',
 			[Language.ES]: 'Mediation & Hospitality in spanish'
 		},
 		options: {
@@ -1739,8 +1739,8 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.MANAGEMENT_AND_ADMIN]: {
 		groupLabel: {
 			[Language.EN]: 'Management & Admin',
-			[Language.FR]: 'Management & Administration',
-			[Language.IT]: 'Management & Amministrazione',
+			[Language.FR]: 'Management & administration',
+			[Language.IT]: 'Management & amministrazione',
 			[Language.ES]: 'Management & Admin in spanish'
 		},
 		options: {
@@ -2019,8 +2019,8 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.COMMUNICATION_AND_DOCUMENTATION]: {
 		groupLabel: {
 			[Language.EN]: 'Communication & Documentation',
-			[Language.FR]: 'Communication & Documentation',
-			[Language.IT]: 'Communicazione & Documentazione',
+			[Language.FR]: 'Communication & documentation',
+			[Language.IT]: 'Communicazione & documentazione',
 			[Language.ES]: 'Communcation & Documentation in spanish'
 		},
 		options: {
@@ -2179,8 +2179,8 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.OPERATIONS_AND_IT]: {
 		groupLabel: {
 			[Language.EN]: 'Operations & IT',
-			[Language.FR]: 'Opérations & Services Informatiques',
-			[Language.IT]: 'Operations & IT',
+			[Language.FR]: 'Opérations & services informatiques',
+			[Language.IT]: 'Operazioni & IT',
 			[Language.ES]: 'Operations & IT in spanish'
 		},
 		options: {
@@ -2279,8 +2279,8 @@ export const workerTypeOptions = {
 	[WorkerTypeSubgroup.LEGAL_AND_FINANCE]: {
 		groupLabel: {
 			[Language.EN]: 'Legal & Finance',
-			[Language.FR]: 'Services Légaux & Financiers',
-			[Language.IT]: 'Legale & Finanza',
+			[Language.FR]: 'Services légaux & financiers',
+			[Language.IT]: 'Legale & finanza',
 			[Language.ES]: 'Legal & Finance in spanish'
 		},
 		options: {
