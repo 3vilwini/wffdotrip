@@ -313,15 +313,9 @@ export const enum EmployerTypeSubgroup {
 }
 
 export const enum EmployerType {
-	MUSEUM = 'MUSEUM',
-	ART_CENTER = 'ART_CENTER',
 	REGIONAL_CULTURAL_INSTITUTION = 'REGIONAL_CULTURAL_INSTITUTION',
 	NATIONAL_CULTURAL_INSTITUTION = 'NATIONAL_CULTURAL_INSTITUTION',
-	GALLERY = 'GALLERY',
 	ARTIST_RUN_SPACE = 'ARTIST_RUN_SPACE',
-	FOUNDATION = 'FOUNDATION',
-	CULTURAL_CENTER = 'CULTURAL_CENTER',
-	THIRD_PLACES = 'THIRD_PLACES',
 	NON_PROFIT_ORGANIZATION = 'NON_PROFIT_ORGANIZATION',
 	PUBLIC_SCHOOL = 'PUBLIC_SCHOOL',
 	PRIVATE_SCHOOL = 'PRIVATE_SCHOOL',
@@ -330,12 +324,9 @@ export const enum EmployerType {
 	LIBRARY = 'LIBRARY',
 	ARCHIVE = 'ARCHIVE',
 	RESEARCH_CENTER = 'RESEARCH_CENTER',
-	LABORATORY = 'LABORATORY',
 	NATIONAL_CULTURAL_AUTHORITY = 'NATIONAL_CULTURAL_AUTHORITY',
 	ARTS_COUNCIL = 'ARTS_COUNCIL',
 	LOCAL_GOVT = 'LOCAL_GOVT',
-	PUBLIC_FUNDING_AGENCY = 'PUBLIC_FUNDING_AGENCY',
-	ENDOWMENT_FUND = 'ENDOWMENT_FUND',
 	CULTURAL_DIPLOMACY_BODY = 'CULTURAL_DIPLOMACY_BODY',
 	AUCTION_HOUSE = 'AUCTION_HOUSE',
 	ART_DEALER = 'ART_DEALER',
@@ -352,7 +343,6 @@ export const enum EmployerType {
 	FESTIVAL = 'FESTIVAL',
 	BIENNIAL = 'BIENNIAL',
 	TRIENNIAL = 'TRIENNIAL',
-	FAIR = 'FAIR',
 	LOCAL_EVENT = 'LOCAL_EVENT',
 	UNION = 'UNION',
 	ARTIST_SERVICES_ORGANIZATION = 'ARTIST_SERVICES_ORGANIZATION',
@@ -371,20 +361,6 @@ export const employerTypeOptions = {
 			[Language.ES]: 'Cultural Institutions in spanish'
 		},
 		options: {
-			[EmployerType.MUSEUM]: {
-				[Language.EN]: 'Museum',
-				[Language.FR]: 'Museum in french',
-				[Language.IT]: 'Museum in italian',
-				[Language.ES]: 'Museum in spanish',
-				id: '5207059'
-			},
-			[EmployerType.ART_CENTER]: {
-				[Language.EN]: 'Art Center',
-				[Language.FR]: 'Art Center in french',
-				[Language.IT]: 'Art Center in italian',
-				[Language.ES]: 'Art Center in spanish',
-				id: '5207060'
-			},
 			[EmployerType.REGIONAL_CULTURAL_INSTITUTION]: {
 				[Language.EN]: 'Regional Cultural Institution (FRAC, Kunstverein)',
 				[Language.FR]: 'Regional Cultural Institution (FRAC, Kunstverein) in french',
@@ -399,40 +375,12 @@ export const employerTypeOptions = {
 				[Language.ES]: 'National Cultural Institution (EPCC...) in spanish',
 				id: '5207062'
 			},
-			[EmployerType.GALLERY]: {
-				[Language.EN]: 'Gallery',
-				[Language.FR]: 'Gallery in french',
-				[Language.IT]: 'Gallery in italian',
-				[Language.ES]: 'Gallery in spanish',
-				id: '5207063'
-			},
 			[EmployerType.ARTIST_RUN_SPACE]: {
 				[Language.EN]: 'Artist-Run Space',
 				[Language.FR]: 'Artist-Run Space in french',
 				[Language.IT]: 'Artist-Run Space in italian',
 				[Language.ES]: 'Artist-Run Space in spanish',
 				id: '5207064'
-			},
-			[EmployerType.FOUNDATION]: {
-				[Language.EN]: 'Foundation',
-				[Language.FR]: 'Foundation in french',
-				[Language.IT]: 'Foundation in italian',
-				[Language.ES]: 'Foundation in spanish',
-				id: '5207065'
-			},
-			[EmployerType.CULTURAL_CENTER]: {
-				[Language.EN]: 'Cultural Center',
-				[Language.FR]: 'Cultural Center in french',
-				[Language.IT]: 'Cultural Center in italian',
-				[Language.ES]: 'Cultural Center in spanish',
-				id: '5207066'
-			},
-			[EmployerType.THIRD_PLACES]: {
-				[Language.EN]: 'Third Places',
-				[Language.FR]: 'Third Places in french',
-				[Language.IT]: 'Third Places in italian',
-				[Language.ES]: 'Third Places in spanish',
-				id: '5207067'
 			},
 			[EmployerType.NON_PROFIT_ORGANIZATION]: {
 				[Language.EN]: 'Non-Profit Organization',
@@ -493,13 +441,6 @@ export const employerTypeOptions = {
 				[Language.ES]: 'Archive in spanish',
 				id: '5207074'
 			},
-			[EmployerType.FOUNDATION]: {
-				[Language.EN]: 'Foundation',
-				[Language.FR]: 'Foundation in french',
-				[Language.IT]: 'Foundation in italian',
-				[Language.ES]: 'Foundation in spanish',
-				id: '5207065'
-			},
 			[EmployerType.RESEARCH_CENTER]: {
 				[Language.EN]: 'Research Center',
 				[Language.FR]: 'Research Center in french',
@@ -507,13 +448,6 @@ export const employerTypeOptions = {
 				[Language.ES]: 'Research Center in spanish',
 				id: '5207075'
 			},
-			[EmployerType.LABORATORY]: {
-				[Language.EN]: 'Laboratory',
-				[Language.FR]: 'Laboratory in french',
-				[Language.IT]: 'Laboratory in italian',
-				[Language.ES]: 'Laboratory in spanish',
-				id: '5207076'
-			}
 		}
 	},
 	[EmployerTypeSubgroup.GOVERNMENT_AND_FUNDING_BODIES]: {
@@ -544,20 +478,6 @@ export const employerTypeOptions = {
 				[Language.IT]: 'Regional or Local Government in italian',
 				[Language.ES]: 'Regional or Local Government in spanish',
 				id: '5207079'
-			},
-			[EmployerType.PUBLIC_FUNDING_AGENCY]: {
-				[Language.EN]: 'Public Funding Agency',
-				[Language.FR]: 'Public Funding Agency in french',
-				[Language.IT]: 'Public Funding Agency in italian',
-				[Language.ES]: 'Public Funding Agency in spanish',
-				id: '5207080'
-			},
-			[EmployerType.ENDOWMENT_FUND]: {
-				[Language.EN]: 'Endowment Fund or Public-Interest Foundation',
-				[Language.FR]: 'Endowment Fund or Public-Interest Foundation in french',
-				[Language.IT]: 'Endowment Fund or Public-Interest Foundation in italian',
-				[Language.ES]: 'Endowment Fund or Public-Interest Foundation in spanish',
-				id: '5207081'
 			},
 			[EmployerType.CULTURAL_DIPLOMACY_BODY]: {
 				[Language.EN]: 'Cultural Diplomacy Body (Embassy / Cultural Institute)',
@@ -710,13 +630,6 @@ export const employerTypeOptions = {
 				[Language.IT]: 'Triennial in italian',
 				[Language.ES]: 'Triennial in spanish',
 				id: '5207097'
-			},
-			[EmployerType.FAIR]: {
-				[Language.EN]: 'Fair',
-				[Language.FR]: 'Fair in french',
-				[Language.IT]: 'Fair in italian',
-				[Language.ES]: 'Fair in spanish',
-				id: '5207098'
 			},
 			[EmployerType.LOCAL_EVENT]: {
 				[Language.EN]: 'Local Event',
