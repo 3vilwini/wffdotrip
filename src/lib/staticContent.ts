@@ -542,7 +542,7 @@ export const employerTypeOptions = {
 				[Language.FR]: 'Galerie d’art',
 				[Language.IT]: 'Galleria commerciale',
 				[Language.ES]: 'Auction House in spanish',
-				id: '5207083'
+				id: '5768089'
 			},
 			[EmployerType.ART_DEALER]: {
 				[Language.EN]: 'Art Dealer',
@@ -563,7 +563,7 @@ export const employerTypeOptions = {
 				[Language.FR]: 'Foire d’art contemporain',
 				[Language.IT]: 'Fiera d’arte',
 				[Language.ES]: 'Auction House in spanish',
-				id: '5207083'
+				id: '5768090'
 			},
 			[EmployerType.ONLINE_SALES_PLATFORM]: {
 				[Language.EN]: 'Online Sales Platform',
@@ -577,7 +577,7 @@ export const employerTypeOptions = {
 				[Language.FR]: 'Entreprise privée',
 				[Language.IT]: 'Impresa privata',
 				[Language.ES]: 'Auction House in spanish',
-				id: '5207083'
+				id: '5768091'
 			}
 		}
 	},
