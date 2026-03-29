@@ -152,7 +152,7 @@ export const fieldLabels = {
 		[Language.ES]: 'Contract Length (optional) in spanish'
 	},
 	contractNumHours: {
-		[Language.EN]: '# hours (optional)',
+		[Language.EN]: '# of Hours (optional)',
 		[Language.FR]: '# d’heures (facultatif)',
 		[Language.IT]: '# di ore (facoltativo)',
 		[Language.ES]: '# of hours (optional) in spanish'
