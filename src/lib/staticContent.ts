@@ -891,7 +891,7 @@ export const workerStatusOptions = {
 		'Salarié·e',
 		'Intermittence',
 		'Stagiaire',
-		'Other'
+		'Autre'
 	],
 	[Country.ITALY]: [
 		'Partita IVA (forfettario)',
@@ -900,7 +900,7 @@ export const workerStatusOptions = {
 		'Lavoratore dello spettacolo',
 		'Dipendente',
 		'Tirocinio curriculare',
-		'Other'
+		'Altro'
 	],
 	[Country.UK]: [
 		'Self Employed',
