@@ -2180,7 +2180,7 @@ export const workerTypeOptions = {
 		groupLabel: {
 			[Language.EN]: 'Operations & IT',
 			[Language.FR]: 'Opérations & services informatiques',
-			[Language.IT]: 'Operazioni & IT',
+			[Language.IT]: 'Operations & IT',
 			[Language.ES]: 'Operations & IT in spanish'
 		},
 		options: {
