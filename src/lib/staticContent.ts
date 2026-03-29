@@ -32,13 +32,13 @@ export const indexHeaderLabels = {
 	worker: {
 		[Language.EN]: 'Worker',
 		[Language.FR]: 'Travailleur·se',
-		[Language.IT]: 'Lavoratorɜ',
+		[Language.IT]: 'Lavoratorə',
 		[Language.ES]: 'Worker (ES)'
 	},
 	employer: {
 		[Language.EN]: 'Employer',
 		[Language.FR]: 'Employeur',
-		[Language.IT]: 'Datorɜ di lavoro',
+		[Language.IT]: 'Datorə di lavoro',
 		[Language.ES]: 'Employer (ES)'
 	},
 	contract: {
@@ -110,7 +110,7 @@ export const fieldLabels = {
 	numEmployees: {
 		[Language.EN]: '# of Employees',
 		[Language.FR]: '# d’employé·es',
-		[Language.IT]: '# di dipendentɜ',
+		[Language.IT]: '# di dipendentə',
 		[Language.ES]: '# of Employees in spanish'
 	},
 	contractType: {
@@ -122,21 +122,21 @@ export const fieldLabels = {
 	workerStatus: {
 		[Language.EN]: {
 			[Country.UK]: 'Worker Status (UK)',
-			[Country.SPAIN]: 'Worker Status',
+			[Country.SPAIN]: 'Worker Status (NL)',
 			[Country.ITALY]: 'Worker Status (IT)',
 			[Country.FRANCE]: 'Worker Status (FR)'
 		},
 		[Language.FR]: {
 			[Country.UK]: 'Statut / régime (UK)',
-			[Country.SPAIN]: 'Statut / régime',
+			[Country.SPAIN]: 'Statut / régime (NL',
 			[Country.ITALY]: 'Statut / régime (IT)',
 			[Country.FRANCE]: 'Statut / régime (FR)'
 		},
 		[Language.IT]: {
-			[Country.UK]: 'Status del lavoratorɜ in Regno Unito',
-			[Country.SPAIN]: 'Spanish Worker status (IT)',
-			[Country.ITALY]: 'Status del lavoratorɜ in Italia',
-			[Country.FRANCE]: 'Status del lavoratorɜ in France'
+			[Country.UK]: 'Status del lavoratorə (UK)',
+			[Country.SPAIN]: 'Status del lavoratorə (NL)',
+			[Country.ITALY]: 'Status del lavoratorə (IT)',
+			[Country.FRANCE]: 'Status del lavoratorɜ (FR)'
 		},
 		[Language.ES]: {
 			[Country.UK]: 'UK Worker status (ES)',
@@ -158,15 +158,15 @@ export const fieldLabels = {
 		[Language.ES]: '# of hours (optional) in spanish'
 	},
 	perWeek: {
-		[Language.EN]: 'hours / week (optional)',
-		[Language.FR]: 'heures / semaine (facultatif)',
-		[Language.IT]: 'Cadenza settimanale (facoltativo)',
+		[Language.EN]: 'hours / week',
+		[Language.FR]: 'heures / semaine',
+		[Language.IT]: 'ore / settimana',
 		[Language.ES]: 'hours per week in spanish'
 	},
 	workerType: {
 		[Language.EN]: 'Worker Category',
 		[Language.FR]: 'Catégorie de travailleur·se',
-		[Language.IT]: 'Categoria del lavoratorɜ',
+		[Language.IT]: 'Categoria del lavoratorə',
 		[Language.ES]: 'Worker category in spanish'
 	},
 	jobTitle: {
@@ -208,29 +208,29 @@ export const fieldLabels = {
 	compensationLate: {
 		[Language.EN]: 'I was paid late',
 		[Language.FR]: 'J’ai été payé·e en retard',
-		[Language.IT]: 'Sono statɜ pagatɜ in ritardo',
+		[Language.IT]: 'Sono statə pagatə in ritardo',
 		[Language.ES]: 'I was paid late in spanish'
 	},
 	satisfiedWithCompensation: {
 		[Language.EN]: 'I was satisfied with the compensation',
 		[Language.FR]: 'La rémunération m’est apparue satisfaisante',
-		[Language.IT]: 'Ero soddisfattɜ del compenso',
+		[Language.IT]: 'Ero soddisfattə del compenso',
 		[Language.ES]: 'I was satisfied with the compensation in spanish'
 	},
 	satisfiedWithConditions: {
 		[Language.EN]: 'I was satisfied with the working conditions',
 		[Language.FR]: 'Les conditions de travail me sont apparues satisfaisantes',
-		[Language.IT]: 'Ero soddisfattɜ delle condizioni di lavoro',
+		[Language.IT]: 'Ero soddisfattə delle condizioni di lavoro',
 		[Language.ES]: 'I was satisfied with the working conditions in spanish'
 	},
 	treatedFairly: {
 		[Language.EN]: 'I felt fairly treated against my colleagues',
 		[Language.FR]: 'Je me suis senti·e traité·e de manière équitable par rapport à mes collègues',
-		[Language.IT]: 'Mi sono sentitɜ trattatɜ in modo equo rispetto ai miei colleghi',
+		[Language.IT]: 'Mi sono sentitə trattatə in modo equo rispetto ai miei colleghi',
 		[Language.ES]: 'I felt fairly treated against my colleagues in spanish'
 	},
 	addlComp: {
-		[Language.EN]: 'Additional compensation',
+		[Language.EN]: 'Additional Compensation',
 		[Language.FR]: 'Compensations additionelles',
 		[Language.IT]: 'Compensi aggiuntivi',
 		[Language.ES]: 'Additional compensation in spanish'
@@ -238,7 +238,7 @@ export const fieldLabels = {
 	employees: {
 		[Language.EN]: 'employees',
 		[Language.FR]: 'employé·es',
-		[Language.IT]: 'dipendentɜ',
+		[Language.IT]: 'dipendentə',
 		[Language.ES]: 'employees in spanish'
 	},
 	yearsOfExperience: {
@@ -1124,9 +1124,9 @@ export const workerTypeOptions = {
 					[Language.ES]: 'Editor in spanish'
 				},
 				detail: {
-					[Language.EN]: '- format, publication type, number of texts, number of contributors, languages, etc.',
-					[Language.FR]: '- nombre de textes, nombre de contributeur·ices, langues, format, etc.',
-					[Language.IT]: '-formato, tipo di pubblicazione, numero di testi, numero di contributor, lingue, ecc.',
+					[Language.EN]: '- format, number of texts, number of contributors, languages, etc.',
+					[Language.FR]: '- format, nombre de textes, nombre de contributeur·ices, langues, etc.',
+					[Language.IT]: '- formato, numero di testi, numero di contributor, lingue, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207131'
@@ -1201,7 +1201,7 @@ export const workerTypeOptions = {
 				detail: {
 					[Language.EN]: '- type of collection, cataloging systems, digitization volume, etc.',
 					[Language.FR]: '- type de la collection, systèmes de catalogage utilisés, volume de numérisation, etc.',
-					[Language.IT]: '- tipologia/dimensione della collezione, sistemi di catalogazione, volume di digitalizzazione, ecc.',
+					[Language.IT]: '- tipologia della collezione, sistemi di catalogazione, volume di digitalizzazione, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207136'
@@ -1224,7 +1224,7 @@ export const workerTypeOptions = {
 					[Language.ES]: 'Curator in spanish'
 				},
 				detail: {
-					[Language.EN]: '- exhibition space size, number of artists, thematic focus, etc.',
+					[Language.EN]: '- size of exhibition space, number of artists, thematic focus, etc.',
 					[Language.FR]: '- taille de l’espace d’exposition, nombre d’artistes, axe thématique, etc.',
 					[Language.IT]: '- dimensione dello spazio espositivo, numero di artisti, focus tematico, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
@@ -1271,7 +1271,7 @@ export const workerTypeOptions = {
 				detail: {
 					[Language.EN]: '- event format, number of artists, audience size, etc.',
 					[Language.FR]: '- format d’événement, nombre d’artistes, taille du public, etc.',
-					[Language.IT]: '- numero di eventi, numero di artisti, formati curatoriali, dimensione del pubblico, ecc.',
+					[Language.IT]: '- formati curatoriali, numero di artisti, dimensione del pubblico, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207140'
@@ -1280,7 +1280,7 @@ export const workerTypeOptions = {
 				label: {
 					[Language.EN]: 'Curatorial Fellow',
 					[Language.FR]: 'Curateur·ice associé·e',
-					[Language.IT]: 'Curatorial Fellow / borsista',
+					[Language.IT]: 'Curatorial fellow / borsista',
 					[Language.ES]: 'Curatorial Fellow in spanish'
 				},
 				detail: {
@@ -1301,7 +1301,7 @@ export const workerTypeOptions = {
 				detail: {
 					[Language.EN]: '- project focus, exhibitions supported, research areas, etc.',
 					[Language.FR]: '- orientation du projet, expositions accompagnées, axes de recherche, etc.',
-					[Language.IT]: '- focus del progetto, mostre supportate, aree di ricerca, attività di scrittura, ecc.',
+					[Language.IT]: '- focus del progetto, mostre supportate, aree di ricerca, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207142'
@@ -1356,7 +1356,7 @@ export const workerTypeOptions = {
 				detail: {
 					[Language.EN]: '- tasks, techniques, scale of studio, etc.',
 					[Language.FR]: '- missions, techniques, taiille de l’atelier, etc.',
-					[Language.IT]: '- mansioni (fabbricazione/organizzazione), tecniche, scala dello studio, ecc.',
+					[Language.IT]: '- mansioni, tecniche, scala dello studio, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207145'
@@ -1461,7 +1461,7 @@ export const workerTypeOptions = {
 				detail: {
 					[Language.EN]: '- space type, concepts developed, cueing, etc.',
 					[Language.FR]: '- type d’espace et de création, repérages, etc.',
-					[Language.IT]: '- tipologia di spazio, concetti sviluppati',
+					[Language.IT]: '- tipologia di spazio, concetti sviluppati, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207152'
@@ -1475,7 +1475,7 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- space type, projectors used, mapping, etc.',
-					[Language.FR]: '- type d’espace, projecteurs utilisés, type de création, mapping, etc.',
+					[Language.FR]: '- type d’espace, projecteurs utilisés, mapping, etc.',
 					[Language.IT]: '- tipologia di spazio, proiettori utilizzati, mapping, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1558,9 +1558,9 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.UI_UX]: {
 				label: {
-					[Language.EN]: 'UI/UX Designer (as art production)',
+					[Language.EN]: 'UI/UX Designer',
 					[Language.FR]: 'Designer UI/UX',
-					[Language.IT]: 'Designer UI/UX (in ambito di produzione artistica)',
+					[Language.IT]: 'Designer UI/UX',
 					[Language.ES]: 'UI/UX Designer (as art production) in spanish'
 				},
 				detail: {
@@ -1575,7 +1575,7 @@ export const workerTypeOptions = {
 				label: {
 					[Language.EN]: 'Stage Manager',
 					[Language.FR]: 'Régisseur·se de plateau',
-					[Language.IT]: 'Stage manager / direttore di scena',
+					[Language.IT]: 'Stage manager / direttorə di scena',
 					[Language.ES]: 'Stage Manager in spanish'
 				},
 				detail: {
@@ -1978,9 +1978,9 @@ export const workerTypeOptions = {
 		options: {
 			[WorkerType.GRAPHIC_DESIGNER]: {
 				label: {
-					[Language.EN]: 'Graphic Designer (books, posters, exhibitions)',
+					[Language.EN]: 'Graphic Designer',
 					[Language.FR]: 'Graphiste',
-					[Language.IT]: 'Graphic designer (libri, poster, mostre)',
+					[Language.IT]: 'Graphic designer',
 					[Language.ES]: 'Graphic designer (books, posters, exhibitions) in spanish'
 				},
 				detail: {
@@ -1993,9 +1993,9 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.PHOTOGRAPHER]: {
 				label: {
-					[Language.EN]: 'Photographer (documentation, portraits, installation shots)',
+					[Language.EN]: 'Photographer',
 					[Language.FR]: 'Photographe',
-					[Language.IT]: 'Fotografə (documentazione, ritratti, installazioni)',
+					[Language.IT]: 'Fotografə',
 					[Language.ES]: 'Photographer (documentation, portraits, installation shots) in spanish'
 				},
 				detail: {
@@ -2153,7 +2153,7 @@ export const workerTypeOptions = {
 			},
 			[WorkerType.CUSTODIAL_STAFF]: {
 				label: {
-					[Language.EN]: 'Maintenance Worker',
+					[Language.EN]: 'Caretaker / Maintenance Worker',
 					[Language.FR]: 'Agent·e d’entretien',
 					[Language.IT]: 'Custodə / addettə alla manutenzione',
 					[Language.ES]: 'Custodial Staff in spanish'
@@ -2291,7 +2291,7 @@ export const workerTypeOptions = {
 				detail: {
 					[Language.EN]: '- grants written, awarded amounts, reporting tasks, etc.',
 					[Language.FR]: '- subventions rédigées, montants attribués, missions de reporting, etc.',
-					[Language.IT]: 'bandi scritti, importi ottenuti, attività di rendicontazione, ecc.',
+					[Language.IT]: '— bandi scritti, importi ottenuti, attività di rendicontazione, ecc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
 				id: '5207204'
@@ -2300,7 +2300,7 @@ export const workerTypeOptions = {
 				label: {
 					[Language.EN]: 'Art Advisor',
 					[Language.FR]: 'Art advisor',
-					[Language.IT]: 'Art advisor / consulente d’arte',
+					[Language.IT]: 'Art advisor',
 					[Language.ES]: 'Art Advisor in spanish'
 				},
 				detail: {
@@ -2375,7 +2375,7 @@ export const workerTypeOptions = {
 				label: {
 					[Language.EN]: 'Membership / Patron Relations Manager',
 					[Language.FR]: 'Responsable du mécénat',
-					[Language.IT]: 'Responsabile relazioni con membri / patron',
+					[Language.IT]: 'Responsabile relazioni con membri',
 					[Language.ES]: 'Membership/Patron Relations Manager in spanish'
 				},
 				detail: {
@@ -2405,7 +2405,7 @@ export const workerTypeOptions = {
 				label: {
 					[Language.EN]: 'Art Lawyer',
 					[Language.FR]: 'Avocat·e spécialisé·e',
-					[Language.IT]: 'Avvocatə specializzatə in diritto dell`arte',
+					[Language.IT]: 'Avvocatə specializzatə in diritto dell’arte',
 					[Language.ES]: 'Art Lawyer in spanish'
 				},
 				detail: {
@@ -2546,7 +2546,7 @@ export const jobObtainedViaOptions = {
 	},
 	[JobObtainedVia.PURE_NEPOTISM]: {
 		[Language.EN]: 'Nepotism / Friendship',
-		[Language.FR]: 'Népotisme / amitié',
+		[Language.FR]: 'Népotisme ou amitié',
 		[Language.IT]: 'Nepotismo o amichettismo',
 		[Language.ES]: 'Pure Nepotism ES'
 	}
