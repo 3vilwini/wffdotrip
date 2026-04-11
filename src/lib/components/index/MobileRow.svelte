@@ -8,21 +8,27 @@
 		getWorkerTypeLabel,
 		numEmployeesOptions,
 		countryIcons,
-		projectTypeOptions
+		projectTypeOptions,
+		countryOptions
 	} from '$lib/staticContent';
 	let { row, onclick } = $props();
 </script>
 
 <div {onclick} class="items-top flex cursor-pointer gap-x-2 border-b p-3 pt-2 hover:bg-lightgrey">
 	<div class="items-top flex grow flex-col flex-wrap justify-between gap-0.25">
-		{#if row.city}
+		{#if row.country}
 			<div class="mb-1.75 flex shrink-0 items-center gap-x-2">
 				<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
 					{countryIcons[row.country.value]}
 				</div>
+			
 				<div class=" shrink-0 grow-0 pt-1 font-mono text-xs">
-					{row.city}
+					{#if row.city}
+					{row.city},
+						{/if}
+						{countryOptions[row.country.value][siteState.language]}
 				</div>
+			
 			</div>
 		{/if}
 		<div class="leading-none">

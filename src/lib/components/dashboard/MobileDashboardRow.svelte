@@ -3,7 +3,7 @@
 
 	import { enhance } from '$app/forms';
 
-	import { siteState, yarndingsText } from '$lib/states.svelte';
+	import { siteState } from '$lib/states.svelte';
 	import {
 		countryOptions,
 		getWorkerTypeLabel,
@@ -13,7 +13,8 @@
 		jobExperienceOptions,
 		getEmployerTypeLabel,
 		projectTypeOptions,
-		currency
+		currency,
+		countryIcons
 	} from '$lib/staticContent';
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
@@ -102,13 +103,16 @@
 >
 	<div class="align-center flex grow flex-col gap-1">
 		<div class="flex items-center gap-4 pb-3">
-			{#if row.city && row.country}
+			{#if row.country}
 				<div class="flex basis-1/2 items-center gap-2">
 					<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
-						{yarndingsText[row.city.length % yarndingsText.length]}
+						{countryIcons[row.country.value]}
 					</div>
 					<div>
-						{row.city}, {countryOptions[row.country.value][siteState.language]}
+						{#if row.city}
+							{row.city},
+						{/if}
+						{countryOptions[row.country.value][siteState.language]}
 					</div>
 				</div>
 			{/if}

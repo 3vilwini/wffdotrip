@@ -15,9 +15,10 @@
 		jobExperienceOptions,
 		compensationFrequencyOptions,
 		contractTypeOptions,
-		projectTypeOptions
+		projectTypeOptions,
+		countryIcons
 	} from '$lib/staticContent';
-	import { siteState, yarndingsText } from '$lib/states.svelte';
+	import { siteState } from '$lib/states.svelte';
 
 	let { row, showExpandedEntry = $bindable() } = $props();
 </script>
@@ -26,11 +27,9 @@
 	<div class="flex flex-col">
 		<div class="flex items-start justify-between p-3">
 			<div class="flex items-center gap-2">
-				{#if row.city}
 					<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
-						{yarndingsText[row.city.length % yarndingsText.length]}
+						{countryIcons[row.country.value]}
 					</div>
-				{/if}
 				{#if row.worker_type}
 					<div class="text-lg leading-none xl:text-2xl">
 						{getWorkerTypeLabel(row.worker_type.value)}
@@ -134,7 +133,7 @@
 					</div>
 				</div>
 			{/if}
-			{#if row.country && (row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel)}
+			{#if row.country && (row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel || row.addl_comp_accessibility_budget)}
 				<div>
 					<div class="mb-1 text-lg tracking-[-0.01em]">
 						{fieldLabels.addlComp[siteState.language]}
@@ -147,7 +146,7 @@
 										{addlCompItemOptions[AddlCompItem[key]][siteState.language]}
 									</div>
 									<div>
-										{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM'}
+										{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM' || key === 'ACCESSIBILITY_BUDGET' }
 											{row['addl_comp_' + key.toLowerCase()]}{currency[row.country.value]}
 										{:else if key === 'COMMISSION'}
 											{row['addl_comp_' + key.toLowerCase()]}%

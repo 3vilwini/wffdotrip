@@ -41,6 +41,7 @@
 	// const closeEditModal = () => {
 	// 	showEditModal = false;
 	// };
+	console.log(row);
 </script>
 
 {#if showEditModal}
@@ -119,12 +120,15 @@
 >
 	<div class="align-center flex justify-between gap-4 pt-1 pb-1.5">
 		<div class="flex basis-1/4 items-center gap-4">
-			{#if row.city && row.country}
+			{#if row.country}
 				<div class="flex h-8.5 w-6 text-center font-yarndings text-3xl leading-none">
 					{countryIcons[row.country.value]}
 				</div>
 				<div class="basis-1/2 pt-0.75">
-					{row.city}, {countryOptions[row.country.value][siteState.language]}
+					{#if row.city}
+						{row.city},
+					{/if}
+					{countryOptions[row.country.value][siteState.language]}
 				</div>
 			{/if}
 			<div class="basis-1/3 pt-0.75">
@@ -290,7 +294,7 @@
 					{/if}
 				</div>
 				<div class="basis-1/5">
-					{#if row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel}
+					{#if row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel || row.addl_comp_accessibility_budget}
 						<div class="my-4">{fieldLabels.addlComp[siteState.language]}</div>
 						{#if row.addl_comp_sale_of_work}
 							<DashboardRowAddlCompLine
@@ -302,6 +306,12 @@
 							<DashboardRowAddlCompLine
 								item={AddlCompItem.PRODUCTION_BUDGET}
 								value={row.addl_comp_production_budget + currency[row.country.value]}
+							></DashboardRowAddlCompLine>
+						{/if}
+						{#if row.addl_comp_accessibility_budget}
+							<DashboardRowAddlCompLine
+								item={AddlCompItem.ACCESSIBILITY_BUDGET}
+								value={row.addl_comp_accessibility_budget + currency[row.country.value]}
 							></DashboardRowAddlCompLine>
 						{/if}
 						{#if row.addl_comp_transport_of_work}
@@ -361,7 +371,7 @@
 						{#if row.addl_comp_commission}
 							<DashboardRowAddlCompLine
 								item={AddlCompItem.COMMISSION}
-								value={row.addl_comp_commission	+ '%'}
+								value={row.addl_comp_commission + '%'}
 							></DashboardRowAddlCompLine>
 						{/if}
 					{/if}

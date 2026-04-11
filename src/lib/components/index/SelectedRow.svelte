@@ -16,7 +16,8 @@
 		projectTypeOptions,
 		jobExperienceOptions,
 		compensationFrequencyOptions,
-		contractTypeOptions
+		contractTypeOptions,
+		countryIcons
 	} from '$lib/staticContent';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 	let { rows = $bindable() } = $props();
@@ -82,11 +83,11 @@ verified: true
 							onclick={() => expandRow(row)}
 						>
 							<div class="flex items-center gap-2">
-								{#if row.city}
+								{#if row.country}
 									<div
 										class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none"
 									>
-										{yarndingsText[idx]}
+										{countryIcons[row.country.value]}
 									</div>
 								{/if}
 								{#if row.worker_type}
@@ -159,9 +160,12 @@ verified: true
 											{#if row.employer_type && row.employer_name}
 												<div>{getEmployerTypeLabel(row.employer_type.value)}</div>
 											{/if}
-											{#if row.city && row.country}
+											{#if row.country}
 												<div>
-													{row.city}, {countryOptions[row.country.value][siteState.language]}
+													{#if row.city}
+														{row.city},
+													{/if}
+													{countryOptions[row.country.value][siteState.language]}
 												</div>
 											{/if}
 											{#if row.num_employees}
@@ -218,7 +222,7 @@ verified: true
 											</div>
 										</div>
 									{/if}
-									{#if row.country && (row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel)}
+									{#if row.country && (row.addl_comp_accommodation || row.addl_comp_commission || row.addl_comp_health_insurance || row.addl_comp_meals || row.addl_comp_per_diem || row.addl_comp_production_budget || row.addl_comp_public_transportation || row.addl_comp_sale_of_work || row.addl_comp_transport_of_work || row.addl_comp_travel || row.addl_comp_accessibility_budget)}
 										<div>
 											<div class="mb-1 text-lg tracking-[-0.01em]">
 												{fieldLabels.addlComp[siteState.language]}
@@ -231,7 +235,7 @@ verified: true
 																{addlCompItemOptions[AddlCompItem[key]][siteState.language]}
 															</div>
 															<div class="text-right">
-																{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM'}
+																{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM' || key === 'ACCESSIBILITY_BUDGET'}
 																	{row['addl_comp_' + key.toLowerCase()]}{currency[
 																		row.country.value
 																	]}

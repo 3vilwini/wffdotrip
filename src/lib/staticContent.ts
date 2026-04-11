@@ -3846,7 +3846,8 @@ export const enum AddlCompItem {
 	PER_DIEM = 'PER_DIEM',
 	HEALTH_INSURANCE = 'HEALTH_INSURANCE',
 	PUBLIC_TRANSPORTATION = 'PUBLIC_TRANSPORTATION',
-	COMMISSION = 'COMMISSION'
+	COMMISSION = 'COMMISSION',
+	ACCESSIBILITY_BUDGET = 'ACCESSIBILITY_BUDGET',
 }
 
 export const addlCompItemOptions = {
@@ -3909,5 +3910,11 @@ export const addlCompItemOptions = {
 		[Language.FR]: 'Commission',
 		[Language.IT]: 'Commissione',
 		[Language.ES]: 'Commission ES'
+	},
+	[AddlCompItem.ACCESSIBILITY_BUDGET]: {
+		[Language.EN]: 'Accessibility Budget',
+		[Language.FR]: 'Budget d’accessibilité',
+		[Language.IT]: 'Budget di accessibilità',
+		[Language.ES]: 'Accessibility Budget ES'
 	}
 };

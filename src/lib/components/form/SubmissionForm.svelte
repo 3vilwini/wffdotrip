@@ -530,6 +530,23 @@
 														</div>
 													{/if}
 												</div>
+											{:else if key === 'ACCESSIBILITY_BUDGET'}
+												<div class="flex w-48">
+													<FormSimpleInput
+														name="addl_comp_accessibility_budget"
+														type="number"
+														placeholder={fieldLabels.compensationAmount[siteState.language]}
+														class="w-48 border-b-0"
+														required
+													/>
+													{#if selectedCountry}
+														<div
+															class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+														>
+															{currency[selectedCountry]}
+														</div>
+													{/if}
+												</div>
 											{:else if key === 'PER_DIEM'}
 												<div class="flex w-48">
 													<FormSimpleInput
