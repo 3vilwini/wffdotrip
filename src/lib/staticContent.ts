@@ -19,7 +19,7 @@ export const countryIcons = {
 	[Country.FRANCE]: '✸',
 	[Country.ITALY]: '✤',
 	[Country.SPAIN]: '✣'
-}
+};
 
 export const currency = {
 	[Country.UK]: '£',
@@ -169,9 +169,15 @@ export const fieldLabels = {
 		[Language.IT]: 'Worker category in italian',
 		[Language.ES]: 'Worker category in spanish'
 	},
-	jobTitle: {
-		[Language.EN]: 'Labor Category (optional)',
+	projectType: {
+		[Language.EN]: 'Project Type (optional)',
 		[Language.FR]: 'Type de projet (optionnel)',
+		[Language.IT]: 'Project Type in italian',
+		[Language.ES]: 'Project Type in spanish'
+	},
+	jobTitle: {
+		[Language.EN]: 'Job title (optional)',
+		[Language.FR]: 'Titre du poste (optionnel)',
 		[Language.IT]: 'Job title (optional) in italian',
 		[Language.ES]: 'Job title (optional) in spanish'
 	},
@@ -283,7 +289,7 @@ export const countryOptions = {
 		[Language.IT]: 'Italy in italian',
 		[Language.ES]: 'Italy in spanish',
 		id: '5207041'
-	},
+	}
 	// [Country.SPAIN]: {
 	// 	[Language.EN]: 'Spain',
 	// 	[Language.FR]: 'Spain in french',
@@ -1055,7 +1061,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: 'mediums used, new or old works, number of works produced, etc.',
-					[Language.FR]: 'médiums utilisés, œuvres nouvelles ou anciennes, nombre d’œuvres produites, etc.',
+					[Language.FR]:
+						'médiums utilisés, œuvres nouvelles ou anciennes, nombre d’œuvres produites, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1124,7 +1131,8 @@ export const workerTypeOptions = {
 					[Language.ES]: 'Editor in spanish'
 				},
 				detail: {
-					[Language.EN]: '- format, publication type, number of texts, number of contributors, languages, etc.',
+					[Language.EN]:
+						'- format, publication type, number of texts, number of contributors, languages, etc.',
 					[Language.FR]: '- nombre de textes, nombre de contributeur·ices, langues, format, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
@@ -1200,7 +1208,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- type of collection, cataloging systems, digitization volume, etc.',
-					[Language.FR]: '- type de la collection, systèmes de catalogage utilisés, volume de numérisation, etc.',
+					[Language.FR]:
+						'- type de la collection, systèmes de catalogage utilisés, volume de numérisation, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1225,7 +1234,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- exhibition space size, number of artists, thematic focus, etc.',
-					[Language.FR]: '- taille de l’espace d’exposition, nombre d’artistes, axe thématique, etc.',
+					[Language.FR]:
+						'- taille de l’espace d’exposition, nombre d’artistes, axe thématique, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1240,7 +1250,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- scope of research, archives accessed, outputs produced, etc.',
-					[Language.FR]: '- champ de recherche, archives consultées, productions/résultats réalisés, etc.',
+					[Language.FR]:
+						'- champ de recherche, archives consultées, productions/résultats réalisés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1285,7 +1296,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- project focus, exhibitions supported, research areas, etc.',
-					[Language.FR]: '- orientation du projet, expositions accompagnées, axes de recherche, etc.',
+					[Language.FR]:
+						'- orientation du projet, expositions accompagnées, axes de recherche, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1300,7 +1312,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- project focus, exhibitions supported, research areas, etc.',
-					[Language.FR]: '- orientation du projet, expositions accompagnées, axes de recherche, etc.',
+					[Language.FR]:
+						'- orientation du projet, expositions accompagnées, axes de recherche, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1550,7 +1563,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- project type, software, number of visualizations, etc.',
-					[Language.FR]: '- type de projet, complexité, prise en compte des conditions d’accessibilité, etc.',
+					[Language.FR]:
+						'- type de projet, complexité, prise en compte des conditions d’accessibilité, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1565,7 +1579,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- project type, complexity, accessibility considerations, etc.',
-					[Language.FR]: '- type de projet, complexité, prise en compte des conditions d’accessibilité, etc.',
+					[Language.FR]:
+						'- type de projet, complexité, prise en compte des conditions d’accessibilité, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1580,7 +1595,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- rehearsal cadence, cast/crew size, etc.',
-					[Language.FR]: '- fréquence des répétitions, taille de la distribution/équipe technique, etc.',
+					[Language.FR]:
+						'- fréquence des répétitions, taille de la distribution/équipe technique, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1734,8 +1750,10 @@ export const workerTypeOptions = {
 					[Language.ES]: 'Event Producer in spanish'
 				},
 				detail: {
-					[Language.EN]: '- event scale, vendors managed, audience size, technical complexity, etc.',
-					[Language.FR]: '- envergure de l’événement, types de prestataires, taille du public, complexité technique, etc.',
+					[Language.EN]:
+						'- event scale, vendors managed, audience size, technical complexity, etc.',
+					[Language.FR]:
+						'- envergure de l’événement, types de prestataires, taille du public, complexité technique, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1840,7 +1858,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- size of collection, cataloging system, storage conditions, etc.',
-					[Language.FR]: '- taille de la collection, système de catalogage, conditions de stockage, etc.',
+					[Language.FR]:
+						'- taille de la collection, système de catalogage, conditions de stockage, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -1960,7 +1979,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- task types, skills & tools used, workplace policies, etc.',
-					[Language.FR]: '- types de mission, compétences et outils utilisés, mise en place de politiques internes, etc.',
+					[Language.FR]:
+						'- types de mission, compétences et outils utilisés, mise en place de politiques internes, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2015,7 +2035,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- languages/CMS used, site complexity, features built, etc.',
-					[Language.FR]: '- langages utilisés, complexité du site, fonctionnalités développées, etc.',
+					[Language.FR]:
+						'- langages utilisés, complexité du site, fonctionnalités développées, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2030,7 +2051,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- layouts, UI systems, prototypes, branding elements, etc.',
-					[Language.FR]: '- mises en page, systèmes d’interface utilisateur, prototypes, éléments de branding, etc.',
+					[Language.FR]:
+						'- mises en page, systèmes d’interface utilisateur, prototypes, éléments de branding, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2145,7 +2167,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- building size, protocols assigned, etc.',
-					[Language.FR]: '- superficie du bâtiment, horaires spécifiques, protocoles assignés, etc.',
+					[Language.FR]:
+						'- superficie du bâtiment, horaires spécifiques, protocoles assignés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2190,7 +2213,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- hardware/software supported, ticket volume, systems managed, etc.',
-					[Language.FR]: '- matériel/logiciels gérés, volume de tickets, systèmes administrés, etc.',
+					[Language.FR]:
+						'- matériel/logiciels gérés, volume de tickets, systèmes administrés, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2220,7 +2244,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- database used, number of records, digitisation scope, etc.',
-					[Language.FR]: '- base de données utilisée, nombre de notices, périmètre de numérisation, etc.',
+					[Language.FR]:
+						'- base de données utilisée, nombre de notices, périmètre de numérisation, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2320,7 +2345,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- policies developed, research areas, stakeholder coordination, etc.',
-					[Language.FR]: '- politiques élaborées, axes de recherche, missions de coordination, etc.',
+					[Language.FR]:
+						'- politiques élaborées, axes de recherche, missions de coordination, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2335,7 +2361,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- fundraising goals, target donors, team size, etc.',
-					[Language.FR]: '- objectifs de collecte de fonds, portefeuille de donateurs, taille de l’équipe, etc.',
+					[Language.FR]:
+						'- objectifs de collecte de fonds, portefeuille de donateurs, taille de l’équipe, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2350,7 +2377,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- campaigns, donor cultivation, grant success rate, etc.',
-					[Language.FR]: '- campagnes, fidélisation des donateurs, taux de réussite des subventions, etc.',
+					[Language.FR]:
+						'- campagnes, fidélisation des donateurs, taux de réussite des subventions, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2380,7 +2408,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- membership tiers, events, donor communication, etc.',
-					[Language.FR]: '- objectifs d’adhésion, événements, communication avec les donateurs, etc.',
+					[Language.FR]:
+						'- objectifs d’adhésion, événements, communication avec les donateurs, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2395,7 +2424,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- contract types, compliance issues, legal areas covered, etc.',
-					[Language.FR]: '- types de contrats, questions de conformité, domaines juridiques couverts, etc.',
+					[Language.FR]:
+						'- types de contrats, questions de conformité, domaines juridiques couverts, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2410,7 +2440,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: 'IP cases, contract negotiations, artist rights advocacy, etc.',
-					[Language.FR]: 'question de propriété intellectuelle, négociations contractuelles, défense des droits des artistes, etc.',
+					[Language.FR]:
+						'question de propriété intellectuelle, négociations contractuelles, défense des droits des artistes, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2425,7 +2456,8 @@ export const workerTypeOptions = {
 				},
 				detail: {
 					[Language.EN]: '- contract volume, types drafted, approval workflows, etc.',
-					[Language.FR]: '- volume de contrats, missions de rédaction, processus d’approbation, etc.',
+					[Language.FR]:
+						'- volume de contrats, missions de rédaction, processus d’approbation, etc.',
 					[Language.IT]: '(IT) mediums used, new or old works, number of works produced, etc.',
 					[Language.ES]: '(ES) mediums used, new or old works, number of works produced, etc.'
 				},
@@ -2482,6 +2514,1145 @@ export const getWorkerTypeLabel = (workerType: WorkerType): string => {
 	}
 	return workerType;
 };
+
+export const getWorkerTypeSubgroup = (
+	workerType: WorkerType | undefined
+): WorkerTypeSubgroup | undefined => {
+	if (workerType) {
+		for (const subgroupKey in workerTypeOptions) {
+			const subgroup = workerTypeOptions[subgroupKey as WorkerTypeSubgroup];
+			if (workerType in subgroup.options) {
+				return subgroupKey as WorkerTypeSubgroup;
+			}
+		}
+	}
+
+	return undefined;
+};
+
+export const enum ProjectType {
+	GROUP_EXHIBITION = 'GROUP_EXHIBITION',
+	SOLO_EXHIBITION = 'SOLO_EXHIBITION',
+	FILM_SCREENING = 'FILM_SCREENING',
+	PUBLIC_READING = 'PUBLIC_READING',
+	CONFERENCE = 'CONFERENCE',
+	PUBLIC_TALK = 'PUBLIC_TALK',
+	CURATORIAL_TALK = 'CURATORIAL_TALK',
+	VISITING_ARTIST_TUTORIAL = 'VISITING_ARTIST_TUTORIAL',
+	VISITING_ARTIST_TALK = 'VISITING_ARTIST_TALK',
+	LIVE_PERFORMANCE = 'LIVE_PERFORMANCE',
+	COMMISSIONED_PERFORMANCE = 'COMMISSIONED_PERFORMANCE',
+	COMMISSIONED_WORK = 'COMMISSIONED_WORK',
+	REPLICA = 'REPLICA',
+	STUDIO_VISIT = 'STUDIO_VISIT',
+	CATALOG_TEXT = 'CATALOG_TEXT',
+	PRESENTATION_TEXT = 'PRESENTATION_TEXT',
+	CRITICAL_REVIEW = 'CRITICAL_REVIEW',
+	MONOGRAPHIC_ESSAY = 'MONOGRAPHIC_ESSAY',
+	ARTWORK_WALL_TEXT = 'ARTWORK_WALL_TEXT',
+	CURATORIAL_TEXT = 'CURATORIAL_TEXT',
+	LITERARY_COMMISSION = 'LITERARY_COMMISSION',
+	POETRY_COMMISSION = 'POETRY_COMMISSION',
+	TEXT_REPRINT = 'TEXT_REPRINT',
+	PODCAST_FEATURE = 'PODCAST_FEATURE',
+	PODCAST_COMMISSION = 'PODCAST_COMMISSION',
+	SKILLS_WORKSHOP = 'SKILLS_WORKSHOP',
+	PANEL_DISCUSSION_PARTICIPATION = 'PANEL_DISCUSSION_PARTICIPATION',
+	PANEL_DISCUSSION_MODERATION = 'PANEL_DISCUSSION_MODERATION',
+	EDITING_PROJECT = 'EDITING_PROJECT',
+	CATALOG_TRANSLATION = 'CATALOG_TRANSLATION',
+	TEXT_TRANSLATION = 'TEXT_TRANSLATION',
+	LITERARY_TRANSLATION = 'LITERARY_TRANSLATION',
+	POETRY_TRANSLATION = 'POETRY_TRANSLATION',
+	SUBTITLING = 'SUBTITLING',
+	COPYWRITING_TASK = 'COPYWRITING_TASK',
+	GHOSTWRITING_PROJECT = 'GHOSTWRITING_PROJECT',
+	ARCHIVE_BUILD = 'ARCHIVE_BUILD',
+	ARCHIVE_RESEARCH = 'ARCHIVE_RESEARCH',
+	BIBLIOGRAPHY_BUILD = 'BIBLIOGRAPHY_BUILD',
+	CATALOG_RESEARCH = 'CATALOG_RESEARCH',
+	COLLECTION_ACCESS = 'COLLECTION_ACCESS',
+	METADATA_ENTRY = 'METADATA_ENTRY',
+	RESEARCH_ASSISTANCE = 'RESEARCH_ASSISTANCE',
+	PUBLIC_TOUR = 'PUBLIC_TOUR',
+	GUIDED_VISIT = 'GUIDED_VISIT',
+	AUDIENCE_EDUCATION = 'AUDIENCE_EDUCATION',
+	CULTURAL_OUTREACH_SESSION = 'CULTURAL_OUTREACH_SESSION',
+	OUTREACH_IN_SCHOOLS = 'OUTREACH_IN_SCHOOLS',
+	WORKSHOP_DESIGN_AND_FACILITATION = 'WORKSHOP_DESIGN_AND_FACILITATION',
+	PERFORMANCE = 'PERFORMANCE',
+	EVENT = 'EVENT',
+	VIDEO_WORK = 'VIDEO_WORK',
+	SCREENING = 'SCREENING',
+	PODCAST = 'PODCAST',
+	ARCHIVE = 'ARCHIVE',
+	DIGITAL_NEW_MEDIA_WORK = 'DIGITAL_NEW_MEDIA_WORK',
+	SCULPTURE = 'SCULPTURE',
+	PAINTING = 'PAINTING',
+	INSTALLATION = 'INSTALLATION',
+	TECHNICAL_SETUP = 'TECHNICAL_SETUP',
+	PROJECT_COORDINATION = 'PROJECT_COORDINATION',
+	SUPPORT_AND_CONSULTING = 'SUPPORT_AND_CONSULTING',
+	TOUR_PLANNING = 'TOUR_PLANNING',
+	SCHOOL_INTERVENTION = 'SCHOOL_INTERVENTION',
+	CONFERENCE_MODERATION = 'CONFERENCE_MODERATION',
+	EDUCATIONAL_RESOURCE_WRITING = 'EDUCATIONAL_RESOURCE_WRITING',
+	MEDIATION_TEXT = 'MEDIATION_TEXT',
+	DEVELOPMENT_OF_MEDIATION_TOOLS = 'DEVELOPMENT_OF_MEDIATION_TOOLS',
+	OUTREACH_PROJECT_PLANNING = 'OUTREACH_PROJECT_PLANNING',
+	RECEPTION_AND_SUPPORT_FOR_GROUP_VISITS = 'RECEPTION_AND_SUPPORT_FOR_GROUP_VISITS',
+	MEDIATOR_PEER_TRAINING = 'MEDIATOR_PEER_TRAINING',
+	EDUCATIONAL_COORDINATION = 'EDUCATIONAL_COORDINATION',
+	COMMUNITY_WORKSHOP = 'COMMUNITY_WORKSHOP',
+	VISITOR_SUPPORT = 'VISITOR_SUPPORT',
+	FRONT_OF_HOUSE = 'FRONT_OF_HOUSE',
+	TICKETING_SERVICE = 'TICKETING_SERVICE',
+	HOSTING_DUTIES = 'HOSTING_DUTIES',
+	ARCHIVE_RETRIEVAL = 'ARCHIVE_RETRIEVAL',
+	EXHIBITION_PRODUCTION = 'EXHIBITION_PRODUCTION',
+	EVENT_PRODUCTION = 'EVENT_PRODUCTION',
+	RESIDENCY_COORDINATION = 'RESIDENCY_COORDINATION',
+	PROGRAMME_COORDINATION = 'PROGRAMME_COORDINATION',
+	COLLECTION_MANAGEMENT = 'COLLECTION_MANAGEMENT',
+	ARTIST_LIAISON = 'ARTIST_LIAISON',
+	BUDGET_MANAGEMENT = 'BUDGET_MANAGEMENT',
+	GRANT_WRITING = 'GRANT_WRITING',
+	PARTNERSHIP_DEVELOPMENT = 'PARTNERSHIP_DEVELOPMENT',
+	VENDOR_MANAGEMENT = 'VENDOR_MANAGEMENT',
+	TEAM_MANAGEMENT = 'TEAM_MANAGEMENT',
+	HR_AND_RECRUITMENT = 'HR_AND_RECRUITMENT',
+	SCHEDULING_AND_PLANNING = 'SCHEDULING_AND_PLANNING',
+	REPORTING = 'REPORTING',
+	CONTRACT_DRAFTING = 'CONTRACT_DRAFTING',
+	STRATEGIC_PLANNING = 'STRATEGIC_PLANNING',
+	ADMINISTRATIVE_SUPPORT = 'ADMINISTRATIVE_SUPPORT',
+	ARTISTIC_SUPPORT = 'ARTISTIC_SUPPORT',
+	PUBLICATION = 'PUBLICATION',
+	PHOTO_DOCUMENTATION = 'PHOTO_DOCUMENTATION',
+	VIDEO_CAPTURE = 'VIDEO_CAPTURE',
+	CONTENT_CREATION = 'CONTENT_CREATION',
+	SOCIAL_STRATEGY = 'SOCIAL_STRATEGY',
+	DIGITAL_MANAGEMENT = 'DIGITAL_MANAGEMENT',
+	PRESS_OUTREACH = 'PRESS_OUTREACH',
+	MARKETING_CAMPAIGN = 'MARKETING_CAMPAIGN',
+	AUDIENCE_STRATEGY = 'AUDIENCE_STRATEGY',
+	COMMUNITY_STRATEGY = 'COMMUNITY_STRATEGY',
+	EXHIBITION = 'EXHIBITION',
+	DIGITAL_MIGRATION = 'DIGITAL_MIGRATION',
+	ARCHIVE_DIGITISATION = 'ARCHIVE_DIGITISATION',
+	SYSTEM_DEPLOYMENT = 'SYSTEM_DEPLOYMENT',
+	BUILDING_MAINTENANCE = 'BUILDING_MAINTENANCE',
+	SECURITY_OPERATIONS = 'SECURITY_OPERATIONS',
+	FACILITIES_MANAGEMENT = 'FACILITIES_MANAGEMENT',
+	IT_SUPPORT = 'IT_SUPPORT',
+	SYSTEMS_ADMINISTRATION = 'SYSTEMS_ADMINISTRATION',
+	NETWORK_MANAGEMENT = 'NETWORK_MANAGEMENT',
+	HARDWARE_INSTALLATION = 'HARDWARE_INSTALLATION',
+	SOFTWARE_DEPLOYMENT = 'SOFTWARE_DEPLOYMENT',
+	DATABASE_MANAGEMENT = 'DATABASE_MANAGEMENT',
+	DATA_ENTRY_AND_CATALOGUING = 'DATA_ENTRY_AND_CATALOGUING',
+	COLLECTION_DIGITISATION = 'COLLECTION_DIGITISATION',
+	USER_TRAINING = 'USER_TRAINING',
+	TECHNICAL_SUPPORT = 'TECHNICAL_SUPPORT',
+	FINANCIAL_REPORTING = 'FINANCIAL_REPORTING',
+	BUDGETING = 'BUDGETING',
+	INVOICE_MANAGEMENT = 'INVOICE_MANAGEMENT',
+	TAX_ADVISORY = 'TAX_ADVISORY',
+	LEGAL_ADVISORY = 'LEGAL_ADVISORY',
+	STRATEGIC_ADVISORY = 'STRATEGIC_ADVISORY',
+	INTELLECTUAL_PROPERTY = 'INTELLECTUAL_PROPERTY',
+	INSURANCE_AND_RISK = 'INSURANCE_AND_RISK'
+}
+
+export const projectTypeOptions = {
+	[ProjectType.GROUP_EXHIBITION]: {
+		[Language.EN]: 'Group Exhibition',
+		[Language.FR]: 'Exposition collective',
+		[Language.IT]: 'Group Exhibition in italian',
+		[Language.ES]: 'Group Exhibition in spanish'
+	},
+	[ProjectType.SOLO_EXHIBITION]: {
+		[Language.EN]: 'Solo Exhibition',
+		[Language.FR]: 'Exposition personnelle',
+		[Language.IT]: 'Solo Exhibition in italian',
+		[Language.ES]: 'Solo Exhibition in spanish'
+	},
+	[ProjectType.FILM_SCREENING]: {
+		[Language.EN]: 'Film Screening',
+		[Language.FR]: 'Projection de film',
+		[Language.IT]: 'Film Screening in italian',
+		[Language.ES]: 'Film Screening in spanish'
+	},
+	[ProjectType.PUBLIC_READING]: {
+		[Language.EN]: 'Public Reading',
+		[Language.FR]: 'Lecture publique',
+		[Language.IT]: 'Public Reading in italian',
+		[Language.ES]: 'Public Reading in spanish'
+	},
+	[ProjectType.CONFERENCE]: {
+		[Language.EN]: 'Conference',
+		[Language.FR]: 'Conférence',
+		[Language.IT]: 'Conference in italian',
+		[Language.ES]: 'Conference in spanish'
+	},
+	[ProjectType.PUBLIC_TALK]: {
+		[Language.EN]: 'Public Talk',
+		[Language.FR]: 'Conférence publique',
+		[Language.IT]: 'Public Talk in italian',
+		[Language.ES]: 'Public Talk in spanish'
+	},
+	[ProjectType.CURATORIAL_TALK]: {
+		[Language.EN]: 'Curatorial Talk',
+		[Language.FR]: 'Conférence curatoriale',
+		[Language.IT]: 'Curatorial Talk in italian',
+		[Language.ES]: 'Curatorial Talk in spanish'
+	},
+	[ProjectType.VISITING_ARTIST_TUTORIAL]: {
+		[Language.EN]: 'Visiting Artist Tutorial',
+		[Language.FR]: 'Atelier avec un·e artiste invité·e',
+		[Language.IT]: 'Visiting Artist Tutorial in italian',
+		[Language.ES]: 'Visiting Artist Tutorial in spanish'
+	},
+	[ProjectType.VISITING_ARTIST_TALK]: {
+		[Language.EN]: 'Visiting Artist Talk',
+		[Language.FR]: 'Conférence avec un·e artiste invité·e',
+		[Language.IT]: 'Visiting Artist Talk in italian',
+		[Language.ES]: 'Visiting Artist Talk in spanish'
+	},
+	[ProjectType.LIVE_PERFORMANCE]: {
+		[Language.EN]: 'Live Performance',
+		[Language.FR]: 'Performance en direct',
+		[Language.IT]: 'Live Performance in italian',
+		[Language.ES]: 'Live Performance in spanish'
+	},
+	[ProjectType.COMMISSIONED_PERFORMANCE]: {
+		[Language.EN]: 'Commissioned Performance',
+		[Language.FR]: 'Performance commandée',
+		[Language.IT]: 'Commissioned Performance in italian',
+		[Language.ES]: 'Commissioned Performance in spanish'
+	},
+	[ProjectType.COMMISSIONED_WORK]: {
+		[Language.EN]: 'Commissioned Work',
+		[Language.FR]: 'Œuvre commandée',
+		[Language.IT]: 'Commissioned Work in italian',
+		[Language.ES]: 'Commissioned Work in spanish'
+	},
+	[ProjectType.REPLICA]: {
+		[Language.EN]: 'Replica',
+		[Language.FR]: 'Réplique',
+		[Language.IT]: 'Replica in italian',
+		[Language.ES]: 'Replica in spanish'
+	},
+	[ProjectType.STUDIO_VISIT]: {
+		[Language.EN]: 'Studio Visit',
+		[Language.FR]: "Visite d'atelier",
+		[Language.IT]: 'Studio Visit in italian',
+		[Language.ES]: 'Studio Visit in spanish'
+	},
+	[ProjectType.CATALOG_TEXT]: {
+		[Language.EN]: 'Catalog Text',
+		[Language.FR]: 'Texte de catalogue',
+		[Language.IT]: 'Catalog Text in italian',
+		[Language.ES]: 'Catalog Text in spanish'
+	},
+	[ProjectType.PRESENTATION_TEXT]: {
+		[Language.EN]: 'Presentation Text',
+		[Language.FR]: 'Texte de présentation',
+		[Language.IT]: 'Presentation Text in italian',
+		[Language.ES]: 'Presentation Text in spanish'
+	},
+	[ProjectType.CRITICAL_REVIEW]: {
+		[Language.EN]: 'Critical Review',
+		[Language.FR]: 'Critique',
+		[Language.IT]: 'Critical Review in italian',
+		[Language.ES]: 'Critical Review in spanish'
+	},
+	[ProjectType.MONOGRAPHIC_ESSAY]: {
+		[Language.EN]: 'Monographic Essay',
+		[Language.FR]: 'Essai monographique',
+		[Language.IT]: 'Monographic Essay in italian',
+		[Language.ES]: 'Monographic Essay in spanish'
+	},
+	[ProjectType.ARTWORK_WALL_TEXT]: {
+		[Language.EN]: 'Artwork Wall Text',
+		[Language.FR]: "Texte de présentation de l'œuvre",
+		[Language.IT]: 'Artwork Wall Text in italian',
+		[Language.ES]: 'Artwork Wall Text in spanish'
+	},
+	[ProjectType.CURATORIAL_TEXT]: {
+		[Language.EN]: 'Curatorial Text',
+		[Language.FR]: 'Texte curatoriale',
+		[Language.IT]: 'Curatorial Text in italian',
+		[Language.ES]: 'Curatorial Text in spanish'
+	},
+	[ProjectType.LITERARY_COMMISSION]: {
+		[Language.EN]: 'Literary Commission',
+		[Language.FR]: 'Commande littéraire',
+		[Language.IT]: 'Literary Commission in italian',
+		[Language.ES]: 'Literary Commission in spanish'
+	},
+	[ProjectType.POETRY_COMMISSION]: {
+		[Language.EN]: 'Poetry Commission',
+		[Language.FR]: 'Commande de poésie',
+		[Language.IT]: 'Poetry Commission in italian',
+		[Language.ES]: 'Poetry Commission in spanish'
+	},
+	[ProjectType.TEXT_REPRINT]: {
+		[Language.EN]: 'Text Reprint',
+		[Language.FR]: 'Réimpression de texte',
+		[Language.IT]: 'Text Reprint in italian',
+		[Language.ES]: 'Text Reprint in spanish'
+	},
+	[ProjectType.PODCAST_FEATURE]: {
+		[Language.EN]: 'Podcast Feature',
+		[Language.FR]: 'Podcast en vedette',
+		[Language.IT]: 'Podcast Feature in italian',
+		[Language.ES]: 'Podcast Feature in spanish'
+	},
+	[ProjectType.PODCAST_COMMISSION]: {
+		[Language.EN]: 'Podcast Commission',
+		[Language.FR]: 'Commande de podcast',
+		[Language.IT]: 'Podcast Commission in italian',
+		[Language.ES]: 'Podcast Commission in spanish'
+	},
+	[ProjectType.SKILLS_WORKSHOP]: {
+		[Language.EN]: 'Skills Workshop',
+		[Language.FR]: 'Atelier de compétences',
+		[Language.IT]: 'Skills Workshop in italian',
+		[Language.ES]: 'Skills Workshop in spanish'
+	},
+	[ProjectType.PANEL_DISCUSSION_PARTICIPATION]: {
+		[Language.EN]: 'Panel Discussion Participation',
+		[Language.FR]: 'Participation à une table ronde',
+		[Language.IT]: 'Panel Discussion Participation in italian',
+		[Language.ES]: 'Panel Discussion Participation in spanish'
+	},
+	[ProjectType.PANEL_DISCUSSION_MODERATION]: {
+		[Language.EN]: 'Panel Discussion Moderation',
+		[Language.FR]: "Modération d'une table ronde",
+		[Language.IT]: 'Panel Discussion Moderation in italian',
+		[Language.ES]: 'Panel Discussion Moderation in spanish'
+	},
+	[ProjectType.EDITING_PROJECT]: {
+		[Language.EN]: 'Editing Project',
+		[Language.FR]: "Projet d'édition",
+		[Language.IT]: 'Editing Project in italian',
+		[Language.ES]: 'Editing Project in spanish'
+	},
+	[ProjectType.CATALOG_TRANSLATION]: {
+		[Language.EN]: 'Catalog Translation',
+		[Language.FR]: 'Traduction de catalogue',
+		[Language.IT]: 'Catalog Translation in italian',
+		[Language.ES]: 'Catalog Translation in spanish'
+	},
+	[ProjectType.TEXT_TRANSLATION]: {
+		[Language.EN]: 'Text Translation',
+		[Language.FR]: 'Traduction de texte',
+		[Language.IT]: 'Text Translation in italian',
+		[Language.ES]: 'Text Translation in spanish'
+	},
+	[ProjectType.LITERARY_TRANSLATION]: {
+		[Language.EN]: 'Literary Translation',
+		[Language.FR]: 'Traduction littéraire',
+		[Language.IT]: 'Literary Translation in italian',
+		[Language.ES]: 'Literary Translation in spanish'
+	},
+	[ProjectType.POETRY_TRANSLATION]: {
+		[Language.EN]: 'Poetry Translation',
+		[Language.FR]: 'Traduction de poésie',
+		[Language.IT]: 'Poetry Translation in italian',
+		[Language.ES]: 'Poetry Translation in spanish'
+	},
+	[ProjectType.SUBTITLING]: {
+		[Language.EN]: 'Subtitling',
+		[Language.FR]: 'Sous-titrage',
+		[Language.IT]: 'Subtitling in italian',
+		[Language.ES]: 'Subtitling in spanish'
+	},
+	[ProjectType.COPYWRITING_TASK]: {
+		[Language.EN]: 'Copywriting Task',
+		[Language.FR]: 'Tâche de rédaction',
+		[Language.IT]: 'Copywriting Task in italian',
+		[Language.ES]: 'Copywriting Task in spanish'
+	},
+	[ProjectType.GHOSTWRITING_PROJECT]: {
+		[Language.EN]: 'Ghostwriting Project',
+		[Language.FR]: 'Projet de rédaction fantôme',
+		[Language.IT]: 'Ghostwriting Project in italian',
+		[Language.ES]: 'Ghostwriting Project in spanish'
+	},
+	[ProjectType.ARCHIVE_BUILD]: {
+		[Language.EN]: 'Archive Build',
+		[Language.FR]: "Construction d'archive",
+		[Language.IT]: 'Archive Build in italian',
+		[Language.ES]: 'Archive Build in spanish'
+	},
+	[ProjectType.ARCHIVE_RESEARCH]: {
+		[Language.EN]: 'Archive Research',
+		[Language.FR]: "Recherche d'archive",
+		[Language.IT]: 'Archive Research in italian',
+		[Language.ES]: 'Archive Research in spanish'
+	},
+	[ProjectType.BIBLIOGRAPHY_BUILD]: {
+		[Language.EN]: 'Bibliography Build',
+		[Language.FR]: 'Construction de bibliographie',
+		[Language.IT]: 'Bibliography Build in italian',
+		[Language.ES]: 'Bibliography Build in spanish'
+	},
+	[ProjectType.CATALOG_RESEARCH]: {
+		[Language.EN]: 'Catalog Research',
+		[Language.FR]: 'Recherche de catalogue',
+		[Language.IT]: 'Catalog Research in italian',
+		[Language.ES]: 'Catalog Research in spanish'
+	},
+	[ProjectType.COLLECTION_ACCESS]: {
+		[Language.EN]: 'Collection Access',
+		[Language.FR]: 'Accès à la collection',
+		[Language.IT]: 'Collection Access in italian',
+		[Language.ES]: 'Collection Access in spanish'
+	},
+	[ProjectType.METADATA_ENTRY]: {
+		[Language.EN]: 'Metadata Entry',
+		[Language.FR]: 'Saisie de métadonnées',
+		[Language.IT]: 'Metadata Entry in italian',
+		[Language.ES]: 'Metadata Entry in spanish'
+	},
+	[ProjectType.RESEARCH_ASSISTANCE]: {
+		[Language.EN]: 'Research Assistance',
+		[Language.FR]: 'Assistance à la recherche',
+		[Language.IT]: 'Research Assistance in italian',
+		[Language.ES]: 'Research Assistance in spanish'
+	},
+	[ProjectType.PUBLIC_TOUR]: {
+		[Language.EN]: 'Public Tour',
+		[Language.FR]: 'Visite guidée publique',
+		[Language.IT]: 'Public Tour in italian',
+		[Language.ES]: 'Public Tour in spanish'
+	},
+	[ProjectType.GUIDED_VISIT]: {
+		[Language.EN]: 'Guided Visit',
+		[Language.FR]: 'Visite guidée',
+		[Language.IT]: 'Guided Visit in italian',
+		[Language.ES]: 'Guided Visit in spanish'
+	},
+	[ProjectType.AUDIENCE_EDUCATION]: {
+		[Language.EN]: 'Audience Education',
+		[Language.FR]: 'Éducation du public',
+		[Language.IT]: 'Audience Education in italian',
+		[Language.ES]: 'Audience Education in spanish'
+	},
+	[ProjectType.CULTURAL_OUTREACH_SESSION]: {
+		[Language.EN]: 'Cultural Outreach Session',
+		[Language.FR]: 'Session de sensibilisation culturelle',
+		[Language.IT]: 'Cultural Outreach Session in italian',
+		[Language.ES]: 'Cultural Outreach Session in spanish'
+	},
+	[ProjectType.OUTREACH_IN_SCHOOLS]: {
+		[Language.EN]: 'Outreach in Schools',
+		[Language.FR]: 'Sensibilisation dans les écoles',
+		[Language.IT]: 'Outreach in Schools in italian',
+		[Language.ES]: 'Outreach in Schools in spanish'
+	},
+	[ProjectType.WORKSHOP_DESIGN_AND_FACILITATION]: {
+		[Language.EN]: 'Workshop Design and Facilitation',
+		[Language.FR]: "Conception et facilitation d'ateliers",
+		[Language.IT]: 'Workshop Design and Facilitation in italian',
+		[Language.ES]: 'Workshop Design and Facilitation in spanish'
+	},
+	[ProjectType.PERFORMANCE]: {
+		[Language.EN]: 'Performance',
+		[Language.FR]: 'Performance',
+		[Language.IT]: 'Performance in italian',
+		[Language.ES]: 'Performance in spanish'
+	},
+	[ProjectType.EVENT]: {
+		[Language.EN]: 'Event',
+		[Language.FR]: 'Événement',
+		[Language.IT]: 'Event in italian',
+		[Language.ES]: 'Event in spanish'
+	},
+	[ProjectType.VIDEO_WORK]: {
+		[Language.EN]: 'Video Work',
+		[Language.FR]: 'Œuvre vidéo',
+		[Language.IT]: 'Video Work in italian',
+		[Language.ES]: 'Video Work in spanish'
+	},
+	[ProjectType.SCREENING]: {
+		[Language.EN]: 'Screening',
+		[Language.FR]: 'Projection',
+		[Language.IT]: 'Screening in italian',
+		[Language.ES]: 'Screening in spanish'
+	},
+	[ProjectType.PODCAST]: {
+		[Language.EN]: 'Podcast',
+		[Language.FR]: 'Podcast',
+		[Language.IT]: 'Podcast in italian',
+		[Language.ES]: 'Podcast in spanish'
+	},
+	[ProjectType.ARCHIVE]: {
+		[Language.EN]: 'Archive',
+		[Language.FR]: 'Archive',
+		[Language.IT]: 'Archive in italian',
+		[Language.ES]: 'Archive in spanish'
+	},
+	[ProjectType.DIGITAL_NEW_MEDIA_WORK]: {
+		[Language.EN]: 'Digital/New Media Work',
+		[Language.FR]: 'Œuvre numérique/nouveaux médias',
+		[Language.IT]: 'Digital/New Media Work in italian',
+		[Language.ES]: 'Digital/New Media Work in spanish'
+	},
+	[ProjectType.SCULPTURE]: {
+		[Language.EN]: 'Sculpture',
+		[Language.FR]: 'Sculpture',
+		[Language.IT]: 'Sculpture in italian',
+		[Language.ES]: 'Sculpture in spanish'
+	},
+	[ProjectType.PAINTING]: {
+		[Language.EN]: 'Painting',
+		[Language.FR]: 'Peinture',
+		[Language.IT]: 'Painting in italian',
+		[Language.ES]: 'Painting in spanish'
+	},
+	[ProjectType.INSTALLATION]: {
+		[Language.EN]: 'Installation',
+		[Language.FR]: 'Installation',
+		[Language.IT]: 'Installation in italian',
+		[Language.ES]: 'Installation in spanish'
+	},
+	[ProjectType.TECHNICAL_SETUP]: {
+		[Language.EN]: 'Technical Setup',
+		[Language.FR]: 'Installation technique',
+		[Language.IT]: 'Technical Setup in italian',
+		[Language.ES]: 'Technical Setup in spanish'
+	},
+	[ProjectType.PROJECT_COORDINATION]: {
+		[Language.EN]: 'Project Coordination',
+		[Language.FR]: 'Coordination de projet',
+		[Language.IT]: 'Project Coordination in italian',
+		[Language.ES]: 'Project Coordination in spanish'
+	},
+	[ProjectType.SUPPORT_AND_CONSULTING]: {
+		[Language.EN]: 'Support and Consulting',
+		[Language.FR]: 'Soutien et conseil',
+		[Language.IT]: 'Support and Consulting in italian',
+		[Language.ES]: 'Support and Consulting in spanish'
+	},
+	[ProjectType.TOUR_PLANNING]: {
+		[Language.EN]: 'Tour Planning',
+		[Language.FR]: 'Planification de tournée',
+		[Language.IT]: 'Tour Planning in italian',
+		[Language.ES]: 'Tour Planning in spanish'
+	},
+	[ProjectType.SCHOOL_INTERVENTION]: {
+		[Language.EN]: 'School Intervention',
+		[Language.FR]: 'Intervention scolaire',
+		[Language.IT]: 'School Intervention in italian',
+		[Language.ES]: 'School Intervention in spanish'
+	},
+	[ProjectType.CONFERENCE_MODERATION]: {
+		[Language.EN]: 'Conference Moderation',
+		[Language.FR]: 'Modération de conférence',
+		[Language.IT]: 'Conference Moderation in italian',
+		[Language.ES]: 'Conference Moderation in spanish'
+	},
+	[ProjectType.EDUCATIONAL_RESOURCE_WRITING]: {
+		[Language.EN]: 'Educational Resource Writing',
+		[Language.FR]: 'Rédaction de ressources éducatives',
+		[Language.IT]: 'Educational Resource Writing in italian',
+		[Language.ES]: 'Educational Resource Writing in spanish'
+	},
+	[ProjectType.MEDIATION_TEXT]: {
+		[Language.EN]: 'Mediation Text',
+		[Language.FR]: 'Texte de médiation',
+		[Language.IT]: 'Mediation Text in italian',
+		[Language.ES]: 'Mediation Text in spanish'
+	},
+	[ProjectType.DEVELOPMENT_OF_MEDIATION_TOOLS]: {
+		[Language.EN]: 'Development of Mediation Tools',
+		[Language.FR]: "Développement d'outils de médiation",
+		[Language.IT]: 'Development of Mediation Tools in italian',
+		[Language.ES]: 'Development of Mediation Tools in spanish'
+	},
+	[ProjectType.OUTREACH_PROJECT_PLANNING]: {
+		[Language.EN]: 'Outreach Project Planning',
+		[Language.FR]: 'Planification de projet de sensibilisation',
+		[Language.IT]: 'Outreach Project Planning in italian',
+		[Language.ES]: 'Outreach Project Planning in spanish'
+	},
+	[ProjectType.RECEPTION_AND_SUPPORT_FOR_GROUP_VISITS]: {
+		[Language.EN]: 'Reception and Support for Group Visits',
+		[Language.FR]: 'Accueil et soutien pour les visites de groupe',
+		[Language.IT]: 'Reception and Support for Group Visits in italian',
+		[Language.ES]: 'Reception and Support for Group Visits in spanish'
+	},
+	[ProjectType.MEDIATOR_PEER_TRAINING]: {
+		[Language.EN]: 'Mediator Peer Training',
+		[Language.FR]: 'Formation de pairs médiateurs',
+		[Language.IT]: 'Mediator Peer Training in italian',
+		[Language.ES]: 'Mediator Peer Training in spanish'
+	},
+	[ProjectType.EDUCATIONAL_COORDINATION]: {
+		[Language.EN]: 'Educational Coordination',
+		[Language.FR]: 'Coordination éducative',
+		[Language.IT]: 'Educational Coordination in italian',
+		[Language.ES]: 'Educational Coordination in spanish'
+	},
+	[ProjectType.COMMUNITY_WORKSHOP]: {
+		[Language.EN]: 'Community Workshop',
+		[Language.FR]: 'Atelier communautaire',
+		[Language.IT]: 'Community Workshop in italian',
+		[Language.ES]: 'Community Workshop in spanish'
+	},
+	[ProjectType.VISITOR_SUPPORT]: {
+		[Language.EN]: 'Visitor Support',
+		[Language.FR]: 'Soutien aux visiteurs',
+		[Language.IT]: 'Visitor Support in italian',
+		[Language.ES]: 'Visitor Support in spanish'
+	},
+	[ProjectType.FRONT_OF_HOUSE]: {
+		[Language.EN]: 'Front of House',
+		[Language.FR]: 'Accueil',
+		[Language.IT]: 'Front of House in italian',
+		[Language.ES]: 'Front of House in spanish'
+	},
+	[ProjectType.TICKETING_SERVICE]: {
+		[Language.EN]: 'Ticketing Service',
+		[Language.FR]: 'Service de billetterie',
+		[Language.IT]: 'Ticketing Service in italian',
+		[Language.ES]: 'Ticketing Service in spanish'
+	},
+	[ProjectType.HOSTING_DUTIES]: {
+		[Language.EN]: 'Hosting Duties',
+		[Language.FR]: "Tâches d'accueil",
+		[Language.IT]: 'Hosting Duties in italian',
+		[Language.ES]: 'Hosting Duties in spanish'
+	},
+	[ProjectType.ARCHIVE_RETRIEVAL]: {
+		[Language.EN]: 'Archive Retrieval',
+		[Language.FR]: "Récupération d'archives",
+		[Language.IT]: 'Archive Retrieval in italian',
+		[Language.ES]: 'Archive Retrieval in spanish'
+	},
+	[ProjectType.EXHIBITION_PRODUCTION]: {
+		[Language.EN]: 'Exhibition Production',
+		[Language.FR]: "Production d'exposition",
+		[Language.IT]: 'Exhibition Production in italian',
+		[Language.ES]: 'Exhibition Production in spanish'
+	},
+	[ProjectType.EVENT_PRODUCTION]: {
+		[Language.EN]: 'Event Production',
+		[Language.FR]: "Production d'événement",
+		[Language.IT]: 'Event Production in italian',
+		[Language.ES]: 'Event Production in spanish'
+	},
+	[ProjectType.RESIDENCY_COORDINATION]: {
+		[Language.EN]: 'Residency Coordination',
+		[Language.FR]: 'Coordination de résidence',
+		[Language.IT]: 'Residency Coordination in italian',
+		[Language.ES]: 'Residency Coordination in spanish'
+	},
+	[ProjectType.PROGRAMME_COORDINATION]: {
+		[Language.EN]: 'Programme Coordination',
+		[Language.FR]: 'Coordination de programme',
+		[Language.IT]: 'Programme Coordination in italian',
+		[Language.ES]: 'Programme Coordination in spanish'
+	},
+	[ProjectType.COLLECTION_MANAGEMENT]: {
+		[Language.EN]: 'Collection Management',
+		[Language.FR]: 'Gestion de collection',
+		[Language.IT]: 'Collection Management in italian',
+		[Language.ES]: 'Collection Management in spanish'
+	},
+	[ProjectType.ARTIST_LIAISON]: {
+		[Language.EN]: 'Artist Liaison',
+		[Language.FR]: 'Liaison avec les artistes',
+		[Language.IT]: 'Artist Liaison in italian',
+		[Language.ES]: 'Artist Liaison in spanish'
+	},
+	[ProjectType.BUDGET_MANAGEMENT]: {
+		[Language.EN]: 'Budget Management',
+		[Language.FR]: 'Gestion budgétaire',
+		[Language.IT]: 'Budget Management in italian',
+		[Language.ES]: 'Budget Management in spanish'
+	},
+	[ProjectType.GRANT_WRITING]: {
+		[Language.EN]: 'Grant Writing',
+		[Language.FR]: 'Rédaction de subventions',
+		[Language.IT]: 'Grant Writing in italian',
+		[Language.ES]: 'Grant Writing in spanish'
+	},
+	[ProjectType.PARTNERSHIP_DEVELOPMENT]: {
+		[Language.EN]: 'Partnership Development',
+		[Language.FR]: 'Développement de partenariats',
+		[Language.IT]: 'Partnership Development in italian',
+		[Language.ES]: 'Partnership Development in spanish'
+	},
+	[ProjectType.VENDOR_MANAGEMENT]: {
+		[Language.EN]: 'Vendor Management',
+		[Language.FR]: 'Gestion des fournisseurs',
+		[Language.IT]: 'Vendor Management in italian',
+		[Language.ES]: 'Vendor Management in spanish'
+	},
+	[ProjectType.TEAM_MANAGEMENT]: {
+		[Language.EN]: 'Team Management',
+		[Language.FR]: "Gestion d'équipe",
+		[Language.IT]: 'Team Management in italian',
+		[Language.ES]: 'Team Management in spanish'
+	},
+	[ProjectType.HR_AND_RECRUITMENT]: {
+		[Language.EN]: 'HR and Recruitment',
+		[Language.FR]: 'Ressources humaines et recrutement',
+		[Language.IT]: 'HR and Recruitment in italian',
+		[Language.ES]: 'HR and Recruitment in spanish'
+	},
+	[ProjectType.SCHEDULING_AND_PLANNING]: {
+		[Language.EN]: 'Scheduling and Planning',
+		[Language.FR]: 'Planification et organisation',
+		[Language.IT]: 'Scheduling and Planning in italian',
+		[Language.ES]: 'Scheduling and Planning in spanish'
+	},
+	[ProjectType.REPORTING]: {
+		[Language.EN]: 'Reporting',
+		[Language.FR]: 'Rapports',
+		[Language.IT]: 'Reporting in italian',
+		[Language.ES]: 'Reporting in spanish'
+	},
+	[ProjectType.CONTRACT_DRAFTING]: {
+		[Language.EN]: 'Contract Drafting',
+		[Language.FR]: 'Rédaction de contrats',
+		[Language.IT]: 'Contract Drafting in italian',
+		[Language.ES]: 'Contract Drafting in spanish'
+	},
+	[ProjectType.STRATEGIC_PLANNING]: {
+		[Language.EN]: 'Strategic Planning',
+		[Language.FR]: 'Planification stratégique',
+		[Language.IT]: 'Strategic Planning in italian',
+		[Language.ES]: 'Strategic Planning in spanish'
+	},
+	[ProjectType.ADMINISTRATIVE_SUPPORT]: {
+		[Language.EN]: 'Administrative Support',
+		[Language.FR]: 'Soutien administratif',
+		[Language.IT]: 'Administrative Support in italian',
+		[Language.ES]: 'Administrative Support in spanish'
+	},
+	[ProjectType.ARTISTIC_SUPPORT]: {
+		[Language.EN]: 'Artistic Support',
+		[Language.FR]: 'Soutien artistique',
+		[Language.IT]: 'Artistic Support in italian',
+		[Language.ES]: 'Artistic Support in spanish'
+	},
+	[ProjectType.PUBLICATION]: {
+		[Language.EN]: 'Publication',
+		[Language.FR]: 'Publication',
+		[Language.IT]: 'Publication in italian',
+		[Language.ES]: 'Publication in spanish'
+	},
+	[ProjectType.PHOTO_DOCUMENTATION]: {
+		[Language.EN]: 'Photo Documentation',
+		[Language.FR]: 'Documentation photographique',
+		[Language.IT]: 'Photo Documentation in italian',
+		[Language.ES]: 'Photo Documentation in spanish'
+	},
+	[ProjectType.VIDEO_CAPTURE]: {
+		[Language.EN]: 'Video Capture',
+		[Language.FR]: 'Captation vidéo',
+		[Language.IT]: 'Video Capture in italian',
+		[Language.ES]: 'Video Capture in spanish'
+	},
+	[ProjectType.CONTENT_CREATION]: {
+		[Language.EN]: 'Content Creation',
+		[Language.FR]: 'Création de contenu',
+		[Language.IT]: 'Content Creation in italian',
+		[Language.ES]: 'Content Creation in spanish'
+	},
+	[ProjectType.SOCIAL_STRATEGY]: {
+		[Language.EN]: 'Social Strategy',
+		[Language.FR]: 'Stratégie sociale',
+		[Language.IT]: 'Social Strategy in italian',
+		[Language.ES]: 'Social Strategy in spanish'
+	},
+	[ProjectType.DIGITAL_MANAGEMENT]: {
+		[Language.EN]: 'Digital Management',
+		[Language.FR]: 'Gestion numérique',
+		[Language.IT]: 'Digital Management in italian',
+		[Language.ES]: 'Digital Management in spanish'
+	},
+	[ProjectType.PRESS_OUTREACH]: {
+		[Language.EN]: 'Press Outreach',
+		[Language.FR]: 'Sensibilisation de la presse',
+		[Language.IT]: 'Press Outreach in italian',
+		[Language.ES]: 'Press Outreach in spanish'
+	},
+	[ProjectType.MARKETING_CAMPAIGN]: {
+		[Language.EN]: 'Marketing Campaign',
+		[Language.FR]: 'Campagne de marketing',
+		[Language.IT]: 'Marketing Campaign in italian',
+		[Language.ES]: 'Marketing Campaign in spanish'
+	},
+	[ProjectType.AUDIENCE_STRATEGY]: {
+		[Language.EN]: 'Audience Strategy',
+		[Language.FR]: "Stratégie d'audience",
+		[Language.IT]: 'Audience Strategy in italian',
+		[Language.ES]: 'Audience Strategy in spanish'
+	},
+	[ProjectType.COMMUNITY_STRATEGY]: {
+		[Language.EN]: 'Community Strategy',
+		[Language.FR]: 'Stratégie communautaire',
+		[Language.IT]: 'Community Strategy in italian',
+		[Language.ES]: 'Community Strategy in spanish'
+	},
+	[ProjectType.EXHIBITION]: {
+		[Language.EN]: 'Exhibition',
+		[Language.FR]: 'Exposition',
+		[Language.IT]: 'Exhibition in italian',
+		[Language.ES]: 'Exhibition in spanish'
+	},
+	[ProjectType.DIGITAL_MIGRATION]: {
+		[Language.EN]: 'Digital Migration',
+		[Language.FR]: 'Migration numérique',
+		[Language.IT]: 'Digital Migration in italian',
+		[Language.ES]: 'Digital Migration in spanish'
+	},
+	[ProjectType.ARCHIVE_DIGITISATION]: {
+		[Language.EN]: 'Archive Digitisation',
+		[Language.FR]: "Numérisation d'archives",
+		[Language.IT]: 'Archive Digitisation in italian',
+		[Language.ES]: 'Archive Digitisation in spanish'
+	},
+	[ProjectType.SYSTEM_DEPLOYMENT]: {
+		[Language.EN]: 'System Deployment',
+		[Language.FR]: 'Déploiement de système',
+		[Language.IT]: 'System Deployment in italian',
+		[Language.ES]: 'System Deployment in spanish'
+	},
+	[ProjectType.BUILDING_MAINTENANCE]: {
+		[Language.EN]: 'Building Maintenance',
+		[Language.FR]: 'Maintenance du bâtiment',
+		[Language.IT]: 'Building Maintenance in italian',
+		[Language.ES]: 'Building Maintenance in spanish'
+	},
+	[ProjectType.SECURITY_OPERATIONS]: {
+		[Language.EN]: 'Security Operations',
+		[Language.FR]: 'Opérations de sécurité',
+		[Language.IT]: 'Security Operations in italian',
+		[Language.ES]: 'Security Operations in spanish'
+	},
+	[ProjectType.FACILITIES_MANAGEMENT]: {
+		[Language.EN]: 'Facilities Management',
+		[Language.FR]: 'Gestion des installations',
+		[Language.IT]: 'Facilities Management in italian',
+		[Language.ES]: 'Facilities Management in spanish'
+	},
+	[ProjectType.IT_SUPPORT]: {
+		[Language.EN]: 'IT Support',
+		[Language.FR]: 'Support informatique',
+		[Language.IT]: 'IT Support in italian',
+		[Language.ES]: 'IT Support in spanish'
+	},
+	[ProjectType.SYSTEMS_ADMINISTRATION]: {
+		[Language.EN]: 'Systems Administration',
+		[Language.FR]: 'Administration des systèmes',
+		[Language.IT]: 'Systems Administration in italian',
+		[Language.ES]: 'Systems Administration in spanish'
+	},
+	[ProjectType.NETWORK_MANAGEMENT]: {
+		[Language.EN]: 'Network Management',
+		[Language.FR]: 'Gestion de réseau',
+		[Language.IT]: 'Network Management in italian',
+		[Language.ES]: 'Network Management in spanish'
+	},
+	[ProjectType.HARDWARE_INSTALLATION]: {
+		[Language.EN]: 'Hardware Installation',
+		[Language.FR]: 'Installation de matériel',
+		[Language.IT]: 'Hardware Installation in italian',
+		[Language.ES]: 'Hardware Installation in spanish'
+	},
+	[ProjectType.SOFTWARE_DEPLOYMENT]: {
+		[Language.EN]: 'Software Deployment',
+		[Language.FR]: 'Déploiement de logiciel',
+		[Language.IT]: 'Software Deployment in italian',
+		[Language.ES]: 'Software Deployment in spanish'
+	},
+	[ProjectType.DATABASE_MANAGEMENT]: {
+		[Language.EN]: 'Database Management',
+		[Language.FR]: 'Gestion de base de données',
+		[Language.IT]: 'Database Management in italian',
+		[Language.ES]: 'Database Management in spanish'
+	},
+	[ProjectType.DATA_ENTRY_AND_CATALOGUING]: {
+		[Language.EN]: 'Data Entry and Cataloguing',
+		[Language.FR]: 'Saisie de données et catalogage',
+		[Language.IT]: 'Data Entry and Cataloguing in italian',
+		[Language.ES]: 'Data Entry and Cataloguing in spanish'
+	},
+	[ProjectType.COLLECTION_DIGITISATION]: {
+		[Language.EN]: 'Collection Digitisation',
+		[Language.FR]: 'Numérisation de collection',
+		[Language.IT]: 'Collection Digitisation in italian',
+		[Language.ES]: 'Collection Digitisation in spanish'
+	},
+	[ProjectType.USER_TRAINING]: {
+		[Language.EN]: 'User Training',
+		[Language.FR]: 'Formation des utilisateurs',
+		[Language.IT]: 'User Training in italian',
+		[Language.ES]: 'User Training in spanish'
+	},
+	[ProjectType.TECHNICAL_SUPPORT]: {
+		[Language.EN]: 'Technical Support',
+		[Language.FR]: 'Support technique',
+		[Language.IT]: 'Technical Support in italian',
+		[Language.ES]: 'Technical Support in spanish'
+	},
+	[ProjectType.FINANCIAL_REPORTING]: {
+		[Language.EN]: 'Financial Reporting',
+		[Language.FR]: 'Rapports financiers',
+		[Language.IT]: 'Financial Reporting in italian',
+		[Language.ES]: 'Financial Reporting in spanish'
+	},
+	[ProjectType.BUDGETING]: {
+		[Language.EN]: 'Budgeting',
+		[Language.FR]: 'Budgétisation',
+		[Language.IT]: 'Budgeting in italian',
+		[Language.ES]: 'Budgeting in spanish'
+	},
+	[ProjectType.INVOICE_MANAGEMENT]: {
+		[Language.EN]: 'Invoice Management',
+		[Language.FR]: 'Gestion des factures',
+		[Language.IT]: 'Invoice Management in italian',
+		[Language.ES]: 'Invoice Management in spanish'
+	},
+	[ProjectType.TAX_ADVISORY]: {
+		[Language.EN]: 'Tax Advisory',
+		[Language.FR]: 'Conseil fiscal',
+		[Language.IT]: 'Tax Advisory in italian',
+		[Language.ES]: 'Tax Advisory in spanish'
+	},
+	[ProjectType.LEGAL_ADVISORY]: {
+		[Language.EN]: 'Legal Advisory',
+		[Language.FR]: 'Conseil juridique',
+		[Language.IT]: 'Legal Advisory in italian',
+		[Language.ES]: 'Legal Advisory in spanish'
+	},
+	[ProjectType.STRATEGIC_ADVISORY]: {
+		[Language.EN]: 'Strategic Advisory',
+		[Language.FR]: 'Conseil stratégique',
+		[Language.IT]: 'Strategic Advisory in italian',
+		[Language.ES]: 'Strategic Advisory in spanish'
+	},
+	[ProjectType.INTELLECTUAL_PROPERTY]: {
+		[Language.EN]: 'Intellectual Property',
+		[Language.FR]: 'Propriété intellectuelle',
+		[Language.IT]: 'Intellectual Property in italian',
+		[Language.ES]: 'Intellectual Property in spanish'
+	},
+	[ProjectType.INSURANCE_AND_RISK]: {
+		[Language.EN]: 'Insurance and Risk',
+		[Language.FR]: 'Assurance et risque',
+		[Language.IT]: 'Insurance and Risk in italian',
+		[Language.ES]: 'Insurance and Risk in spanish'
+	}
+};
+
+//ARTMAKING / WRITING / CURATION
+export const projectTypeGroupOne = [
+	ProjectType.GROUP_EXHIBITION,
+	ProjectType.SOLO_EXHIBITION,
+	ProjectType.FILM_SCREENING,
+	ProjectType.PUBLIC_READING,
+	ProjectType.CONFERENCE,
+	ProjectType.PUBLIC_TALK,
+	ProjectType.CURATORIAL_TALK,
+	ProjectType.VISITING_ARTIST_TUTORIAL,
+	ProjectType.VISITING_ARTIST_TALK,
+	ProjectType.LIVE_PERFORMANCE,
+	ProjectType.COMMISSIONED_PERFORMANCE,
+	ProjectType.COMMISSIONED_WORK,
+	ProjectType.REPLICA,
+	ProjectType.STUDIO_VISIT,
+	ProjectType.CATALOG_TEXT,
+	ProjectType.PRESENTATION_TEXT,
+	ProjectType.CRITICAL_REVIEW,
+	ProjectType.MONOGRAPHIC_ESSAY,
+	ProjectType.ARTWORK_WALL_TEXT,
+	ProjectType.CURATORIAL_TEXT,
+	ProjectType.LITERARY_COMMISSION,
+	ProjectType.POETRY_COMMISSION,
+	ProjectType.TEXT_REPRINT,
+	ProjectType.PODCAST_FEATURE,
+	ProjectType.PODCAST_COMMISSION,
+	ProjectType.SKILLS_WORKSHOP,
+	ProjectType.PANEL_DISCUSSION_PARTICIPATION,
+	ProjectType.PANEL_DISCUSSION_MODERATION,
+	ProjectType.EDITING_PROJECT,
+	ProjectType.CATALOG_TRANSLATION,
+	ProjectType.TEXT_TRANSLATION,
+	ProjectType.LITERARY_TRANSLATION,
+	ProjectType.POETRY_TRANSLATION,
+	ProjectType.SUBTITLING,
+	ProjectType.COPYWRITING_TASK,
+	ProjectType.GHOSTWRITING_PROJECT,
+	ProjectType.ARCHIVE_BUILD,
+	ProjectType.ARCHIVE_RESEARCH,
+	ProjectType.BIBLIOGRAPHY_BUILD,
+	ProjectType.CATALOG_RESEARCH,
+	ProjectType.COLLECTION_ACCESS,
+	ProjectType.METADATA_ENTRY,
+	ProjectType.RESEARCH_ASSISTANCE,
+	ProjectType.PUBLIC_TOUR,
+	ProjectType.GUIDED_VISIT,
+	ProjectType.AUDIENCE_EDUCATION,
+	ProjectType.CULTURAL_OUTREACH_SESSION,
+	ProjectType.OUTREACH_IN_SCHOOLS,
+	ProjectType.WORKSHOP_DESIGN_AND_FACILITATION
+];
+
+//PRODUCTION
+export const projectTypeGroupTwo = [
+	ProjectType.SOLO_EXHIBITION,
+	ProjectType.GROUP_EXHIBITION,
+	ProjectType.PERFORMANCE,
+	ProjectType.EVENT,
+	ProjectType.COMMISSIONED_WORK,
+	ProjectType.VIDEO_WORK,
+	ProjectType.SCREENING,
+	ProjectType.PODCAST,
+	ProjectType.ARCHIVE,
+	ProjectType.DIGITAL_NEW_MEDIA_WORK,
+	ProjectType.SCULPTURE,
+	ProjectType.PAINTING,
+	ProjectType.INSTALLATION,
+	ProjectType.TECHNICAL_SETUP,
+	ProjectType.PROJECT_COORDINATION,
+	ProjectType.SUPPORT_AND_CONSULTING
+];
+
+//MEDIATION / HOSPITALITY
+export const projectTypeGroupThree = [
+	ProjectType.TOUR_PLANNING,
+	ProjectType.PUBLIC_TOUR,
+	ProjectType.GUIDED_VISIT,
+	ProjectType.AUDIENCE_EDUCATION,
+	ProjectType.CULTURAL_OUTREACH_SESSION,
+	ProjectType.SCHOOL_INTERVENTION,
+	ProjectType.CONFERENCE_MODERATION,
+	ProjectType.EDUCATIONAL_RESOURCE_WRITING,
+	ProjectType.MEDIATION_TEXT,
+	ProjectType.DEVELOPMENT_OF_MEDIATION_TOOLS,
+	ProjectType.OUTREACH_PROJECT_PLANNING,
+	ProjectType.RECEPTION_AND_SUPPORT_FOR_GROUP_VISITS,
+	ProjectType.MEDIATOR_PEER_TRAINING,
+	ProjectType.EDUCATIONAL_COORDINATION,
+	ProjectType.COMMUNITY_WORKSHOP,
+	ProjectType.VISITOR_SUPPORT,
+	ProjectType.FRONT_OF_HOUSE,
+	ProjectType.TICKETING_SERVICE,
+	ProjectType.HOSTING_DUTIES,
+	ProjectType.BIBLIOGRAPHY_BUILD,
+	ProjectType.CATALOG_RESEARCH,
+	ProjectType.ARCHIVE_RETRIEVAL,
+	ProjectType.COLLECTION_ACCESS,
+	ProjectType.RESEARCH_ASSISTANCE,
+	ProjectType.PROJECT_COORDINATION,
+	ProjectType.SUPPORT_AND_CONSULTING
+];
+
+//MANAGEMENT / ADMINISTRATION
+export const projectTypeGroupFour = [
+	ProjectType.SOLO_EXHIBITION,
+	ProjectType.GROUP_EXHIBITION,
+	ProjectType.PERFORMANCE,
+	ProjectType.EVENT,
+	ProjectType.COMMISSIONED_WORK,
+	ProjectType.SCREENING,
+	ProjectType.PODCAST,
+	ProjectType.ARCHIVE,
+	ProjectType.INSTALLATION,
+	ProjectType.TECHNICAL_SETUP,
+	ProjectType.EXHIBITION_PRODUCTION,
+	ProjectType.EVENT_PRODUCTION,
+	ProjectType.RESIDENCY_COORDINATION,
+	ProjectType.PROGRAMME_COORDINATION,
+	ProjectType.COLLECTION_MANAGEMENT,
+	ProjectType.ARTIST_LIAISON,
+	ProjectType.BUDGET_MANAGEMENT,
+	ProjectType.GRANT_WRITING,
+	ProjectType.PARTNERSHIP_DEVELOPMENT,
+	ProjectType.VENDOR_MANAGEMENT,
+	ProjectType.TEAM_MANAGEMENT,
+	ProjectType.HR_AND_RECRUITMENT,
+	ProjectType.SCHEDULING_AND_PLANNING,
+	ProjectType.REPORTING,
+	ProjectType.CONTRACT_DRAFTING,
+	ProjectType.STRATEGIC_PLANNING,
+	ProjectType.ADMINISTRATIVE_SUPPORT,
+	ProjectType.ARTISTIC_SUPPORT,
+	ProjectType.PROJECT_COORDINATION,
+	ProjectType.SUPPORT_AND_CONSULTING
+];
+
+//COMMUNICATION / DOCUMENTATION
+export const projectTypeGroupFive = [
+	ProjectType.SOLO_EXHIBITION,
+	ProjectType.GROUP_EXHIBITION,
+	ProjectType.PERFORMANCE,
+	ProjectType.EVENT,
+	ProjectType.PUBLICATION,
+	ProjectType.PHOTO_DOCUMENTATION,
+	ProjectType.VIDEO_CAPTURE,
+	ProjectType.CONTENT_CREATION,
+	ProjectType.SOCIAL_STRATEGY,
+	ProjectType.DIGITAL_MANAGEMENT,
+	ProjectType.PRESS_OUTREACH,
+	ProjectType.MARKETING_CAMPAIGN,
+	ProjectType.AUDIENCE_STRATEGY,
+	ProjectType.COMMUNITY_STRATEGY,
+	ProjectType.PROJECT_COORDINATION,
+	ProjectType.SUPPORT_AND_CONSULTING
+];
+
+// OPERATIONS / IT
+export const projectTypeGroupSix = [
+	ProjectType.EXHIBITION,
+	ProjectType.PERFORMANCE,
+	ProjectType.EVENT,
+	ProjectType.DIGITAL_MIGRATION,
+	ProjectType.ARCHIVE_DIGITISATION,
+	ProjectType.SYSTEM_DEPLOYMENT,
+	ProjectType.BUILDING_MAINTENANCE,
+	ProjectType.SECURITY_OPERATIONS,
+	ProjectType.FACILITIES_MANAGEMENT,
+	ProjectType.IT_SUPPORT,
+	ProjectType.SYSTEMS_ADMINISTRATION,
+	ProjectType.NETWORK_MANAGEMENT,
+	ProjectType.HARDWARE_INSTALLATION,
+	ProjectType.SOFTWARE_DEPLOYMENT,
+	ProjectType.DATABASE_MANAGEMENT,
+	ProjectType.DATA_ENTRY_AND_CATALOGUING,
+	ProjectType.COLLECTION_DIGITISATION,
+	ProjectType.USER_TRAINING,
+	ProjectType.TECHNICAL_SUPPORT
+];
+
+// LEGAL & FINANCE
+export const projectTypeGroupSeven = [
+	ProjectType.SOLO_EXHIBITION,
+	ProjectType.GROUP_EXHIBITION,
+	ProjectType.PERFORMANCE,
+	ProjectType.EVENT,
+	ProjectType.PUBLICATION,
+	ProjectType.CONTRACT_DRAFTING,
+	ProjectType.GRANT_WRITING,
+	ProjectType.FINANCIAL_REPORTING,
+	ProjectType.BUDGETING,
+	ProjectType.INVOICE_MANAGEMENT,
+	ProjectType.TAX_ADVISORY,
+	ProjectType.LEGAL_ADVISORY,
+	ProjectType.STRATEGIC_ADVISORY,
+	ProjectType.INTELLECTUAL_PROPERTY,
+	ProjectType.INSURANCE_AND_RISK,
+	ProjectType.PROJECT_COORDINATION,
+	ProjectType.SUPPORT_AND_CONSULTING
+];
 
 export const jobExperienceOptions = {
 	'0_EXPERIENCE': '0',

@@ -1,10 +1,5 @@
 <script lang="ts">
 	import {
-		jobExperienceOptions,
-		compensationFrequencyOptions,
-		contractTypeOptions
-	} from './../../staticContent.ts';
-	import {
 		countryOptions,
 		countryShortCode,
 		AddlCompItem,
@@ -16,7 +11,11 @@
 		fieldLabels,
 		numEmployeesOptions,
 		jobObtainedViaOptions,
-		contractLengthUnitOptions
+		contractLengthUnitOptions,
+		jobExperienceOptions,
+		compensationFrequencyOptions,
+		contractTypeOptions,
+		projectTypeOptions
 	} from '$lib/staticContent';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 
@@ -48,6 +47,13 @@
 				<div class="font-mono text-xs">
 					{#if row.job_title}
 						<div>{row.job_title}</div>
+					{/if}
+					{#if row.project_type}
+						<div class="pt-2.75">
+							{#if projectTypeOptions[row.project_type?.value]}
+								{projectTypeOptions[row.project_type.value][siteState.language]}
+							{/if}
+						</div>
 					{/if}
 					{#if row.job_details}
 						<div>{row.job_details}</div>

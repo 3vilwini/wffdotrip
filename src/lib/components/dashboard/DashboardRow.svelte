@@ -11,7 +11,8 @@
 		currency,
 		contractLengthUnitOptions,
 		indexHeaderLabels,
-		countryIcons
+		countryIcons,
+		projectTypeOptions
 	} from '../../staticContent.ts';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 	import {
@@ -88,15 +89,17 @@
 					>
 						Delete
 					</button>
-					<div onclick={() => {
-						showDeleteModal = false;
-					}}
+					<div
+						onclick={() => {
+							showDeleteModal = false;
+						}}
 						class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 					>
 						Cancel
 					</div>
 				</form>
-				<div class="absolute top-4 right-4"
+				<div
+					class="absolute top-4 right-4"
 					onclick={() => {
 						showDeleteModal = false;
 					}}
@@ -108,13 +111,16 @@
 	</div>
 {/if}
 
-<div onclick={() => {
-				rowExpanded = !rowExpanded;
-			}} class=" cursor-pointer border-t pr-4 pl-8 font-mono text-xs leading-normal last:border-b">
+<div
+	onclick={() => {
+		rowExpanded = !rowExpanded;
+	}}
+	class=" cursor-pointer border-t pr-4 pl-8 font-mono text-xs leading-normal last:border-b"
+>
 	<div class="align-center flex justify-between gap-4 pt-1 pb-1.5">
-		<div class="flex items-center basis-1/4 gap-4">
+		<div class="flex basis-1/4 items-center gap-4">
 			{#if row.city && row.country}
-				<div class="flex w-6 h-8.5 text-center font-yarndings text-3xl leading-none">
+				<div class="flex h-8.5 w-6 text-center font-yarndings text-3xl leading-none">
 					{countryIcons[row.country.value]}
 				</div>
 				<div class="basis-1/2 pt-0.75">
@@ -133,13 +139,20 @@
 
 		<div class="flex basis-1/4 gap-2">
 			{#if row.worker_type}
-				<div class="pt-3 font-sans text-[17.25px] leading-3">
+				<div class="pt-2 font-sans text-[17.25px] leading-[1.2]">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
 			{#if row.job_title}
 				<div class="pt-2.75">
 					{row.job_title}
+				</div>
+			{/if}
+			{#if row.project_type}
+				<div class="pt-2.75">
+					{#if projectTypeOptions[row.project_type?.value]}
+						{projectTypeOptions[row.project_type.value][siteState.language]}
+					{/if}
 				</div>
 			{/if}
 		</div>
@@ -152,7 +165,9 @@
 
 		<div class="flex basis-1/5 justify-between">
 			{#if row.contract_type}
-				<div class="pt-2.75">{contractTypeOptions[row.contract_type.value][siteState.language]}</div>
+				<div class="pt-2.75">
+					{contractTypeOptions[row.contract_type.value][siteState.language]}
+				</div>
 			{/if}
 			{#if row.compensation_amount && row.compensation_frequency && row.country}
 				<div class="pt-2.75">
@@ -165,10 +180,7 @@
 				</div>
 			{/if}
 		</div>
-		<div
-
-			class="pt-2"
-		>
+		<div class="pt-2">
 			<div
 				class="relative h-4 w-4 {rowExpanded
 					? 'rotate-45'
@@ -189,13 +201,19 @@
 				<div class="basis-1/4">
 					<div class="flex gap-2">
 						<button
-							onclick={(e) => {e.stopImmediatePropagation(); showEditModal = true}}
+							onclick={(e) => {
+								e.stopImmediatePropagation();
+								showEditModal = true;
+							}}
 							class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 						>
 							Edit
 						</button>
 						<button
-							onclick={(e) => {e.stopImmediatePropagation(); showDeleteModal = true}}
+							onclick={(e) => {
+								e.stopImmediatePropagation();
+								showDeleteModal = true;
+							}}
 							class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 						>
 							Delete

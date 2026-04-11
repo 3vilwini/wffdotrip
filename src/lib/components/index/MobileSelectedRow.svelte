@@ -1,11 +1,4 @@
 <script lang="ts">
-	import DoubleArrowButton from './DoubleArrowButton.svelte';
-
-	import {
-		jobExperienceOptions,
-		compensationFrequencyOptions,
-		contractTypeOptions
-	} from './../../staticContent.ts';
 	import {
 		countryOptions,
 		countryShortCode,
@@ -18,7 +11,11 @@
 		fieldLabels,
 		numEmployeesOptions,
 		jobObtainedViaOptions,
-		contractLengthUnitOptions
+		contractLengthUnitOptions,
+		projectTypeOptions,
+		jobExperienceOptions,
+		compensationFrequencyOptions,
+		contractTypeOptions
 	} from '$lib/staticContent';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 
@@ -86,6 +83,14 @@ verified: true
 							{#if row.job_title}
 								<div>{row.job_title}</div>
 							{/if}
+							{#if row.project_type}
+								<div>
+									{#if projectTypeOptions[row.project_type?.value]}
+										{projectTypeOptions[row.project_type.value][siteState.language]}
+									{/if}
+								</div>
+							{/if}
+
 							{#if row.job_details}
 								<div>{row.job_details}</div>
 							{/if}

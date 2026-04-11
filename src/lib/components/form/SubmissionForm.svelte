@@ -21,7 +21,18 @@
 		getWorkerTypeHelpText,
 		jobExperienceOptions,
 		employerTypeOptions,
-		currency
+		getWorkerTypeSubgroup,
+		currency,
+		WorkerTypeSubgroup,
+		ProjectType,
+		projectTypeOptions,
+		projectTypeGroupOne,
+		projectTypeGroupTwo,
+		projectTypeGroupThree,
+		projectTypeGroupFour,
+		projectTypeGroupFive,
+		projectTypeGroupSix,
+		projectTypeGroupSeven
 	} from '$lib/staticContent';
 	import FormSectionHeader from './FormSectionHeader.svelte';
 	import { siteState } from '$lib/states.svelte';
@@ -41,6 +52,7 @@
 	let selectedContractType: ContractType | undefined = $state();
 	let selectedWorkerType: WorkerType | undefined = $state();
 	let selectedWorkerTypeHelpText = $derived(getWorkerTypeHelpText(selectedWorkerType));
+	let selectedWorkerTypeSubgroup = $derived(getWorkerTypeSubgroup(selectedWorkerType));
 	let disclaimerIsChecked = $state(false);
 
 	$inspect(disclaimerIsChecked);
@@ -74,7 +86,9 @@
 	<div class="flex flex-col gap-4 py-4">
 		<h1 class="text-center font-sans text-3xl">{formPage.formTitle[siteState.language]}</h1>
 		<div
-			class="grid {disclaimerIsChecked ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'} transition-[grid-template-rows]"
+			class="grid {disclaimerIsChecked
+				? 'grid-rows-[0fr]'
+				: 'grid-rows-[1fr]'} transition-[grid-template-rows]"
 		>
 			<div class="overflow-hidden">
 				<div class="flex flex-col gap-4">
@@ -159,21 +173,21 @@
 					</div>
 				</div>
 
-				<div class="my-8 flex gap-4">
+				<div class="my-8 flex w-full gap-4">
 					<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
 						b
 					</div>
 
-					<div role="presentation" onmouseenter={() => (siteState.currFormSection = 'employer')}>
+					<div
+						role="presentation"
+						onmouseenter={() => (siteState.currFormSection = 'employer')}
+						class="w-full"
+					>
 						<FormSectionHeader>
 							{formPage.employerSectionTitle[siteState.language]}
 						</FormSectionHeader>
-						<div class="flex flex-wrap gap-4">
-							<FormSelect
-								class="w-full sm:w-0 sm:basis-[calc(50%-0.5rem)]"
-								name="employer_type"
-								required
-							>
+						<div class="flex w-full flex-wrap gap-4">
+							<FormSelect class="w-full sm:basis-[calc(50%-0.5rem)]" name="employer_type" required>
 								<FormOption value="" isDefault
 									>{fieldLabels.employerType[siteState.language]}</FormOption
 								>
@@ -313,18 +327,75 @@
 								{/each}
 							</FormSelect>
 
-							<FormSimpleInput
-								name="job_title"
-								placeholder={fieldLabels.jobTitle[siteState.language]}
-								class="w-full sm:basis-[calc(50%-0.5rem)]"
-							/>
+							{#if selectedContractType}
+								{#if selectedContractType === ContractType.INDEPENDENT || selectedContractType === ContractType.FULLTIME_TEMP || selectedContractType === ContractType.PARTTIME_TEMP}
+									<FormSelect
+										name="project_type"
+										class="w-full sm:basis-[calc(50%-0.5rem)]"
+										required
+									>
+										<FormOption value="" isDefault
+											>{fieldLabels.projectType[siteState.language]}</FormOption
+										>
+										{#if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.CREATION || selectedWorkerTypeSubgroup === WorkerTypeSubgroup.WRITING || selectedWorkerTypeSubgroup === WorkerTypeSubgroup.CURATION}
+											{#each projectTypeGroupOne as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.PRODUCTION}
+											{#each projectTypeGroupTwo as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.MEDIATION_AND_HOSPITALITY}
+											{#each projectTypeGroupThree as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.MANAGEMENT_AND_ADMIN}
+											{#each projectTypeGroupFour as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.COMMUNICATION_AND_DOCUMENTATION}
+											{#each projectTypeGroupFive as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.OPERATIONS_AND_IT}
+											{#each projectTypeGroupSix as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.LEGAL_AND_FINANCE}
+											{#each projectTypeGroupSeven as projectType (projectType)}
+												<option value={projectType} class="pl-8 text-black">
+													{projectTypeOptions[projectType][siteState.language]}
+												</option>
+											{/each}
+										{/if}
+									</FormSelect>
+								{:else}
+									<FormSimpleInput
+										name="job_title"
+										placeholder={fieldLabels.jobTitle[siteState.language]}
+										class="w-full sm:basis-[calc(50%-0.5rem)]"
+									/>
+								{/if}
+							{/if}
 
 							<textarea
 								name="job_details"
 								placeholder="{fieldLabels.jobDetails[
 									siteState.language
 								]} {selectedWorkerTypeHelpText}"
-								class="field-sizing-content basis-full border-0 border-b text-xs"
+								class="field-sizing-content w-full border-0 border-b text-xs [word-break:break-word]"
 								maxlength="250"
 							></textarea>
 
@@ -553,7 +624,7 @@
 										<div class="pb-2">{question.questionLabel[siteState.language]}</div>
 										<textarea
 											name={question.dbFieldName}
-											class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+											class="field-sizing-content w-full border-0 border-b text-xs leading-normal [word-break:break-word]"
 										></textarea>
 									</div>
 								{/each}
@@ -577,7 +648,7 @@
 							<textarea
 								name="addl_notes"
 								placeholder={formPage.addlSectionPlaceholder[siteState.language]}
-								class="field-sizing-content w-full border-0 border-b text-xs leading-normal"
+								class="field-sizing-content w-full border-0 border-b text-xs leading-normal [word-break:break-word]"
 							></textarea>
 						</div>
 					</div>

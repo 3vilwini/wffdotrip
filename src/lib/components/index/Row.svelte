@@ -7,7 +7,8 @@
 		getEmployerTypeLabel,
 		getWorkerTypeLabel,
 		numEmployeesOptions,
-		countryIcons
+		countryIcons,
+		projectTypeOptions
 	} from '$lib/staticContent';
 	let { row, isSelected, onclick } = $props();
 </script>
@@ -22,7 +23,7 @@
 >
 	{#if row.city}
 		<div class="flex shrink-0 gap-x-2">
-			<div class="flex w-6 h-8.5 text-center font-yarndings text-3xl leading-[1]">
+			<div class="flex h-8.5 w-6 text-center font-yarndings text-3xl leading-[1]">
 				{countryIcons[row.country.value]}
 			</div>
 			<div
@@ -32,7 +33,7 @@
 			</div>
 		</div>
 	{/if}
-	<div class="items-top flex grow  justify-between gap-x-4">
+	<div class="items-top flex grow justify-between gap-x-4">
 		<div class=" pt-2 leading-none">
 			{#if row.worker_type}
 				<span class="text-[17.25px] leading-tight tracking-[-0.01em]">
@@ -42,6 +43,13 @@
 			{#if row.job_title}
 				<span class="relative -top-0.25 -mb-1.25 ml-1 font-mono text-[9px]">
 					{row.job_title}
+				</span>
+			{/if}
+			{#if row.project_type}
+				<span class="relative -top-0.25 -mb-1.25 ml-1 font-mono text-[9px]">
+					{#if projectTypeOptions[row.project_type?.value]}
+						{projectTypeOptions[row.project_type.value][siteState.language]}
+					{/if}
 				</span>
 			{/if}
 		</div>

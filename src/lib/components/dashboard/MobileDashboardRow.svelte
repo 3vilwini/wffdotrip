@@ -3,15 +3,6 @@
 
 	import { enhance } from '$app/forms';
 
-	import {
-		addlCompensationCoverageOptions,
-		fieldLabels,
-		jobObtainedViaOptions,
-		AddlCompItem,
-		currency,
-		contractLengthUnitOptions,
-		indexHeaderLabels
-	} from '../../staticContent.ts';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 	import {
 		countryOptions,
@@ -20,7 +11,9 @@
 		contractTypeOptions,
 		compensationFrequencyOptions,
 		jobExperienceOptions,
-		getEmployerTypeLabel
+		getEmployerTypeLabel,
+		projectTypeOptions,
+		currency
 	} from '$lib/staticContent';
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
@@ -133,13 +126,20 @@
 
 		<div class="flex items-baseline gap-2">
 			{#if row.worker_type}
-				<div class=" font-sans text-[17.25px] leading-3">
+				<div class=" font-sans text-[17.25px]">
 					{getWorkerTypeLabel(row.worker_type.value)}
 				</div>
 			{/if}
 			{#if row.job_title}
 				<div class="">
 					{row.job_title}
+				</div>
+			{/if}
+			{#if row.project_type}
+				<div class="pt-2.75">
+					{#if projectTypeOptions[row.project_type?.value]}
+						{projectTypeOptions[row.project_type.value][siteState.language]}
+					{/if}
 				</div>
 			{/if}
 		</div>

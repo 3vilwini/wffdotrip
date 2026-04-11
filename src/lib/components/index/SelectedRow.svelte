@@ -1,11 +1,5 @@
 <script lang="ts">
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
-
-	import {
-		jobExperienceOptions,
-		compensationFrequencyOptions,
-		contractTypeOptions
-	} from './../../staticContent.ts';
 	import {
 		countryOptions,
 		countryShortCode,
@@ -18,7 +12,11 @@
 		fieldLabels,
 		numEmployeesOptions,
 		jobObtainedViaOptions,
-		contractLengthUnitOptions
+		contractLengthUnitOptions,
+		projectTypeOptions,
+		jobExperienceOptions,
+		compensationFrequencyOptions,
+		contractTypeOptions
 	} from '$lib/staticContent';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 	let { rows = $bindable() } = $props();
@@ -123,6 +121,13 @@ verified: true
 											{#if row.job_title}
 												<div>{row.job_title}</div>
 											{/if}
+											{#if row.project_type}
+												<div>
+													{#if projectTypeOptions[row.project_type?.value]}
+														{projectTypeOptions[row.project_type.value][siteState.language]}
+													{/if}
+												</div>
+											{/if}
 											{#if row.job_details}
 												<div>{row.job_details}</div>
 											{/if}
@@ -142,9 +147,13 @@ verified: true
 									</div>
 									<div>
 										{#if row.employer_name}
-											<div class="font-serif text-lg tracking-[-0.01em] leading-[1.2]">{row.employer_name}</div>
+											<div class="font-serif text-lg leading-[1.2] tracking-[-0.01em]">
+												{row.employer_name}
+											</div>
 										{:else if row.employer_type}
-											<div class="font-serif text-lg tracking-[-0.01em] leading-[1.2]">{getEmployerTypeLabel(row.employer_type.value)}</div>
+											<div class="font-serif text-lg leading-[1.2] tracking-[-0.01em]">
+												{getEmployerTypeLabel(row.employer_type.value)}
+											</div>
 										{/if}
 										<div class="font-mono text-xs leading-[1.6]">
 											{#if row.employer_type && row.employer_name}
