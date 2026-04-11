@@ -187,6 +187,8 @@ verified: true
 											<div>
 												{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM'}
 													{row['addl_comp_' + key.toLowerCase()]}{currency[row.country.value]}
+												{:else if key === 'COMMISSION'}
+													{row['addl_comp_' + key.toLowerCase()]}%
 												{:else}
 													{addlCompensationCoverageOptions[
 														row['addl_comp_' + key.toLowerCase()].value

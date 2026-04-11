@@ -361,9 +361,7 @@
 						{#if row.addl_comp_commission}
 							<DashboardRowAddlCompLine
 								item={AddlCompItem.COMMISSION}
-								value={addlCompensationCoverageOptions[row.addl_comp_commission.value][
-									siteState.language
-								]}
+								value={row.addl_comp_commission	+ '%'}
 							></DashboardRowAddlCompLine>
 						{/if}
 					{/if}

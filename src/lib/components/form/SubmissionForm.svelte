@@ -154,7 +154,6 @@
 								class="basis-full sm:basis-1/2"
 								name="city"
 								placeholder={fieldLabels.city[siteState.language]}
-								required
 							></FormSimpleInput>
 
 							<FormSelect
@@ -241,7 +240,7 @@
 								class="w-full sm:basis-[calc(50%-0.5rem)]"
 								required
 							>
-								<FormOption value="" isDefault
+								<FormOption value="" isDefault={true}
 									>{fieldLabels.contractType[siteState.language]}</FormOption
 								>
 								{#each Object.entries(contractTypeOptions) as [key, value]}
@@ -265,23 +264,6 @@
 							{/if}
 
 							{#if selectedContractType}
-								{#if selectedContractType !== ContractType.FULLTIME && selectedContractType !== ContractType.PARTTIME}
-									<div class="flex w-full sm:basis-[calc(50%-0.5rem)]">
-										<FormSimpleInput
-											name="contract_length"
-											type="number"
-											placeholder={fieldLabels.contractLength[siteState.language]}
-											class="flex-grow border-r-0"
-										></FormSimpleInput>
-
-										<FormSelect name="contract_length_unit" class="w-20">
-											{#each Object.entries(contractLengthUnitOptions) as [key, value]}
-												<FormOption value={key}>{value[siteState.language]}</FormOption>
-											{/each}
-										</FormSelect>
-									</div>
-								{/if}
-
 								<label class="flex w-full items-center sm:basis-[calc(50%-0.5rem)]">
 									<FormSimpleInput
 										name="contract_num_hours"
@@ -293,6 +275,25 @@
 										{fieldLabels.perWeek[siteState.language]}
 									</span>
 								</label>
+
+								{#if selectedContractType !== ContractType.FULLTIME && selectedContractType !== ContractType.PARTTIME}
+									<div class="flex w-full sm:basis-[calc(50%-0.5rem)]">
+										<FormSimpleInput
+											name="contract_length"
+											type="number"
+											placeholder={fieldLabels.contractLength[siteState.language]}
+											class="flex-grow border-r-0"
+										></FormSimpleInput>
+
+										<FormSelect name="contract_length_unit" class="w-20">
+											{#each Object.entries(contractLengthUnitOptions) as [key, value]}
+												<FormOption value={key} isDefault={false}
+													>{value[siteState.language]}</FormOption
+												>
+											{/each}
+										</FormSelect>
+									</div>
+								{/if}
 							{/if}
 						</div>
 					</div>
@@ -448,9 +449,9 @@
 									</div>
 								{/if}
 								<FormSelect name="compensation_frequency" class="w-30" required>
-									<FormOption value="" isDefault
+									<!-- <FormOption value="" isDefault
 										>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
-									>
+									> -->
 									{#each Object.entries(compensationFrequencyOptions) as [key, value]}
 										<FormOption value={key}>{value[siteState.language]}</FormOption>
 									{/each}
@@ -545,6 +546,21 @@
 															{currency[selectedCountry]}
 														</div>
 													{/if}
+												</div>
+											{:else if key === 'COMMISSION'}
+												<div class="flex w-48">
+													<FormSimpleInput
+														name="addl_comp_commission"
+														type="number"
+														placeholder={fieldLabels.compensationPercentage[siteState.language]}
+														class=" w-48 border-b-0"
+														required
+													/>
+													<div
+														class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+													>
+														%
+													</div>
 												</div>
 											{:else}
 												<FormSelect

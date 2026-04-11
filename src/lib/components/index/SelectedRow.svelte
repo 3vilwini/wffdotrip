@@ -235,6 +235,8 @@ verified: true
 																	{row['addl_comp_' + key.toLowerCase()]}{currency[
 																		row.country.value
 																	]}
+																{:else if key === 'COMMISSION'}
+																	{row['addl_comp_' + key.toLowerCase()]}%
 																{:else}
 																	{addlCompensationCoverageOptions[
 																		row['addl_comp_' + key.toLowerCase()].value

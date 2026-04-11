@@ -169,6 +169,12 @@ export const fieldLabels = {
 		[Language.IT]: 'Categoria del lavoratorə',
 		[Language.ES]: 'Worker category in spanish'
 	},
+	projectType: {
+		[Language.EN]: 'Project Category',
+		[Language.FR]: 'Type de projet',
+		[Language.IT]: 'Tipologia di progetto',
+		[Language.ES]: 'Project category in spanish'
+	},
 	jobTitle: {
 		[Language.EN]: 'Project Category (optional)',
 		[Language.FR]: 'Type de projet (facultatif)',
@@ -198,6 +204,12 @@ export const fieldLabels = {
 		[Language.FR]: 'Montant',
 		[Language.IT]: 'Importo',
 		[Language.ES]: 'Amount in spanish'
+	},
+	compensationPercentage: {
+		[Language.EN]: 'Percentage',
+		[Language.FR]: 'Pourcentage',
+		[Language.IT]: 'Percentuale',
+		[Language.ES]: 'Percentage in spanish'
 	},
 	compensationFrequency: {
 		[Language.EN]: 'frequency',
