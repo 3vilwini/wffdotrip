@@ -1,16 +1,13 @@
 <script lang="ts">
-	import { compensationFrequencyOptions } from './../../staticContent.ts';
-	import { siteState, yarndingsText } from '$lib/states.svelte';
-	import {
-		currency,
-		contractTypeOptions,
-		getEmployerTypeLabel,
-		getWorkerTypeLabel,
-		numEmployeesOptions,
-		countryIcons,
-		projectTypeOptions,
-		countryOptions
-	} from '$lib/staticContent';
+	import { compensationFrequencyOptions } from '$lib/content/compensation';
+	import { contractTypeOptions, numEmployeesOptions } from '$lib/content/jobDetails';
+	import { currency, countryIcons, countryOptions } from '$lib/content/country';
+	import { projectTypeOptions } from '$lib/content/projectType';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { getEmployerTypeLabel } from '$lib/content/employerType';
+
+	import { siteState } from '$lib/states.svelte';
+
 	let { row, isSelected, onclick } = $props();
 </script>
 

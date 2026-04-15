@@ -1,30 +1,33 @@
 <script lang="ts">
 	import FormSelect from './FormSelect.svelte';
 	import { enhance } from '$app/forms';
+
+	import { fieldLabels, yearOption2010OrBefore } from '$lib/content/misc';
+	import { countryOptions, Country, currency } from '$lib/content/country';
 	import {
-		fieldLabels,
-		countryOptions,
 		numEmployeesOptions,
 		contractTypeOptions,
-		yearOption2010OrBefore,
 		workerStatusOptions,
-		Country,
 		ContractType,
-		compensationFrequencyOptions,
 		contractLengthUnitOptions,
 		jobObtainedViaOptions,
-		workerTypeOptions,
-		WorkerType,
+		jobExperienceOptions
+	} from '$lib/content/jobDetails';
+	import {
+		compensationFrequencyOptions,
 		addlCompensationCoverageOptions,
 		AddlCompItem,
-		addlCompItemOptions,
+		addlCompItemOptions
+	} from '$lib/content/compensation';
+	import {
+		workerTypeOptions,
+		WorkerType,
 		getWorkerTypeHelpText,
-		jobExperienceOptions,
-		employerTypeOptions,
 		getWorkerTypeSubgroup,
-		currency,
-		WorkerTypeSubgroup,
-		ProjectType,
+		WorkerTypeSubgroup
+	} from '$lib/content/workerType';
+	import { employerTypeOptions } from '$lib/content/employerType';
+	import {
 		projectTypeOptions,
 		projectTypeGroupOne,
 		projectTypeGroupTwo,
@@ -33,7 +36,8 @@
 		projectTypeGroupFive,
 		projectTypeGroupSix,
 		projectTypeGroupSeven
-	} from '$lib/staticContent';
+	} from '$lib/content/projectType';
+
 	import FormSectionHeader from './FormSectionHeader.svelte';
 	import { siteState } from '$lib/states.svelte';
 	import BlockContent from '../blockContent/BlockContent.svelte';

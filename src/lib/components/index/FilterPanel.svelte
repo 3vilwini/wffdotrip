@@ -1,13 +1,11 @@
 <script>
-	import {
-		compensationFrequencyOptions,
-		contractTypeOptions,
-		countryOptions,
-		employerTypeOptions,
-		fieldLabels,
-		indexHeaderLabels,
-		workerTypeOptions
-	} from '$lib/staticContent';
+	import { fieldLabels, indexHeaderLabels } from '$lib/content/misc';
+	import { countryOptions } from '$lib/content/country';
+	import { contractTypeOptions } from '$lib/content/jobDetails';
+	import { compensationFrequencyOptions } from '$lib/content/compensation';
+	import { workerTypeOptions } from '$lib/content/workerType';
+	import { employerTypeOptions } from '$lib/content/employerType';
+
 	import { siteState, filteredResultsState } from '$lib/states.svelte';
 	import FormCheckbox from '../form/FormCheckbox.svelte';
 	import { enhance } from '$app/forms';

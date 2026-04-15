@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { fieldLabels } from '$lib/staticContent.js';
+	import { fieldLabels } from '$lib/content/misc.js';
 
 	import { siteState } from '$lib/states.svelte';
 </script>

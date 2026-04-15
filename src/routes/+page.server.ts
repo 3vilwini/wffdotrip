@@ -1,13 +1,13 @@
 import type { Actions, PageLoad } from './$types';
 import { getAllVerifiedRows, getRowsByFilter } from '$lib/baserow';
 import { getIndexPage } from '$lib/sanity';
-import {
-	compensationFrequencyOptions,
-	contractTypeOptions,
-	countryOptions,
-	employerTypeOptions,
-	workerTypeOptions
-} from '$lib/staticContent';
+
+import { compensationFrequencyOptions } from '$lib/content/compensation';
+import { contractTypeOptions } from '$lib/content/jobDetails';
+import { countryOptions } from '$lib/content/country';
+import { workerTypeOptions } from '$lib/content/workerType';
+import { employerTypeOptions } from '$lib/content/employerType';
+
 import { shuffle } from '$lib/utils';
 export const load = (async ({ locals }) => {
 	const indexPage = await getIndexPage();

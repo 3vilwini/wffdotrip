@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { siteState, Language } from '$lib/states.svelte';
-	import { languageOptions } from '$lib/staticContent';
 	let { showMobileNavMenu = $bindable() } = $props();
 </script>
 

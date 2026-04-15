@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { siteState, Language } from '$lib/states.svelte';
-	import { languageOptions } from '$lib/staticContent';
+	import { languageOptions } from '$lib/content/country';
 </script>
 
 <div class="w-full">

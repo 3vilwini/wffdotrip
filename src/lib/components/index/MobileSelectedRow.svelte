@@ -1,23 +1,23 @@
 <script lang="ts">
 	import {
-		countryOptions,
-		countryShortCode,
-		AddlCompItem,
-		currency,
-		addlCompItemOptions,
-		getEmployerTypeLabel,
-		getWorkerTypeLabel,
 		addlCompensationCoverageOptions,
-		fieldLabels,
-		numEmployeesOptions,
+		AddlCompItem,
+		compensationFrequencyOptions,
+		addlCompItemOptions
+	} from '$lib/content/compensation';
+	import { fieldLabels } from '$lib/content/misc';
+	import {
+		jobExperienceOptions,
 		jobObtainedViaOptions,
 		contractLengthUnitOptions,
-		projectTypeOptions,
-		jobExperienceOptions,
-		compensationFrequencyOptions,
 		contractTypeOptions,
-		countryIcons
-	} from '$lib/staticContent';
+		numEmployeesOptions
+	} from '$lib/content/jobDetails';
+	import { currency, countryIcons, countryOptions, countryShortCode } from '$lib/content/country';
+	import { projectTypeOptions } from '$lib/content/projectType';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { getEmployerTypeLabel } from '$lib/content/employerType';
+
 	import { siteState } from '$lib/states.svelte';
 
 	let { row = $bindable() } = $props();
@@ -46,11 +46,11 @@ verified: true
 <div
 	class="z-20 {row
 		? 'max-h-[calc(100dvh-55px)] bg-amber-50'
-		: 'max-h-0'} fixed bottom-0 w-full overflow-auto border-t bg-lightgrey transition-[height,max-height] pb-12"
+		: 'max-h-0'} fixed bottom-0 w-full overflow-auto border-t bg-lightgrey pb-12 transition-[height,max-height]"
 >
 	{#if row}
-		<div class="flex flex-col ">
-			<div class="flex min-h-14 flex-col ">
+		<div class="flex flex-col">
+			<div class="flex min-h-14 flex-col">
 				<div class="flex cursor-pointer items-center justify-between p-2">
 					<div class="flex items-center gap-2">
 						{#if row.country}

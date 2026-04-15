@@ -4,22 +4,15 @@
 	import { enhance } from '$app/forms';
 
 	import { siteState } from '$lib/states.svelte';
-	import {
-		countryOptions,
-		getWorkerTypeLabel,
-		numEmployeesOptions,
-		contractTypeOptions,
-		compensationFrequencyOptions,
-		jobExperienceOptions,
-		getEmployerTypeLabel,
-		projectTypeOptions,
-		currency,
-		countryIcons
-	} from '$lib/staticContent';
+
+	import { compensationFrequencyOptions } from '$lib/content/compensation';
+	import { contractTypeOptions } from '$lib/content/jobDetails';
+	import { currency, countryOptions, countryIcons } from '$lib/content/country';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { projectTypeOptions } from '$lib/content/projectType';
+
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
-	import DashboardRowAddlCompLine from './DashboardRowAddlCompLine.svelte';
-	import MobileSelectedRow from '../index/MobileSelectedRow.svelte';
 	import MobileDashboardSelectedRow from './MobileDashboardSelectedRow.svelte';
 	let { row, formPage } = $props();
 	let showEditModal = $state(false);

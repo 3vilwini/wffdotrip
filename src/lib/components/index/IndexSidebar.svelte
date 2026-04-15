@@ -2,7 +2,7 @@
 	import logo from '$lib/assets/logo.png';
 	import logo2 from '$lib/assets/logo2.png';
 	import { siteState, yarndingsText } from '$lib/states.svelte';
-	import { countryOptions, countryIcons } from '$lib/staticContent';
+	import { countryOptions, countryIcons } from '$lib/content/country';
 	import BlockContent from '../blockContent/BlockContent.svelte';
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
 	let { indexPage, numRowsPerCountry } = $props();

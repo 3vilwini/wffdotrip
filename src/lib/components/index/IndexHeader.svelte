@@ -1,16 +1,12 @@
 <script lang="ts">
-	import sortIcon from '$lib/assets/sort.svg';
 	import searchIcon from '$lib/assets/search.svg';
-	import {
-		indexHeaderLabels,
-		fieldLabels,
-		getWorkerTypeLabel,
-		compensationFrequencyOptions,
-		contractTypeOptions,
-		countryOptions,
-		employerTypeOptions,
-		workerTypeOptions
-	} from '$lib/staticContent';
+	import { fieldLabels, indexHeaderLabels } from '$lib/content/misc';
+	import { countryOptions } from '$lib/content/country';
+	import { contractTypeOptions } from '$lib/content/jobDetails';
+	import { compensationFrequencyOptions } from '$lib/content/compensation';
+	import { workerTypeOptions } from '$lib/content/workerType';
+	import { employerTypeOptions } from '$lib/content/employerType';
+
 	import { filteredResultsState, siteState } from '$lib/states.svelte';
 	import FilterPanel from './FilterPanel.svelte';
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
@@ -62,7 +58,7 @@
 	</div>
 </div>
 {#if filteredResultsState.rows}
-	<div class="flex min-h-14 flex-col justify-center gap-4 border-b p-3 ">
+	<div class="flex min-h-14 flex-col justify-center gap-4 border-b p-3">
 		<div class="flex w-full items-center justify-between">
 			<div class="font-mono text-xs">
 				{filteredResultsState?.rows?.results?.length} Filtered Results

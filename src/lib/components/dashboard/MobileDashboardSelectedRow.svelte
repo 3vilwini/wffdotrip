@@ -1,23 +1,23 @@
 <script lang="ts">
 	import {
-		countryOptions,
-		countryShortCode,
+		compensationFrequencyOptions,
 		AddlCompItem,
-		currency,
 		addlCompItemOptions,
-		getEmployerTypeLabel,
-		getWorkerTypeLabel,
-		addlCompensationCoverageOptions,
-		fieldLabels,
+		addlCompensationCoverageOptions
+	} from '$lib/content/compensation';
+	import {
+		contractTypeOptions,
 		numEmployeesOptions,
 		jobObtainedViaOptions,
 		contractLengthUnitOptions,
-		jobExperienceOptions,
-		compensationFrequencyOptions,
-		contractTypeOptions,
-		projectTypeOptions,
-		countryIcons
-	} from '$lib/staticContent';
+		jobExperienceOptions
+	} from '$lib/content/jobDetails';
+	import { currency, countryOptions, countryIcons, countryShortCode } from '$lib/content/country';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { projectTypeOptions } from '$lib/content/projectType';
+	import { getEmployerTypeLabel } from '$lib/content/employerType';
+	import { fieldLabels } from '$lib/content/misc';
+
 	import { siteState } from '$lib/states.svelte';
 
 	let { row, showExpandedEntry = $bindable() } = $props();
@@ -27,9 +27,9 @@
 	<div class="flex flex-col">
 		<div class="flex items-start justify-between p-3">
 			<div class="flex items-center gap-2">
-					<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
-						{countryIcons[row.country.value]}
-					</div>
+				<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
+					{countryIcons[row.country.value]}
+				</div>
 				{#if row.worker_type}
 					<div class="text-lg leading-none xl:text-2xl">
 						{getWorkerTypeLabel(row.worker_type.value)}
@@ -146,7 +146,7 @@
 										{addlCompItemOptions[AddlCompItem[key]][siteState.language]}
 									</div>
 									<div>
-										{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM' || key === 'ACCESSIBILITY_BUDGET' }
+										{#if key === 'SALE_OF_WORK' || key === 'PRODUCTION_BUDGET' || key === 'PER_DIEM' || key === 'ACCESSIBILITY_BUDGET'}
 											{row['addl_comp_' + key.toLowerCase()]}{currency[row.country.value]}
 										{:else if key === 'COMMISSION'}
 											{row['addl_comp_' + key.toLowerCase()]}%

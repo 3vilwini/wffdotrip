@@ -1,17 +1,15 @@
 <script lang="ts">
-	import SubmitEntryButton from '../lib/components/index/SubmitEntryButton.svelte';
-
+	import SubmitEntryButton from '$lib/components/index/SubmitEntryButton.svelte';
 	import Row from '$lib/components/index/Row.svelte';
 	import IndexSidebar from '$lib/components/index/IndexSidebar.svelte';
 	import { onMount } from 'svelte';
-	import {
-		compensationFrequencyOptions,
-		contractTypeOptions,
-		countryOptions,
-		employerTypeOptions,
-		fieldLabels,
-		workerTypeOptions
-	} from '$lib/staticContent.js';
+	import { compensationFrequencyOptions } from '$lib/content/compensation';
+	import { contractTypeOptions } from '$lib/content/jobDetails';
+	import { countryOptions } from '$lib/content/country';
+	import { employerTypeOptions } from '$lib/content/employerType';
+	import { fieldLabels } from '$lib/content/misc';
+	import { workerTypeOptions } from '$lib/content/workerType';
+
 	import CurrentResidentBanner from '$lib/components/index/CurrentResidentBanner.svelte';
 	import IndexHeader from '$lib/components/index/IndexHeader.svelte';
 	import SelectedRow from '$lib/components/index/SelectedRow.svelte';
@@ -86,8 +84,8 @@
 
 <div class="sm:hidden">
 	{#if filteredResultsState.rows}
-		<div class="flex flex-col min-h-12 items-center justify-between gap-4 border-b p-3">
-			<div class='flex flex-row justify-between items-center w-full'>
+		<div class="flex min-h-12 flex-col items-center justify-between gap-4 border-b p-3">
+			<div class="flex w-full flex-row items-center justify-between">
 				<div class="font-mono text-xs">
 					{filteredResultsState?.rows?.results?.length} Filtered Results
 				</div>

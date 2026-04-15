@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { addlCompItemOptions } from '$lib/staticContent';
+	import { addlCompItemOptions } from '$lib/content/compensation';
 	import { siteState } from '$lib/states.svelte';
 	let { item, value } = $props();
 </script>

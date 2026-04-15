@@ -1,16 +1,12 @@
 <script lang="ts">
-	import { compensationFrequencyOptions } from './../../staticContent.ts';
+	import { compensationFrequencyOptions } from '$lib/content/compensation';
+	import { currency, countryIcons, countryOptions } from '$lib/content/country';
+	import { getEmployerTypeLabel } from '$lib/content/employerType';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { contractTypeOptions, numEmployeesOptions } from '$lib/content/jobDetails';
+	import { projectTypeOptions } from '$lib/content/projectType';
 	import { siteState } from '$lib/states.svelte';
-	import {
-		currency,
-		contractTypeOptions,
-		getEmployerTypeLabel,
-		getWorkerTypeLabel,
-		numEmployeesOptions,
-		countryIcons,
-		projectTypeOptions,
-		countryOptions
-	} from '$lib/staticContent';
+
 	let { row, onclick } = $props();
 </script>
 
@@ -21,14 +17,13 @@
 				<div class="flex w-6 justify-center text-center font-yarndings text-3xl">
 					{countryIcons[row.country.value]}
 				</div>
-			
+
 				<div class=" shrink-0 grow-0 pt-1 font-mono text-xs">
 					{#if row.city}
-					{row.city},
-						{/if}
-						{countryOptions[row.country.value][siteState.language]}
+						{row.city},
+					{/if}
+					{countryOptions[row.country.value][siteState.language]}
 				</div>
-			
 			</div>
 		{/if}
 		<div class="leading-none">

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { navMenuItems } from '$lib/staticContent';
+	import { navMenuItems } from '$lib/content/misc';
 	import BlockContent from '$lib/components/blockContent/BlockContent.svelte';
 	import { siteState } from '$lib/states.svelte.js';
 	import { onMount } from 'svelte';
@@ -66,21 +66,24 @@
 		/>
 	</div>
 	<div class="mt-12">
-		<a href="/faq#privacy-policy" class="text-xs font-mono hover:underline">{navMenuItems.privacy[siteState.language]} &rightarrow;&#xFE0E;</a>
+		<a href="/faq#privacy-policy" class="font-mono text-xs hover:underline"
+			>{navMenuItems.privacy[siteState.language]} &rightarrow;&#xFE0E;</a
+		>
 	</div>
 </SignedOut>
 <SignedIn>
 	<div class="flex flex-col gap-4">
-		<div class="border border-dashed px-4 pt-2 py-3">
+		<div class="border border-dashed px-4 py-3 pt-2">
 			{#if data && data.user && data.user.emailAddresses && data.user.emailAddresses.length >= 1 && data.user.emailAddresses[0].emailAddress}
 				<div class="font-serif text-xl tracking-tight">
 					{data.user.emailAddresses[0].emailAddress}
 				</div>
 			{/if}
-			<div class="flex gap-4 justify-between mt-2">
+			<div class="mt-2 flex justify-between gap-4">
 				<SignOutButton class="cursor-pointer text-left font-mono text-xs hover:underline"
 				></SignOutButton>
-				<a href="/dashboard" class="cursor-pointer font-mono text-xs hover:underline">Dashboard →</a>
+				<a href="/dashboard" class="cursor-pointer font-mono text-xs hover:underline">Dashboard →</a
+				>
 			</div>
 		</div>
 	</div>

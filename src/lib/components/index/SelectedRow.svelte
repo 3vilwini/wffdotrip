@@ -1,25 +1,26 @@
 <script lang="ts">
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
 	import {
-		countryOptions,
-		countryShortCode,
-		AddlCompItem,
-		currency,
-		addlCompItemOptions,
-		getEmployerTypeLabel,
-		getWorkerTypeLabel,
 		addlCompensationCoverageOptions,
-		fieldLabels,
-		numEmployeesOptions,
+		AddlCompItem,
+		compensationFrequencyOptions,
+		addlCompItemOptions
+	} from '$lib/content/compensation';
+	import { fieldLabels } from '$lib/content/misc';
+	import {
+		jobExperienceOptions,
 		jobObtainedViaOptions,
 		contractLengthUnitOptions,
-		projectTypeOptions,
-		jobExperienceOptions,
-		compensationFrequencyOptions,
 		contractTypeOptions,
-		countryIcons
-	} from '$lib/staticContent';
-	import { siteState, yarndingsText } from '$lib/states.svelte';
+		numEmployeesOptions
+	} from '$lib/content/jobDetails';
+	import { currency, countryIcons, countryOptions, countryShortCode } from '$lib/content/country';
+	import { projectTypeOptions } from '$lib/content/projectType';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { getEmployerTypeLabel } from '$lib/content/employerType';
+
+
+	import { siteState } from '$lib/states.svelte';
 	let { rows = $bindable() } = $props();
 
 	const expandRow = (row) => {

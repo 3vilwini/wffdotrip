@@ -5,25 +5,24 @@
 
 	import {
 		addlCompensationCoverageOptions,
-		fieldLabels,
-		jobObtainedViaOptions,
 		AddlCompItem,
-		currency,
-		contractLengthUnitOptions,
-		indexHeaderLabels,
-		countryIcons,
-		projectTypeOptions
-	} from '../../staticContent.ts';
-	import { siteState, yarndingsText } from '$lib/states.svelte';
+		compensationFrequencyOptions
+	} from '$lib/content/compensation';
+	import { fieldLabels, indexHeaderLabels } from '$lib/content/misc';
 	import {
-		countryOptions,
-		getWorkerTypeLabel,
-		numEmployeesOptions,
-		contractTypeOptions,
-		compensationFrequencyOptions,
 		jobExperienceOptions,
-		getEmployerTypeLabel
-	} from '$lib/staticContent';
+		jobObtainedViaOptions,
+		contractLengthUnitOptions,
+		contractTypeOptions,
+		numEmployeesOptions
+	} from '$lib/content/jobDetails';
+	import { currency, countryIcons, countryOptions } from '$lib/content/country';
+	import { projectTypeOptions } from '$lib/content/projectType';
+	import { getWorkerTypeLabel } from '$lib/content/workerType';
+	import { getEmployerTypeLabel } from '$lib/content/employerType';
+
+	import { siteState } from '$lib/states.svelte';
+
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
 	import DashboardRowAddlCompLine from './DashboardRowAddlCompLine.svelte';
@@ -41,7 +40,6 @@
 	// const closeEditModal = () => {
 	// 	showEditModal = false;
 	// };
-	console.log(row);
 </script>
 
 {#if showEditModal}
