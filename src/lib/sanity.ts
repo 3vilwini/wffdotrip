@@ -34,15 +34,12 @@ export const getImgUrl = (imgRef: Image) => {
 };
 
 export async function getSiteInfo(): Promise<any> {
-	return await client.fetch(groq`{
-        "siteMetadata": *[_id=="siteMetadata"][0]{
+	return await client.fetch(groq`*[_id=="siteMetadata"][0]{
+        ...,
+        favicon{
             ...,
-            favicon{
-                ...,
-                "url": asset->url
-            }
-        },
-        "homePage": *[_id=="homePage"][0],
+            "url": asset->url
+        }
     }`);
 }
 
