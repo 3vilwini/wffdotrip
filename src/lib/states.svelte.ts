@@ -2,7 +2,7 @@ export const enum Language {
 	EN = 'EN',
 	FR = 'FR',
 	IT = 'IT',
-	ES = 'ES'
+	NL = 'NL'
 }
 
 export const siteState = $state({

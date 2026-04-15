@@ -8,6 +8,6 @@ export default defineType({
     defineField({name: 'EN', title: 'EN', type: 'blockContent'}),
     defineField({name: 'FR', title: 'FR', type: 'blockContent'}),
     defineField({name: 'IT', title: 'IT', type: 'blockContent'}),
-    defineField({name: 'ES', title: 'ES', type: 'blockContent'}),
+    defineField({name: 'NL', title: 'NL', type: 'blockContent'}),
   ],
 })

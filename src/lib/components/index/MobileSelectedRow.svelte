@@ -18,7 +18,7 @@
 		contractTypeOptions,
 		countryIcons
 	} from '$lib/staticContent';
-	import { siteState, yarndingsText } from '$lib/states.svelte';
+	import { siteState } from '$lib/states.svelte';
 
 	let { row = $bindable() } = $props();
 </script>
