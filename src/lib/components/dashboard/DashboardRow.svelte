@@ -2,13 +2,14 @@
 	import X from '../X.svelte';
 
 	import { enhance } from '$app/forms';
+	import { resolve } from '$app/paths';
 
 	import {
 		addlCompensationCoverageOptions,
 		AddlCompItem,
 		compensationFrequencyOptions
 	} from '$lib/content/compensation';
-	import { fieldLabels, indexHeaderLabels } from '$lib/content/misc';
+	import { fieldLabels, indexHeaderLabels, miscLabels } from '$lib/content/misc';
 	import {
 		jobExperienceOptions,
 		jobObtainedViaOptions,
@@ -68,12 +69,12 @@
 			<div
 				class="relative flex max-w-2xl flex-col justify-center gap-4 overflow-scroll border border-black bg-white px-12 pt-12 pb-4 font-mono text-xs leading-normal"
 			>
-				Are you sure you want to delete?
+				{miscLabels.confirmDelete[siteState.language]}
 				<form
 					use:enhance={({ formElement, formData, action, cancel, submitter }) => {
 						return async ({ result, update }) => {
 							if (result.type === 'success') {
-								goto('/dashboard');
+								goto(resolve('/dashboard'));
 							}
 						};
 					}}
@@ -86,7 +87,7 @@
 					<button
 						class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 					>
-						Delete
+						{miscLabels.delete[siteState.language]}
 					</button>
 					<div
 						onclick={() => {
@@ -94,7 +95,7 @@
 						}}
 						class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 					>
-						Cancel
+						{miscLabels.cancel[siteState.language]}
 					</div>
 				</form>
 				<div

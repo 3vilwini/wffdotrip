@@ -239,6 +239,26 @@ export const fieldLabels = {
 	}
 };
 
+export const miscLabels = {
+	confirmDelete: {
+		[Language.EN]: 'Are you sure you want to delete this entry?',
+		[Language.FR]: 'Êtes-vous sûr·e de vouloir supprimer cette entrée ?',
+		[Language.IT]: 'Sei sicurə di voler eliminare questa voce?',
+		[Language.NL]: 'Are you sure you want to delete this entry? (NL)'
+	},
+	delete: {
+		[Language.EN]: 'Delete',
+		[Language.FR]: 'Supprimer',
+		[Language.IT]: 'Elimina',
+		[Language.NL]: 'Delete (NL)'
+	},
+	cancel: {
+		[Language.EN]: 'Cancel',
+		[Language.FR]: 'Annuler',
+		[Language.IT]: 'Annulla',
+		[Language.NL]: 'Cancel (NL)'
+	}
+};
 export const yearOption2010OrBefore = {
 	[Language.EN]: '2010 or before',
 	[Language.FR]: '2010 ou avant',

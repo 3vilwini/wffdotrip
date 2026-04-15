@@ -1,6 +1,7 @@
 <script lang="ts">
 	import FormSelect from '../form/FormSelect.svelte';
 	import { enhance } from '$app/forms';
+	import { resolve } from '$app/paths';
 
 	import {
 		addlCompensationCoverageOptions,
@@ -84,7 +85,7 @@
 				isSubmitting = false;
 				if (result.type === 'success') {
 					siteState.formSubmitted = true;
-					goto('/dashboard');
+					goto(resolve('/dashboard'));
 				}
 			};
 		}}
@@ -105,7 +106,7 @@
 					<FormSelect bind:boundValue={selectedCountry} name="country" class="basis-1/4">
 						<FormOption value="" isDefault>{fieldLabels.country[siteState.language]}</FormOption>
 
-						{#each Object.entries(countryOptions) as [key, value]}
+						{#each Object.entries(countryOptions) as [key, value] (key)}
 							<FormOption value={key}>{value[siteState.language]}</FormOption>
 						{/each}
 					</FormSelect>
@@ -119,7 +120,7 @@
 
 					<FormSelect bind:boundValue={selectedYear} name="year" class="basis-1/4">
 						<FormOption value="" isDefault>{fieldLabels.year[siteState.language]}</FormOption>
-						{#each yearOptions as year}
+						{#each yearOptions as year (year)}
 							<FormOption value={year}>{year}</FormOption>
 						{/each}
 						<FormOption value="2010">{yearOption2010OrBefore[siteState.language]}</FormOption>
@@ -140,9 +141,9 @@
 						<FormOption value="" isDefault
 							>{fieldLabels.employerType[siteState.language]}</FormOption
 						>
-						{#each Object.values(employerTypeOptions) as section}
+						{#each Object.entries(employerTypeOptions) as [key, section] (key)}
 							<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
-								{#each Object.entries(section.options) as [key, value]}
+								{#each Object.entries(section.options) as [key, value] (key)}
 									<option class="pl-8 text-black" value={key}>{value[siteState.language]}</option>
 								{/each}
 							</optgroup>
@@ -164,7 +165,7 @@
 						<FormOption value="" isDefault
 							>{fieldLabels.numEmployees[siteState.language]}</FormOption
 						>
-						{#each Object.entries(numEmployeesOptions) as [key, value]}
+						{#each Object.entries(numEmployeesOptions) as [key, value] (key)}
 							<FormOption value={key}
 								>{value + ' ' + fieldLabels.employees[siteState.language]}</FormOption
 							>
@@ -186,7 +187,7 @@
 						<FormOption value="" isDefault
 							>{fieldLabels.contractType[siteState.language]}</FormOption
 						>
-						{#each Object.entries(contractTypeOptions) as [key, value]}
+						{#each Object.entries(contractTypeOptions) as [key, value] (key)}
 							<FormOption value={key}>{value[siteState.language]}</FormOption>
 						{/each}
 					</FormSelect>
@@ -200,7 +201,7 @@
 							<FormOption value="" isDefault>
 								{fieldLabels.workerStatus[siteState.language][selectedCountry]}
 							</FormOption>
-							{#each workerStatusOptions[selectedCountry] as option}
+							{#each workerStatusOptions[selectedCountry] as option (option)}
 								<FormOption value={option}>{option}</FormOption>
 							{/each}
 						</FormSelect>
@@ -221,7 +222,7 @@
 								name="contract_length_unit"
 								class="w-20"
 							>
-								{#each Object.entries(contractLengthUnitOptions) as [key, value]}
+								{#each Object.entries(contractLengthUnitOptions) as [key, value] (key)}
 									<FormOption value={key}>{value[siteState.language]}</FormOption>
 								{/each}
 							</FormSelect>
@@ -254,9 +255,9 @@
 						class=" basis-[calc(50%-0.5rem)]"
 					>
 						<FormOption value="" isDefault>{fieldLabels.workerType[siteState.language]}</FormOption>
-						{#each Object.values(workerTypeOptions) as section}
+						{#each Object.entries(workerTypeOptions) as [key, section] (key)}
 							<optgroup class="px-0.5 text-grey" label={section.groupLabel[siteState.language]}>
-								{#each Object.entries(section.options) as [key, value]}
+								{#each Object.entries(section.options) as [key, value] (key)}
 									<option value={key} class="pl-8 text-black"
 										>{value.label[siteState.language]}</option
 									>
@@ -288,7 +289,7 @@
 						<FormOption value="" isDefault
 							>{fieldLabels.jobExperience[siteState.language]}</FormOption
 						>
-						{#each Object.entries(jobExperienceOptions) as [key, value]}
+						{#each Object.entries(jobExperienceOptions) as [key, value] (key)}
 							<FormOption value={key}
 								>{value + ' ' + fieldLabels.yearsOfExperience[siteState.language]}</FormOption
 							>
@@ -303,7 +304,7 @@
 						<FormOption value="" isDefault
 							>{fieldLabels.jobObtainedVia[siteState.language]}</FormOption
 						>
-						{#each Object.entries(jobObtainedViaOptions) as [key, value]}
+						{#each Object.entries(jobObtainedViaOptions) as [key, value] (key)}
 							<FormOption value={key}>{value[siteState.language]}</FormOption>
 						{/each}
 					</FormSelect>
@@ -336,7 +337,7 @@
 							<FormOption value=""
 								>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
 							>
-							{#each Object.entries(compensationFrequencyOptions) as [key, value]}
+							{#each Object.entries(compensationFrequencyOptions) as [key, value] (key)}
 								<FormOption value={key}>{value[siteState.language]}</FormOption>
 							{/each}
 						</FormSelect>
@@ -361,7 +362,7 @@
 					</button>
 					{#if showAddlCompMenu}
 						<div class="absolute top-4 left-8 flex flex-col gap-1 sm:w-50">
-							{#each Object.entries(addlCompItemOptions) as [key, langOptions]}
+							{#each Object.entries(addlCompItemOptions) as [key, langOptions] (key)}
 								{#if !addlCompFieldsShown[key]}
 									<AddlCompMenuItem onclick={() => showAddlCompField(key)}
 										>{langOptions[siteState.language]}</AddlCompMenuItem
@@ -372,7 +373,7 @@
 					{/if}
 				</div>
 				<div class="flex flex-col gap-2">
-					{#each Object.entries(addlCompFieldsShown) as [key, val]}
+					{#each Object.entries(addlCompFieldsShown) as [key, val] (key)}
 						{#if val}
 							<AddlCompensationContainer>
 								{addlCompItemOptions[key][siteState.language]}
@@ -440,8 +441,8 @@
 												? row['addl_comp_' + key.toLowerCase()].value
 												: ''}
 										>
-											{#each Object.entries(addlCompensationCoverageOptions) as [optKey, value]}
-												<FormOption value={optKey}>{value[siteState.language]}</FormOption>
+											{#each Object.entries(addlCompensationCoverageOptions) as [key, value] (key)}
+												<FormOption value={key}>{value[siteState.language]}</FormOption>
 											{/each}
 										</FormSelect>
 									{/if}
