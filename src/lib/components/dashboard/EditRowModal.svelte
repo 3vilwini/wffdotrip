@@ -19,8 +19,24 @@
 		ContractType,
 		workerStatusOptions
 	} from '$lib/content/jobDetails';
+	import {
+		projectTypeOptions,
+		projectTypeGroupOne,
+		projectTypeGroupTwo,
+		projectTypeGroupThree,
+		projectTypeGroupFour,
+		projectTypeGroupFive,
+		projectTypeGroupSix,
+		projectTypeGroupSeven
+	} from '$lib/content/projectType';
 	import { currency, countryOptions, Country } from '$lib/content/country';
-	import { workerTypeOptions, WorkerType, getWorkerTypeHelpText } from '$lib/content/workerType';
+	import {
+		workerTypeOptions,
+		WorkerType,
+		getWorkerTypeHelpText,
+		getWorkerTypeSubgroup,
+		WorkerTypeSubgroup
+	} from '$lib/content/workerType';
 	import { employerTypeOptions } from '$lib/content/employerType';
 
 	import FormSectionHeader from '../form/FormSectionHeader.svelte';
@@ -41,6 +57,7 @@
 	let selectedContractType: ContractType | undefined = $state(row.contract_type.value);
 	let selectedWorkerType: WorkerType | undefined = $state(row.worker_type.value);
 	let selectedWorkerTypeHelpText = $derived(getWorkerTypeHelpText(selectedWorkerType));
+	let selectedWorkerTypeSubgroup = $derived(getWorkerTypeSubgroup(selectedWorkerType));
 
 	let thisYear = new Date().getFullYear();
 	let minYear = 2011;
@@ -207,27 +224,7 @@
 						</FormSelect>
 					{/if}
 
-					{#if selectedContractType && selectedContractType !== ContractType.FULLTIME}
-						<div class="flex basis-[calc(50%-0.5rem)]">
-							<FormSimpleInput
-								value={row.contract_length}
-								name="contract_length"
-								type="number"
-								placeholder={fieldLabels.contractLength[siteState.language]}
-								class="flex-grow border-r-0"
-							></FormSimpleInput>
-
-							<FormSelect
-								boundValue={row.contract_length_unit?.value}
-								name="contract_length_unit"
-								class="w-20"
-							>
-								{#each Object.entries(contractLengthUnitOptions) as [key, value] (key)}
-									<FormOption value={key}>{value[siteState.language]}</FormOption>
-								{/each}
-							</FormSelect>
-						</div>
-
+					{#if selectedContractType}
 						<label class="flex basis-[calc(50%-0.5rem)] items-center">
 							<FormSimpleInput
 								name="contract_num_hours"
@@ -240,6 +237,28 @@
 								{fieldLabels.perWeek[siteState.language]}
 							</span>
 						</label>
+
+						{#if selectedContractType !== ContractType.FULLTIME && selectedContractType !== ContractType.PARTTIME}
+							<div class="flex basis-[calc(50%-0.5rem)]">
+								<FormSimpleInput
+									value={row.contract_length}
+									name="contract_length"
+									type="number"
+									placeholder={fieldLabels.contractLength[siteState.language]}
+									class="flex-grow border-r-0"
+								></FormSimpleInput>
+
+								<FormSelect
+									boundValue={row.contract_length_unit?.value}
+									name="contract_length_unit"
+									class="w-20"
+								>
+									{#each Object.entries(contractLengthUnitOptions) as [key, value] (key)}
+										<FormOption value={key}>{value[siteState.language]}</FormOption>
+									{/each}
+								</FormSelect>
+							</div>
+						{/if}
 					{/if}
 				</div>
 			</div>
@@ -266,12 +285,70 @@
 						{/each}
 					</FormSelect>
 
-					<FormSimpleInput
-						name="job_title"
-						placeholder={fieldLabels.jobTitle[siteState.language]}
-						class="basis-[calc(50%-0.5rem)]"
-						value={row.job_title}
-					/>
+					{#if selectedContractType}
+						{#if selectedContractType === ContractType.INDEPENDENT || selectedContractType === ContractType.FULLTIME_TEMP || selectedContractType === ContractType.PARTTIME_TEMP}
+							<FormSelect
+								boundValue={row.project_type?.value ? row.project_type.value : ''}
+								name="project_type"
+								class="w-full sm:basis-[calc(50%-0.5rem)]"
+								required
+							>
+								<FormOption value="" isDefault
+									>{fieldLabels.projectType[siteState.language]}</FormOption
+								>
+								{#if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.CREATION || selectedWorkerTypeSubgroup === WorkerTypeSubgroup.WRITING || selectedWorkerTypeSubgroup === WorkerTypeSubgroup.CURATION}
+									{#each projectTypeGroupOne as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.PRODUCTION}
+									{#each projectTypeGroupTwo as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.MEDIATION_AND_HOSPITALITY}
+									{#each projectTypeGroupThree as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.MANAGEMENT_AND_ADMIN}
+									{#each projectTypeGroupFour as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.COMMUNICATION_AND_DOCUMENTATION}
+									{#each projectTypeGroupFive as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.OPERATIONS_AND_IT}
+									{#each projectTypeGroupSix as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{:else if selectedWorkerTypeSubgroup === WorkerTypeSubgroup.LEGAL_AND_FINANCE}
+									{#each projectTypeGroupSeven as projectType (projectType)}
+										<option value={projectType} class="pl-8 text-black">
+											{projectTypeOptions[projectType][siteState.language]}
+										</option>
+									{/each}
+								{/if}
+							</FormSelect>
+						{:else}
+							<FormSimpleInput
+								name="job_title"
+								placeholder={fieldLabels.jobTitle[siteState.language]}
+								class="basis-[calc(50%-0.5rem)]"
+								value={row.job_title}
+							/>
+						{/if}
+					{/if}
 
 					<textarea
 						name="job_details"
@@ -414,6 +491,24 @@
 												</div>
 											{/if}
 										</div>
+									{:else if key === 'ACCESSIBILITY_BUDGET'}
+										<div class="flex w-48">
+											<FormSimpleInput
+												name="addl_comp_accessibility_budget"
+												type="number"
+												placeholder={fieldLabels.compensationAmount[siteState.language]}
+												class="w-48 border-b-0"
+												required
+												value={row.addl_comp_accessibility_budget}
+											/>
+											{#if selectedCountry}
+												<div
+													class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center"
+												>
+													{currency[selectedCountry]}
+												</div>
+											{/if}
+										</div>
 									{:else if key === 'PER_DIEM'}
 										<div class="flex w-48">
 											<FormSimpleInput
@@ -431,6 +526,20 @@
 													{currency[selectedCountry]}
 												</div>
 											{/if}
+										</div>
+									{:else if key === 'COMMISSION'}
+										<div class="flex w-48">
+											<FormSimpleInput
+												name="addl_comp_commission"
+												type="number"
+												placeholder={fieldLabels.compensationPercentage[siteState.language]}
+												class=" w-48 border-b-0"
+												required
+												value={row.addl_comp_commission}
+											/>
+											<div class="relative -left-12 flex w-0 shrink-0 grow-0 basis-0 items-center">
+												%
+											</div>
 										</div>
 									{:else}
 										<FormSelect

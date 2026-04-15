@@ -72,9 +72,6 @@
 					</div>
 				{/if}
 				<FormSelect name="compensation_frequency" class="w-30" required>
-					<!-- <FormOption value="" isDefault
-										>{fieldLabels.compensationFrequency[siteState.language]}</FormOption
-									> -->
 					{#each Object.entries(compensationFrequencyOptions) as [key, value] (key)}
 						<FormOption value={key}>{value[siteState.language]}</FormOption>
 					{/each}
