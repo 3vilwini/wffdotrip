@@ -10,7 +10,6 @@
 	let url = 'https://www.mobileagenciespedagogies.com';
 	let domain = 'mobileagenciespedagogies.com';
 
-	console.log(data);
 </script>
 
 <svelte:head>

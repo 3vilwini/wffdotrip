@@ -46,7 +46,6 @@
 						filteredResultsState.filtersApplied.compensationFrequency.push(compensationFrequency);
 					}
 				});
-				console.log(filteredResultsState.filtersApplied);
 			};
 		}}
 		method="POST"

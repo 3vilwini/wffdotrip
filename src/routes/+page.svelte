@@ -58,7 +58,6 @@
 
 	onMount(() => {
 		for (let country of Object.keys(countryOptions)) {
-			console.log(data.rows.results);
 			numRowsPerCountry[country] = data.rows.results.filter((row) => {
 				return row.country.value === country;
 			}).length;
