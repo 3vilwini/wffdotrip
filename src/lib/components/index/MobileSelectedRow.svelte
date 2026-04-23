@@ -18,7 +18,7 @@
 	import { getWorkerTypeLabel } from '$lib/content/workerType';
 	import { getEmployerTypeLabel } from '$lib/content/employerType';
 
-	import { siteState } from '$lib/states.svelte';
+	import { siteState, yarndingsText } from '$lib/states.svelte';
 
 	let { row = $bindable() } = $props();
 </script>
@@ -55,7 +55,7 @@ verified: true
 					<div class="flex items-center gap-2">
 						{#if row.country}
 							<div class="flex w-6 justify-center text-center font-yarndings text-3xl leading-none">
-								{countryIcons[row.country.value]}
+								{yarndingsText[row.id % yarndingsText.length]}
 							</div>
 						{/if}
 						{#if row.worker_type}
