@@ -2771,369 +2771,369 @@ export const projectTypeOptions = {
 	},
 	[ProjectType.SOLO_EXHIBITION]: {
 		[Language.EN]: 'Solo exhibition',
-		[Language.FR]: 'Exposition personnelle',
+		[Language.FR]: 'Solo show',
 		[Language.IT]: 'Mostra personale',
 		[Language.NL]: 'Solo tentoonstelling'
 	},
 	[ProjectType.FILM_SCREENING]: {
 		[Language.EN]: 'Film screening',
-		[Language.FR]: 'Projection de film',
+		[Language.FR]: 'Projection',
 		[Language.IT]: 'Video proiezione',
 		[Language.NL]: 'Filmvertoning'
 	},
 	[ProjectType.PUBLIC_READING]: {
 		[Language.EN]: 'Public reading',
-		[Language.FR]: 'Lecture publique',
-		[Language.IT]: 'Public Reading in italian',
-		[Language.NL]: 'Public Reading (NL)'
+		[Language.FR]: 'Lecture',
+		[Language.IT]: 'Lettura pubblica',
+		[Language.NL]: 'Publieke lezing'
 	},
 	[ProjectType.CONFERENCE]: {
 		[Language.EN]: 'Conference',
 		[Language.FR]: 'Conférence',
-		[Language.IT]: 'Conference in italian',
-		[Language.NL]: 'Conference (NL)'
+		[Language.IT]: 'Conferenza',
+		[Language.NL]: 'Conferentie'
 	},
 	[ProjectType.PUBLIC_TALK]: {
-		[Language.EN]: 'Public Talk',
-		[Language.FR]: 'Conférence publique',
-		[Language.IT]: 'Public Talk in italian',
-		[Language.NL]: 'Public Talk (NL)'
+		[Language.EN]: 'Public talk',
+		[Language.FR]: 'Prise de parole publique',
+		[Language.IT]: 'Incontro pubblico',
+		[Language.NL]: 'Publiek gesprek'
 	},
 	[ProjectType.CURATORIAL_TALK]: {
-		[Language.EN]: 'Curatorial Talk',
-		[Language.FR]: 'Conférence curatoriale',
-		[Language.IT]: 'Curatorial Talk in italian',
-		[Language.NL]: 'Curatorial Talk (NL)'
+		[Language.EN]: 'Curatorial talk',
+		[Language.FR]: 'Intervention curatoriale',
+		[Language.IT]: 'Intervento curatoriale',
+		[Language.NL]: 'Curatorieel gesprek'
 	},
 	[ProjectType.VISITING_ARTIST_TUTORIAL]: {
-		[Language.EN]: 'Visiting Artist Tutorial',
+		[Language.EN]: 'Visiting artist tutorial',
 		[Language.FR]: 'Atelier avec un·e artiste invité·e',
-		[Language.IT]: 'Visiting Artist Tutorial in italian',
-		[Language.NL]: 'Visiting Artist Tutorial (NL)'
+		[Language.IT]: 'Artista ospite – tutoraggio ',
+		[Language.NL]: 'Gastkunstenaar (tutorial)'
 	},
 	[ProjectType.VISITING_ARTIST_TALK]: {
-		[Language.EN]: 'Visiting Artist Talk',
+		[Language.EN]: 'Visiting artist talk',
 		[Language.FR]: 'Conférence avec un·e artiste invité·e',
-		[Language.IT]: 'Visiting Artist Talk in italian',
-		[Language.NL]: 'Visiting Artist Talk (NL)'
+		[Language.IT]: 'Artista ospite – talk',
+		[Language.NL]: 'Gastkunstenaar (gesprek)'
 	},
 	[ProjectType.LIVE_PERFORMANCE]: {
-		[Language.EN]: 'Live Performance',
-		[Language.FR]: 'Performance en direct',
-		[Language.IT]: 'Live Performance in italian',
-		[Language.NL]: 'Live Performance (NL)'
+		[Language.EN]: 'Live performance',
+		[Language.FR]: 'Performance',
+		[Language.IT]: 'Performance dal vivo',
+		[Language.NL]: 'Live performance'
 	},
 	[ProjectType.COMMISSIONED_PERFORMANCE]: {
-		[Language.EN]: 'Commissioned Performance',
-		[Language.FR]: 'Performance commandée',
-		[Language.IT]: 'Commissioned Performance in italian',
-		[Language.NL]: 'Commissioned Performance (NL)'
+		[Language.EN]: 'Commissioned performance',
+		[Language.FR]: 'Commande de performance',
+		[Language.IT]: 'Performance su commissione',
+		[Language.NL]: 'Performance in opdracht'
 	},
 	[ProjectType.COMMISSIONED_WORK]: {
-		[Language.EN]: 'Commissioned Work',
-		[Language.FR]: 'Œuvre commandée',
-		[Language.IT]: 'Commissioned Work in italian',
-		[Language.NL]: 'Commissioned Work (NL)'
+		[Language.EN]: 'Commissioned work',
+		[Language.FR]: 'Commande d’œuvre',
+		[Language.IT]: 'Opera su commissione',
+		[Language.NL]: 'Werk in opdracht'
 	},
 	[ProjectType.REPLICA]: {
 		[Language.EN]: 'Replica',
-		[Language.FR]: 'Réplique',
-		[Language.IT]: 'Replica in italian',
-		[Language.NL]: 'Replica (NL)'
+		[Language.FR]: 'Édition d’œuvre',
+		[Language.IT]: 'Replica',
+		[Language.NL]: 'Replica'
 	},
 	[ProjectType.STUDIO_VISIT]: {
-		[Language.EN]: 'Studio Visit',
-		[Language.FR]: "Visite d'atelier",
-		[Language.IT]: 'Studio Visit in italian',
-		[Language.NL]: 'Studio Visit (NL)'
+		[Language.EN]: 'Studio visit',
+		[Language.FR]: "Visite d’atelier",
+		[Language.IT]: 'Visita in studio',
+		[Language.NL]: 'Atelierbezoek'
 	},
 	[ProjectType.CATALOG_TEXT]: {
-		[Language.EN]: 'Catalog Text',
+		[Language.EN]: 'Catalog text',
 		[Language.FR]: 'Texte de catalogue',
-		[Language.IT]: 'Catalog Text in italian',
-		[Language.NL]: 'Catalog Text (NL)'
+		[Language.IT]: 'Testo per catalogo',
+		[Language.NL]: 'Catalogus tekst'
 	},
 	[ProjectType.PRESENTATION_TEXT]: {
 		[Language.EN]: 'Presentation Text',
 		[Language.FR]: 'Texte de présentation',
-		[Language.IT]: 'Presentation Text in italian',
-		[Language.NL]: 'Presentation Text (NL)'
+		[Language.IT]: 'Testo di presentazione',
+		[Language.NL]: 'Presentatie tekst'
 	},
 	[ProjectType.CRITICAL_REVIEW]: {
-		[Language.EN]: 'Critical Review',
+		[Language.EN]: 'Critical review',
 		[Language.FR]: 'Critique',
-		[Language.IT]: 'Critical Review in italian',
-		[Language.NL]: 'Critical Review (NL)'
+		[Language.IT]: 'Recensione',
+		[Language.NL]: 'Kritische bespreking'
 	},
 	[ProjectType.MONOGRAPHIC_ESSAY]: {
-		[Language.EN]: 'Monographic Essay',
+		[Language.EN]: 'Monographic essay',
 		[Language.FR]: 'Essai monographique',
-		[Language.IT]: 'Monographic Essay in italian',
-		[Language.NL]: 'Monographic Essay (NL)'
+		[Language.IT]: 'Saggio monografico',
+		[Language.NL]: 'Monografische essay'
 	},
 	[ProjectType.ARTWORK_WALL_TEXT]: {
-		[Language.EN]: 'Artwork Wall Text',
-		[Language.FR]: "Texte de présentation de l'œuvre",
-		[Language.IT]: 'Artwork Wall Text in italian',
-		[Language.NL]: 'Artwork Wall Text (NL)'
+		[Language.EN]: 'Artwork wall text',
+		[Language.FR]: 'Notice d’œuvre",
+		[Language.IT]: 'Scheda opera',
+		[Language.NL]: 'Kunstwerk muurtekst'
 	},
 	[ProjectType.CURATORIAL_TEXT]: {
 		[Language.EN]: 'Curatorial Text',
-		[Language.FR]: 'Texte curatoriale',
-		[Language.IT]: 'Curatorial Text in italian',
-		[Language.NL]: 'Curatorial Text (NL)'
+		[Language.FR]: 'Texte de commissariat',
+		[Language.IT]: 'Testo curatoriale',
+		[Language.NL]: 'Curatoriële tekst'
 	},
 	[ProjectType.LITERARY_COMMISSION]: {
-		[Language.EN]: 'Literary Commission',
+		[Language.EN]: 'Literary commission',
 		[Language.FR]: 'Commande littéraire',
-		[Language.IT]: 'Literary Commission in italian',
-		[Language.NL]: 'Literary Commission (NL)'
+		[Language.IT]: 'Commissione letteraria',
+		[Language.NL]: 'Literaire opdracht'
 	},
 	[ProjectType.POETRY_COMMISSION]: {
-		[Language.EN]: 'Poetry Commission',
+		[Language.EN]: 'Poetry commission',
 		[Language.FR]: 'Commande de poésie',
-		[Language.IT]: 'Poetry Commission in italian',
-		[Language.NL]: 'Poetry Commission (NL)'
+		[Language.IT]: 'Commissione poetica',
+		[Language.NL]: 'Poëzieopdracht'
 	},
 	[ProjectType.TEXT_REPRINT]: {
-		[Language.EN]: 'Text Reprint',
-		[Language.FR]: 'Réimpression de texte',
-		[Language.IT]: 'Text Reprint in italian',
-		[Language.NL]: 'Text Reprint (NL)'
+		[Language.EN]: 'Text reprint',
+		[Language.FR]: 'Réédition de texte',
+		[Language.IT]: 'Ristampa di testo',
+		[Language.NL]: 'Tekst herdruk'
 	},
 	[ProjectType.PODCAST_FEATURE]: {
-		[Language.EN]: 'Podcast Feature',
-		[Language.FR]: 'Podcast en vedette',
-		[Language.IT]: 'Podcast Feature in italian',
-		[Language.NL]: 'Podcast Feature (NL)'
+		[Language.EN]: 'Podcast feature',
+		[Language.FR]: 'Intervention dans un podcast',
+		[Language.IT]: 'Partecipazione a podcast',
+		[Language.NL]: 'Podcast functie'
 	},
 	[ProjectType.PODCAST_COMMISSION]: {
-		[Language.EN]: 'Podcast Commission',
+		[Language.EN]: 'Podcast commission',
 		[Language.FR]: 'Commande de podcast',
-		[Language.IT]: 'Podcast Commission in italian',
-		[Language.NL]: 'Podcast Commission (NL)'
+		[Language.IT]: 'Podcast su commissione',
+		[Language.NL]: 'Podcastopdracht'
 	},
 	[ProjectType.SKILLS_WORKSHOP]: {
-		[Language.EN]: 'Skills Workshop',
-		[Language.FR]: 'Atelier de compétences',
-		[Language.IT]: 'Skills Workshop in italian',
-		[Language.NL]: 'Skills Workshop (NL)'
+		[Language.EN]: 'Skills workshop',
+		[Language.FR]: 'Atelier pratique',
+		[Language.IT]: 'Workshop',
+		[Language.NL]: 'Vaardigheden workshop)'
 	},
 	[ProjectType.PANEL_DISCUSSION_PARTICIPATION]: {
-		[Language.EN]: 'Panel Discussion Participation',
+		[Language.EN]: 'Panel discussion participation',
 		[Language.FR]: 'Participation à une table ronde',
-		[Language.IT]: 'Panel Discussion Participation in italian',
-		[Language.NL]: 'Panel Discussion Participation (NL)'
+		[Language.IT]: 'Partecipazione a tavola rotonda',
+		[Language.NL]: 'Deelname (aan een) paneldiscussie'
 	},
 	[ProjectType.PANEL_DISCUSSION_MODERATION]: {
-		[Language.EN]: 'Panel Discussion Moderation',
+		[Language.EN]: 'Panel discussion moderation',
 		[Language.FR]: "Modération d'une table ronde",
-		[Language.IT]: 'Panel Discussion Moderation in italian',
-		[Language.NL]: 'Panel Discussion Moderation (NL)'
+		[Language.IT]: 'Moderazione di tavola rotonda',
+		[Language.NL]: 'Moderatie (van een) paneldiscussie'
 	},
 	[ProjectType.EDITING_PROJECT]: {
-		[Language.EN]: 'Editing Project',
-		[Language.FR]: "Projet d'édition",
-		[Language.IT]: 'Editing Project in italian',
-		[Language.NL]: 'Editing Project (NL)'
+		[Language.EN]: 'Editing project',
+		[Language.FR]: "Projet éditorial",
+		[Language.IT]: 'Progetto editoriale / editing',
+		[Language.NL]: 'Editing project'
 	},
 	[ProjectType.CATALOG_TRANSLATION]: {
-		[Language.EN]: 'Catalog Translation',
+		[Language.EN]: 'Catalog translation',
 		[Language.FR]: 'Traduction de catalogue',
-		[Language.IT]: 'Catalog Translation in italian',
+		[Language.IT]: 'Traduzione di catalogo',
 		[Language.NL]: 'Catalog Translation (NL)'
 	},
 	[ProjectType.TEXT_TRANSLATION]: {
-		[Language.EN]: 'Text Translation',
+		[Language.EN]: 'Text translation',
 		[Language.FR]: 'Traduction de texte',
-		[Language.IT]: 'Text Translation in italian',
-		[Language.NL]: 'Text Translation (NL)'
+		[Language.IT]: 'Traduzione di testi',
+		[Language.NL]: 'Tekstvertaling'
 	},
 	[ProjectType.LITERARY_TRANSLATION]: {
-		[Language.EN]: 'Literary Translation',
+		[Language.EN]: 'Literary translation',
 		[Language.FR]: 'Traduction littéraire',
-		[Language.IT]: 'Literary Translation in italian',
-		[Language.NL]: 'Literary Translation (NL)'
+		[Language.IT]: 'Traduzione letteraria',
+		[Language.NL]: 'Literaire vertaling'
 	},
 	[ProjectType.POETRY_TRANSLATION]: {
-		[Language.EN]: 'Poetry Translation',
+		[Language.EN]: 'Poetry translation',
 		[Language.FR]: 'Traduction de poésie',
-		[Language.IT]: 'Poetry Translation in italian',
-		[Language.NL]: 'Poetry Translation (NL)'
+		[Language.IT]: 'Traduzione poetica',
+		[Language.NL]: 'Poëzievertaling'
 	},
 	[ProjectType.SUBTITLING]: {
 		[Language.EN]: 'Subtitling',
 		[Language.FR]: 'Sous-titrage',
-		[Language.IT]: 'Subtitling in italian',
-		[Language.NL]: 'Subtitling (NL)'
+		[Language.IT]: 'Sottotitolazione',
+		[Language.NL]: 'Ondertiteling'
 	},
 	[ProjectType.COPYWRITING_TASK]: {
-		[Language.EN]: 'Copywriting Task',
-		[Language.FR]: 'Tâche de rédaction',
-		[Language.IT]: 'Copywriting Task in italian',
-		[Language.NL]: 'Copywriting Task (NL)'
+		[Language.EN]: 'Copywriting task',
+		[Language.FR]: 'Conception-rédaction ',
+		[Language.IT]: 'Attività di copywriting',
+		[Language.NL]: 'Opdracht voor het schrijven van teksten'
 	},
 	[ProjectType.GHOSTWRITING_PROJECT]: {
-		[Language.EN]: 'Ghostwriting Project',
-		[Language.FR]: 'Projet de rédaction fantôme',
-		[Language.IT]: 'Ghostwriting Project in italian',
-		[Language.NL]: 'Ghostwriting Project (NL)'
+		[Language.EN]: 'Ghostwriting project',
+		[Language.FR]: 'Collaboration éditoriale',
+		[Language.IT]: 'Progetto di ghostwriting',
+		[Language.NL]: 'Ghostwriting-project'
 	},
 	[ProjectType.ARCHIVE_BUILD]: {
-		[Language.EN]: 'Archive Build',
-		[Language.FR]: "Construction d'archive",
-		[Language.IT]: 'Archive Build in italian',
-		[Language.NL]: 'Archive Build (NL)'
+		[Language.EN]: 'Archive build',
+		[Language.FR]: "Mission d'archivage",
+		[Language.IT]: 'Costruzione di archivio',
+		[Language.NL]: 'Aangelegd archief'
 	},
 	[ProjectType.ARCHIVE_RESEARCH]: {
-		[Language.EN]: 'Archive Research',
-		[Language.FR]: "Recherche d'archive",
-		[Language.IT]: 'Archive Research in italian',
-		[Language.NL]: 'Archive Research (NL)'
+		[Language.EN]: 'Archive research',
+		[Language.FR]: "Recherche archivistique",
+		[Language.IT]: 'Ricerca d’archivio',
+		[Language.NL]: 'Archiefonderzoek'
 	},
 	[ProjectType.BIBLIOGRAPHY_BUILD]: {
-		[Language.EN]: 'Bibliography Build',
-		[Language.FR]: 'Construction de bibliographie',
-		[Language.IT]: 'Bibliography Build in italian',
-		[Language.NL]: 'Bibliography Build (NL)'
+		[Language.EN]: 'Bibliography build',
+		[Language.FR]: 'Recherche bibliographique',
+		[Language.IT]: 'Costruzione bibliografia',
+		[Language.NL]: 'Samengestelde bibliografie'
 	},
 	[ProjectType.CATALOG_RESEARCH]: {
-		[Language.EN]: 'Catalog Research',
-		[Language.FR]: 'Recherche de catalogue',
-		[Language.IT]: 'Catalog Research in italian',
-		[Language.NL]: 'Catalog Research (NL)'
+		[Language.EN]: 'Catalog research',
+		[Language.FR]: 'Recherche documentaire',
+		[Language.IT]: 'Ricerca per catalogo',
+		[Language.NL]: 'Catalogus onderzoek'
 	},
 	[ProjectType.COLLECTION_ACCESS]: {
-		[Language.EN]: 'Collection Access',
-		[Language.FR]: 'Accès à la collection',
-		[Language.IT]: 'Collection Access in italian',
-		[Language.NL]: 'Collection Access (NL)'
+		[Language.EN]: 'Collection access',
+		[Language.FR]: 'Valorisation de collection',
+		[Language.IT]: 'Accesso a collezioni',
+		[Language.NL]: 'Toegang tot de collectie'
 	},
 	[ProjectType.METADATA_ENTRY]: {
-		[Language.EN]: 'Metadata Entry',
+		[Language.EN]: 'Metadata entry',
 		[Language.FR]: 'Saisie de métadonnées',
-		[Language.IT]: 'Metadata Entry in italian',
-		[Language.NL]: 'Metadata Entry (NL)'
+		[Language.IT]: 'Inserimento metadata',
+		[Language.NL]: 'Metadata invoering'
 	},
 	[ProjectType.RESEARCH_ASSISTANCE]: {
-		[Language.EN]: 'Research Assistance',
-		[Language.FR]: 'Assistance à la recherche',
-		[Language.IT]: 'Research Assistance in italian',
-		[Language.NL]: 'Research Assistance (NL)'
+		[Language.EN]: 'Research assistance',
+		[Language.FR]: 'Soutien de recherche',
+		[Language.IT]: 'Assistenza alla ricerca',
+		[Language.NL]: 'Onderzoeksassistent'
 	},
 	[ProjectType.PUBLIC_TOUR]: {
-		[Language.EN]: 'Public Tour',
-		[Language.FR]: 'Visite guidée publique',
-		[Language.IT]: 'Public Tour in italian',
-		[Language.NL]: 'Public Tour (NL)'
+		[Language.EN]: 'Public tour',
+		[Language.FR]: 'Visite publique',
+		[Language.IT]: 'Visita pubblica',
+		[Language.NL]: 'Publieke rondleiding'
 	},
 	[ProjectType.GUIDED_VISIT]: {
-		[Language.EN]: 'Guided Visit',
+		[Language.EN]: 'Guided visit',
 		[Language.FR]: 'Visite guidée',
-		[Language.IT]: 'Guided Visit in italian',
-		[Language.NL]: 'Guided Visit (NL)'
+		[Language.IT]: 'Visita guidata',
+		[Language.NL]: 'Rondleiding'
 	},
 	[ProjectType.AUDIENCE_EDUCATION]: {
-		[Language.EN]: 'Audience Education',
-		[Language.FR]: 'Éducation du public',
-		[Language.IT]: 'Audience Education in italian',
-		[Language.NL]: 'Audience Education (NL)'
+		[Language.EN]: 'Audience education',
+		[Language.FR]: 'Médiation éducative',
+		[Language.IT]: 'Educazione del pubblico',
+		[Language.NL]: 'Publiekseducatie'
 	},
 	[ProjectType.CULTURAL_OUTREACH_SESSION]: {
-		[Language.EN]: 'Cultural Outreach Session',
-		[Language.FR]: 'Session de sensibilisation culturelle',
-		[Language.IT]: 'Cultural Outreach Session in italian',
-		[Language.NL]: 'Cultural Outreach Session (NL)'
+		[Language.EN]: 'Cultural outreach session',
+		[Language.FR]: 'Médiation hors-les-murs',
+		[Language.IT]: 'Attività di mediazione culturale',
+		[Language.NL]: 'Culturele outreach-sessie'
 	},
 	[ProjectType.OUTREACH_IN_SCHOOLS]: {
-		[Language.EN]: 'Outreach in Schools',
-		[Language.FR]: 'Sensibilisation dans les écoles',
-		[Language.IT]: 'Outreach in Schools in italian',
-		[Language.NL]: 'Outreach in Schools (NL)'
+		[Language.EN]: 'Outreach in schools',
+		[Language.FR]: 'Intervention en établissement scolaire',
+		[Language.IT]: 'Intervento in istituto scolastico',
+		[Language.NL]: 'Voorlichting op scholen'
 	},
 	[ProjectType.WORKSHOP_DESIGN_AND_FACILITATION]: {
-		[Language.EN]: 'Workshop Design and Facilitation',
-		[Language.FR]: "Conception et facilitation d'ateliers",
-		[Language.IT]: 'Workshop Design and Facilitation in italian',
-		[Language.NL]: 'Workshop Design and Facilitation (NL)'
+		[Language.EN]: 'Workshop design and facilitation',
+		[Language.FR]: "Conception et animation d'ateliers",
+		[Language.IT]: 'Progettazione e conduzione laboratori',
+		[Language.NL]: 'Workshop Ontwerp & Begeleiding'
 	},
 	[ProjectType.PERFORMANCE]: {
 		[Language.EN]: 'Performance',
 		[Language.FR]: 'Performance',
-		[Language.IT]: 'Performance in italian',
+		[Language.IT]: 'Performance',
 		[Language.NL]: 'Performance (NL)'
 	},
 	[ProjectType.EVENT]: {
 		[Language.EN]: 'Event',
 		[Language.FR]: 'Événement',
-		[Language.IT]: 'Event in italian',
-		[Language.NL]: 'Event (NL)'
+		[Language.IT]: 'Evento',
+		[Language.NL]: 'Event'
 	},
 	[ProjectType.VIDEO_WORK]: {
-		[Language.EN]: 'Video Work',
+		[Language.EN]: 'Artwork — Video',
 		[Language.FR]: 'Œuvre vidéo',
-		[Language.IT]: 'Video Work in italian',
-		[Language.NL]: 'Video Work (NL)'
+		[Language.IT]: 'Opera video',
+		[Language.NL]: 'Videowerk'
 	},
 	[ProjectType.SCREENING]: {
 		[Language.EN]: 'Screening',
 		[Language.FR]: 'Projection',
-		[Language.IT]: 'Screening in italian',
-		[Language.NL]: 'Screening (NL)'
+		[Language.IT]: 'Proiezione',
+		[Language.NL]: 'Vertoning'
 	},
 	[ProjectType.PODCAST]: {
 		[Language.EN]: 'Podcast',
 		[Language.FR]: 'Podcast',
-		[Language.IT]: 'Podcast in italian',
-		[Language.NL]: 'Podcast (NL)'
+		[Language.IT]: 'Podcast',
+		[Language.NL]: 'Podcast'
 	},
 	[ProjectType.ARCHIVE]: {
 		[Language.EN]: 'Archive',
 		[Language.FR]: 'Archive',
-		[Language.IT]: 'Archive in italian',
-		[Language.NL]: 'Archive (NL)'
+		[Language.IT]: 'Archivio',
+		[Language.NL]: 'Archief'
 	},
 	[ProjectType.DIGITAL_NEW_MEDIA_WORK]: {
-		[Language.EN]: 'Digital/New Media Work',
-		[Language.FR]: 'Œuvre numérique/nouveaux médias',
-		[Language.IT]: 'Digital/New Media Work in italian',
-		[Language.NL]: 'Digital/New Media Work (NL)'
+		[Language.EN]: 'Artwork — Digital/new media',
+		[Language.FR]: 'Oeuvre nouveaux média',
+		[Language.IT]: 'Opera digitale / new media',
+		[Language.NL]: 'Digitaal / nieuwe media werk'
 	},
 	[ProjectType.SCULPTURE]: {
-		[Language.EN]: 'Sculpture',
+		[Language.EN]: 'Artwork — Sculpture',
 		[Language.FR]: 'Sculpture',
-		[Language.IT]: 'Sculpture in italian',
-		[Language.NL]: 'Sculpture (NL)'
+		[Language.IT]: 'Scultura',
+		[Language.NL]: 'Sculptuur'
 	},
 	[ProjectType.PAINTING]: {
-		[Language.EN]: 'Painting',
-		[Language.FR]: 'Peinture',
-		[Language.IT]: 'Painting in italian',
-		[Language.NL]: 'Painting (NL)'
+		[Language.EN]: 'Artwork — Painting/wall-based',
+		[Language.FR]: 'Peinture/fresque',
+		[Language.IT]: 'Pittura',
+		[Language.NL]: 'Schilderij'
 	},
 	[ProjectType.INSTALLATION]: {
 		[Language.EN]: 'Installation',
 		[Language.FR]: 'Installation',
-		[Language.IT]: 'Installation in italian',
-		[Language.NL]: 'Installation (NL)'
+		[Language.IT]: 'Installazione',
+		[Language.NL]: 'Installatie'
 	},
 	[ProjectType.TECHNICAL_SETUP]: {
-		[Language.EN]: 'Technical Setup',
+		[Language.EN]: 'Technical setup',
 		[Language.FR]: 'Installation technique',
-		[Language.IT]: 'Technical Setup in italian',
-		[Language.NL]: 'Technical Setup (NL)'
+		[Language.IT]: 'Allestimento tecnico',
+		[Language.NL]: 'Technische set-up'
 	},
 	[ProjectType.PROJECT_COORDINATION]: {
 		[Language.EN]: 'Project Coordination',
 		[Language.FR]: 'Coordination de projet',
-		[Language.IT]: 'Project Coordination in italian',
-		[Language.NL]: 'Project Coordination (NL)'
+		[Language.IT]: 'Coordinamento del progetto',
+		[Language.NL]: 'Projectcoördinatie'
 	},
 	[ProjectType.SUPPORT_AND_CONSULTING]: {
 		[Language.EN]: 'Support and Consulting',
-		[Language.FR]: 'Soutien et conseil',
-		[Language.IT]: 'Support and Consulting in italian',
-		[Language.NL]: 'Support and Consulting (NL)'
+		[Language.FR]: 'Suivi et conseil ',
+		[Language.IT]: 'Supporto e consulenza',
+		[Language.NL]: 'Ondersteuning & advies'
 	},
 	[ProjectType.TOUR_PLANNING]: {
 		[Language.EN]: 'Tour Planning',
