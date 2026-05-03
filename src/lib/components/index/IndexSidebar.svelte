@@ -53,7 +53,7 @@
 						</div>
 					{/each}
 				</div>
-				<div class="mt-4 flex justify-between font-sans text-2xl">
+				<div class="mt-4 flex justify-between font-sans text-xl">
 					<span class="font-yarndings">{yarndingsText[1]}</span>
 					{indexPage.getInvolvedHeader[siteState.language]}
 				</div>
