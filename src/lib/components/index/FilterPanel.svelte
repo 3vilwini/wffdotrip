@@ -110,12 +110,12 @@
 		</div>
 		<div class="flex justify-center">
 			<button
-				type="submit"
-				class="mt-6 cursor-pointer border border-dashed bg-black px-6 py-3 font-sans text-base text-white uppercase disabled:opacity-50"
-				disabled={isSubmitting}
-			>
-				Search
-			</button>
+  type="submit"
+  class="mt-6 cursor-pointer outline outline-dashed outline-black bg-black px-6 py-3 font-sans text-base text-white uppercase transition-colors disabled:opacity-50 hover:bg-white hover:text-black"
+  disabled={isSubmitting}
+>
+  Search
+</button>
 		</div>
 	</form>
 </div>
