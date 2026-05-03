@@ -8,7 +8,7 @@
 
 
 <button
-	class={`cursor-pointer rounded-full px-3 py-1 border ${
+	class={`cursor-pointer flex items-center justify-center w-10 h-10 rounded-full border ${
 		language === siteState.language
 			? 'border-current'
 			: 'border-transparent'
