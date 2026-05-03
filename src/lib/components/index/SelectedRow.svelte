@@ -103,7 +103,11 @@ verified: true
 									onclick={() => removeRow(row)}
 									class="flex size-6 cursor-pointer items-center justify-center bg-black"
 								>
-									×
+									<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="7.82841" y1="2.17155" x2="2.17155" y2="7.8284" stroke="white"/>
+<line x1="2.17155" y1="2.17159" x2="7.8284" y2="7.82845" stroke="white"/>
+</svg>
+
 								</div>
 							</div>
 						</div>
