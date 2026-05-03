@@ -8,11 +8,11 @@
 
 
 <button
-	class={`cursor-pointer flex items-center justify-center w-10 h-10 rounded-full border ${
+	class={`cursor-pointer rounded-full px-3 py-1 border transition ${
 		language === siteState.language
 			? 'border-current'
 			: 'border-transparent'
-	}`}
+	} hover:border-dashed hover:border-current`}
 	onclick={() => {
 		setLanguage(language);
 	}}
