@@ -33,25 +33,25 @@ export const indexHeaderLabels = {
 		[Language.EN]: 'Worker',
 		[Language.FR]: 'Travailleur·se',
 		[Language.IT]: 'Lavoratorə',
-		[Language.NL]: 'Worker (NL)'
+		[Language.NL]: 'Werknemer'
 	},
 	employer: {
 		[Language.EN]: 'Employer',
 		[Language.FR]: 'Employeur',
 		[Language.IT]: 'Datorə di lavoro',
-		[Language.NL]: 'Employer (NL)'
+		[Language.NL]: 'Werkgever'
 	},
 	contract: {
 		[Language.EN]: 'Contract',
 		[Language.FR]: 'Contrat',
 		[Language.IT]: 'Contratto',
-		[Language.NL]: 'Contract (NL)'
+		[Language.NL]: 'Contract'
 	},
 	wage: {
 		[Language.EN]: 'Wage',
 		[Language.FR]: 'Paie',
 		[Language.IT]: 'Retribuzione',
-		[Language.NL]: 'Wage (NL)'
+		[Language.NL]: 'Loon'
 	}
 };
 
@@ -60,19 +60,19 @@ export const navMenuItems = {
 		[Language.EN]: 'FAQ',
 		[Language.FR]: 'FAQ',
 		[Language.IT]: 'FAQ',
-		[Language.NL]: 'FAQ (NL)'
+		[Language.NL]: 'FAQ'
 	},
 	privacy: {
 		[Language.EN]: 'Privacy & data',
 		[Language.FR]: 'Confidentialité & données',
 		[Language.IT]: 'Privacy e dati',
-		[Language.NL]: 'Privacy & data (NL)'
+		[Language.NL]: 'Privacy & gegevens'
 	},
 	cost: {
 		[Language.EN]: 'How much does this website cost?',
 		[Language.FR]: 'Combien coûte cette plateforme ?',
 		[Language.IT]: 'Quanto costa questo sito web?',
-		[Language.NL]: 'How much does this website cost? (NL)'
+		[Language.NL]: 'Wat kost deze website?'
 	}
 };
 
@@ -81,47 +81,47 @@ export const fieldLabels = {
 		[Language.EN]: 'Country',
 		[Language.FR]: 'Pays',
 		[Language.IT]: 'Paese',
-		[Language.NL]: 'Country (NL)'
+		[Language.NL]: 'Land'
 	},
 	city: {
 		[Language.EN]: 'City (optional)',
 		[Language.FR]: 'Ville (facultatif)',
 		[Language.IT]: 'Città (facoltativo)',
-		[Language.NL]: 'City (optional) (NL)'
+		[Language.NL]: 'Stad (optioneel)'
 	},
 	year: {
 		[Language.EN]: 'Year',
 		[Language.FR]: 'Année',
 		[Language.IT]: 'Anno',
-		[Language.NL]: 'Year (NL)'
+		[Language.NL]: 'Jaar (optioneel)'
 	},
 	employerType: {
-		[Language.EN]: 'Employer Category',
+		[Language.EN]: 'Employer category',
 		[Language.FR]: 'Catégorie d’employeur',
 		[Language.IT]: 'Tipologia di datore di lavoro',
-		[Language.NL]: 'Employer Category (NL)'
+		[Language.NL]: 'Werkgever type'
 	},
 	employerName: {
-		[Language.EN]: 'Employer Name (optional)',
+		[Language.EN]: 'Employer name (optional)',
 		[Language.FR]: 'Nom de l’employeur (facultatif)',
 		[Language.IT]: 'Nome del datore di lavoro (facoltativo)',
-		[Language.NL]: 'Employer Name (optional) (NL)'
+		[Language.NL]: 'Naam werkgever (optioneel)'
 	},
 	numEmployees: {
-		[Language.EN]: '# of Employees',
+		[Language.EN]: '# of employees',
 		[Language.FR]: '# d’employé·es',
 		[Language.IT]: '# di dipendentə',
-		[Language.NL]: '# of Employees (NL)'
+		[Language.NL]: '# aantal werknemers'
 	},
 	contractType: {
-		[Language.EN]: 'Contract Type',
+		[Language.EN]: 'Contract type',
 		[Language.FR]: 'Type de contrat',
 		[Language.IT]: 'Tipologia di contratto',
-		[Language.NL]: 'Contract Type (NL)'
+		[Language.NL]: 'Contract type'
 	},
 	workerStatus: {
 		[Language.EN]: {
-			[Country.UK]: 'Worker Status (UK)',
+			[Country.UK]: 'Worker status (UK)',
 			[Country.NETHERLANDS]: 'Worker Status (NL)',
 			[Country.ITALY]: 'Worker Status (IT)',
 			[Country.FRANCE]: 'Worker Status (FR)'
@@ -139,131 +139,131 @@ export const fieldLabels = {
 			[Country.FRANCE]: 'Status del lavoratorɜ (FR)'
 		},
 		[Language.NL]: {
-			[Country.UK]: 'UK Worker status (NL)',
-			[Country.NETHERLANDS]: 'Dutch Worker status (NL)',
-			[Country.ITALY]: 'Italian Worker status (NL)',
-			[Country.FRANCE]: 'French Worker status (NL)'
+			[Country.UK]: 'Werknemer status (UK)',
+			[Country.NETHERLANDS]: ' Werknemer status (NL)',
+			[Country.ITALY]: 'Werknemer status (IT)',
+			[Country.FRANCE]: 'Werknemer status (FR)'
 		}
 	},
 	contractLength: {
-		[Language.EN]: 'Contract Length (optional)',
+		[Language.EN]: 'Contract length (optional)',
 		[Language.FR]: 'Durée du contrat (facultatif)',
 		[Language.IT]: 'Durata del contratto (facoltativo)',
-		[Language.NL]: 'Contract Length (optional) (NL)'
+		[Language.NL]: 'Contract duur (optioneel)'
 	},
 	contractNumHours: {
-		[Language.EN]: '# of Hours (optional)',
+		[Language.EN]: '# of hours (optional)',
 		[Language.FR]: '# d’heures (facultatif)',
 		[Language.IT]: '# di ore (facoltativo)',
-		[Language.NL]: '# of Hours (optional) (NL)'
+		[Language.NL]: '# uren (optioneel)'
 	},
 	perWeek: {
 		[Language.EN]: 'hours / week',
 		[Language.FR]: 'heures / semaine',
 		[Language.IT]: 'ore / settimana',
-		[Language.NL]: 'hours / week (NL)'
+		[Language.NL]: 'uren / week '
 	},
 	workerType: {
-		[Language.EN]: 'Worker Category',
+		[Language.EN]: 'Worker category',
 		[Language.FR]: 'Catégorie de travailleur·se',
 		[Language.IT]: 'Categoria del lavoratorə',
-		[Language.NL]: 'Worker Category (NL)'
+		[Language.NL]: 'Werknemer categorie'
 	},
 	projectType: {
-		[Language.EN]: 'Project Category',
-		[Language.FR]: 'Type de projet',
-		[Language.IT]: 'Tipologia di progetto',
-		[Language.NL]: 'Project Category (NL)'
-	},
-	jobTitle: {
-		[Language.EN]: 'Project Category (optional)',
+		[Language.EN]: 'Project type (optional)',
 		[Language.FR]: 'Type de projet (facultatif)',
 		[Language.IT]: 'Tipologia di progetto (facoltativo)',
-		[Language.NL]: 'Job title (optional) (NL)'
+		[Language.NL]: 'Project type (optioneel)'
+	},
+	jobTitle: {
+		[Language.EN]: 'Job title (optional)',
+		[Language.FR]: 'Intitulé de poste (facultatif)',
+		[Language.IT]: 'Titolo di lavoro (facoltativo)',
+		[Language.NL]: 'Functietitel (optioneel)'
 	},
 	jobDetails: {
 		[Language.EN]: 'Details (optional)',
 		[Language.FR]: 'Détails (facultatif)',
 		[Language.IT]: 'Dettagli (facoltativo)',
-		[Language.NL]: 'Details (optional) (NL)'
+		[Language.NL]: 'Detail (optioneel)'
 	},
 	jobExperience: {
 		[Language.EN]: 'Experience (optional)',
 		[Language.FR]: 'Expérience (facultatif)',
 		[Language.IT]: 'Esperienza (facoltativo)',
-		[Language.NL]: 'Experience (optional) (NL)'
+		[Language.NL]: 'Ervaring(optioneel)'
 	},
 	jobObtainedVia: {
-		[Language.EN]: 'Job Obtained Via (optional)',
+		[Language.EN]: 'Job obtained via (optional)',
 		[Language.FR]: 'Travail obtenu via (facultatif)',
 		[Language.IT]: 'Modalità di ottenimento del lavoro (facoltativo)',
-		[Language.NL]: 'Job obtained via (optional) (NL)'
+		[Language.NL]: 'Baan verkregen via (optioneel)'
 	},
 	compensationAmount: {
 		[Language.EN]: 'Amount',
 		[Language.FR]: 'Montant',
 		[Language.IT]: 'Importo',
-		[Language.NL]: 'Amount (NL)'
+		[Language.NL]: 'Bedrag'
 	},
 	compensationPercentage: {
 		[Language.EN]: 'Percentage',
 		[Language.FR]: 'Pourcentage',
 		[Language.IT]: 'Percentuale',
-		[Language.NL]: 'Percentage (NL)'
+		[Language.NL]: 'Percentage'
 	},
 	compensationFrequency: {
 		[Language.EN]: 'frequency',
 		[Language.FR]: 'fréquence',
 		[Language.IT]: 'frequenza',
-		[Language.NL]: 'frequency (NL)'
+		[Language.NL]: 'frequentie'
 	},
 	compensationLate: {
 		[Language.EN]: 'I was paid late',
 		[Language.FR]: 'J’ai été payé·e en retard',
 		[Language.IT]: 'Sono statə pagatə in ritardo',
-		[Language.NL]: 'I was paid late (NL)'
+		[Language.NL]: 'Ik werd te laat betaald'
 	},
 	satisfiedWithCompensation: {
 		[Language.EN]: 'I was satisfied with the compensation',
 		[Language.FR]: 'La rémunération m’est apparue satisfaisante',
 		[Language.IT]: 'Ero soddisfattə del compenso',
-		[Language.NL]: 'I was satisfied with the compensation (NL)'
+		[Language.NL]: 'Ik was tevreden over de vergoeding'
 	},
 	satisfiedWithConditions: {
-		[Language.EN]: 'I was satisfied with the working conditions',
+		[Language.EN]: 'Ik was tevreden over de vergoeding',
 		[Language.FR]: 'Les conditions de travail me sont apparues satisfaisantes',
 		[Language.IT]: 'Ero soddisfattə delle condizioni di lavoro',
-		[Language.NL]: 'I was satisfied with the working conditions (NL)'
+		[Language.NL]: 'Ik was tevreden over de werkomstandigheden'
 	},
 	treatedFairly: {
 		[Language.EN]: 'I felt fairly treated against my colleagues',
 		[Language.FR]: 'Je me suis senti·e traité·e de manière équitable par rapport à mes collègues',
 		[Language.IT]: 'Mi sono sentitə trattatə in modo equo rispetto ai miei colleghi',
-		[Language.NL]: 'I felt fairly treated against my colleagues (NL)'
+		[Language.NL]: 'Ik werd gelijkwaardig als mijn collega’s behandeld'
 	},
 	addlComp: {
-		[Language.EN]: 'Additional Compensation',
+		[Language.EN]: 'Additional compensation',
 		[Language.FR]: 'Compensations additionelles',
 		[Language.IT]: 'Compensi aggiuntivi',
-		[Language.NL]: 'Additional Compensation (NL)'
+		[Language.NL]: 'Extra vergoeding'
 	},
 	employees: {
 		[Language.EN]: 'employees',
 		[Language.FR]: 'employé·es',
 		[Language.IT]: 'dipendentə',
-		[Language.NL]: 'employees (NL)'
+		[Language.NL]: 'werknemers'
 	},
 	yearsOfExperience: {
 		[Language.EN]: 'year(s) of experience',
 		[Language.FR]: 'année(s) d’expérience',
 		[Language.IT]: 'anni di esperienza',
-		[Language.NL]: 'year(s) of experience (NL)'
+		[Language.NL]: 'jaar/jaren ervaring'
 	},
 	submitAnEntry: {
 		[Language.EN]: 'Submit an entry',
 		[Language.FR]: 'Partager une rémuneration',
 		[Language.IT]: 'Condividere una remunerazione',
-		[Language.NL]: 'Submit an entry (NL)'
+		[Language.NL]: 'Een inzending indienen'
 	}
 };
 
@@ -279,28 +279,28 @@ export const countryOptions = {
 		[Language.EN]: 'UK',
 		[Language.FR]: 'Royaume-Uni',
 		[Language.IT]: 'Regno Unito',
-		[Language.NL]: 'UK (NL)',
+		[Language.NL]: 'Verenigd Koninkrijk',
 		id: '5207042'
 	},
 	[Country.FRANCE]: {
 		[Language.EN]: 'France',
 		[Language.FR]: 'France',
 		[Language.IT]: 'Francia',
-		[Language.NL]: 'France (NL)',
+		[Language.NL]: 'Frankrijk',
 		id: '5207043'
 	},
 	[Country.ITALY]: {
 		[Language.EN]: 'Italy',
 		[Language.FR]: 'Italie',
 		[Language.IT]: 'Italia',
-		[Language.NL]: 'Italy (NL)',
+		[Language.NL]: 'Italië',
 		id: '5207041'
 	}
 	// [Country.NETHERLANDS]: {
 	// 	[Language.EN]: 'Netherlands',
 	// 	[Language.FR]: 'Pays-Bas',
 	// 	[Language.IT]: 'Paesi Bassi',
-	// 	[Language.NL]: 'Netherlands (NL)',
+	// 	[Language.NL]: 'Nederland',
 	// 	id: '5207044'
 	// }
 };
@@ -309,7 +309,7 @@ export const yearOption2010OrBefore = {
 	[Language.EN]: '2010 or before',
 	[Language.FR]: '2010 ou avant',
 	[Language.IT]: '2010 o anni precedenti',
-	[Language.NL]: '2010 or before (NL)'
+	[Language.NL]: '2010 of eerder'
 };
 
 export const enum EmployerTypeSubgroup {
@@ -378,71 +378,66 @@ export const enum EmployerType {
 export const employerTypeOptions = {
 	[EmployerTypeSubgroup.CULTURAL_INSTITUTIONS]: {
 		groupLabel: {
-			[Language.EN]: 'Cultural Institutions',
+			[Language.EN]: 'Cultural institutions',
 			[Language.FR]: 'Institutions culturelles',
 			[Language.IT]: 'Istituzioni culturali',
-			[Language.NL]: 'Cultural Institutions (NL)'
+			[Language.NL]: 'Culturele Instituten'
 		},
 		options: {
 			[EmployerType.NATIONAL_CULTURAL_INSTITUTION]: {
-				[Language.EN]: 'National Cultural Institution (e.g. Tate, National Galleries of Scotland)',
-				[Language.FR]:
-					'Institution culturelle nationale (ex: Centre Pompidou, Palais de Tokyo, MUCEM)',
-				[Language.IT]: 'Istituzione pubblica di grandi dimensioni (ex: MAXXI, GNAM)',
-				[Language.NL]: 'National Cultural Institution (NL)',
+				[Language.EN]: 'National cultural institution (e.g. Tate, Rijksmuseum, MAXXI, Centre Pompidou)',
+				[Language.FR]: 'Institution culturelle nationale (ex: Tate, Rijksmuseum, MAXXI, Centre Pompidou)',
+				[Language.IT]: 'Istituzione pubblica di grandi dimensioni (ex: Tate, Rijksmuseum, MAXXI, Centre Pompidou)',
+				[Language.NL]: 'Nationaal cultureel instituut (b.v. Tate, Rijksmuseum, MAXXI, Centre Pompidou)',
 				id: '5207062'
 			},
 			[EmployerType.REGIONAL_CULTURAL_INSTITUTION]: {
-				[Language.EN]: 'Regional Cutural Institution (e.g. FACT, Turner Contemporary, Chapter)',
+				[Language.EN]: 'Regional cultural institution (e.g. FACT, Turner Contemporary, Chapter)',
 				[Language.FR]: 'Institution culturelle régionale (ex: FRAC)',
-				[Language.IT]:
-					'Istituzione pubblica di medie dimensioni (ex: Castello di Rivoli, CRAC, MART)',
-				[Language.NL]: 'Regional Cultural Institution (NL)',
+				[Language.IT]: 'Istituzione pubblica di medie dimensioni (ex: Castello di Rivoli, CRAC, MART)',
+				[Language.NL]: 'Regionale culturele instelling (b.v. Eye, Melly)',
 				id: '5207061'
 			},
 			[EmployerType.LOCAL_CULTURAL_INSTITUTION]: {
-				[Language.EN]:
-					'Local Cultural Institution  (e.g. Metroland Cultures, Devonshire Collective)',
+				[Language.EN]:'Local cultural institution (e.g. Metroland Cultures, Devonshire Collective)',
 				[Language.FR]: 'Institution culturelle locale (ex: La Friche Belle de Mai, CAC Bretigny)',
-				[Language.IT]:
-					'Istituzione pubblica di piccole dimensioni (ex: PAC Milano, MAMbo, Galleria Civica di Modena)',
-				[Language.NL]: 'Local Cultural Institution (NL)',
+				[Language.IT]:'Istituzione pubblica di piccole dimensioni (ex: PAC Milano, MAMbo, Galleria Civica di Modena)',
+				[Language.NL]: 'Lokale culturele instelling (b.v. Framer Framed, Van Abbemuseum, de Pont)',
 				id: '5768056'
 			},
 			[EmployerType.PRIVATE_FOUNDATION]: {
-				[Language.EN]: 'Private Cultural Institution (e.g. Wellcome Collection, Royal Academy)',
+				[Language.EN]: 'Private cultural institution (e.g. Wellcome Collection, Royal Academy)',
 				[Language.FR]: 'Fondation privée (ex: Fondation Cartier, Fondation d’entreprise Ricard)',
 				[Language.IT]: 'Istituzione privata o fondazione (ex: Fondazione Prada, Palazzo Grassi)',
-				[Language.NL]: 'Private Cultural Institution (NL)',
+				[Language.NL]: 'Particuliere culturele instelling (b.v. Museum Voorlinden, Hartwig Art Foundation)',
 				id: '5768057'
 			},
 			[EmployerType.ARTS_COMMISSIONER]: {
-				[Language.EN]: 'Arts Commissioner (e.g. Create London, Art Angel)',
+				[Language.EN]: 'Arts commissioner (e.g. Create London, Art Angel)',
 				[Language.FR]: 'Fonds de dotation (ex: Kadist, Fonds de dotation agnès b.)',
-				[Language.IT]:
-					'Fondazione filantropica per le arti (ex: Dena Foundation for Contemporary Art, Fondazione Nicola Trussardi)',
-				[Language.NL]: 'Arts Commissioner (NL)',
+				[Language.IT]:'Fondazione filantropica per le arti (ex: Dena Foundation for Contemporary Art, Fondazione Nicola Trussardi)',
+				[Language.NL]: 'Kunstcommissie/opdrachtgever (b.v. AFK, Mondraanfonds)',
 				id: '5768058'
 			},
 			[EmployerType.NON_PROFIT_ORGANIZATION]: {
-				[Language.EN]: 'Nonprofit Art Space (e.g. The Perimeter, Raven Row)',
+				[Language.EN]: 'Non-profit art space (e.g. The Perimeter, Raven Row)',
 				[Language.FR]: 'Espace associatif (ex: Bétonsalon, Triangle-Astérides)',
 				[Language.IT]: 'Spazi d’arte non profit (ex: Pirelli HangarBicocca, Fondazione ICA Milano)',
-				[Language.NL]: 'Non-Profit Organization (NL)',
+				[Language.NL]: 'Non-profit kunstruimte (b.v. De Appel, 1646)',
 				id: '5207068'
 			},
 			[EmployerType.ARTIST_RUN_SPACE]: {
-				[Language.EN]: 'Artist-Run Space',
+				[Language.EN]: 'Artist-run space',
 				[Language.FR]: 'Artist-run space',
 				[Language.IT]: 'Artist-run space',
-				[Language.NL]: 'Artist-Run Space (NL)',
+				[Language.NL]: 'Door kunstenaars gerunde ruimte',
 				id: '5207064'
 			},
 			[EmployerType.STAFFING_AGENCY]: {
-				[Language.EN]: 'Staffing Agency',
+				[Language.EN]: 'Staffing agency',
 				[Language.FR]: 'Agence en sous-traitance',
 				[Language.IT]: 'Cooperativa di servizi culturali',
-				[Language.NL]: 'Staffing Agency (NL)',
+				[Language.NL]: 'Uitzendbureau',
 				id: '5768059'
 			}
 		}
@@ -589,8 +584,8 @@ export const employerTypeOptions = {
 			},
 			[EmployerType.ONLINE_SALES_PLATFORM]: {
 				[Language.EN]: 'Online Sales Platform',
-				[Language.FR]: 'Online Sales Platform in french',
-				[Language.IT]: 'Online Sales Platform in italian',
+				[Language.FR]: 'Plateforme de vente en ligne',
+				[Language.IT]: 'Piattaforma di vendita online',
 				[Language.NL]: 'Online Sales Platform (NL)',
 				id: '5207086'
 			},
