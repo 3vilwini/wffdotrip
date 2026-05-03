@@ -3061,7 +3061,7 @@ export const projectTypeOptions = {
 		[Language.EN]: 'Performance',
 		[Language.FR]: 'Performance',
 		[Language.IT]: 'Performance',
-		[Language.NL]: 'Performance (NL)'
+		[Language.NL]: 'Performance'
 	},
 	[ProjectType.EVENT]: {
 		[Language.EN]: 'Event',
@@ -3124,430 +3124,430 @@ export const projectTypeOptions = {
 		[Language.NL]: 'Technische set-up'
 	},
 	[ProjectType.PROJECT_COORDINATION]: {
-		[Language.EN]: 'Project Coordination',
+		[Language.EN]: 'Project coordination',
 		[Language.FR]: 'Coordination de projet',
 		[Language.IT]: 'Coordinamento del progetto',
 		[Language.NL]: 'Projectcoördinatie'
 	},
 	[ProjectType.SUPPORT_AND_CONSULTING]: {
-		[Language.EN]: 'Support and Consulting',
+		[Language.EN]: 'Support and consulting',
 		[Language.FR]: 'Suivi et conseil ',
 		[Language.IT]: 'Supporto e consulenza',
 		[Language.NL]: 'Ondersteuning & advies'
 	},
 	[ProjectType.TOUR_PLANNING]: {
-		[Language.EN]: 'Tour Planning',
-		[Language.FR]: 'Planification de tournée',
-		[Language.IT]: 'Tour Planning in italian',
-		[Language.NL]: 'Tour Planning (NL)'
+		[Language.EN]: 'Tour planning',
+		[Language.FR]: 'Conception de parcours de visite',
+		[Language.IT]: 'Progettazione del percorso di visita',
+		[Language.NL]: 'Rondleidingsplanning'
 	},
 	[ProjectType.SCHOOL_INTERVENTION]: {
-		[Language.EN]: 'School Intervention',
-		[Language.FR]: 'Intervention scolaire',
-		[Language.IT]: 'School Intervention in italian',
-		[Language.NL]: 'School Intervention (NL)'
+		[Language.EN]: 'School intervention',
+		[Language.FR]: 'Intervention en établissement scolaire',
+		[Language.IT]: 'Intervento in istituto scolastico',
+		[Language.NL]: 'School interventie'
 	},
 	[ProjectType.CONFERENCE_MODERATION]: {
-		[Language.EN]: 'Conference Moderation',
+		[Language.EN]: 'Conference moderation',
 		[Language.FR]: 'Modération de conférence',
-		[Language.IT]: 'Conference Moderation in italian',
-		[Language.NL]: 'Conference Moderation (NL)'
+		[Language.IT]: 'Moderazione di conferenze',
+		[Language.NL]: 'Conferentie moderatie'
 	},
 	[ProjectType.EDUCATIONAL_RESOURCE_WRITING]: {
-		[Language.EN]: 'Educational Resource Writing',
-		[Language.FR]: 'Rédaction de ressources éducatives',
-		[Language.IT]: 'Educational Resource Writing in italian',
-		[Language.NL]: 'Educational Resource Writing (NL)'
+		[Language.EN]: 'Educational resource writing',
+		[Language.FR]: 'Écriture de dossier pédagogique',
+		[Language.IT]: 'Redazione di dossier pedagogico',
+		[Language.NL]: 'Het schrijven van lesmateriaal'
 	},
 	[ProjectType.MEDIATION_TEXT]: {
-		[Language.EN]: 'Mediation Text',
-		[Language.FR]: 'Texte de médiation',
-		[Language.IT]: 'Mediation Text in italian',
-		[Language.NL]: 'Mediation Text (NL)'
+		[Language.EN]: 'Mediation text',
+		[Language.FR]: 'Écriture de livret de salle',
+		[Language.IT]: 'Redazione di guida di sala',
+		[Language.NL]: 'Tekst over bemiddeling'
 	},
 	[ProjectType.DEVELOPMENT_OF_MEDIATION_TOOLS]: {
-		[Language.EN]: 'Development of Mediation Tools',
+		[Language.EN]: 'Development of mediation tools',
 		[Language.FR]: "Développement d'outils de médiation",
-		[Language.IT]: 'Development of Mediation Tools in italian',
-		[Language.NL]: 'Development of Mediation Tools (NL)'
+		[Language.IT]: 'Sviluppo di strumenti di mediazione',
+		[Language.NL]: 'Ontwikkeling van bemiddelingsinstrumenten'
 	},
 	[ProjectType.OUTREACH_PROJECT_PLANNING]: {
-		[Language.EN]: 'Outreach Project Planning',
-		[Language.FR]: 'Planification de projet de sensibilisation',
-		[Language.IT]: 'Outreach Project Planning in italian',
-		[Language.NL]: 'Outreach Project Planning (NL)'
+		[Language.EN]: 'Outreach project planning',
+		[Language.FR]: 'Ingénierie culturelle hors-les-murs',
+		[Language.IT]: 'Ingegneria culturale fuori sede',
+		[Language.NL]: 'Planning van voorlichtingsprojecten'
 	},
 	[ProjectType.RECEPTION_AND_SUPPORT_FOR_GROUP_VISITS]: {
-		[Language.EN]: 'Reception and Support for Group Visits',
-		[Language.FR]: 'Accueil et soutien pour les visites de groupe',
-		[Language.IT]: 'Reception and Support for Group Visits in italian',
-		[Language.NL]: 'Reception and Support for Group Visits (NL)'
+		[Language.EN]: 'Reception and support for group visits',
+		[Language.FR]: 'Accueil et accompagnement de groupes',
+		[Language.IT]: 'Accoglienza e accompagnamento gruppi',
+		[Language.NL]: 'Ontvangst en ondersteuning bij groepsbezoeken'
 	},
 	[ProjectType.MEDIATOR_PEER_TRAINING]: {
-		[Language.EN]: 'Mediator Peer Training',
-		[Language.FR]: 'Formation de pairs médiateurs',
-		[Language.IT]: 'Mediator Peer Training in italian',
-		[Language.NL]: 'Mediator Peer Training (NL)'
+		[Language.EN]: 'Mediator peer training',
+		[Language.FR]: 'Formation de médiateur·ices',
+		[Language.IT]: 'Formazione di mediatori',
+		[Language.NL]: 'Peer-to-peer training'
 	},
 	[ProjectType.EDUCATIONAL_COORDINATION]: {
-		[Language.EN]: 'Educational Coordination',
-		[Language.FR]: 'Coordination éducative',
-		[Language.IT]: 'Educational Coordination in italian',
-		[Language.NL]: 'Educational Coordination (NL)'
+		[Language.EN]: 'Educational coordination',
+		[Language.FR]: 'Coordination pédagogique',
+		[Language.IT]: 'Coordinamento pedagogico',
+		[Language.NL]: 'Onderwijscoördinatie'
 	},
 	[ProjectType.COMMUNITY_WORKSHOP]: {
-		[Language.EN]: 'Community Workshop',
+		[Language.EN]: 'Community workshop',
 		[Language.FR]: 'Atelier communautaire',
-		[Language.IT]: 'Community Workshop in italian',
-		[Language.NL]: 'Community Workshop (NL)'
+		[Language.IT]: 'Workshop di gruppo',
+		[Language.NL]: 'Community Workshop'
 	},
 	[ProjectType.VISITOR_SUPPORT]: {
-		[Language.EN]: 'Visitor Support',
-		[Language.FR]: 'Soutien aux visiteurs',
-		[Language.IT]: 'Visitor Support in italian',
-		[Language.NL]: 'Visitor Support (NL)'
+		[Language.EN]: 'Visitor support',
+		[Language.FR]: 'Accompagnement à la visite',
+		[Language.IT]: 'Supporto ai visitatori',
+		[Language.NL]: 'Bezoekersondersteuning'
 	},
 	[ProjectType.FRONT_OF_HOUSE]: {
-		[Language.EN]: 'Front of House',
+		[Language.EN]: 'Front of house',
 		[Language.FR]: 'Accueil',
-		[Language.IT]: 'Front of House in italian',
-		[Language.NL]: 'Front of House (NL)'
+		[Language.IT]: 'Accoglienza',
+		[Language.NL]: 'Gastenservice'
 	},
 	[ProjectType.TICKETING_SERVICE]: {
-		[Language.EN]: 'Ticketing Service',
-		[Language.FR]: 'Service de billetterie',
-		[Language.IT]: 'Ticketing Service in italian',
-		[Language.NL]: 'Ticketing Service (NL)'
+		[Language.EN]: 'Ticketing service',
+		[Language.FR]: 'Billetterie',
+		[Language.IT]: 'Servizio biglietteria',
+		[Language.NL]: 'Ticketverkoop'
 	},
 	[ProjectType.HOSTING_DUTIES]: {
-		[Language.EN]: 'Hosting Duties',
-		[Language.FR]: "Tâches d'accueil",
-		[Language.IT]: 'Hosting Duties in italian',
-		[Language.NL]: 'Hosting Duties (NL)'
+		[Language.EN]: 'Hosting duties',
+		[Language.FR]: "Accueil événementiel",
+		[Language.IT]: 'Mansioni di ospitalità',
+		[Language.NL]: 'Gastheer taken'
 	},
 	[ProjectType.ARCHIVE_RETRIEVAL]: {
-		[Language.EN]: 'Archive Retrieval',
+		[Language.EN]: 'Archive retrieval',
 		[Language.FR]: "Récupération d'archives",
-		[Language.IT]: 'Archive Retrieval in italian',
-		[Language.NL]: 'Archive Retrieval (NL)'
+		[Language.IT]: 'Recupero materiali d’archivio',
+		[Language.NL]: 'Archiefopvraging'
 	},
 	[ProjectType.EXHIBITION_PRODUCTION]: {
-		[Language.EN]: 'Exhibition Production',
+		[Language.EN]: 'Exhibition production',
 		[Language.FR]: "Production d'exposition",
-		[Language.IT]: 'Exhibition Production in italian',
-		[Language.NL]: 'Exhibition Production (NL)'
+		[Language.IT]: 'Produzione della mostra',
+		[Language.NL]: 'Tentoonstellingsproductie'
 	},
 	[ProjectType.EVENT_PRODUCTION]: {
-		[Language.EN]: 'Event Production',
-		[Language.FR]: "Production d'événement",
-		[Language.IT]: 'Event Production in italian',
-		[Language.NL]: 'Event Production (NL)'
+		[Language.EN]: 'Event production',
+		[Language.FR]: "Production événementielle",
+		[Language.IT]: 'Produzione di eventi',
+		[Language.NL]: 'Event productie'
 	},
 	[ProjectType.RESIDENCY_COORDINATION]: {
-		[Language.EN]: 'Residency Coordination',
+		[Language.EN]: 'Residency coordination',
 		[Language.FR]: 'Coordination de résidence',
-		[Language.IT]: 'Residency Coordination in italian',
-		[Language.NL]: 'Residency Coordination (NL)'
+		[Language.IT]: 'Coordinamento della residenza',
+		[Language.NL]: 'Residencycoördinatie'
 	},
 	[ProjectType.PROGRAMME_COORDINATION]: {
-		[Language.EN]: 'Programme Coordination',
+		[Language.EN]: 'Programme coordination',
 		[Language.FR]: 'Coordination de programme',
-		[Language.IT]: 'Programme Coordination in italian',
-		[Language.NL]: 'Programme Coordination (NL)'
+		[Language.IT]: 'Coordinamento del programma',
+		[Language.NL]: 'Programmacoördinatie'
 	},
 	[ProjectType.COLLECTION_MANAGEMENT]: {
-		[Language.EN]: 'Collection Management',
-		[Language.FR]: 'Gestion de collection',
-		[Language.IT]: 'Collection Management in italian',
-		[Language.NL]: 'Collection Management (NL)'
+		[Language.EN]: 'Collection management',
+		[Language.FR]: 'Gestion des collections',
+		[Language.IT]: 'Gestione delle collezioni',
+		[Language.NL]: 'Collectiebeheer'
 	},
 	[ProjectType.ARTIST_LIAISON]: {
-		[Language.EN]: 'Artist Liaison',
-		[Language.FR]: 'Liaison avec les artistes',
-		[Language.IT]: 'Artist Liaison in italian',
-		[Language.NL]: 'Artist Liaison (NL)'
+		[Language.EN]: 'Artist liaison',
+		[Language.FR]: 'Suivi des relations artistes',
+		[Language.IT]: 'Relazioni con gli artisti',
+		[Language.NL]: 'Kunstenaarsbemiddelaar'
 	},
 	[ProjectType.BUDGET_MANAGEMENT]: {
-		[Language.EN]: 'Budget Management',
+		[Language.EN]: 'Budget management',
 		[Language.FR]: 'Gestion budgétaire',
-		[Language.IT]: 'Budget Management in italian',
-		[Language.NL]: 'Budget Management (NL)'
+		[Language.IT]: 'Gestione del budget',
+		[Language.NL]: 'Budgetbeheer'
 	},
 	[ProjectType.GRANT_WRITING]: {
-		[Language.EN]: 'Grant Writing',
+		[Language.EN]: 'Grant writing',
 		[Language.FR]: 'Rédaction de subventions',
-		[Language.IT]: 'Grant Writing in italian',
-		[Language.NL]: 'Grant Writing (NL)'
+		[Language.IT]: 'Montage de dossiers de subvention',
+		[Language.NL]: 'Domande di finanziamento'
 	},
 	[ProjectType.PARTNERSHIP_DEVELOPMENT]: {
-		[Language.EN]: 'Partnership Development',
+		[Language.EN]: 'Partnership development',
 		[Language.FR]: 'Développement de partenariats',
-		[Language.IT]: 'Partnership Development in italian',
-		[Language.NL]: 'Partnership Development (NL)'
+		[Language.IT]: 'Sviluppo di partnership',
+		[Language.NL]: 'Ontwikkeling van partnerschappen'
 	},
 	[ProjectType.VENDOR_MANAGEMENT]: {
-		[Language.EN]: 'Vendor Management',
-		[Language.FR]: 'Gestion des fournisseurs',
-		[Language.IT]: 'Vendor Management in italian',
-		[Language.NL]: 'Vendor Management (NL)'
+		[Language.EN]: 'Vendor management',
+		[Language.FR]: 'Gestion des prestataires',
+		[Language.IT]: 'Gestione dei fornitori',
+		[Language.NL]: 'Leveranciersbeheer'
 	},
 	[ProjectType.TEAM_MANAGEMENT]: {
-		[Language.EN]: 'Team Management',
-		[Language.FR]: "Gestion d'équipe",
-		[Language.IT]: 'Team Management in italian',
-		[Language.NL]: 'Team Management (NL)'
+		[Language.EN]: 'Team management',
+		[Language.FR]: "Management d'équipe",
+		[Language.IT]: 'Gestione del team',
+		[Language.NL]: 'Teammanagement'
 	},
 	[ProjectType.HR_AND_RECRUITMENT]: {
-		[Language.EN]: 'HR and Recruitment',
-		[Language.FR]: 'Ressources humaines et recrutement',
-		[Language.IT]: 'HR and Recruitment in italian',
-		[Language.NL]: 'HR and Recruitment (NL)'
+		[Language.EN]: 'HR and recruitment',
+		[Language.FR]: 'RH et recrutement',
+		[Language.IT]: 'Risorse umane e selezione',
+		[Language.NL]: 'HR & Werving'
 	},
 	[ProjectType.SCHEDULING_AND_PLANNING]: {
-		[Language.EN]: 'Scheduling and Planning',
-		[Language.FR]: 'Planification et organisation',
-		[Language.IT]: 'Scheduling and Planning in italian',
-		[Language.NL]: 'Scheduling and Planning (NL)'
+		[Language.EN]: 'Scheduling and planning',
+		[Language.FR]: 'Planification',
+		[Language.IT]: 'Pianificazione',
+		[Language.NL]: 'Planning & organisatie'
 	},
 	[ProjectType.REPORTING]: {
 		[Language.EN]: 'Reporting',
-		[Language.FR]: 'Rapports',
-		[Language.IT]: 'Reporting in italian',
-		[Language.NL]: 'Reporting (NL)'
+		[Language.FR]: 'Reporting',
+		[Language.IT]: 'Reportistica',
+		[Language.NL]: 'Verslaglegging'
 	},
 	[ProjectType.CONTRACT_DRAFTING]: {
-		[Language.EN]: 'Contract Drafting',
+		[Language.EN]: 'Contract drafting',
 		[Language.FR]: 'Rédaction de contrats',
-		[Language.IT]: 'Contract Drafting in italian',
-		[Language.NL]: 'Contract Drafting (NL)'
+		[Language.IT]: 'Redazione di contratti',
+		[Language.NL]: 'Opstellen van contracten'
 	},
 	[ProjectType.STRATEGIC_PLANNING]: {
-		[Language.EN]: 'Strategic Planning',
+		[Language.EN]: 'Strategic planning',
 		[Language.FR]: 'Planification stratégique',
-		[Language.IT]: 'Strategic Planning in italian',
-		[Language.NL]: 'Strategic Planning (NL)'
+		[Language.IT]: 'Pianificazione strategica',
+		[Language.NL]: 'Strategische planning'
 	},
 	[ProjectType.ADMINISTRATIVE_SUPPORT]: {
-		[Language.EN]: 'Administrative Support',
+		[Language.EN]: 'Administrative support',
 		[Language.FR]: 'Soutien administratif',
-		[Language.IT]: 'Administrative Support in italian',
-		[Language.NL]: 'Administrative Support (NL)'
+		[Language.IT]: 'Supporto amministrativo',
+		[Language.NL]: 'Administratieve ondersteuning'
 	},
 	[ProjectType.ARTISTIC_SUPPORT]: {
 		[Language.EN]: 'Artistic Support',
 		[Language.FR]: 'Soutien artistique',
-		[Language.IT]: 'Artistic Support in italian',
-		[Language.NL]: 'Artistic Support (NL)'
+		[Language.IT]: 'Supporto artistico',
+		[Language.NL]: 'Artistieke ondersteuning'
 	},
 	[ProjectType.PUBLICATION]: {
 		[Language.EN]: 'Publication',
 		[Language.FR]: 'Publication',
-		[Language.IT]: 'Publication in italian',
-		[Language.NL]: 'Publication (NL)'
+		[Language.IT]: 'Pubblicazione',
+		[Language.NL]: 'Publicatie'
 	},
 	[ProjectType.PHOTO_DOCUMENTATION]: {
-		[Language.EN]: 'Photo Documentation',
+		[Language.EN]: 'Photo documentation',
 		[Language.FR]: 'Documentation photographique',
-		[Language.IT]: 'Photo Documentation in italian',
-		[Language.NL]: 'Photo Documentation (NL)'
+		[Language.IT]: 'Documentazione fotografica',
+		[Language.NL]: 'Fotodocumentatie'
 	},
 	[ProjectType.VIDEO_CAPTURE]: {
-		[Language.EN]: 'Video Capture',
+		[Language.EN]: 'Video capture',
 		[Language.FR]: 'Captation vidéo',
-		[Language.IT]: 'Video Capture in italian',
-		[Language.NL]: 'Video Capture (NL)'
+		[Language.IT]: 'Riprese video',
+		[Language.NL]: 'Video-opname'
 	},
 	[ProjectType.CONTENT_CREATION]: {
-		[Language.EN]: 'Content Creation',
+		[Language.EN]: 'Content creation',
 		[Language.FR]: 'Création de contenu',
-		[Language.IT]: 'Content Creation in italian',
-		[Language.NL]: 'Content Creation (NL)'
+		[Language.IT]: 'Creazione di contenuti',
+		[Language.NL]: 'Het maken van content'
 	},
 	[ProjectType.SOCIAL_STRATEGY]: {
 		[Language.EN]: 'Social Strategy',
-		[Language.FR]: 'Stratégie sociale',
-		[Language.IT]: 'Social Strategy in italian',
-		[Language.NL]: 'Social Strategy (NL)'
+		[Language.FR]: 'Stratégie réseaux sociaux',
+		[Language.IT]: 'Strategia social',
+		[Language.NL]: 'Sociale strategie'
 	},
 	[ProjectType.DIGITAL_MANAGEMENT]: {
-		[Language.EN]: 'Digital Management',
-		[Language.FR]: 'Gestion numérique',
-		[Language.IT]: 'Digital Management in italian',
-		[Language.NL]: 'Digital Management (NL)'
+		[Language.EN]: 'Digital management',
+		[Language.FR]: 'Gestion de la communication digitale',
+		[Language.IT]: 'Gestione digitale',
+		[Language.NL]: 'Digitaal beheer'
 	},
 	[ProjectType.PRESS_OUTREACH]: {
-		[Language.EN]: 'Press Outreach',
-		[Language.FR]: 'Sensibilisation de la presse',
-		[Language.IT]: 'Press Outreach in italian',
-		[Language.NL]: 'Press Outreach (NL)'
+		[Language.EN]: 'Press outreach',
+		[Language.FR]: 'Relation presse',
+		[Language.IT]: 'Ufficio stampa / relazioni con la stampa',
+		[Language.NL]: 'Persvoorlichting'
 	},
 	[ProjectType.MARKETING_CAMPAIGN]: {
-		[Language.EN]: 'Marketing Campaign',
-		[Language.FR]: 'Campagne de marketing',
-		[Language.IT]: 'Marketing Campaign in italian',
-		[Language.NL]: 'Marketing Campaign (NL)'
+		[Language.EN]: 'Marketing campaign',
+		[Language.FR]: 'Campagne marketing',
+		[Language.IT]: 'Campagna di marketing',
+		[Language.NL]: 'Marketingcampagne'
 	},
 	[ProjectType.AUDIENCE_STRATEGY]: {
-		[Language.EN]: 'Audience Strategy',
-		[Language.FR]: "Stratégie d'audience",
-		[Language.IT]: 'Audience Strategy in italian',
-		[Language.NL]: 'Audience Strategy (NL)'
+		[Language.EN]: 'Audience strategy',
+		[Language.FR]: "Stratégie d'engagement des publics",
+		[Language.IT]: 'Strategia di pubblico',
+		[Language.NL]: 'Doelgroepstrategie'
 	},
 	[ProjectType.COMMUNITY_STRATEGY]: {
-		[Language.EN]: 'Community Strategy',
-		[Language.FR]: 'Stratégie communautaire',
-		[Language.IT]: 'Community Strategy in italian',
-		[Language.NL]: 'Community Strategy (NL)'
+		[Language.EN]: 'Community strategy',
+		[Language.FR]: 'Gestion des communautés',
+		[Language.IT]: 'Strategia di comunità',
+		[Language.NL]: 'Gemeenschapsstrategie'
 	},
 	[ProjectType.EXHIBITION]: {
 		[Language.EN]: 'Exhibition',
 		[Language.FR]: 'Exposition',
-		[Language.IT]: 'Exhibition in italian',
-		[Language.NL]: 'Exhibition (NL)'
+		[Language.IT]: 'Allestimento di mostra',
+		[Language.NL]: 'Tentoonstelling'
 	},
 	[ProjectType.DIGITAL_MIGRATION]: {
-		[Language.EN]: 'Digital Migration',
+		[Language.EN]: 'Digital migration',
 		[Language.FR]: 'Migration numérique',
-		[Language.IT]: 'Digital Migration in italian',
-		[Language.NL]: 'Digital Migration (NL)'
+		[Language.IT]: 'Migrazione digitale',
+		[Language.NL]: 'Digitale migratie'
 	},
 	[ProjectType.ARCHIVE_DIGITISATION]: {
-		[Language.EN]: 'Archive Digitisation',
-		[Language.FR]: "Numérisation d'archives",
-		[Language.IT]: 'Archive Digitisation in italian',
-		[Language.NL]: 'Archive Digitisation (NL)'
+		[Language.EN]: 'Archive digitisation',
+		[Language.FR]: "Numérisation d’archives",
+		[Language.IT]: 'Digitalizzazione d’archivio',
+		[Language.NL]: 'Digitalisering van archieven'
 	},
 	[ProjectType.SYSTEM_DEPLOYMENT]: {
-		[Language.EN]: 'System Deployment',
+		[Language.EN]: 'System deployment',
 		[Language.FR]: 'Déploiement de système',
-		[Language.IT]: 'System Deployment in italian',
-		[Language.NL]: 'System Deployment (NL)'
+		[Language.IT]: 'Distribuzione di sistema',
+		[Language.NL]: 'Systeemtoepassing'
 	},
 	[ProjectType.BUILDING_MAINTENANCE]: {
-		[Language.EN]: 'Building Maintenance',
+		[Language.EN]: 'Building maintenance',
 		[Language.FR]: 'Maintenance du bâtiment',
-		[Language.IT]: 'Building Maintenance in italian',
-		[Language.NL]: 'Building Maintenance (NL)'
+		[Language.IT]: 'Manutenzione dell’edificio',
+		[Language.NL]: 'Gebouwbeheer'
 	},
 	[ProjectType.SECURITY_OPERATIONS]: {
-		[Language.EN]: 'Security Operations',
-		[Language.FR]: 'Opérations de sécurité',
-		[Language.IT]: 'Security Operations in italian',
-		[Language.NL]: 'Security Operations (NL)'
+		[Language.EN]: 'Security operations',
+		[Language.FR]: 'Gestion de la sécurité',
+		[Language.IT]: 'Gestione della sicurezza',
+		[Language.NL]: 'Beveiligingsactiviteiten'
 	},
 	[ProjectType.FACILITIES_MANAGEMENT]: {
-		[Language.EN]: 'Facilities Management',
-		[Language.FR]: 'Gestion des installations',
-		[Language.IT]: 'Facilities Management in italian',
-		[Language.NL]: 'Facilities Management (NL)'
+		[Language.EN]: 'Facilities management',
+		[Language.FR]: 'Gestion des infrastructures',
+		[Language.IT]: 'Gestione delle infrastrutture',
+		[Language.NL]: 'Facilitair beheer'
 	},
 	[ProjectType.IT_SUPPORT]: {
 		[Language.EN]: 'IT Support',
-		[Language.FR]: 'Support informatique',
-		[Language.IT]: 'IT Support in italian',
-		[Language.NL]: 'IT Support (NL)'
+		[Language.FR]: 'Assistance informatique',
+		[Language.IT]: 'Assistenza informatica',
+		[Language.NL]: 'IT-ondersteuning'
 	},
 	[ProjectType.SYSTEMS_ADMINISTRATION]: {
-		[Language.EN]: 'Systems Administration',
+		[Language.EN]: 'Systems administration',
 		[Language.FR]: 'Administration des systèmes',
-		[Language.IT]: 'Systems Administration in italian',
-		[Language.NL]: 'Systems Administration (NL)'
+		[Language.IT]: 'Amministrazione dei sistemi',
+		[Language.NL]: 'Systeembeheer'
 	},
 	[ProjectType.NETWORK_MANAGEMENT]: {
-		[Language.EN]: 'Network Management',
-		[Language.FR]: 'Gestion de réseau',
-		[Language.IT]: 'Network Management in italian',
-		[Language.NL]: 'Network Management (NL)'
+		[Language.EN]: 'Network management',
+		[Language.FR]: 'Gestion du réseau',
+		[Language.IT]: 'Gestione della rete',
+		[Language.NL]: 'Netwerkbeheer'
 	},
 	[ProjectType.HARDWARE_INSTALLATION]: {
-		[Language.EN]: 'Hardware Installation',
+		[Language.EN]: 'Hardware installation',
 		[Language.FR]: 'Installation de matériel',
-		[Language.IT]: 'Hardware Installation in italian',
-		[Language.NL]: 'Hardware Installation (NL)'
+		[Language.IT]: 'Installazione hardware',
+		[Language.NL]: 'Installatie van hardware'
 	},
 	[ProjectType.SOFTWARE_DEPLOYMENT]: {
-		[Language.EN]: 'Software Deployment',
+		[Language.EN]: 'Software deployment',
 		[Language.FR]: 'Déploiement de logiciel',
-		[Language.IT]: 'Software Deployment in italian',
-		[Language.NL]: 'Software Deployment (NL)'
+		[Language.IT]: 'Distribuzione software',
+		[Language.NL]: 'Software-toepassing'
 	},
 	[ProjectType.DATABASE_MANAGEMENT]: {
-		[Language.EN]: 'Database Management',
+		[Language.EN]: 'Database management',
 		[Language.FR]: 'Gestion de base de données',
-		[Language.IT]: 'Database Management in italian',
-		[Language.NL]: 'Database Management (NL)'
+		[Language.IT]: 'Gestione del database',
+		[Language.NL]: 'Databasebeheer'
 	},
 	[ProjectType.DATA_ENTRY_AND_CATALOGUING]: {
-		[Language.EN]: 'Data Entry and Cataloguing',
+		[Language.EN]: 'Data entry and cataloguing',
 		[Language.FR]: 'Saisie de données et catalogage',
-		[Language.IT]: 'Data Entry and Cataloguing in italian',
-		[Language.NL]: 'Data Entry and Cataloguing (NL)'
+		[Language.IT]: 'Inserimento dati e catalogazione',
+		[Language.NL]: 'Gegevensinvoer en catalogiseren'
 	},
 	[ProjectType.COLLECTION_DIGITISATION]: {
-		[Language.EN]: 'Collection Digitisation',
-		[Language.FR]: 'Numérisation de collection',
-		[Language.IT]: 'Collection Digitisation in italian',
-		[Language.NL]: 'Collection Digitisation (NL)'
+		[Language.EN]: 'Collection digitisation',
+		[Language.FR]: 'Numérisation des collections',
+		[Language.IT]: 'Digitalizzazione delle collezioni',
+		[Language.NL]: 'Digitalisering van collecties'
 	},
 	[ProjectType.USER_TRAINING]: {
-		[Language.EN]: 'User Training',
-		[Language.FR]: 'Formation des utilisateurs',
-		[Language.IT]: 'User Training in italian',
-		[Language.NL]: 'User Training (NL)'
+		[Language.EN]: 'User training',
+		[Language.FR]: 'Formation des utilisateur·ices',
+		[Language.IT]: 'Formazione degli utenti',
+		[Language.NL]: 'Gebruikerstraining'
 	},
 	[ProjectType.TECHNICAL_SUPPORT]: {
-		[Language.EN]: 'Technical Support',
+		[Language.EN]: 'Technical support',
 		[Language.FR]: 'Support technique',
-		[Language.IT]: 'Technical Support in italian',
-		[Language.NL]: 'Technical Support (NL)'
+		[Language.IT]: 'Supporto tecnico',
+		[Language.NL]: 'Technische ondersteuning'
 	},
 	[ProjectType.FINANCIAL_REPORTING]: {
-		[Language.EN]: 'Financial Reporting',
-		[Language.FR]: 'Rapports financiers',
-		[Language.IT]: 'Financial Reporting in italian',
-		[Language.NL]: 'Financial Reporting (NL)'
+		[Language.EN]: 'Financial reporting',
+		[Language.FR]: 'Reporting financier',
+		[Language.IT]: 'Reportistica finanziaria',
+		[Language.NL]: 'Financiële verslaglegging'
 	},
 	[ProjectType.BUDGETING]: {
 		[Language.EN]: 'Budgeting',
 		[Language.FR]: 'Budgétisation',
-		[Language.IT]: 'Budgeting in italian',
-		[Language.NL]: 'Budgeting (NL)'
+		[Language.IT]: 'Elaborazione del budget',
+		[Language.NL]: 'Budgettering'
 	},
 	[ProjectType.INVOICE_MANAGEMENT]: {
-		[Language.EN]: 'Invoice Management',
-		[Language.FR]: 'Gestion des factures',
-		[Language.IT]: 'Invoice Management in italian',
-		[Language.NL]: 'Invoice Management (NL)'
+		[Language.EN]: 'Invoice management',
+		[Language.FR]: 'Gestion de la facturation',
+		[Language.IT]: 'Gestione della fatturazione',
+		[Language.NL]: 'Factureringsbeheer'
 	},
 	[ProjectType.TAX_ADVISORY]: {
-		[Language.EN]: 'Tax Advisory',
+		[Language.EN]: 'Tax advisory',
 		[Language.FR]: 'Conseil fiscal',
-		[Language.IT]: 'Tax Advisory in italian',
-		[Language.NL]: 'Tax Advisory (NL)'
+		[Language.IT]: 'Consulenza fiscale',
+		[Language.NL]: 'Fiscaal advies'
 	},
 	[ProjectType.LEGAL_ADVISORY]: {
 		[Language.EN]: 'Legal Advisory',
 		[Language.FR]: 'Conseil juridique',
-		[Language.IT]: 'Legal Advisory in italian',
-		[Language.NL]: 'Legal Advisory (NL)'
+		[Language.IT]: 'Consulenza legale',
+		[Language.NL]: 'Juridisch advies'
 	},
 	[ProjectType.STRATEGIC_ADVISORY]: {
-		[Language.EN]: 'Strategic Advisory',
+		[Language.EN]: 'Strategic advisory',
 		[Language.FR]: 'Conseil stratégique',
-		[Language.IT]: 'Strategic Advisory in italian',
-		[Language.NL]: 'Strategic Advisory (NL)'
+		[Language.IT]: 'Consulenza strategica',
+		[Language.NL]: 'Strategisch advies'
 	},
 	[ProjectType.INTELLECTUAL_PROPERTY]: {
-		[Language.EN]: 'Intellectual Property',
+		[Language.EN]: 'Intellectual property',
 		[Language.FR]: 'Propriété intellectuelle',
-		[Language.IT]: 'Intellectual Property in italian',
-		[Language.NL]: 'Intellectual Property (NL)'
+		[Language.IT]: 'Proprietà intellettuale',
+		[Language.NL]: 'Intellectueel eigendom'
 	},
 	[ProjectType.INSURANCE_AND_RISK]: {
-		[Language.EN]: 'Insurance and Risk',
-		[Language.FR]: 'Assurance et risque',
-		[Language.IT]: 'Insurance and Risk in italian',
-		[Language.NL]: 'Insurance and Risk (NL)'
+		[Language.EN]: 'Insurance and risk',
+		[Language.FR]: 'Assurances et gestion des risques',
+		[Language.IT]: 'Assicurazioni e gestione dei rischi',
+		[Language.NL]: 'Verzekeringen & risico’s'
 	}
 };
 
@@ -3781,43 +3781,43 @@ export const jobObtainedViaOptions = {
 		[Language.EN]: 'Internal Promotion',
 		[Language.FR]: 'Promotion interne',
 		[Language.IT]: 'Promozione interna',
-		[Language.NL]: 'Internal Promotion ES'
+		[Language.NL]: 'Interne promotie'
 	},
 	[JobObtainedVia.CALL_FOR_APPLICATIONS]: {
 		[Language.EN]: 'Call for Applications',
 		[Language.FR]: 'Appel à candidatures',
 		[Language.IT]: 'Bando di selezione',
-		[Language.NL]: 'Call for Applications ES'
+		[Language.NL]: 'Oproep tot aanvraag'
 	},
 	[JobObtainedVia.CALL_FOR_PROJECTS]: {
 		[Language.EN]: 'Call for Projects',
 		[Language.FR]: 'Appel à projets',
 		[Language.IT]: 'Bando per progetto',
-		[Language.NL]: 'Call for Projects ES'
+		[Language.NL]: 'Projectaanvraag'
 	},
 	[JobObtainedVia.JOB_OFFER]: {
 		[Language.EN]: 'Job Offer',
 		[Language.FR]: 'Offre d’emploi',
 		[Language.IT]: 'Offerta di lavoro',
-		[Language.NL]: 'Job Offer ES'
+		[Language.NL]: 'Baan aangeboden'
 	},
 	[JobObtainedVia.INVITATION_REFERRAL]: {
 		[Language.EN]: 'Invitation',
 		[Language.FR]: 'Invitation',
 		[Language.IT]: 'Invito',
-		[Language.NL]: 'Invitation Referral ES'
+		[Language.NL]: 'Op uitnodiging'
 	},
 	[JobObtainedVia.DIRECT_OUTREACH]: {
 		[Language.EN]: 'Direct Outreach',
 		[Language.FR]: 'Candidature spontanée',
 		[Language.IT]: 'Autocandidatura',
-		[Language.NL]: 'Direct Outreach ES'
+		[Language.NL]: 'Directe benadering'
 	},
 	[JobObtainedVia.PURE_NEPOTISM]: {
 		[Language.EN]: 'Nepotism / Friendship',
 		[Language.FR]: 'Népotisme ou amitié',
 		[Language.IT]: 'Nepotismo o amichettismo',
-		[Language.NL]: 'Pure Nepotism ES'
+		[Language.NL]: 'Nepotisme of vriendendienst'
 	}
 };
 
@@ -3834,35 +3834,35 @@ export const compensationFrequencyOptions = {
 		[Language.EN]: '/ hour',
 		[Language.FR]: '/ heure',
 		[Language.IT]: '/ ora',
-		[Language.NL]: 'Hourly ES',
+		[Language.NL]: '/ uur',
 		id: '5207257'
 	},
 	[CompensationFrequency.DAILY]: {
 		[Language.EN]: '/ day',
 		[Language.FR]: '/ jour',
 		[Language.IT]: '/ giorno',
-		[Language.NL]: 'Daily ES',
+		[Language.NL]: '/ dag',
 		id: '5207256'
 	},
 	[CompensationFrequency.WEEKLY]: {
 		[Language.EN]: '/ week',
 		[Language.FR]: '/ semaine',
 		[Language.IT]: '/ settimana',
-		[Language.NL]: 'Weekly ES',
+		[Language.NL]: '/ week',
 		id: '5207255'
 	},
 	[CompensationFrequency.MONTHLY]: {
 		[Language.EN]: '/ month',
 		[Language.FR]: '/ mois',
 		[Language.IT]: '/ mese',
-		[Language.NL]: 'Monthly ES',
+		[Language.NL]: '/ maand',
 		id: '5207254'
 	},
 	[CompensationFrequency.FLAT_FEE]: {
 		[Language.EN]: 'flat fee',
 		[Language.FR]: 'forfait',
 		[Language.IT]: 'Compenso forfettario',
-		[Language.NL]: 'Flat Fee ES',
+		[Language.NL]: '/ afgesproken bedrag',
 		id: '5207253'
 	}
 };
@@ -3878,19 +3878,19 @@ export const addlCompensationCoverageOptions = {
 		[Language.EN]: 'not covered',
 		[Language.FR]: 'pas couvert',
 		[Language.IT]: 'non coperti',
-		[Language.NL]: 'not covered ES'
+		[Language.NL]: 'niet gedekt'
 	},
 	[AddlCompensationCoverage.PARTIALLY_COVERED]: {
 		[Language.EN]: 'partially covered',
 		[Language.FR]: 'partiellement couvert',
 		[Language.IT]: 'parzialmente coperti',
-		[Language.NL]: 'partially covered ES'
+		[Language.NL]: 'gedeeltelijk gedekt'
 	},
 	[AddlCompensationCoverage.COVERED]: {
 		[Language.EN]: 'fully covered',
 		[Language.FR]: 'intégralement couvert',
 		[Language.IT]: 'completamente coperti',
-		[Language.NL]: 'was covered ES'
+		[Language.NL]: 'volledig gedekt'
 	}
 };
 
@@ -3910,69 +3910,69 @@ export const enum AddlCompItem {
 
 export const addlCompItemOptions = {
 	[AddlCompItem.SALE_OF_WORK]: {
-		[Language.EN]: 'Sale of Work',
+		[Language.EN]: 'Sale of work',
 		[Language.FR]: 'Vente d’œuvres',
 		[Language.IT]: 'Vendita dell’opera',
-		[Language.NL]: 'Sale of work ES'
+		[Language.NL]: 'Verkoop van werk'
 	},
 	[AddlCompItem.PRODUCTION_BUDGET]: {
-		[Language.EN]: 'Production Budget',
+		[Language.EN]: 'Production budget',
 		[Language.FR]: 'Budget de production',
 		[Language.IT]: 'Budget di produzione',
-		[Language.NL]: 'Production budget ES'
+		[Language.NL]: 'Productie budget '
 	},
 	[AddlCompItem.TRANSPORT_OF_WORK]: {
-		[Language.EN]: 'Transport of Works',
+		[Language.EN]: 'Transport of works',
 		[Language.FR]: 'Transport d’œuvres',
 		[Language.IT]: 'Trasporto delle opere',
-		[Language.NL]: 'Transport of work ES'
+		[Language.NL]: 'Transport van werk'
 	},
 	[AddlCompItem.TRAVEL]: {
 		[Language.EN]: 'Travel',
 		[Language.FR]: 'Transport',
 		[Language.IT]: 'Viaggio',
-		[Language.NL]: 'Travel ES'
+		[Language.NL]: 'Reiskosten'
 	},
 	[AddlCompItem.ACCOMMODATION]: {
 		[Language.EN]: 'Accommodation',
 		[Language.FR]: 'Hébergement',
 		[Language.IT]: 'Alloggio',
-		[Language.NL]: 'Accommodation ES'
+		[Language.NL]: 'Huisvesting/accomodatie'
 	},
 	[AddlCompItem.MEALS]: {
 		[Language.EN]: 'Meals',
 		[Language.FR]: 'Repas',
 		[Language.IT]: 'Pasti',
-		[Language.NL]: 'Meals ES'
+		[Language.NL]: 'Maaltijden'
 	},
 	[AddlCompItem.PER_DIEM]: {
-		[Language.EN]: 'Per Diem',
+		[Language.EN]: 'Per diem',
 		[Language.FR]: 'Per diem',
 		[Language.IT]: 'Diaria',
-		[Language.NL]: 'Per Diem ES'
+		[Language.NL]: 'Dagvergoeding'
 	},
 	[AddlCompItem.HEALTH_INSURANCE]: {
-		[Language.EN]: 'Health Insurance',
+		[Language.EN]: 'Health insurance',
 		[Language.FR]: 'Mutuelle',
 		[Language.IT]: 'Assicurazione sanitaria',
-		[Language.NL]: 'Health Insurance ES'
+		[Language.NL]: 'Gezondheidsverzekering'
 	},
 	[AddlCompItem.PUBLIC_TRANSPORTATION]: {
 		[Language.EN]: 'Public Transportation',
 		[Language.FR]: 'Transport public',
 		[Language.IT]: 'Trasporto pubblico',
-		[Language.NL]: 'Public Transportation ES'
+		[Language.NL]: 'Openbaar vervoer'
 	},
 	[AddlCompItem.COMMISSION]: {
 		[Language.EN]: 'Commission',
 		[Language.FR]: 'Commission',
 		[Language.IT]: 'Commissione',
-		[Language.NL]: 'Commission ES'
+		[Language.NL]: 'Commissie'
 	},
 	[AddlCompItem.ACCESSIBILITY_BUDGET]: {
-		[Language.EN]: 'Accessibility Budget',
+		[Language.EN]: 'Accessibility budget',
 		[Language.FR]: 'Budget d’accessibilité',
 		[Language.IT]: 'Budget di accessibilità',
-		[Language.NL]: 'Accessibility Budget ES'
+		[Language.NL]: 'Access Budget'
 	}
 };
