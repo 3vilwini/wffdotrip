@@ -77,9 +77,9 @@
 
 				<div class="flex items-center justify-center pt-8">
 				<button
-  class="cursor-pointer border border-dashed border-black bg-black px-4 py-2 font-sans text-xl text-white uppercase transition-colors hover:bg-white hover:text-black"
+  class="cursor-pointer outline outline-dashed outline-[var(--btn-color)] bg-[var(--btn-color)] px-4 py-2 font-sans text-xl text-white uppercase transition-colors hover:bg-white hover:text-[var(--btn-color)]"
 >
-  {isSubmitting ? 'Submitting Form...' : 'Submit'}
+  Submit
 </button>
 				</div>
 			</div>
