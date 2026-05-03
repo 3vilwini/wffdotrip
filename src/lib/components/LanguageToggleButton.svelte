@@ -6,8 +6,13 @@
 	};
 </script>
 
+
 <button
-	class="cursor-pointer {language === siteState.language ? 'underline' : ''}"
+	class={`cursor-pointer rounded-full px-3 py-1 border ${
+		language === siteState.language
+			? 'border-current'
+			: 'border-transparent'
+	}`}
 	onclick={() => {
 		setLanguage(language);
 	}}
