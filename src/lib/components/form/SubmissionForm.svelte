@@ -78,7 +78,7 @@
 				<div class="flex items-center justify-center pt-8">
 					<button
 						class="cursor-pointer border border-dashed bg-black px-4 py-2 font-sans text-xl text-white uppercase transition-colors"
-						>{isSubmitting ? 'Submitting Form...' : 'Submit Form'}</button
+						>{isSubmitting ? 'Submitting Form...' : 'Submit'}</button
 					>
 				</div>
 			</div>
