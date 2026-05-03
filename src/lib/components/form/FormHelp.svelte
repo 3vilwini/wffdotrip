@@ -8,24 +8,4 @@
 </script>
 
 
-<script>
-	let { helpTextSpecificLanguage } = $props();
-
-	function getFirstChar(blocks) {
-		const text =
-			blocks?.find(b => b.children)?.children?.find(c => c.text)?.text ?? "";
-		return text?.[0] ?? "";
-	}
-</script>
-
-<div class="max-w-xs font-mono text-xs pt-13">
-	<div class="flex items-start gap-2">
-		<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">
-			{getFirstChar(helpTextSpecificLanguage)}
-		</div>
-
-		<div class="flex-1">
-			<BlockContent value={helpTextSpecificLanguage} />
-		</div>
-	</div>
-</div>
+<div class="max-w-xs font-mono text-xs pt-13"> <BlockContent value={helpTextSpecificLanguage}></BlockContent> </div>
