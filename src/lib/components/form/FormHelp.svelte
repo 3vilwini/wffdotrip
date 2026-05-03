@@ -7,6 +7,9 @@
 	let helpTextSpecificLanguage = $derived(helpText ? helpText[siteState.language] : '');
 </script>
 
+
+<div class="flex size-6 items-center justify-center text-center font-yarndings text-3xl">a</div>
+
 <div class="max-w-xs font-mono text-xs pt-13">
 	<BlockContent value={helpTextSpecificLanguage}></BlockContent>
 </div>
