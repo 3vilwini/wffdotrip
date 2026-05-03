@@ -45,7 +45,7 @@
 				{#if siteState.formSubmitted}
 					<div>Thanks, your submission has been recorded!</div>
 				{:else}
-					<div>Thanks for your submission(s)!</div>
+					<div>Thanks for your submissions!</div>
 				{/if}
 
 				<div class="font-mono text-xs">
