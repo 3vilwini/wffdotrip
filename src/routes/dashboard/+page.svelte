@@ -54,15 +54,9 @@
 				</div>
 			</div>
 			<div class="flex items-center gap-3">
-				<a
-					href="/"
-					class="flex items-center justify-center outline outline-dashed outline-black bg-black px-4 py-2 whitespace-nowrap text-white transition-colors hover:bg-white hover:text-black"
-				>BACK TO INDEX
+				<a href="/" class="flex items-center justify-center outline outline-dashed outline-black bg-black px-4 py-2 whitespace-nowrap text-white transition-colors hover:bg-white hover:text-black">BACK TO INDEX
 				</a>
-				<a
-					href="/form"
-					flex items-center justify-center outline outline-dashed outline-black bg-black px-4 py-2 whitespace-nowrap text-white transition-colors hover:bg-white hover:text-black"
-				>SUBMIT NEW ENTRY
+				<a href="/form" class="flex items-center justify-center outline outline-dashed outline-black bg-black px-4 py-2 whitespace-nowrap text-white transition-colors hover:bg-white hover:text-black">SUBMIT NEW ENTRY
 				</a>
 			</div>
 		</div>
