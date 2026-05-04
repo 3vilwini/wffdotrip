@@ -149,7 +149,7 @@ export const contractLengthUnitOptions = {
 
 
 export const jobExperienceOptions = {
-	'0_EXPERIENCE': '0',
+	'0_EXPERIENCE': '0-1',
 	'1_YEAR_EXPERIENCE': '1',
 	'2_YEARS_EXPERIENCE': '2',
 	'3_YEARS_EXPERIENCE': '3',
