@@ -923,6 +923,8 @@ export const projectTypeOptions = {
 	}
 };
 
+
+
 //ARTMAKING / WRITING / CURATION
 export const projectTypeGroupOne = [
 	ProjectType.GROUP_EXHIBITION,
@@ -1123,3 +1125,7 @@ export const projectTypeGroupSeven = [
 	ProjectType.PROJECT_COORDINATION,
 	ProjectType.SUPPORT_AND_CONSULTING
 ];
+
+
+
+
