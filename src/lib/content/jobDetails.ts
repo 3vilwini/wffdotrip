@@ -28,56 +28,56 @@ export const contractTypeOptions = {
 		[Language.EN]: 'Full-time',
 		[Language.FR]: 'CDI temps plein',
 		[Language.IT]: 'Tempo pieno',
-		[Language.NL]: 'Full-time (NL)',
+		[Language.NL]: 'Voltijds',
 		id: '5207121'
 	},
 	[ContractType.PARTTIME]: {
 		[Language.EN]: 'Part-time',
 		[Language.FR]: 'CDI temps partiel',
 		[Language.IT]: 'Part-time',
-		[Language.NL]: 'Part-time (NL)',
+		[Language.NL]: 'Deeltijds',
 		id: '5207124'
 	},
 	[ContractType.FULLTIME_TEMP]: {
 		[Language.EN]: 'Full-time (fixed-term)',
 		[Language.FR]: 'CDD temps plein',
 		[Language.IT]: 'Tempo pieno (TI)',
-		[Language.NL]: 'Full-time (fixed-term) (NL)',
+		[Language.NL]: 'Voltijds (tijdelijk)',
 		id: '5207122'
 	},
 	[ContractType.PARTTIME_TEMP]: {
 		[Language.EN]: 'Part-time (fixed-term)',
 		[Language.FR]: 'CDD temps partiel',
 		[Language.IT]: 'Part-time (TD)',
-		[Language.NL]: 'Part-time (fixed-term) (NL)',
+		[Language.NL]: 'Deeltijds (tijdelijk)',
 		id: '5207120'
 	},
 	[ContractType.INDEPENDENT]: {
 		[Language.EN]: 'Freelance',
 		[Language.FR]: 'Indépendant',
 		[Language.IT]: 'Freelance',
-		[Language.NL]: 'Freelance (NL)',
+		[Language.NL]: 'Freelancecontract/zzp',
 		id: '5207125'
 	},
 	[ContractType.INTERNSHIP]: {
 		[Language.EN]: 'Internship',
 		[Language.FR]: 'Stage',
 		[Language.IT]: 'Tirocinio',
-		[Language.NL]: 'Internship (NL)',
+		[Language.NL]: 'Stageovereenkomst',
 		id: '5207123'
 	},
 	[ContractType.APPRENTICESHIP]: {
 		[Language.EN]: 'Apprenticeship',
 		[Language.FR]: 'Apprentissage',
 		[Language.IT]: 'Apprendistato',
-		[Language.NL]: 'Apprenticeship (NL)',
+		[Language.NL]: 'Leerovereenkomst',
 		id: '5207126'
 	},
 	[ContractType.ZERO_HOURS]: {
 		[Language.EN]: 'Zero Hours',
 		[Language.FR]: 'Zero Hours',
 		[Language.IT]: 'Zero Hours',
-		[Language.NL]: 'Zero Hours (NL)',
+		[Language.NL]: 'Nulurencontract',
 		id: '5768112'
 	}
 };
@@ -111,7 +111,13 @@ export const workerStatusOptions = {
 		'Other'
 	],
 
-	[Country.NETHERLANDS]: ['Other NL']
+	[Country.NETHERLANDS]: [
+		'Zelfstandige/zzp',
+		'Werknemer in loondienst',
+		'Werknemer',
+		'Stagiair',
+		'Overig'
+	]
 };
 
 export const enum ContractLengthUnit {
@@ -125,19 +131,19 @@ export const contractLengthUnitOptions = {
 		[Language.EN]: 'hours',
 		[Language.FR]: 'heures',
 		[Language.IT]: 'ore',
-		[Language.NL]: 'hours NL'
+		[Language.NL]: 'uren'
 	},
 	[ContractLengthUnit.DAYS]: {
 		[Language.EN]: 'days',
 		[Language.FR]: 'jours',
 		[Language.IT]: 'giorni',
-		[Language.NL]: 'days NL'
+		[Language.NL]: 'dagen'
 	},
 	[ContractLengthUnit.MONTHS]: {
 		[Language.EN]: 'months',
 		[Language.FR]: 'mois',
 		[Language.IT]: 'mesi',
-		[Language.NL]: 'months NL'
+		[Language.NL]: 'maanden'
 	}
 };
 
@@ -168,45 +174,45 @@ export const enum JobObtainedVia {
 
 export const jobObtainedViaOptions = {
 	[JobObtainedVia.INTERNAL_PROMOTION]: {
-		[Language.EN]: 'Internal Promotion',
+		[Language.EN]: 'Internal promotion',
 		[Language.FR]: 'Promotion interne',
 		[Language.IT]: 'Promozione interna',
-		[Language.NL]: 'Internal Promotion ES'
+		[Language.NL]: 'Interne promotie'
 	},
 	[JobObtainedVia.CALL_FOR_APPLICATIONS]: {
-		[Language.EN]: 'Call for Applications',
+		[Language.EN]: 'Call for applications',
 		[Language.FR]: 'Appel à candidatures',
 		[Language.IT]: 'Bando di selezione',
-		[Language.NL]: 'Call for Applications ES'
+		[Language.NL]: 'Oproep tot aanvraag'
 	},
 	[JobObtainedVia.CALL_FOR_PROJECTS]: {
-		[Language.EN]: 'Call for Projects',
+		[Language.EN]: 'Call for projects',
 		[Language.FR]: 'Appel à projets',
 		[Language.IT]: 'Bando per progetto',
-		[Language.NL]: 'Call for Projects ES'
+		[Language.NL]: 'Projectaanvraag'
 	},
 	[JobObtainedVia.JOB_OFFER]: {
-		[Language.EN]: 'Job Offer',
+		[Language.EN]: 'Job offer',
 		[Language.FR]: 'Offre d’emploi',
 		[Language.IT]: 'Offerta di lavoro',
-		[Language.NL]: 'Job Offer ES'
+		[Language.NL]: 'Baan aangeboden'
 	},
 	[JobObtainedVia.INVITATION_REFERRAL]: {
 		[Language.EN]: 'Invitation',
 		[Language.FR]: 'Invitation',
 		[Language.IT]: 'Invito',
-		[Language.NL]: 'Invitation Referral ES'
+		[Language.NL]: 'Op uitnodiging'
 	},
 	[JobObtainedVia.DIRECT_OUTREACH]: {
-		[Language.EN]: 'Direct Outreach',
+		[Language.EN]: 'Direct outreach',
 		[Language.FR]: 'Candidature spontanée',
 		[Language.IT]: 'Autocandidatura',
-		[Language.NL]: 'Direct Outreach ES'
+		[Language.NL]: 'Directe benadering'
 	},
 	[JobObtainedVia.PURE_NEPOTISM]: {
-		[Language.EN]: 'Nepotism / Friendship',
+		[Language.EN]: 'Nepotism or friendship',
 		[Language.FR]: 'Népotisme ou amitié',
 		[Language.IT]: 'Nepotismo o amichettismo',
-		[Language.NL]: 'Pure Nepotism ES'
+		[Language.NL]: 'Nepotisme of vriendendienst'
 	}
 };
