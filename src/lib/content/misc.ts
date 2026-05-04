@@ -65,7 +65,7 @@ export const fieldLabels = {
 		[Language.EN]: 'Year',
 		[Language.FR]: 'Année',
 		[Language.IT]: 'Anno',
-		[Language.NL]: 'Jaar (optioneel)'
+		[Language.NL]: 'Jaar'
 	},
 	employerType: {
 		[Language.EN]: 'Employer category',
