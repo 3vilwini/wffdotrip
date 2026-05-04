@@ -59,7 +59,7 @@
 			</FormSelect>
 
 			{#if formState.selectedContractType}
-				{#if formState.selectedContractType === ContractType.INDEPENDENT || formState.selectedContractType === ContractType.FULLTIME_TEMP || formState.selectedContractType === ContractType.PARTTIME_TEMP}
+				{#if formState.selectedContractType === ContractType.INDEPENDENT}
 					<FormSelect name="project_type" class="w-full sm:basis-[calc(50%-0.5rem)]" required>
 						<FormOption value="" isDefault>{fieldLabels.projectType[siteState.language]}</FormOption
 						>
