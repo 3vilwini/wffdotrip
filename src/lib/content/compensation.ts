@@ -13,35 +13,35 @@ export const compensationFrequencyOptions = {
 		[Language.EN]: '/ hour',
 		[Language.FR]: '/ heure',
 		[Language.IT]: '/ ora',
-		[Language.NL]: 'Hourly ES',
+		[Language.NL]: '/ uur',
 		id: '5207257'
 	},
 	[CompensationFrequency.DAILY]: {
 		[Language.EN]: '/ day',
 		[Language.FR]: '/ jour',
 		[Language.IT]: '/ giorno',
-		[Language.NL]: 'Daily ES',
+		[Language.NL]: '/ dag',
 		id: '5207256'
 	},
 	[CompensationFrequency.WEEKLY]: {
 		[Language.EN]: '/ week',
 		[Language.FR]: '/ semaine',
 		[Language.IT]: '/ settimana',
-		[Language.NL]: 'Weekly ES',
+		[Language.NL]: '/ week',
 		id: '5207255'
 	},
 	[CompensationFrequency.MONTHLY]: {
 		[Language.EN]: '/ month',
 		[Language.FR]: '/ mois',
 		[Language.IT]: '/ mese',
-		[Language.NL]: 'Monthly ES',
+		[Language.NL]: '/ maand',
 		id: '5207254'
 	},
 	[CompensationFrequency.FLAT_FEE]: {
 		[Language.EN]: 'flat fee',
 		[Language.FR]: 'forfait',
-		[Language.IT]: 'Compenso forfettario',
-		[Language.NL]: 'Flat Fee ES',
+		[Language.IT]: 'compenso forfettario',
+		[Language.NL]: 'afgesproken bedrag',
 		id: '5207253'
 	}
 };
@@ -57,19 +57,19 @@ export const addlCompensationCoverageOptions = {
 		[Language.EN]: 'not covered',
 		[Language.FR]: 'pas couvert',
 		[Language.IT]: 'non coperti',
-		[Language.NL]: 'not covered ES'
+		[Language.NL]: 'niet gedekt'
 	},
 	[AddlCompensationCoverage.PARTIALLY_COVERED]: {
 		[Language.EN]: 'partially covered',
 		[Language.FR]: 'partiellement couvert',
 		[Language.IT]: 'parzialmente coperti',
-		[Language.NL]: 'partially covered ES'
+		[Language.NL]: 'gedeeltelijk gedekt'
 	},
 	[AddlCompensationCoverage.COVERED]: {
 		[Language.EN]: 'fully covered',
 		[Language.FR]: 'intégralement couvert',
 		[Language.IT]: 'completamente coperti',
-		[Language.NL]: 'was covered ES'
+		[Language.NL]: 'volledig gedekt'
 	}
 };
 
@@ -89,69 +89,70 @@ export const enum AddlCompItem {
 
 export const addlCompItemOptions = {
 	[AddlCompItem.SALE_OF_WORK]: {
-		[Language.EN]: 'Sale of Work',
+		[Language.EN]: 'Sale of work',
 		[Language.FR]: 'Vente d’œuvres',
 		[Language.IT]: 'Vendita dell’opera',
-		[Language.NL]: 'Sale of work ES'
+		[Language.NL]: 'Verkoop van werk'
 	},
 	[AddlCompItem.PRODUCTION_BUDGET]: {
-		[Language.EN]: 'Production Budget',
+		[Language.EN]: 'Production budget',
 		[Language.FR]: 'Budget de production',
 		[Language.IT]: 'Budget di produzione',
-		[Language.NL]: 'Production budget ES'
+		[Language.NL]: 'Productie budget '
 	},
 	[AddlCompItem.TRANSPORT_OF_WORK]: {
-		[Language.EN]: 'Transport of Works',
+		[Language.EN]: 'Transport of works',
 		[Language.FR]: 'Transport d’œuvres',
 		[Language.IT]: 'Trasporto delle opere',
-		[Language.NL]: 'Transport of work ES'
+		[Language.NL]: 'Transport van werk'
 	},
 	[AddlCompItem.TRAVEL]: {
 		[Language.EN]: 'Travel',
 		[Language.FR]: 'Transport',
 		[Language.IT]: 'Viaggio',
-		[Language.NL]: 'Travel ES'
+		[Language.NL]: 'Reiskosten'
 	},
 	[AddlCompItem.ACCOMMODATION]: {
 		[Language.EN]: 'Accommodation',
 		[Language.FR]: 'Hébergement',
 		[Language.IT]: 'Alloggio',
-		[Language.NL]: 'Accommodation ES'
+		[Language.NL]: 'Huisvesting/accomodatie'
 	},
 	[AddlCompItem.MEALS]: {
 		[Language.EN]: 'Meals',
 		[Language.FR]: 'Repas',
 		[Language.IT]: 'Pasti',
-		[Language.NL]: 'Meals ES'
+		[Language.NL]: 'Maaltijden'
 	},
 	[AddlCompItem.PER_DIEM]: {
-		[Language.EN]: 'Per Diem',
+		[Language.EN]: 'Per diem',
 		[Language.FR]: 'Per diem',
 		[Language.IT]: 'Diaria',
-		[Language.NL]: 'Per Diem ES'
+		[Language.NL]: 'Dagvergoeding'
 	},
 	[AddlCompItem.HEALTH_INSURANCE]: {
-		[Language.EN]: 'Health Insurance',
+		[Language.EN]: 'Health insurance',
 		[Language.FR]: 'Mutuelle',
 		[Language.IT]: 'Assicurazione sanitaria',
-		[Language.NL]: 'Health Insurance ES'
+		[Language.NL]: 'Gezondheidsverzekering'
 	},
 	[AddlCompItem.PUBLIC_TRANSPORTATION]: {
-		[Language.EN]: 'Public Transportation',
+		[Language.EN]: 'Public transportation',
 		[Language.FR]: 'Transport public',
 		[Language.IT]: 'Trasporto pubblico',
-		[Language.NL]: 'Public Transportation ES'
+		[Language.NL]: 'Openbaar vervoer'
 	},
 	[AddlCompItem.COMMISSION]: {
 		[Language.EN]: 'Commission',
 		[Language.FR]: 'Commission',
 		[Language.IT]: 'Commissione',
-		[Language.NL]: 'Commission ES'
+		[Language.NL]: 'Commissie'
 	},
 	[AddlCompItem.ACCESSIBILITY_BUDGET]: {
-		[Language.EN]: 'Accessibility Budget',
+		[Language.EN]: 'Accessibility budget',
 		[Language.FR]: 'Budget d’accessibilité',
 		[Language.IT]: 'Budget di accessibilità',
-		[Language.NL]: 'Accessibility Budget ES'
+		[Language.NL]: 'Access budget'
 	}
 };
+
