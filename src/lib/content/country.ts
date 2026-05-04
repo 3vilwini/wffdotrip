@@ -46,28 +46,28 @@ export const countryOptions = {
 		[Language.EN]: 'UK',
 		[Language.FR]: 'Royaume-Uni',
 		[Language.IT]: 'Regno Unito',
-		[Language.NL]: 'UK (NL)',
+		[Language.NL]: 'Verenigd Koninkrijk',
 		id: '5207042'
 	},
 	[Country.FRANCE]: {
 		[Language.EN]: 'France',
 		[Language.FR]: 'France',
 		[Language.IT]: 'Francia',
-		[Language.NL]: 'France (NL)',
+		[Language.NL]: 'Frankrijk',
 		id: '5207043'
 	},
 	[Country.ITALY]: {
 		[Language.EN]: 'Italy',
 		[Language.FR]: 'Italie',
 		[Language.IT]: 'Italia',
-		[Language.NL]: 'Italy (NL)',
+		[Language.NL]: 'Italië',
 		id: '5207041'
 	}
 	// [Country.NETHERLANDS]: {
 	// 	[Language.EN]: 'Netherlands',
 	// 	[Language.FR]: 'Pays-Bas',
 	// 	[Language.IT]: 'Paesi Bassi',
-	// 	[Language.NL]: 'Netherlands (NL)',
+	// 	[Language.NL]: 'Nederland',
 	// 	id: '5207044'
 	// }
 };
