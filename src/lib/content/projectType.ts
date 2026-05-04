@@ -245,7 +245,7 @@ export const projectTypeOptions = {
 	},
 	[ProjectType.ARTWORK_WALL_TEXT]: {
 		[Language.EN]: 'Artwork wall text',
-		[Language.FR]: 'Notice d’œuvre",
+		[Language.FR]: 'Notice d’œuvre',
 		[Language.IT]: 'Scheda opera',
 		[Language.NL]: 'Kunstwerk muurtekst'
 	},
