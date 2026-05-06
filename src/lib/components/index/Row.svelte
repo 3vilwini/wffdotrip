@@ -60,7 +60,11 @@
 			class="pt-1.5
 			 leading-none"
 		>
-			{#if row.employer_type}
+			{#if row.employer_name}
+				<span class="font-serif text-lg leading-tight tracking-[-0.01em]">
+					{row.employer_name}
+				</span>
+			{:else if row.employer_type}
 				<span class="font-serif text-lg leading-tight tracking-[-0.01em]">
 					{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}
 				</span>

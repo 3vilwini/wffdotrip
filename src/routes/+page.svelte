@@ -5,7 +5,7 @@
 	import { onMount } from 'svelte';
 	import { compensationFrequencyOptions } from '$lib/content/compensation';
 	import { contractTypeOptions } from '$lib/content/jobDetails';
-	import { countryOptions } from '$lib/content/country';
+	import { countryOptions, countryIcons } from '$lib/content/country';
 	import { employerTypeOptions } from '$lib/content/employerType';
 	import { fieldLabels } from '$lib/content/misc';
 	import { workerTypeOptions } from '$lib/content/workerType';
@@ -75,6 +75,17 @@
 	<a href="/faq">
 		<BlockContent value={data.indexPage.siteDescription[siteState.language]}></BlockContent>
 	</a>
+	<div class="flex flex-col gap-2 border border-dashed p-2 pr-3 mt-4">
+		{#each Object.entries(countryOptions) as [key, labels]}
+			<div class="flex items-center justify-between">
+				<div class="my-1 flex gap-2">
+					<span class="text-4xl leading-0">{countryIcons[key]}</span>
+					{labels[siteState.language]}
+				</div>
+				<div>{numRowsPerCountry[key]}</div>
+			</div>
+		{/each}
+	</div>
 </div>
 
 <div>

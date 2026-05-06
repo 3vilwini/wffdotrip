@@ -77,7 +77,7 @@
 				{/if}
 				<div class="font-mono text-xs">
 					{#if row.employer_type}
-						<div>{getEmployerTypeLabel(row.employer_type.value)}</div>
+						<div>{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}</div>
 					{/if}
 					{#if row.city && row.country}
 						<div>

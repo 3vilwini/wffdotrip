@@ -167,7 +167,7 @@ verified: true
 										{/if}
 										<div class="font-mono text-xs leading-[1.6]">
 											{#if row.employer_type && row.employer_name}
-												<div>{getEmployerTypeLabel(row.employer_type.value)}</div>
+												<div>{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}</div>
 											{/if}
 											{#if row.country}
 												<div>

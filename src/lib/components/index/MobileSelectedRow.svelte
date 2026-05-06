@@ -13,7 +13,7 @@
 		contractTypeOptions,
 		numEmployeesOptions
 	} from '$lib/content/jobDetails';
-	import { currency, countryIcons, countryOptions, countryShortCode } from '$lib/content/country';
+	import { currency, countryOptions, countryShortCode } from '$lib/content/country';
 	import { projectTypeOptions } from '$lib/content/projectType';
 	import { getWorkerTypeLabel } from '$lib/content/workerType';
 	import { getEmployerTypeLabel } from '$lib/content/employerType';
@@ -22,26 +22,6 @@
 
 	let { row = $bindable() } = $props();
 </script>
-
-<!-- 
-Created on: "2026-02-01T00:09:30.603243Z"
-
-addl_notes: ""
-
-artist_residency_q_1: "asdfasdfasdf"
-
-artist_residency_q_2: "asdfasdfasdf"
-
-artist_residency_q_3: null
-
-id: 466
-
-order: "2.00000000000000000000"
-
-user_id: "user_38DwbOwozKaMYrb50IznRmw9t7R"
-
-verified: true
--->
 
 <div
 	class="z-20 {row

@@ -264,7 +264,7 @@
 				<div class="basis-1/5">
 					{#if row.employer_type}
 						<div>
-							{getEmployerTypeLabel(row.employer_type.value)}
+							{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}
 						</div>
 					{/if}
 					{#if row.num_employees}
