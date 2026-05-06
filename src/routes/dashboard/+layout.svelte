@@ -16,7 +16,7 @@
 				<div class="font-serif text-xl tracking-tight">
 					{data.user ? data.user.emailAddresses[0].emailAddress : ''}
 				</div>
-				<div class="font-mono text-xs">Deactivate account</div>
+				<!-- <div class="font-mono text-xs">Deactivate account</div> -->
 				<div class="cursor-pointer font-mono text-xs hover:underline">
 					<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
 				</div>
@@ -34,7 +34,7 @@
 				{data.user ? data.user.emailAddresses[0].emailAddress : ''}
 			</div>
 			<div class="flex gap-8">
-				<div class="font-mono text-xs">Deactivate account</div>
+				<!-- <div class="font-mono text-xs">Deactivate account</div> -->
 				<div class="cursor-pointer font-mono text-xs hover:underline">
 					<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
 				</div>

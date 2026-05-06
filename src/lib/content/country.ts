@@ -37,8 +37,8 @@ export const currency = {
 export const languageOptions = {
 	[Language.EN]: 'English',
 	[Language.FR]: 'Français',
-	[Language.IT]: 'Italiano'
-	// [Language.NL]: 'Dutch'
+	[Language.IT]: 'Italiano',
+	[Language.NL]: 'Dutch'
 };
 
 export const countryOptions = {
@@ -62,12 +62,12 @@ export const countryOptions = {
 		[Language.IT]: 'Italia',
 		[Language.NL]: 'Italië',
 		id: '5207041'
+	},
+	[Country.NETHERLANDS]: {
+		[Language.EN]: 'Netherlands',
+		[Language.FR]: 'Pays-Bas',
+		[Language.IT]: 'Paesi Bassi',
+		[Language.NL]: 'Nederland',
+		id: '5207044'
 	}
-	// [Country.NETHERLANDS]: {
-	// 	[Language.EN]: 'Netherlands',
-	// 	[Language.FR]: 'Pays-Bas',
-	// 	[Language.IT]: 'Paesi Bassi',
-	// 	[Language.NL]: 'Nederland',
-	// 	id: '5207044'
-	// }
 };

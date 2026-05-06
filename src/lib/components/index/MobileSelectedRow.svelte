@@ -46,10 +46,10 @@ verified: true
 <div
 	class="z-20 {row
 		? 'max-h-[calc(100dvh-55px)] bg-amber-50'
-		: 'max-h-0'} fixed bottom-0 w-full overflow-auto border-t bg-lightgrey pb-12 transition-[height,max-height]"
+		: 'max-h-0'} fixed bottom-0 w-full overflow-auto border-t bg-lightgrey transition-[height,max-height]"
 >
 	{#if row}
-		<div class="flex flex-col">
+		<div class="flex flex-col pb-12">
 			<div class="flex min-h-14 flex-col">
 				<div class="flex cursor-pointer items-center justify-between p-2">
 					<div class="flex items-center gap-2">
@@ -115,7 +115,7 @@ verified: true
 						{/if}
 						<div class="font-mono text-xs">
 							{#if row.employer_type}
-								<div>{getEmployerTypeLabel(row.employer_type.value)}</div>
+								<div>{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}</div>
 							{/if}
 							{#if row.country}
 								<div>
@@ -164,14 +164,14 @@ verified: true
 
 					{#if row.compensation_amount && row.compensation_frequency && row.country}
 						<div class="border border-dashed">
-							<div class="flex justify-between bg-black p-3 text-lg text-white">
+							<div class="flex justify-between p-3 text-lg">
+								<div class="tracking-wide">
+									{row.compensation_amount}{currency[row.country.value]}
+								</div>
 								<div class="font-serif">
 									{compensationFrequencyOptions[row.compensation_frequency.value][
 										siteState.language
 									]}
-								</div>
-								<div class="tracking-wide">
-									{row.compensation_amount}{currency[row.country.value]}
 								</div>
 							</div>
 						</div>

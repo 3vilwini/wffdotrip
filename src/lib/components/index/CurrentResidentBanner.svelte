@@ -4,5 +4,6 @@
 	<div
 		class="flex h-14 w-[calc(100dvh-55px)] origin-top-left translate-x-14 rotate-90 items-center justify-center whitespace-nowrap"
 	>
+		currently in private beta ♡ by workers for workers ♡
 	</div>
 </div>

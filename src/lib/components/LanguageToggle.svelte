@@ -7,5 +7,5 @@
 	<LanguageToggleButton language={Language.EN}>EN</LanguageToggleButton>
 	<LanguageToggleButton language={Language.FR}>FR</LanguageToggleButton>
 	<LanguageToggleButton language={Language.IT}>IT</LanguageToggleButton>
-	<!-- <LanguageToggleButton language={Language.NL}>NL</LanguageToggleButton> -->
+	<LanguageToggleButton language={Language.NL}>NL</LanguageToggleButton>
 </div>

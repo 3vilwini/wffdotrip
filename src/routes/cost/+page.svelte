@@ -2,11 +2,11 @@
 	import { siteState } from '$lib/states.svelte';
 	import BlockContent from '$lib/components/blockContent/BlockContent.svelte';
 	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';
-	import { fly }from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	let { data } = $props();
 </script>
 
-<div in:fly={{ y: "100%", duration: 150 }} >
+<div in:fly={{ y: '100%', duration: 150 }}>
 	<div class="sticky top-0 z-10 bg-white">
 		<MobileIndexHeader></MobileIndexHeader>
 	</div>
@@ -38,23 +38,30 @@
 		<div class="flex flex-wrap justify-between gap-16 sm:gap-0">
 			{#each data.costPage.sectionThree as item, idx}
 				<div class="flex flex-col items-center sm:basis-1/5">
-					<div
-						class="{idx % 2 === 0
-							? 'font-sans text-[22px]'
-							: 'font-serif text-2xl'} mb-2 text-center tracking-[-0.01em]"
-					>
-						{item.title[siteState.language]}
-					</div>
-					<div class="text-center font-mono text-xs">
-						<BlockContent value={item.description[siteState.language]}></BlockContent>
-					</div>
-					<div class="mt-4">
-						{#each item.sponsors as sponsor}
-							<div class="text-center leading-none">
-								{sponsor[siteState.language]}
-							</div>
-						{/each}
-					</div>
+					{#if item.title}
+						<div
+							class="{idx % 2 === 0
+								? 'font-sans text-[22px]'
+								: 'font-serif text-2xl'} mb-2 text-center tracking-[-0.01em]"
+						>
+							{item.title[siteState.language]}
+						</div>
+					{/if}
+					{#if item.description}
+						<div class="text-center font-mono text-xs">
+							<BlockContent value={item.description[siteState.language]}></BlockContent>
+						</div>
+					{/if}
+
+					{#if item.sponsors && item.sponsors.length > 0}
+						<div class="mt-4">
+							{#each item.sponsors as sponsor}
+								<div class="text-center leading-none">
+									{sponsor[siteState.language]}
+								</div>
+							{/each}
+						</div>
+					{/if}
 				</div>
 			{/each}
 		</div>

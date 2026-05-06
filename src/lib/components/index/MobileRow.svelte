@@ -52,7 +52,7 @@
 		>
 			{#if row.employer_type}
 				<span class="font-serif text-lg leading-tight tracking-[-0.01em]">
-					{getEmployerTypeLabel(row.employer_type.value)}
+					{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}
 				</span>
 			{/if}
 

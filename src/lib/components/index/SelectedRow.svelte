@@ -19,7 +19,6 @@
 	import { getWorkerTypeLabel } from '$lib/content/workerType';
 	import { getEmployerTypeLabel } from '$lib/content/employerType';
 
-
 	import { siteState, yarndingsText } from '$lib/states.svelte';
 	let { rows = $bindable() } = $props();
 
@@ -103,11 +102,16 @@ verified: true
 									onclick={() => removeRow(row)}
 									class="flex size-6 cursor-pointer items-center justify-center bg-black"
 								>
-									<svg width="12" height="12" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="7.82841" y1="2.17155" x2="2.17155" y2="7.8284" stroke="white"/>
-<line x1="2.17155" y1="2.17159" x2="7.8284" y2="7.82845" stroke="white"/>
-</svg>
-
+									<svg
+										width="12"
+										height="12"
+										viewBox="0 0 10 10"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<line x1="7.82841" y1="2.17155" x2="2.17155" y2="7.8284" stroke="white" />
+										<line x1="2.17155" y1="2.17159" x2="7.8284" y2="7.82845" stroke="white" />
+									</svg>
 								</div>
 							</div>
 						</div>
@@ -158,7 +162,7 @@ verified: true
 											</div>
 										{:else if row.employer_type}
 											<div class="font-serif text-lg leading-[1.2] tracking-[-0.01em]">
-												{getEmployerTypeLabel(row.employer_type.value)}
+												{getEmployerTypeLabel(row.employer_type.value).split('(')[0]}
 											</div>
 										{/if}
 										<div class="font-mono text-xs leading-[1.6]">
