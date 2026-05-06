@@ -9,7 +9,7 @@
 <div>
 	<div class="flex flex-col gap-8 p-3 font-mono text-xs sm:flex-row sm:p-6 sm:pt-4">
 		<div class="relative sm:w-0 sm:basis-1/2 lg:basis-1/3">
-			<div class="w-[25dvw] max-w-sm min-w-xs pr-12">
+			<div class="sm:w-[25dvw] sm:max-w-sm min-w-xs sm:pr-12">
 				<a href="/" class="mb-4 flex ">
 					<img src={logo} class="w-60" />
 				</a>
