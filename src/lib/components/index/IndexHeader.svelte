@@ -10,7 +10,6 @@
 	import { filteredResultsState, siteState } from '$lib/states.svelte';
 	import FilterPanel from './FilterPanel.svelte';
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
-	$inspect(filteredResultsState.filtersApplied);
 </script>
 
 <div class="relative flex h-14 items-center border-b pr-2 pl-3 text-lg xl:text-2xl">

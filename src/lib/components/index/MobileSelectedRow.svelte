@@ -45,8 +45,8 @@ verified: true
 
 <div
 	class="z-20 {row
-		? 'max-h-[calc(100dvh-55px)] bg-amber-50'
-		: 'max-h-0'} fixed bottom-0 w-full overflow-auto border-t bg-lightgrey transition-[height,max-height]"
+		? 'max-h-[calc(100dvh-55px)] border-t'
+		: 'max-h-0'} fixed bottom-0 w-full overflow-auto bg-lightgrey transition-[height,max-height]"
 >
 	{#if row}
 		<div class="flex flex-col pb-12">
