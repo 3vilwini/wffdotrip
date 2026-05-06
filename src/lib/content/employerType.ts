@@ -445,7 +445,7 @@ export const employerTypeOptions = {
 				id: '5207101'
 			},
 			[EmployerType.PROFESSIONAL_MEMBERSHIP_ORG]: {
-				[Language.EN]: 'Professional Membership Organisation (e.g.: AICA, c-e-a, AWI)',
+				[Language.EN]: 'Professional membership organisation (e.g.: AICA, c-e-a, AWI)',
 				[Language.FR]: 'Association de professionnel·les de l’art (ex: AICA, c-e-a, AWI)',
 				[Language.IT]: 'Associazioni di categoria (e.g.: AICA, c-e-a, AWI)',
 				[Language.NL]: 'Beroepsvereniging (e.g.: AICA, c-e-a, AWI)',
