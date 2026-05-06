@@ -42,11 +42,11 @@
 					<BlockContent value={indexPage.representedCountriesDescription[siteState.language]}
 					></BlockContent>
 				</div>
-				<div class="flex flex-col gap-2 border border-dashed p-2">
+				<div class="flex flex-col gap-2 border border-dashed p-2 pr-3">
 					{#each Object.entries(countryOptions) as [key, labels]}
-						<div class="flex justify-between">
-							<div>
-								<span class="text-lg leading-0">{countryIcons[key]}</span>
+						<div class="flex items-center justify-between">
+							<div class="flex gap-2 my-1">
+								<span class="text-4xl leading-0">{countryIcons[key]}</span>
 								{labels[siteState.language]}
 							</div>
 							<div>{numRowsPerCountry[key]}</div>
