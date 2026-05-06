@@ -2,6 +2,7 @@
 	import { siteState } from '$lib/states.svelte';
 	import BlockContent from '$lib/components/blockContent/BlockContent.svelte';
 	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';
+	import { navMenuItems } from '$lib/content/misc.js';
 	import { fly } from 'svelte/transition';
 	let { data } = $props();
 </script>
@@ -11,7 +12,7 @@
 		<MobileIndexHeader></MobileIndexHeader>
 	</div>
 	<div class="flex items-center justify-center px-3 pt-8 font-mono text-xs sm:hidden">
-		How much does this website cost?
+		{navMenuItems.cost[siteState.language]}
 	</div>
 	<div class="mx-auto flex w-full max-w-[1500px] flex-col gap-16 p-3 pt-16 sm:p-16">
 		<div class="flex flex-wrap justify-evenly gap-16">
