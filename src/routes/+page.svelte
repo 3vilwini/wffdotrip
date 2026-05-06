@@ -159,13 +159,13 @@
 	</div>
 </div>
 
-<div class="relative w-full overflow-x-hidden sm:flex sm:flex-row">
-	<div class="hidden sm:block">
+<div class="relative w-full  sm:flex sm:flex-row">
+	<div class="hidden sm:block z-10 bg-white">
 		<IndexSidebar indexPage={data.indexPage} {numRowsPerCountry}></IndexSidebar>
 	</div>
 
-	<div class="grow">
-		<div class="hidden sm:block">
+	<div class="grow relative">
+		<div class="hidden sm:block sticky top-0 bg-white z-1">
 			<IndexHeader></IndexHeader>
 		</div>
 		<div bind:clientWidth={rowContainerW} class="flex flex-col">

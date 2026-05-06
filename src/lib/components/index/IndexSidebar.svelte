@@ -15,14 +15,14 @@
 	bind:clientWidth={innerContainerW}
 	class="{collapsed
 		? 'w-14 min-w-14 shrink-0 grow-0'
-		: 'w-[25dvw] max-w-sm min-w-xs'} relative flex h-[calc(100dvh-3.5rem)] transition-[width,min-width]"
+		: 'w-[25dvw] max-w-sm min-w-xs'} relative flex h-[calc(100dvh-3.5rem)] transition-[width,min-width] bg-white"
 >
-	<div style="width: {innerContainerW}px;" class="fixed">
+	<div style="width: {innerContainerW}px;" class="fixed bg-white">
 		<div
 			style="width: {innerContainerW}px;"
 			class=" flex h-[calc(100dvh-3.5rem)] {collapsed
 				? ''
-				: ' p-6 pt-4'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs"
+				: ' p-6 pt-4'} fixed top-0 flex-col gap-4 overflow-auto border-r font-mono text-xs bg-white"
 		>
 			{#if collapsed}
 				<img

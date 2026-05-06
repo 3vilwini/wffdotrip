@@ -12,7 +12,7 @@
 	import DoubleArrowButton from './DoubleArrowButton.svelte';
 </script>
 
-<div class="relative flex h-14 items-center border-b pr-2 pl-3 text-lg xl:text-2xl">
+<div class="sticky top-0 flex h-14 items-center border-b pr-2 pl-3 text-lg xl:text-2xl">
 	<div class="flex {siteState.indexW > 768 ? 'w-33' : 'w-28'} shrink-0 grow-0 items-center gap-3">
 		<div class="flex h-8 w-8 cursor-pointer border border-dashed">
 			<button
