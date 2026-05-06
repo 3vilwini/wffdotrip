@@ -80,7 +80,8 @@
 								formHeaderSubtitle: '!text-xs !mt-0 !font-mono !text-left !text-black',
 								identityPreview: '!border !p-2 !mt-4 !text-xs !font-mono !text-black',
 								identityPreviewText: '!text-xs !text-black',
-								formResendCodeLink: '!text-xs !text-black !font-mono !mt-0 !text-left !opacity-100'
+								formResendCodeLink: '!text-xs !text-black !font-mono !mt-0 !text-left !opacity-100',
+								spinner: '!p-0'
 							}
 						}}
 					/>
