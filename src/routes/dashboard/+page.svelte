@@ -8,7 +8,7 @@
 
 <SignedOut>
 	<div class="flex w-dvw flex-col justify-center items-center gap-4">
-		<div class="px-2 text-center font-mono text-xs">Log-in or Sign up to view Dashboard</div>
+		<div class="px-2 text-center font-mono text-xs">Log in or sign up to view dashboard</div>
 		<SignIn
 			fallbackRedirectUrl="/dashboard"
 			oauthFlow="redirect"
