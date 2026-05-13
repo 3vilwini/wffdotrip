@@ -8,7 +8,7 @@
 </script>
 
 <SignedOut>
-	<div class="flex w-dvw flex-col items-center justify-center gap-4">
+	<div class="flex w-dvw flex-col justify-center items-center gap-4">
 		<div class="px-2 text-center font-mono text-xs">{miscLabels.logInOrSignUpToViewDashboard[siteState.language]}</div>
 		<SignIn
 			fallbackRedirectUrl="/dashboard"
