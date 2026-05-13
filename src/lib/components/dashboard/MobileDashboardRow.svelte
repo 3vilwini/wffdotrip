@@ -1,6 +1,4 @@
 <script lang="ts">
-	import X from '../X.svelte';
-
 	import { enhance } from '$app/forms';
 
 	import { siteState } from '$lib/states.svelte';
@@ -14,6 +12,7 @@
 	import EditRowModal from './EditRowModal.svelte';
 	import { afterNavigate, goto, invalidateAll } from '$app/navigation';
 	import MobileDashboardSelectedRow from './MobileDashboardSelectedRow.svelte';
+	import { miscLabels } from '$lib/content/misc';
 	let { row, formPage } = $props();
 	let showEditModal = $state(false);
 	let showDeleteModal = $state(false);
@@ -25,9 +24,6 @@
 		invalidateAll();
 	});
 
-	const closeEditModal = () => {
-		showEditModal = false;
-	};
 </script>
 
 {#if showEditModal}
@@ -56,7 +52,7 @@
 			<div
 				class="relative flex max-w-2xl flex-col justify-center gap-4 overflow-auto border border-black bg-white px-12 py-12 font-mono text-xs leading-normal"
 			>
-				Are you sure you want to delete?
+				{miscLabels.confirmDelete[siteState.language]}
 				<form
 					use:enhance={({ formElement, formData, action, cancel, submitter }) => {
 						return async ({ result, update }) => {
@@ -74,7 +70,7 @@
 					<button
 						class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 					>
-						Delete
+						{miscLabels.delete[siteState.language]}
 					</button>
 					<div
 						onclick={() => {
@@ -82,7 +78,7 @@
 						}}
 						class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 					>
-						Cancel
+						{miscLabels.cancel[siteState.language]}
 					</div>
 				</form>
 			</div>
@@ -181,7 +177,7 @@
 						onclick={() => (showEditModal = true)}
 						class="cursor-pointer bg-black p-3 px-3 py-2 text-white"
 					>
-						Edit
+						{miscLabels.edit[siteState.language]}
 					</div>
 				</div>
 				<div class="border border-dashed border-black">
@@ -189,7 +185,7 @@
 						onclick={() => (showDeleteModal = true)}
 						class="cursor-pointer bg-black p-3 px-3 py-2 text-white"
 					>
-						Delete
+						{miscLabels.delete[siteState.language]}
 					</div>
 				</div>
 			</div>
@@ -198,7 +194,7 @@
 					onclick={() => (showExpandedEntry = false)}
 					class="cursor-pointer bg-black p-3 px-3 py-2 text-white"
 				>
-					Back to all entries
+					{miscLabels.backToAllEntries[siteState.language]}
 				</div>
 			</div>
 		</div>

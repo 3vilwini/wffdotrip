@@ -9,7 +9,7 @@
 		compensationFrequencyOptions,
 		addlCompItemOptions
 	} from '$lib/content/compensation';
-	import { fieldLabels, yearOption2010OrBefore } from '$lib/content/misc';
+	import { fieldLabels, miscLabels, yearOption2010OrBefore } from '$lib/content/misc';
 	import {
 		jobExperienceOptions,
 		jobObtainedViaOptions,
@@ -610,13 +610,13 @@
 			<div class="flex items-center justify-center gap-8 pt-8">
 				<button
 					class="cursor-pointer border px-4 py-2 transition-colors hover:bg-black hover:text-white"
-					>{isSubmitting ? 'Submitting...' : 'Submit Edits'}</button
+					>{isSubmitting ? 'Submitting...' : miscLabels.submitEdits[siteState.language]}</button
 				>
 				<div
 					onclick={() => (showEditModal = false)}
 					class="cursor-pointer border px-4 py-2 transition-colors hover:bg-black hover:text-white"
 				>
-					Cancel
+					{miscLabels.cancel[siteState.language]}
 				</div>
 			</div>
 		</div>

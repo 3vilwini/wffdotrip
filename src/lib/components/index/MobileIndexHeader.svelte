@@ -7,6 +7,8 @@
 	import MobileNavMenu from './MobileNavMenu.svelte';
 	import { navMenuItems } from '$lib/content/misc';
 	import { page } from '$app/state';
+	import { resolve } from '$app/paths';
+	
 
 	let showMobileLanguageMenu = $state(false);
 	let showMobileNavMenu = $state(false);
@@ -24,7 +26,7 @@
 
 <div class="flex h-16 flex-col gap-6 border-b p-3">
 	<div class="flex items-center justify-between">
-		<a href="/">
+		<a href={resolve('/')}>
 			<img src={logo2} class="w-38" />
 		</a>
 		<div

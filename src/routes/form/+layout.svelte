@@ -10,6 +10,7 @@
 	import { onMount } from 'svelte';
 	import { SignedIn, SignedOut, SignIn, SignOutButton } from 'svelte-clerk';
 	import { page } from '$app/state';
+	import { miscLabels } from '$lib/content/misc';
 	let field: HTMLElement | null = $state(null);
 
 	let headerStyle = $derived(page.url.pathname === '/form' ? '!hidden' : '');
@@ -102,9 +103,10 @@
 						{/if}
 						<div class="mt-2 flex justify-between gap-4">
 							<SignOutButton class="cursor-pointer text-left font-mono text-xs hover:underline"
-							></SignOutButton>
+								>{miscLabels.signOut[siteState.language]}</SignOutButton
+							>
 							<a href="/dashboard" class="cursor-pointer font-mono text-xs hover:underline"
-								>Dashboard →</a
+								>{miscLabels.dashboard[siteState.language]} →</a
 							>
 						</div>
 					</div>

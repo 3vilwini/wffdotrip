@@ -1,14 +1,16 @@
 <script lang="ts">
 	import { SignedIn, SignOutButton } from 'svelte-clerk';
 	import logo from '$lib/assets/logo.png';
-	import IndexHeader from '$lib/components/index/IndexHeader.svelte';
 	import MobileIndexHeader from '$lib/components/index/MobileIndexHeader.svelte';
+	import { miscLabels } from '$lib/content/misc';
+	import { siteState } from '$lib/states.svelte.js';
+	import { resolve } from '$app/paths';
 	let { data, children } = $props();
 </script>
 
 <div class=" flex flex-col sm:gap-12">
 	<div class="hidden items-start justify-between p-6 pt-4 sm:flex">
-		<a href="/" class="cursor-pointer">
+		<a href={resolve('/')} class="cursor-pointer">
 			<img src={logo} class="w-60" />
 		</a>
 		<SignedIn>
@@ -18,7 +20,9 @@
 				</div>
 				<!-- <div class="font-mono text-xs">Deactivate account</div> -->
 				<div class="cursor-pointer font-mono text-xs hover:underline">
-					<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
+					<SignOutButton class="cursor-pointer hover:underline"
+						>{miscLabels.signOut[siteState.language]}</SignOutButton
+					>
 				</div>
 			</div>
 		</SignedIn>
@@ -36,7 +40,9 @@
 			<div class="flex gap-8">
 				<!-- <div class="font-mono text-xs">Deactivate account</div> -->
 				<div class="cursor-pointer font-mono text-xs hover:underline">
-					<SignOutButton class="cursor-pointer hover:underline"></SignOutButton>
+					<SignOutButton class="cursor-pointer hover:underline"
+						>{miscLabels.signOut[siteState.language]}</SignOutButton
+					>
 				</div>
 			</div>
 		</div>

@@ -257,6 +257,154 @@ export const miscLabels = {
 		[Language.FR]: 'Annuler',
 		[Language.IT]: 'Annulla',
 		[Language.NL]: 'Annuleren'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	signOut: {
+		[Language.EN]: 'Sign Out',
+		[Language.FR]: 'Sign Out',
+		[Language.IT]: 'Sign Out',
+		[Language.NL]: 'Sign Out'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	dashboard: {
+		[Language.EN]: 'Dashboard',
+		[Language.FR]: 'Dashboard',
+		[Language.IT]: 'Dashboard',
+		[Language.NL]: 'Dashboard'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	edit: {
+		[Language.EN]: 'Edit',
+		[Language.FR]: 'Edit',
+		[Language.IT]: 'Edit',
+		[Language.NL]: 'Edit'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	submitEdits: {
+		[Language.EN]: 'Submit Edits',
+		[Language.FR]: 'Submit Edits',
+		[Language.IT]: 'Submit Edits',
+		[Language.NL]: 'Submit Edits'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	yourSubmissions: {
+		[Language.EN]: 'Your Submissions',
+		[Language.FR]: 'Your Submissions',
+		[Language.IT]: 'Your Submissions',
+		[Language.NL]: 'Your Submissions'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	filter: {
+		[Language.EN]: 'Filter',
+		[Language.FR]: 'Filter',
+		[Language.IT]: 'Filter',
+		[Language.NL]: 'Filter'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	filteredResults: {
+		[Language.EN]: 'Filtered Results',
+		[Language.FR]: 'Filtered Results',
+		[Language.IT]: 'Filtered Results',
+		[Language.NL]: 'Filtered Results'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	search: {
+		[Language.EN]: 'Search',
+		[Language.FR]: 'Search',
+		[Language.IT]: 'Search',
+		[Language.NL]: 'Search'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	formThanks: {
+		[Language.EN]: 'Thanks, your submission has been recorded!',
+		[Language.FR]: 'Thanks, your submission has been recorded!',
+		[Language.IT]: 'Thanks, your submission has been recorded!',
+		[Language.NL]: 'Thanks, your submission has been recorded!'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	formThanks2: {
+		[Language.EN]: 'Thanks for your submissions!',
+		[Language.FR]: 'Thanks for your submissions!',
+		[Language.IT]: 'Thanks for your submissions!',
+		[Language.NL]: 'Thanks for your submissions!'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	entriesAreManuallyApproved: {
+		[Language.EN]:
+			'Entries are manually approved before appearing, but your identity remains completely anonymous.',
+		[Language.FR]:
+			'Entries are manually approved before appearing, but your identity remains completely anonymous.',
+		[Language.IT]:
+			'Entries are manually approved before appearing, but your identity remains completely anonymous.',
+		[Language.NL]:
+			'Entries are manually approved before appearing, but your identity remains completely anonymous.'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	backToIndex: {
+		[Language.EN]: 'Back to Index',
+		[Language.FR]: 'Back to Index',
+		[Language.IT]: 'Back to Index',
+		[Language.NL]: 'Back to Index'
+	},
+
+	//TODO: FILL OUT TRANSLATIONS
+	backToForm: {
+		[Language.EN]: 'Back to Form',
+		[Language.FR]: 'Back to Form',
+		[Language.IT]: 'Back to Form',
+		[Language.NL]: 'Back to Form'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	submitNewEntry: {
+		[Language.EN]: 'Submit New Entry',
+		[Language.FR]: 'Submit New Entry',
+		[Language.IT]: 'Submit New Entry',
+		[Language.NL]: 'Submit New Entry'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	entries: {
+		[Language.EN]: 'Entries',
+		[Language.FR]: 'Entries',
+		[Language.IT]: 'Entries',
+		[Language.NL]: 'Entries'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	backToAllEntries: {
+		[Language.EN]: 'Back to all entries',
+		[Language.FR]: 'Back to all entries',
+		[Language.IT]: 'Back to all entries',
+		[Language.NL]: 'Back to all entries'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	formErrorMessage: {
+		[Language.EN]:
+			'There has been an error submitting the form. Please try again later or contact TK@TK.com',
+		[Language.FR]:
+			'There has been an error submitting the form. Please try again later or contact TK@TK.com',
+		[Language.IT]:
+			'There has been an error submitting the form. Please try again later or contact TK@TK.com',
+		[Language.NL]:
+			'There has been an error submitting the form. Please try again later or contact TK@TK.com'
+	},
+	//TODO: FILL OUT TRANSLATIONS
+	showAllRows: {
+		[Language.EN]: 'Show All Rows',
+		[Language.FR]: 'Show All Rows',
+		[Language.IT]: 'Show All Rows',
+		[Language.NL]: 'Show All Rows'
+	},
+	logInOrSignUpToViewDashboard: {
+		[Language.EN]: 'Log-in or Sign up to view Dashboard',
+		[Language.FR]: 'Log-in or Sign up to view Dashboard',
+		[Language.IT]: 'Log-in or Sign up to view Dashboard',
+		[Language.NL]: 'Log-in or Sign up to view Dashboard'
+	},
+	currentlyInBeta: {
+		[Language.EN]: 'currently in private beta ♡ by workers for workers ♡',
+		[Language.FR]: 'currently in private beta ♡ by workers for workers ♡',
+		[Language.IT]: 'currently in private beta ♡ by workers for workers ♡',
+		[Language.NL]: 'currently in private beta ♡ by workers for workers ♡'
+		
 	}
 };
 export const yearOption2010OrBefore = {

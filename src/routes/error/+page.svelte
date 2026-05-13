@@ -1,6 +1,11 @@
+<script lang="ts">
+	import { miscLabels } from '$lib/content/misc';
+	import { siteState } from '$lib/states.svelte';
+</script>
+
 <div>
-	There has been an error submitting the form. Please try again later or contact TK@TK.com
+	{miscLabels.formErrorMessage[siteState.language]}
 	<div>
-		<a href="/form">Back to Form</a>
+		<a href="/form">{miscLabels.backToForm[siteState.language]}</a>
 	</div>
 </div>

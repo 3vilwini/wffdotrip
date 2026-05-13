@@ -1,6 +1,6 @@
 <script lang="ts">
 	import searchIcon from '$lib/assets/search.svg';
-	import { fieldLabels, indexHeaderLabels } from '$lib/content/misc';
+	import { fieldLabels, indexHeaderLabels, miscLabels } from '$lib/content/misc';
 	import { countryOptions } from '$lib/content/country';
 	import { contractTypeOptions } from '$lib/content/jobDetails';
 	import { compensationFrequencyOptions } from '$lib/content/compensation';
@@ -60,7 +60,7 @@
 	<div class="flex min-h-14 flex-col justify-center gap-4 border-b p-3">
 		<div class="flex w-full items-center justify-between">
 			<div class="font-mono text-xs">
-				{filteredResultsState?.rows?.results?.length} Filtered Results
+				{filteredResultsState?.rows?.results?.length} {miscLabels.filteredResults[siteState.language]}
 			</div>
 			<div>
 				<button
@@ -76,7 +76,7 @@
 					}}
 					class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
 				>
-					Show All Rows
+					{miscLabels.showAllRows[siteState.language]}
 				</button>
 			</div>
 		</div>

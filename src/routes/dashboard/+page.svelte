@@ -1,14 +1,15 @@
 <script lang="ts">
-	import { SignedIn, SignedOut, SignOutButton, SignIn } from 'svelte-clerk';
+	import { SignedIn, SignedOut, SignIn } from 'svelte-clerk';
 	import { siteState } from '$lib/states.svelte';
 	import DashboardRow from '$lib/components/dashboard/DashboardRow.svelte';
 	import MobileDashboardRow from '$lib/components/dashboard/MobileDashboardRow.svelte';
+	import { miscLabels } from '$lib/content/misc.js';
 	let { data } = $props();
 </script>
 
 <SignedOut>
-	<div class="flex w-dvw flex-col justify-center items-center gap-4">
-		<div class="px-2 text-center font-mono text-xs">Log-in or Sign up to view Dashboard</div>
+	<div class="flex w-dvw flex-col items-center justify-center gap-4">
+		<div class="px-2 text-center font-mono text-xs">{miscLabels.logInOrSignUpToViewDashboard[siteState.language]}</div>
 		<SignIn
 			fallbackRedirectUrl="/dashboard"
 			oauthFlow="redirect"
@@ -43,20 +44,25 @@
 		<div class="flex flex-col justify-between gap-4 sm:flex-row sm:border sm:border-dashed sm:p-4">
 			<div class="flex flex-col gap-1">
 				{#if siteState.formSubmitted}
-					<div>Thanks, your submission has been recorded!</div>
+					<div>{miscLabels.formThanks[siteState.language]}</div>
 				{:else}
-					<div>Thanks for your submissions!</div>
+					<div>{miscLabels.formThanks2[siteState.language]}</div>
 				{/if}
 
 				<div class="font-mono text-xs">
-					Entries are manually approved before appearing, but your identity remains completely
-					anonymous.
+					{miscLabels.entriesAreManuallyApproved[siteState.language]}
 				</div>
 			</div>
 			<div class="flex items-center gap-3">
-				<a href="/" class="flex items-center justify-center outline outline-dashed outline-black bg-black px-4 py-2 whitespace-nowrap text-white transition-colors hover:bg-white hover:text-black">BACK TO INDEX
+				<a
+					href="/"
+					class="flex items-center justify-center bg-black px-4 py-2 whitespace-nowrap text-white outline outline-black transition-colors outline-dashed hover:bg-white hover:text-black"
+					>{miscLabels.backToIndex[siteState.language]}
 				</a>
-				<a href="/form" class="flex items-center justify-center outline outline-dashed outline-black bg-black px-4 py-2 whitespace-nowrap text-white transition-colors hover:bg-white hover:text-black">SUBMIT NEW ENTRY
+				<a
+					href="/form"
+					class="flex items-center justify-center bg-black px-4 py-2 whitespace-nowrap text-white outline outline-black transition-colors outline-dashed hover:bg-white hover:text-black"
+					>{miscLabels.submitNewEntry[siteState.language]}
 				</a>
 			</div>
 		</div>
@@ -64,8 +70,8 @@
 
 	<div>
 		<div class="flex items-baseline gap-4 px-3 py-4 max-sm:pt-12 sm:px-8">
-			<div class="text-2xl">Your Submissions</div>
-			<div class="font-mono text-xs">{data.rows.results.length} entries</div>
+			<div class="text-2xl">{miscLabels.yourSubmissions[siteState.language]}</div>
+			<div class="font-mono text-xs">{data.rows.results.length} {miscLabels.entries[siteState.language]}</div>
 		</div>
 
 		<div class="border-t sm:hidden">

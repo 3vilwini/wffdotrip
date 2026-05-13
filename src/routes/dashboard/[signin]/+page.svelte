@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SignedIn, SignedOut, SignIn, SignInButton, UserButton } from 'svelte-clerk';
+	import {  SignIn } from 'svelte-clerk';
 </script>
 
 <SignIn

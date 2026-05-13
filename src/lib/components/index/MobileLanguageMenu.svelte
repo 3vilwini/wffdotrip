@@ -4,7 +4,7 @@
 </script>
 
 <div class="w-full">
-	{#each Object.entries(languageOptions) as [key, value]}
+	{#each Object.entries(languageOptions) as [key, value] (key)}
 		<div
 			onclick={() => (siteState.language = key as Language)}
 			class="cursor-pointer border-b border-white border-dashed bg-black px-4 py-4 flex justify-center items-center text-lg text-white"

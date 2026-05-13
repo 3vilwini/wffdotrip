@@ -210,7 +210,7 @@
 							}}
 							class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 						>
-							Edit
+							{miscLabels.edit[siteState.language]}
 						</button>
 						<button
 							onclick={(e) => {
@@ -219,7 +219,7 @@
 							}}
 							class="cursor-pointer border px-3 py-1.5 uppercase hover:bg-black hover:text-white"
 						>
-							Delete
+							{miscLabels.delete[siteState.language]}
 						</button>
 					</div>
 				</div>
@@ -245,19 +245,19 @@
 					{#if row.satisfied_with_compensation}
 						<div class="mt-2 flex gap-2">
 							<div>❀</div>
-							<div>satisfied with compensation</div>
+							<div>{fieldLabels.satisfiedWithCompensation[siteState.language]}</div>
 						</div>
 					{/if}
 					{#if row.satisfied_with_conditions}
 						<div class="mt-2 flex gap-2">
 							<div>❀</div>
-							<div>satisfied with working conditions</div>
+							<div>{fieldLabels.satisfiedWithConditions[siteState.language]}</div>
 						</div>
 					{/if}
 					{#if row.treated_fairly}
 						<div class="mt-2 flex gap-2">
 							<div>❀</div>
-							<div>treated fairly</div>
+							<div>{fieldLabels.treatedFairly[siteState.language]}</div>
 						</div>
 					{/if}
 				</div>
@@ -276,7 +276,8 @@
 					{/if}
 					{#if row.contract_num_hours}
 						<div>
-							{row.contract_num_hours} hours / week
+							{row.contract_num_hours}
+							{fieldLabels.perWeek}
 						</div>
 					{/if}
 					{#if row.contract_length && row.contract_length_unit}

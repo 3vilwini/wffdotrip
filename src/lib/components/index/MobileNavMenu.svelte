@@ -1,11 +1,12 @@
 <script lang="ts">
 	import { siteState } from '$lib/states.svelte';
 	import { navMenuItems } from '$lib/content/misc';
+	import { resolve } from '$app/paths';
 </script>
 
 <div class="w-full">
 	<a
-		href="/faq"
+		href={resolve("/faq")}
 		class="flex cursor-pointer items-center justify-center border-b border-dashed border-white bg-black px-4 py-4 text-lg text-white"
 	>
 		{navMenuItems.faq[siteState.language]}
@@ -17,7 +18,7 @@
 		{navMenuItems.privacy[siteState.language]}
 	</a>
 	<a
-		href="/cost"
+		href={resolve("/cost")}
 		class="flex cursor-pointer items-center justify-center border-b border-dashed border-white bg-black px-4 py-4 text-lg text-white"
 	>
 		{navMenuItems.cost[siteState.language]}

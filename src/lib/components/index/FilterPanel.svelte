@@ -1,5 +1,5 @@
 <script>
-	import { fieldLabels, indexHeaderLabels } from '$lib/content/misc';
+	import { fieldLabels, indexHeaderLabels, miscLabels } from '$lib/content/misc';
 	import { countryOptions } from '$lib/content/country';
 	import { contractTypeOptions } from '$lib/content/jobDetails';
 	import { compensationFrequencyOptions } from '$lib/content/compensation';
@@ -114,7 +114,7 @@
   class="mt-6 cursor-pointer outline outline-dashed outline-black bg-black px-6 py-3 font-sans text-base text-white uppercase transition-colors disabled:opacity-50 hover:bg-white hover:text-black"
   disabled={isSubmitting}
 >
-  Search
+  {miscLabels.search[siteState.language]}
 </button>
 		</div>
 	</form>

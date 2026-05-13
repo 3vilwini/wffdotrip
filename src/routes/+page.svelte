@@ -7,7 +7,7 @@
 	import { contractTypeOptions } from '$lib/content/jobDetails';
 	import { countryOptions, countryIcons } from '$lib/content/country';
 	import { employerTypeOptions } from '$lib/content/employerType';
-	import { fieldLabels } from '$lib/content/misc';
+	import { fieldLabels, miscLabels } from '$lib/content/misc';
 	import { workerTypeOptions } from '$lib/content/workerType';
 
 	import CurrentResidentBanner from '$lib/components/index/CurrentResidentBanner.svelte';
@@ -75,7 +75,7 @@
 	<a href="/faq">
 		<BlockContent value={data.indexPage.siteDescription[siteState.language]}></BlockContent>
 	</a>
-	<div class="flex flex-col gap-2 border border-dashed p-2 pr-3 mt-4">
+	<div class="mt-4 flex flex-col gap-2 border border-dashed p-2 pr-3">
 		{#each Object.entries(countryOptions) as [key, labels]}
 			<div class="flex items-center justify-between">
 				<div class="my-1 flex gap-2">
@@ -97,14 +97,15 @@
 		<div class="flex min-h-12 flex-col items-center justify-between gap-4 border-b p-3">
 			<div class="flex w-full flex-row items-center justify-between">
 				<div class="font-mono text-xs">
-					{filteredResultsState?.rows?.results?.length} Filtered Results
+					{filteredResultsState?.rows?.results?.length}
+					{miscLabels.filteredResults[siteState.language]}
 				</div>
 				<div>
 					<button
 						onclick={() => (filteredResultsState.rows = null)}
 						class="cursor-pointer border border-dashed bg-black px-3 py-1 text-white"
 					>
-						Show All Rows
+						{miscLabels.showAllRows[siteState.language]}
 					</button>
 				</div>
 			</div>
@@ -159,13 +160,13 @@
 	</div>
 </div>
 
-<div class="relative w-full  sm:flex sm:flex-row">
-	<div class="hidden sm:block z-10 bg-white">
+<div class="relative w-full sm:flex sm:flex-row">
+	<div class="z-10 hidden bg-white sm:block">
 		<IndexSidebar indexPage={data.indexPage} {numRowsPerCountry}></IndexSidebar>
 	</div>
 
-	<div class="grow relative">
-		<div class="hidden sm:block sticky top-0 bg-white z-1">
+	<div class="relative grow">
+		<div class="sticky top-0 z-1 hidden bg-white sm:block">
 			<IndexHeader></IndexHeader>
 		</div>
 		<div bind:clientWidth={rowContainerW} class="flex flex-col">
