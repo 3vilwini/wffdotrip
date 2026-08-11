@@ -376,17 +376,6 @@ export const miscLabels = {
 		[Language.NL]: 'Back to all entries'
 	},
 	//TODO: FILL OUT TRANSLATIONS
-	formErrorMessage: {
-		[Language.EN]:
-			'There has been an error submitting the form. Please try again later or contact TK@TK.com',
-		[Language.FR]:
-			'There has been an error submitting the form. Please try again later or contact TK@TK.com',
-		[Language.IT]:
-			'There has been an error submitting the form. Please try again later or contact TK@TK.com',
-		[Language.NL]:
-			'There has been an error submitting the form. Please try again later or contact TK@TK.com'
-	},
-	//TODO: FILL OUT TRANSLATIONS
 	showAllRows: {
 		[Language.EN]: 'Show All Rows',
 		[Language.FR]: 'Show All Rows',
