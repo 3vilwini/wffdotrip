@@ -253,45 +253,45 @@ export const miscLabels = {
 		[Language.NL]: 'Verwijderen'
 	},
 	cancel: {
-		[Language.EN]: 'Cancel',
-		[Language.FR]: 'Annuler',
-		[Language.IT]: 'Annulla',
-		[Language.NL]: 'Annuleren'
+		[Language.EN]: 'CANCEL',
+		[Language.FR]: 'ANNULER',
+		[Language.IT]: 'ANNULLA',
+		[Language.NL]: 'ANNULEREN'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	signOut: {
-		[Language.EN]: 'Sign Out',
-		[Language.FR]: 'Sign Out',
-		[Language.IT]: 'Sign Out',
-		[Language.NL]: 'Sign Out'
+		[Language.EN]: 'Sign out',
+		[Language.FR]: 'Se déconnecter',
+		[Language.IT]: 'Esci',
+		[Language.NL]: 'Uitloggen'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	dashboard: {
 		[Language.EN]: 'Dashboard',
-		[Language.FR]: 'Dashboard',
-		[Language.IT]: 'Dashboard',
+		[Language.FR]: 'Tableau de bord',
+		[Language.IT]: 'Pannello di controllo',
 		[Language.NL]: 'Dashboard'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	edit: {
 		[Language.EN]: 'Edit',
-		[Language.FR]: 'Edit',
-		[Language.IT]: 'Edit',
-		[Language.NL]: 'Edit'
+		[Language.FR]: 'Modifier',
+		[Language.IT]: 'Modifica',
+		[Language.NL]: 'Bewerken'
 	},
-	//TODO: FILL OUT TRANSLATIONS
+	//TODO: FILL OUT TRANSLATIONS delete entry
 	submitEdits: {
-		[Language.EN]: 'Submit Edits',
-		[Language.FR]: 'Submit Edits',
-		[Language.IT]: 'Submit Edits',
-		[Language.NL]: 'Submit Edits'
+		[Language.EN]: 'SUBMIT EDITS',
+		[Language.FR]: 'SOUMETTRE LES MODIFICATIONS',
+		[Language.IT]: 'INVIA MODIFICHE',
+		[Language.NL]: 'WIJZIGINGEN VERZENDEN'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	yourSubmissions: {
-		[Language.EN]: 'Your Submissions',
-		[Language.FR]: 'Your Submissions',
-		[Language.IT]: 'Your Submissions',
-		[Language.NL]: 'Your Submissions'
+		[Language.EN]: 'Your submissions',
+		[Language.FR]: 'Vos rémunérations',
+		[Language.IT]: 'Le tue partecipazioni',
+		[Language.NL]: 'Je inzendingen'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	filter: {
@@ -302,24 +302,24 @@ export const miscLabels = {
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	filteredResults: {
-		[Language.EN]: 'Filtered Results',
-		[Language.FR]: 'Filtered Results',
-		[Language.IT]: 'Filtered Results',
-		[Language.NL]: 'Filtered Results'
+		[Language.EN]: 'filtered results',
+		[Language.FR]: 'résultats filtrés',
+		[Language.IT]: 'risultati filtrati',
+		[Language.NL]: 'filtered results'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	search: {
 		[Language.EN]: 'Search',
-		[Language.FR]: 'Search',
-		[Language.IT]: 'Search',
-		[Language.NL]: 'Search'
+		[Language.FR]: 'Rechercher',
+		[Language.IT]: 'Cercare',
+		[Language.NL]: 'Zoek'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	formThanks: {
 		[Language.EN]: 'Thanks, your submission has been recorded!',
-		[Language.FR]: 'Thanks, your submission has been recorded!',
-		[Language.IT]: 'Thanks, your submission has been recorded!',
-		[Language.NL]: 'Thanks, your submission has been recorded!'
+		[Language.FR]: 'Merci, votre contribution a bien été enregistrée !',
+		[Language.IT]: 'Grazie, la tua partecipazione è stata registrata!',
+		[Language.NL]: 'Bedankt, je inzending is geregistreerd!'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	formThanks2: {
@@ -333,18 +333,18 @@ export const miscLabels = {
 		[Language.EN]:
 			'Entries are manually approved before appearing, but your identity remains completely anonymous.',
 		[Language.FR]:
-			'Entries are manually approved before appearing, but your identity remains completely anonymous.',
+			'Les contributions sont approuvées manuellement avant publication, mais votre identité reste totalement anonyme.',
 		[Language.IT]:
-			'Entries are manually approved before appearing, but your identity remains completely anonymous.',
+			'Le partecipazioni vengono approvate manualmente prima della pubblicazione, ma la tua identità rimane completamente anonima.',
 		[Language.NL]:
-			'Entries are manually approved before appearing, but your identity remains completely anonymous.'
+			'Berichten worden handmatig goedgekeurd voordat ze worden weergegeven, maar je identiteit blijft volledig anoniem.'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	backToIndex: {
-		[Language.EN]: 'Back to Index',
-		[Language.FR]: 'Back to Index',
-		[Language.IT]: 'Back to Index',
-		[Language.NL]: 'Back to Index'
+		[Language.EN]: 'BACK TO INDEX',
+		[Language.FR]: 'RETOUR À L’INDEX',
+		[Language.IT]: 'TORNA ALL’INDICE',
+		[Language.NL]: 'TERUG NAAR DE INHOUDSOPGAVE'
 	},
 
 	//TODO: FILL OUT TRANSLATIONS
@@ -356,17 +356,17 @@ export const miscLabels = {
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	submitNewEntry: {
-		[Language.EN]: 'Submit New Entry',
-		[Language.FR]: 'Submit New Entry',
-		[Language.IT]: 'Submit New Entry',
-		[Language.NL]: 'Submit New Entry'
+		[Language.EN]: 'SUBMIT NEW ENTRY',
+		[Language.FR]: 'SOUMETTRE UNE NOUVELLE RÉMUNÉRATIONS',
+		[Language.IT]: 'INVIA UNA NUOVA PARTECIPAZIONE',
+		[Language.NL]: 'EEN NIEUW BERICHT PLAATSEN'
 	},
-	//TODO: FILL OUT TRANSLATIONS
+	//TODO: FILL OUT TRANSLATIONS dashboard number of entries
 	entries: {
-		[Language.EN]: 'Entries',
-		[Language.FR]: 'Entries',
-		[Language.IT]: 'Entries',
-		[Language.NL]: 'Entries'
+		[Language.EN]: 'entries',
+		[Language.FR]: 'entrées',
+		[Language.IT]: 'partecipazioni',
+		[Language.NL]: 'berichten'
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	backToAllEntries: {
@@ -377,22 +377,22 @@ export const miscLabels = {
 	},
 	//TODO: FILL OUT TRANSLATIONS
 	showAllRows: {
-		[Language.EN]: 'Show All Rows',
-		[Language.FR]: 'Show All Rows',
-		[Language.IT]: 'Show All Rows',
-		[Language.NL]: 'Show All Rows'
+		[Language.EN]: 'SHOW ALL',
+		[Language.FR]: 'TOUT AFFICHER',
+		[Language.IT]: 'MOSTRA TUTTO',
+		[Language.NL]: 'ALLES TONEN'
 	},
 	logInOrSignUpToViewDashboard: {
-		[Language.EN]: 'Log-in or Sign up to view Dashboard',
-		[Language.FR]: 'Log-in or Sign up to view Dashboard',
-		[Language.IT]: 'Log-in or Sign up to view Dashboard',
-		[Language.NL]: 'Log-in or Sign up to view Dashboard'
+		[Language.EN]: 'Log in or sign up to view dashboard',
+		[Language.FR]: 'Connectez-vous ou créez un compte pour voir le tableau de bord',
+		[Language.IT]: 'Accedi o registrati per visualizzare il pannello di controllo',
+		[Language.NL]: 'Log in of registreer om het dashboard te bekijken'
 	},
 	currentlyInBeta: {
-		[Language.EN]: 'currently in private beta ♡ by workers for workers ♡',
-		[Language.FR]: 'currently in private beta ♡ by workers for workers ♡',
-		[Language.IT]: 'currently in private beta ♡ by workers for workers ♡',
-		[Language.NL]: 'currently in private beta ♡ by workers for workers ♡'
+		[Language.EN]: '♡ currently in private beta ♡ by workers for workers ♡',
+		[Language.FR]: '♡ currently in private beta ♡ by workers for workers ♡',
+		[Language.IT]: '♡ currently in private beta ♡ by workers for workers ♡',
+		[Language.NL]: '♡ currently in private beta ♡ by workers for workers ♡'
 		
 	}
 };
